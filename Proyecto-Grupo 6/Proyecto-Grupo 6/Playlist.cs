@@ -13,7 +13,7 @@ namespace Proyecto_Grupo_6
         private int SizePlaylist;
         private string KindPlaylist;
         private bool Privacity;
-        private string ImagenURL;
+        //private string ImagenURL;
         private List<Multimedia> AllFiles;
         ///private List<Usuario>Followers;///
 

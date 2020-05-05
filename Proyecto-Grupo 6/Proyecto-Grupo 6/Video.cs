@@ -12,13 +12,16 @@ namespace Proyecto_Grupo_6
         private List<Workers> Directors;
 
 
-        public override void Play()
+        public override string Play()
         {
-
+            return ("Se esta repoduciendo el video");
         }
-        public override void Add()
+        public override void Add(string Name,string Kind,string Date,string Studio)
         {
-
+            this.Name = Name;
+            this.Kind = Kind;
+            this.Date = Date;
+            this.Studio = Studio;
         }
         public override void SetRating(List<Rating> Rating)
         {
@@ -51,20 +54,42 @@ namespace Proyecto_Grupo_6
         }
         public override string GetData()
         {
-            return (this.Name + " " + this.Kynd + " " + this.Date + " " + this.Studio);
+            return (this.Name + " " + this.Kind + " " + this.Date + " " + this.Studio);
         }
-        public void SetActoresVideo(List<Workers> Actors)
+        public override int GetDataNumber()
+        {
+            return (this.Lenght + this.Reproductions + this.Size + this.Likes);
+        }
+        public void SetActorsVideo(List<Workers> Actors)
         {
             this.Actors = Actors;
         }
-        public void SetDirectorVideo(List<Workers> Directors)
+        public void SetDirectorsVideo(List<Workers> Directors)
         {
             this.Directors = Directors;
         }
-        
-        
-        //public string GetDirectoresVideos()//
-        
+
+        public string GetActorsVideo()
+        {
+            string actors = "";
+            for (int i = 0; i < Actors.Count(); i++)
+            {
+                actors += Actors[i].GetName() + " " + Actors[i].GetSurname();
+            }
+            return actors;
+        }
+        public string GetDirectorsVideo()
+        {
+            string directors = "";
+            for (int i = 0; i < Directors.Count(); i++)
+            {
+                directors += Actors[i].GetName() + " " + Actors[i].GetSurname();
+            }
+            return directors;
+        }
+
+
+
 
 
     }
