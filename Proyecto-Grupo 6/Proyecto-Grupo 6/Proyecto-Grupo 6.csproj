@@ -45,10 +45,12 @@
   <ItemGroup>
     <Compile Include="Atributo.cs" />
     <Compile Include="Critica.cs" />
-    <Compile Include="Galeria.cs" />
+    <Compile Include="Multimedia .cs" />
+    <Compile Include="Playlist.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rating.cs" />
+    <Compile Include="Trabajador.cs" />
     <Compile Include="Videos.cs" />
   </ItemGroup>
   <ItemGroup>

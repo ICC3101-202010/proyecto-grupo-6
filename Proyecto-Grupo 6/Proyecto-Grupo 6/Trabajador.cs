@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Grupo_6
 {
-    class Galeria
+    class Trabajador
     {
     }
 }
