@@ -6,17 +6,18 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Grupo_6
 {
-    class Rating : Atributos
-    {
-        private int ValorRating;
+    class Rating : Atributttes
 
-        public void SetRating(int ValorRating)
+    {
+        private int ValueRating;
+
+        public void SetRating(int ValueRating)
         {
-            this.ValorRating = ValorRating;
+            this.ValueRating = ValueRating;
         }
         public int GetRating()
         {
-            return ValorRating;
+            return ValueRating;
         }
     }
 
