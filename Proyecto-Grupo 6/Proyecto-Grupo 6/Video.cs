@@ -14,14 +14,20 @@ namespace Proyecto_Grupo_6
 
         public override string Play()
         {
-            return ("Se esta repoduciendo el video");
+            return ("Se esta reproduciendo el video");
         }
-        public override void Add(string Name,string Kind,string Date,string Studio)
+        public override string Image()
+        {
+            return ("Se ha agregado un archivo imagen.jpg al video");
+        }
+        public void AddVideo(string Name,string Kind,string Studio,List<Workers> Directors,List<Workers> Actors,int Lenght)
         {
             this.Name = Name;
             this.Kind = Kind;
-            this.Date = Date;
             this.Studio = Studio;
+            this.Directors = Directors;
+            this.Actors = Actors;
+            this.Lenght = Lenght;
         }
         public override void SetRating(List<Rating> Rating)
         {
@@ -83,9 +89,25 @@ namespace Proyecto_Grupo_6
             string directors = "";
             for (int i = 0; i < Directors.Count(); i++)
             {
-                directors += Actors[i].GetName() + " " + Actors[i].GetSurname();
+                directors += Directors[i].GetName() + " " + Directors[i].GetSurname();
             }
             return directors;
+        }
+        public override void SetLikes(int Likes)
+        {
+            this.Likes = Likes;
+        }
+        public override int GetLikes()
+        {
+            return Likes;
+        }
+        public override void SetReproductions(int Reproductions)
+        {
+            this.Reproductions = Reproductions;
+        }
+        public override int GetReproductions()
+        {
+            return Reproductions;
         }
 
 

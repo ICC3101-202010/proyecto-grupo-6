@@ -17,7 +17,7 @@ namespace Proyecto_Grupo_6
         protected int Reproductions;
         protected List<Rating> Rating;
         protected List<Review> Review;
-        //protected BadImageFormatException CoverPage;
+        protected string ImageURL;
         protected int Size;
         protected int Likes;
         protected string Studio;
@@ -26,13 +26,11 @@ namespace Proyecto_Grupo_6
         {
             return ("Se esta reproduciendo");
         }
-        public virtual void Add(string Name, string Kind, string Date,string Studio)
+        public virtual string Image()
         {
-            this.Name = Name;
-            this.Kind = Kind;
-            this.Date = Date;
-            this.Studio = Studio;
+            return ("Se ha agregado un archivo imagen.jpg");
         }
+
 
         public virtual void SetRating(List<Rating> Rating)
         {
@@ -71,7 +69,24 @@ namespace Proyecto_Grupo_6
         {
             return (this.Lenght + this.Likes + this.Reproductions + this.Size);
         }
+        public virtual void SetLikes(int Likes)
+        {
+            this.Likes = Likes;
+        }
+        public virtual int GetLikes()
+        {
+            return Likes;
+        }
+        public virtual void SetReproductions(int Reproductions)
+        {
+            this.Reproductions = Reproductions;
+        }
+        public virtual int GetReproductions()
+        {
+            return Reproductions;
+        }
     }
+            
 
         
     
