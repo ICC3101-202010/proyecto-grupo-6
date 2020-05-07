@@ -13,9 +13,9 @@ namespace Proyecto_Grupo_6
         private int SizePlaylist;
         private string KindPlaylist;
         private bool Privacity;
-        //private string ImagenURL;
+        private string ImagenURL;
         private List<Multimedia> AllFiles;
-        ///private List<Usuario>Followers;///
+        private List<User> Followers;
 
         public void CrearPlaylist(string NamePlaylist, int SizePlaylist, string KindPlaylist, bool Privacity, List<Multimedia> AllFiles)
         {
@@ -26,15 +26,23 @@ namespace Proyecto_Grupo_6
             this.AllFiles = AllFiles;
 
         }
-        //private void UserInfo(string ImagenURL)
-        //{
-        //WebClient client = new WebClient();
-        //byte[] imgData = client.DownloadData(ImageURL);//
-
-        // store imgData in database (code depends on what API you're 
-        // using to access the DB
-        // }
-
+        public string GetCoverPagePlaylist() // El trabajo del insert de las imagenes sera desarollado mas adelante
+        {
+            return ("Se ha agregado un archivo imagen.jpg como caratula de la playlist");
+        }
+        public void SetFollower(User user)
+        {
+            this.Followers.Add(user);
+        }
+        public string GetFollower()
+        {
+            string follower = "";
+            for (int i = 0; i < Followers.Count(); i++)
+            {
+                follower += Followers[i].GetUsername();
+            }
+            return follower;
+        }
 
     }
 }
