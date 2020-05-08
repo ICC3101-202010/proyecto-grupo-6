@@ -10,6 +10,7 @@ namespace Proyecto_Grupo_6
     class Playlist
     {
         private string NamePlaylist;
+        private User CreatorPlaylist;
         private int SizePlaylist;
         private string KindPlaylist;
         private bool Privacity;
@@ -17,13 +18,14 @@ namespace Proyecto_Grupo_6
         private List<Multimedia> AllFiles;
         private List<User> Followers;
 
-        public void CrearPlaylist(string NamePlaylist, int SizePlaylist, string KindPlaylist, bool Privacity, List<Multimedia> AllFiles)
+        public void CrearPlaylist(string NamePlaylist, int SizePlaylist, string KindPlaylist, bool Privacity, List<Multimedia> AllFiles, User Creator)
         {
             this.NamePlaylist = NamePlaylist;
             this.SizePlaylist = SizePlaylist;
             this.KindPlaylist = KindPlaylist;
             this.Privacity = Privacity;
             this.AllFiles = AllFiles;
+            this.CreatorPlaylist = Creator;
 
         }
         public string GetCoverPagePlaylist() // El trabajo del insert de las imagenes sera desarollado mas adelante
@@ -42,6 +44,10 @@ namespace Proyecto_Grupo_6
                 follower += Followers[i].GetUsername();
             }
             return follower;
+        }
+        public string GetInfoPL()
+        {
+            return NamePlaylist + Environment.NewLine + "Created by: " + CreatorPlaylist;
         }
 
     }
