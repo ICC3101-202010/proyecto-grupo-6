@@ -52,7 +52,7 @@ namespace Proyecto_Grupo_6
 
         public override string GetData()
         {
-            return (this.Name + " " + this.Kind + " " + this.Album + " " + this.Artist);
+            return (this.Name + " " + this.Album);
         }
         public override int GetDataNumber()
         {
@@ -69,12 +69,27 @@ namespace Proyecto_Grupo_6
 
         public string GetArtistSong()
         {
-            string artist = "";
-            for (int i = 0; i < Artist.Count(); i++)
+            if (Artist.Count() > 1)
             {
-                artist += Artist[i].GetName() + " " + Artist[i].GetSurname();
+                string artist = "";
+                for (int i = 0; i < Artist.Count(); i++)
+                {
+                    artist += Artist[i].GetName() + " " + Artist[i].GetSurname();
+                    if (i == (Artist.Count() - 1))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        artist += ", ";
+                    }
+                }
+                return artist;
             }
-            return artist;
+            else
+            {
+                return this.Artist[0].GetName();
+            }
         }
         public string GetComposerSong()
         {
