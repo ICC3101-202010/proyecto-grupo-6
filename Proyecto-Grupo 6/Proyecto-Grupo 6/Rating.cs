@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Grupo_6
 {
+    [Serializable]
     class Rating : Atributtes
 
     {

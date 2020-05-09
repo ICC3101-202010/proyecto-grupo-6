@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Proyecto_Grupo_6
 {
 
-
+    [Serializable]
     abstract class Multimedia
     {
         protected string Name;
