@@ -107,5 +107,20 @@ namespace Proyecto_Grupo_6
         {
             this.VidQueue.Add(vid);
         }
+
+        public void ToggleAdmin(bool AdminStatus)
+        {
+            this.Admin = AdminStatus;
+        }
+
+        public string GetPassword()
+        {
+            return Password;
+        }
+
+        public bool GetPrivacy()
+        {
+            return AccPrivacy;
+        }
     }
 }
