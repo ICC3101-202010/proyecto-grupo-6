@@ -13,17 +13,17 @@ namespace Proyecto_Grupo_6
         private User CreatorPlaylist;
         private int SizePlaylist;
         private string KindPlaylist;
-        private bool Privacity;
+        private bool Privacy;
         private string ImagenURL;
         private List<Multimedia> AllFiles;
         private List<User> Followers;
 
-        public void CrearPlaylist(string NamePlaylist, int SizePlaylist, string KindPlaylist, bool Privacity, List<Multimedia> AllFiles, User Creator)
+        public void CreatePlaylist(string NamePlaylist, string KindPlaylist, bool Privacy, List<Multimedia> AllFiles, User Creator)
         {
             this.NamePlaylist = NamePlaylist;
-            this.SizePlaylist = SizePlaylist;
+            this.SizePlaylist = AllFiles.Count();
             this.KindPlaylist = KindPlaylist;
-            this.Privacity = Privacity;
+            this.Privacy = Privacy; //true significa privado//
             this.AllFiles = AllFiles;
             this.CreatorPlaylist = Creator;
 
@@ -48,6 +48,16 @@ namespace Proyecto_Grupo_6
         public string GetInfoPL()
         {
             return NamePlaylist + Environment.NewLine + "Created by: " + CreatorPlaylist;
+        }
+
+        public string GetNamePL()
+        {
+            return NamePlaylist;
+        }
+
+        public bool GetPrivacy()
+        {
+            return Privacy;
         }
 
     }
