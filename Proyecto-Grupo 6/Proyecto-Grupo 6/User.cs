@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Grupo_6
 {
+    [Serializable]
     class User
     {
         private string Name;
@@ -121,6 +122,11 @@ namespace Proyecto_Grupo_6
         public bool GetPrivacy()
         {
             return AccPrivacy;
+        }
+
+        public bool GetMember()
+        {
+            return Membership;
         }
     }
 }

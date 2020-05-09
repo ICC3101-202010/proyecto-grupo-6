@@ -13,6 +13,23 @@ namespace Proyecto_Grupo_6
     {
         static void Main(string[] args)
         {
+            InputOutput inp= new InputOutput();
+            App app = new App();
+            string case1 = inp.PrintStartMenu();
+            if (case1 == "3")
+            {
+                Console.WriteLine(app.CloseApp());
+            }
+            else if (case1 == "1")
+            {
+                string case2=inp.ProgramSong();
+                if (case2 == "3")
+                {
+                    inp.PrintStartMenu();
+                }
+            }
+            
+
         }
     }
 }

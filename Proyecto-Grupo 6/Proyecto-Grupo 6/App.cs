@@ -150,7 +150,101 @@ namespace Proyecto_Grupo_6
                 return "Invalid command";
             }
         }
+
+        public void AddSong()
+        {
+
+        }
+
+        public void AddVid()
+        {
+
+        }
         
+        public void SearchAndPlaySong()
+        {
+
+        }
+
+        public void SearchAndPlayVid()
+        {
+
+        }
+
+        public void PlayPlaylist()
+        {
+
+        }
+
+        public string FilterSongs()
+        {
+            return "";
+        }
+
+        public string FilterVids()
+        {
+            return "";
+        }
+
+        public string FilterAwards()
+        {
+            return "";
+        }
+
+        public string TopViewed()
+        {
+            return "";
+        }
+
+        public string TopRated()
+        {
+            return "";
+        }
+
+        public void AddToQueue(Multimedia archive)
+        {
+
+        }
+
+        public void ResetQueue(string queueType)
+        {
+
+        }
+
+        public void GetQueue(string queueType)
+        {
+
+        }
+
+        public string PlayQueue(string queueType)
+        {
+            if (queueType == "Songs")
+            {
+                return "Escuchando cola de canciones";
+            }
+
+            else if (queueType == "Videos")
+            {
+                return "Escuchando cola de videos";
+            }
+
+            else
+            {
+                return "No se encontro la cola";
+            }
+        }
+
+        public bool CheckMembership(User usercheck)
+        {
+            return (usercheck.GetMember());
+        }
+
+        public string CloseApp()
+        {
+            //guardar datos de usuario etc etc para recordar//
+            
+            return "Cerrando aplicacion";
+        }
 
     }
 }

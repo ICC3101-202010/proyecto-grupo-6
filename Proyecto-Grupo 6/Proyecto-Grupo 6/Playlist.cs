@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Grupo_6
 {
+    [Serializable]
     class Playlist
     {
         private string NamePlaylist;
@@ -58,6 +59,20 @@ namespace Proyecto_Grupo_6
         public bool GetPrivacy()
         {
             return Privacy;
+        }
+
+        public string AddMedia(Multimedia media) //Falta la logica para comprobar si el archivo ya existe dentro de la playlist//
+        {
+            if (media is Song)
+            {
+                AllFiles.Add(media);
+                return "Se anadio la cancion con exito";
+            }
+            else
+            {
+                AllFiles.Add(media);
+                return "Se anadio el video con exito";
+            }
         }
 
     }
