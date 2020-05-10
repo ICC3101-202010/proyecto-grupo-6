@@ -86,6 +86,11 @@ namespace Proyecto_Grupo_6
             return Reproductions;
         }
 
+        public virtual string GetName()
+        {
+            return Name;
+        }
+
     }
 
 

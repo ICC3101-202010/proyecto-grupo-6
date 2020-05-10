@@ -75,5 +75,62 @@ namespace Proyecto_Grupo_6
             }
         }
 
+        public string DeleteMedia(Multimedia media)
+        {
+            if (media is Song) 
+            {
+                bool checkDelete = false;
+                foreach (var a in AllFiles)
+                {
+                    if (media.GetName() == a.GetName() && media.GetHashCode()==a.GetHashCode())
+                    {
+                        AllFiles.Remove(a);
+                        checkDelete = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (checkDelete == true)
+                {
+                    return "Cancion eliminada con exito";
+                }
+                else
+                {
+                    return "No se encontro una cancion que cumpla las caracteristicas";
+                }
+            }
+            else
+            {
+                bool checkDelete = false;
+                foreach (var a in AllFiles)
+                {
+                    if (media.GetName() == a.GetName() && media.GetHashCode() == a.GetHashCode())
+                    {
+                        AllFiles.Remove(a);
+                        checkDelete = true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (checkDelete == true)
+                {
+                    return "Video eliminado con exito";
+                }
+                else
+                {
+                    return "No se encontro un video que cumpla las caracteristicas";
+                }
+            }
+        }
+
+        public List<Multimedia> GetAllMedia()
+        {
+            return AllFiles;
+        }
+
     }
 }

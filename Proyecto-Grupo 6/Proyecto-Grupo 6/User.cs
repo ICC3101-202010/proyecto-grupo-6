@@ -128,5 +128,15 @@ namespace Proyecto_Grupo_6
         {
             return Membership;
         }
+
+        public List<Playlist> GetYourMusic()
+        {
+            return this.YourMusic;
+        }
+
+        public List<Playlist> GetYourVideos()
+        {
+            return this.YourVideos;
+        }
     }
 }
