@@ -121,6 +121,20 @@ namespace Proyecto_Grupo_6
         {
             return Reproductions;
         }
+
+
+        public string GetName()
+        {
+            return this.Name;
+        }
+        public string GetGender()
+        {
+            return this.Kind;
+        }
+        public string GetAlbum()
+        {
+            return this.Album;
+        }
         //public string GetAwards()
         //{
         //string award = "";

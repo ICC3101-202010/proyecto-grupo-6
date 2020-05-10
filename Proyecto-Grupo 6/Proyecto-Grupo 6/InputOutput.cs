@@ -56,6 +56,28 @@ namespace Proyecto_Grupo_6
                         Console.WriteLine("Elija filtro:"+Environment.NewLine+"1. Nombre" + Environment.NewLine + "2. Artista" + Environment.NewLine + "3. Genero" + Environment.NewLine + "4. Album" + Environment.NewLine + "5. Multiple");
                         Console.Write("==>  ");
                         string input11 = Console.ReadLine();
+                        switch (input11)
+                        {
+                            case "1":
+                                Console.Write("ingrese nombre: ");
+
+                                break;
+                            case "2":
+                                Console.Write("ingrese artista: ");
+
+                                break;
+                            case "3":
+                                Console.Write("ingrese genero: ");
+                                
+                                break;
+                            case "4":
+                                Console.Write("ingrese album: ");
+
+                                break;
+                            case "5":
+
+                                break;
+                        }
                         return "1";
 
                     case "2":

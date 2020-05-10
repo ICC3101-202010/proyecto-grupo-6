@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -161,9 +162,36 @@ namespace Proyecto_Grupo_6
 
         }
         
-        public void SearchAndPlaySong()
+        public List<Song> SearchAndPlaySong(List<string> filter)
         {
+            List<Song> songFilter = new List<Song>();
 
+            foreach (var b in filter)
+            {
+
+                foreach (var a in allSongs)
+                {
+
+                    if (a.GetName() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetArtistSong() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetGender() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetAlbum() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+
+                }
+            }
+            return songFilter;
         }
 
         public void SearchAndPlayVid()
