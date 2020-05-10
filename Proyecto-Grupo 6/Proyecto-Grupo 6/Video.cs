@@ -111,5 +111,10 @@ namespace Proyecto_Grupo_6
             return Reproductions;
         }
 
+        public override string GetName()
+        {
+            return Name;
+        }
+
     }
 }

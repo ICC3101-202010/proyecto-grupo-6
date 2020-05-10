@@ -123,7 +123,7 @@ namespace Proyecto_Grupo_6
         }
 
 
-        public string GetName()
+        public override string GetName()
         {
             return this.Name;
         }

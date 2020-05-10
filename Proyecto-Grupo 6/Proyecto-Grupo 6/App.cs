@@ -267,6 +267,11 @@ namespace Proyecto_Grupo_6
             return (usercheck.GetMember());
         }
 
+        public Server GetServer()
+        {
+            return server;
+        }
+
         public string CloseApp()
         {
             //guardar datos de usuario etc etc para recordar//

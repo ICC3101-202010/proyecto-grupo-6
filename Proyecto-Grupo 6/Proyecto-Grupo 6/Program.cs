@@ -27,6 +27,14 @@ namespace Proyecto_Grupo_6
                 {
                     inp.PrintStartMenu();
                 }
+                else if (case2 == "1")
+                {
+                    inp.SearchSong(app);
+                }
+                else if (case2 == "2")
+                {
+                    inp.ProgramPlaylist(app,0);
+                }
             }
             
 
