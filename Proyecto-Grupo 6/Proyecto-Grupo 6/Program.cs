@@ -15,25 +15,56 @@ namespace Proyecto_Grupo_6
         {
             InputOutput inp= new InputOutput();
             App app = new App();
-            string case1 = inp.PrintStartMenu();
-            if (case1 == "3")
+            while (true)
             {
-                Console.WriteLine(app.CloseApp());
-            }
-            else if (case1 == "1")
-            {
-                string case2=inp.ProgramSong();
-                if (case2 == "3")
+                Console.Clear();
+                string case1 = inp.PrintStartMenu();
+                if (case1 == "3")
                 {
-                    inp.PrintStartMenu();
+                    Console.WriteLine(app.CloseApp());
+                    break;
                 }
-                else if (case2 == "1")
+                else if (case1 == "1")
                 {
-                    inp.SearchSong(app);
+                    string case2 = inp.ProgramSong();
+                    if (case2 == "3")
+                    {
+                        continue;
+                    }
+                    else if (case2 == "1")
+                    {
+                        inp.SearchSong(app);
+                    }
+                    else if (case2 == "2")
+                    {
+                        inp.ProgramPlaylist(app, 0);
+                    }
                 }
-                else if (case2 == "2")
+
+                else if (case1 == "2")
                 {
-                    inp.ProgramPlaylist(app,0);
+                    string case2 = inp.ProgramVideo();
+                    if (case2 == "3")
+                    {
+                        continue;
+                    }
+                    else if (case2 == "1")
+                    {
+                        inp.SearchSong(app);
+                    }
+                    else if (case2 == "2")
+                    {
+                        inp.ProgramPlaylist(app, 1);
+                    }
+                }
+
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Input Invalido");
+                    System.Threading.Thread.Sleep(2000);
+                    Console.Clear();
+                    continue;
                 }
             }
             
