@@ -13,13 +13,13 @@ namespace Proyecto_Grupo_6
         private List<Workers> Composer;
         private string Album;
         private string Lyrics;
-        private List<string> Awards;
+        private List<Awards> Awards;
 
         public override string Play()
         {
             return ("Se esta reproduciendo la cancion");
         }
-        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<string> Awards, List<Workers> Composer, int Lenght)
+        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<Awards> Awards, List<Workers> Composer, int Lenght)
         {
             this.Name = Name;
             this.Kind = Kind;

@@ -12,7 +12,7 @@ namespace Proyecto_Grupo_6
         {
             while (true)
             {
-                Console.WriteLine("BIENVENIDO A ERNESTIFAI"+Environment.NewLine);
+                Console.WriteLine("BIENVENIDO A PEORESNADA"+Environment.NewLine);
                 Console.WriteLine("1. Modo Cancion" + Environment.NewLine + "2. Modo Video" + Environment.NewLine + "3. Salir");
                 Console.Write("==>  ");
                 string input = Console.ReadLine();
@@ -76,9 +76,37 @@ namespace Proyecto_Grupo_6
         
         
         
-        public void ProgramVideo()
+        public string ProgramVideo()
         {
-            Console.WriteLine("viendo mi pana miguel");
+            while (true)
+            {
+                Console.Clear();
+                Console.WriteLine("USTED ENTRO A MENU DE VIDEOS" + Environment.NewLine);
+                Console.WriteLine("1. Buscar Videos" + Environment.NewLine + "2. Playlists" + Environment.NewLine + "3. Volver atras");
+                Console.Write("==>  ");
+                string input1 = Console.ReadLine();
+                switch (input1)
+                {
+                    case "1":
+
+                        return "1";
+
+                    case "2":
+
+                        return "2";
+
+                    case "3":
+                        Console.Clear();
+                        return "3";
+
+                    default:
+                        Console.Clear();
+                        Console.WriteLine("Input erroneo");
+                        System.Threading.Thread.Sleep(2000);
+                        continue;
+
+                }
+            }
         }
 
         public void SearchSong(App app)
@@ -139,7 +167,8 @@ namespace Proyecto_Grupo_6
         {
             while (true)
             {
-                Console.WriteLine("1. Ver todas las playlists" + Environment.NewLine + "2. Ver tus playlists y escucharlas o editarlas" + Environment.NewLine + "3. Crear Playlist" + Environment.NewLine + "4. Volver atras");
+                Console.Clear();
+                Console.WriteLine("1. Ver todas las playlists" + Environment.NewLine + "2. Ver tus playlists y reproducirlas o editarlas" + Environment.NewLine + "3. Crear Playlist" + Environment.NewLine + "4. Volver atras");
                 Console.Write("==>  ");
                 string choice = Console.ReadLine();
                 if (choice == "1")
@@ -152,7 +181,7 @@ namespace Proyecto_Grupo_6
                     {
                         Console.WriteLine(app.SeeVidPL());
                     }
-                    break;
+                    continue;
                 }
                 else if (choice == "2")
                 {
@@ -161,10 +190,10 @@ namespace Proyecto_Grupo_6
                         List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourMusic();
                         for (int i = 0; i < userPlaylists.Count(); i++)
                         {
-                            Console.WriteLine((i+1)+" "+userPlaylists[i].GetInfoPL()+Environment.NewLine);
+                            Console.WriteLine((i + 1) + " " + userPlaylists[i].GetInfoPL() + Environment.NewLine);
                         }
                         Console.Write("Elija playlist: ");
-                        int plChoice = Int32.Parse(Console.ReadLine())-1;
+                        int plChoice = Int32.Parse(Console.ReadLine()) - 1;
                         Console.Clear();
                         while (true)
                         {
@@ -196,7 +225,7 @@ namespace Proyecto_Grupo_6
                                 Console.Write("Elija la cancion para eliminar: ");
                                 int choiceDelete = Int32.Parse(Console.ReadLine());
                                 Console.WriteLine(app.GetServer().GetActive().GetYourMusic()[plChoice].DeleteMedia(userPlaylists[plChoice].GetAllMedia()[choiceDelete]));
-                                
+
                                 System.Threading.Thread.Sleep(2000);
                                 Console.Clear();
                                 continue;
@@ -221,13 +250,80 @@ namespace Proyecto_Grupo_6
 
                     else
                     {
+                        List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourVideos();
+                        for (int i = 0; i < userPlaylists.Count(); i++)
+                        {
+                            Console.WriteLine((i + 1) + " " + userPlaylists[i].GetInfoPL() + Environment.NewLine);
+                        }
+                        Console.Write("Elija playlist: ");
+                        int plChoice = Int32.Parse(Console.ReadLine()) - 1;
+                        Console.Clear();
+                        while (true)
+                        {
+                            Console.WriteLine(userPlaylists[plChoice].GetNamePL() + Environment.NewLine);
+                            List<Multimedia> playlistFiles = userPlaylists[plChoice].GetAllMedia();
+                            int b = 1;
+                            foreach (var a in playlistFiles)
+                            {
+                                Console.WriteLine(b + ". " + a.GetData());
+                            }
+                            Console.WriteLine("Que desea hacer con la playlist?" + Environment.NewLine + "" + "1. Ver playlist" + Environment.NewLine + "2. Agregar video" + Environment.NewLine + "3. Eliminar video" + Environment.NewLine + "4. Volver atras");
+                            Console.Write("==>  ");
+                            string choicePL = Console.ReadLine();
+                            if (choicePL == "1")
+                            {
+                                Console.WriteLine("Se esta viendo la Playlist");
+                                break;
+                            }
+                            else if (choicePL == "2")
+                            {
+                                Console.WriteLine("Escriba el nombre de la cancion a anadir:");
+                                List<string> searchParameter = new List<string>() { Console.ReadLine() };
+                                Console.WriteLine(app.GetServer().GetActive().GetYourMusic()[plChoice].AddMedia(app.SearchAndPlaySong(searchParameter)[0]));
+                                System.Threading.Thread.Sleep(2000);
+                                continue;
+                            }
+                            else if (choicePL == "3")
+                            {
+                                Console.Write("Elija la cancion para eliminar: ");
+                                int choiceDelete = Int32.Parse(Console.ReadLine());
+                                Console.WriteLine(app.GetServer().GetActive().GetYourMusic()[plChoice].DeleteMedia(userPlaylists[plChoice].GetAllMedia()[choiceDelete]));
 
+                                System.Threading.Thread.Sleep(2000);
+                                Console.Clear();
+                                continue;
+                            }
+                            else if (choicePL == "4")
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                Console.Clear();
+                                Console.WriteLine("Input invalido");
+                                System.Threading.Thread.Sleep(2000);
+                                Console.Clear();
+                                continue;
+                            }
+                            
+                        }
                     }
-                    break;
+                    
                 }
                 else if (choice == "3")
                 {
-                    break;
+                    //crear playlist//
+                    if (diff == 0)
+                    {
+                        Console.Write("Ingrese el nombre de la playlist: ");
+                        app.MakePL("Songs", Console.ReadLine(), false, new List<Multimedia>());
+                    }
+                    else
+                    {
+                        Console.Write("Ingrese el nombre de la playlist: ");
+                        app.MakePL("Videos", Console.ReadLine(), false, new List<Multimedia>());
+                    }
+                    continue;
                 }
                 else if (choice == "4")
                 {
@@ -242,6 +338,11 @@ namespace Proyecto_Grupo_6
 
                 }
             }
+        }
+
+        public void SearchVideo(App app)
+        {
+
         }
 
     }

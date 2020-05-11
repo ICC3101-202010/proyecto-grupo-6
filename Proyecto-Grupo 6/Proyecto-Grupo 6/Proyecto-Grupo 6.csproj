@@ -46,6 +46,7 @@
     <Compile Include="Admin.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Atributtes.cs" />
+    <Compile Include="Awards.cs" />
     <Compile Include="InputOutput.cs" />
     <Compile Include="Multimedia .cs" />
     <Compile Include="Playlist.cs" />

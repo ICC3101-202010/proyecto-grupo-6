@@ -72,7 +72,7 @@ namespace Proyecto_Grupo_6
         }
 
         
-        public string MakePL(string PLType,string NamePlaylist, string KindPlaylist, bool Privacy, List<Multimedia> AllFiles)
+        public string MakePL(string PLType,string NamePlaylist, bool Privacy, List<Multimedia> AllFiles)
         {
             if (PLType == "Songs")
             {
@@ -93,14 +93,16 @@ namespace Proyecto_Grupo_6
                     Playlist playlist = new Playlist();
                     if (server.GetActive().GetPrivacy() == false)
                     {
-                        playlist.CreatePlaylist(NamePlaylist, KindPlaylist, Privacy, AllFiles, server.GetActive());
+                        playlist.CreatePlaylist(NamePlaylist, Privacy, AllFiles, server.GetActive());
                         allMusicPL.Add(playlist);
+                        server.AddMusicPlaylist(playlist);
                         return "Playlist created successfully";
                     }
                     else
                     {
-                        playlist.CreatePlaylist(NamePlaylist, KindPlaylist, true, AllFiles, server.GetActive()); //playlist privada porque usuario privado//
+                        playlist.CreatePlaylist(NamePlaylist, true, AllFiles, server.GetActive()); //playlist privada porque usuario privado//
                         allMusicPL.Add(playlist);
+                        server.AddMusicPlaylist(playlist);
                         return "Playlist created successfully";
                     }
                     
@@ -129,14 +131,16 @@ namespace Proyecto_Grupo_6
                     Playlist playlist = new Playlist();
                     if (server.GetActive().GetPrivacy() == false)
                     {
-                        playlist.CreatePlaylist(NamePlaylist, KindPlaylist, Privacy, AllFiles, server.GetActive());
-                        allMusicPL.Add(playlist);
+                        playlist.CreatePlaylist(NamePlaylist, Privacy, AllFiles, server.GetActive());
+                        allVidPL.Add(playlist);
+                        server.AddVidPlaylist(playlist);
                         return "Playlist created successfully";
                     }
                     else
                     {
-                        playlist.CreatePlaylist(NamePlaylist, KindPlaylist, true, AllFiles, server.GetActive()); //playlist provada porque usuario privado//
-                        allMusicPL.Add(playlist);
+                        playlist.CreatePlaylist(NamePlaylist, true, AllFiles, server.GetActive()); //playlist provada porque usuario privado//
+                        allVidPL.Add(playlist);
+                        server.AddVidPlaylist(playlist);
                         return "Playlist created successfully";
                     }
                 }

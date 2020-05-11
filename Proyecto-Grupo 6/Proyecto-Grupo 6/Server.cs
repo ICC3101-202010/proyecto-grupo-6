@@ -103,5 +103,15 @@ namespace Proyecto_Grupo_6
             return activeUser;
         }
 
+        public void AddMusicPlaylist(Playlist playlist)
+        {
+            activeUser.AddMusicPlaylist(playlist);
+        }
+
+        public void AddVidPlaylist(Playlist playlist)
+        {
+            activeUser.AddVidPlaylist(playlist);
+        }
+
     }
 }
