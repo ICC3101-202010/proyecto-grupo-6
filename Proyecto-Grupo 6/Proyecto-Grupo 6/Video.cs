@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto_Grupo_6
 {
@@ -21,14 +24,14 @@ namespace Proyecto_Grupo_6
         {
             return ("Se ha agregado un archivo imagen.jpg al video");
         }
-        public void AddVideo(string Name, string Kind, string Studio, List<Workers> Directors, List<Workers> Actors, int Lenght)
+        public void AddVideo(string Name, string Kind, string Studio, List<Workers> Directors, List<Workers> Actors, int Length)
         {
             this.Name = Name;
             this.Kind = Kind;
             this.Studio = Studio;
             this.Directors = Directors;
             this.Actors = Actors;
-            this.Lenght = Lenght;
+            this.Length = Length;
         }
         public override void SetRating(List<Rating> Rating)
         {
@@ -65,7 +68,7 @@ namespace Proyecto_Grupo_6
         }
         public override int GetDataNumber()
         {
-            return (this.Lenght + this.Reproductions + this.Size + this.Likes);
+            return (this.Length + this.Reproductions + this.Size + this.Likes);
         }
         public void SetActorsVideo(List<Workers> Actors)
         {
@@ -114,6 +117,16 @@ namespace Proyecto_Grupo_6
         public override string GetName()
         {
             return Name;
+        }
+
+        public string GetKind()
+        {
+            return Kind;
+        }
+
+        public string GetStudio()
+        {
+            return Studio;
         }
 
     }

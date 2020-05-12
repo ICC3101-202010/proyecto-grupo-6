@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto_Grupo_6
 {
@@ -13,21 +16,21 @@ namespace Proyecto_Grupo_6
         private string Surname;
         private string Username;
         private string Password;
-        private List<Playlist> YourMusic;
-        private List<Playlist> YourVideos;
+        private List<Playlist> YourMusic=new List<Playlist>() { };
+        private List<Playlist> YourVideos = new List<Playlist>() { };
         private bool AVI; //la foto de perfil la definimos momentaneamente como un bool. tiene o no//
-        private List<Multimedia> FaveSongs;
-        private List<Multimedia> FaveVids;
+        private List<Multimedia> FaveSongs = new List<Multimedia>() { };
+        private List<Multimedia> FaveVids = new List<Multimedia>() { };
         private bool AccPrivacy;
         private bool Membership = false;
-        private List<Multimedia> Downloads;
-        private string Time;
-        private List<Multimedia> SongQueue;
-        private List<Multimedia> VidQueue;
-        private List<Playlist> FollowedPlaylistMusic;
-        private List<Playlist> FollowedPlaylistVid;
-        private List<Workers> FollowedArtists;
-        private List<User> FollowedUsers;
+        private List<Multimedia> Downloads = new List<Multimedia>() { };
+        private string Time="";
+        private List<Multimedia> SongQueue = new List<Multimedia>() { };
+        private List<Multimedia> VidQueue = new List<Multimedia>() { };
+        private List<Playlist> FollowedPlaylistMusic = new List<Playlist>() { };
+        private List<Playlist> FollowedPlaylistVid = new List<Playlist>() { };
+        private List<Workers> FollowedArtists = new List<Workers>() { };
+        private List<User> FollowedUsers = new List<User>() { };
         private bool Admin;
 
         public void SignUp(string Name, string Surname, string Password, string Username, bool AVI)

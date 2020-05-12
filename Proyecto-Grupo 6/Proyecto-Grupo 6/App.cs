@@ -4,6 +4,9 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Proyecto_Grupo_6
@@ -15,7 +18,11 @@ namespace Proyecto_Grupo_6
         private List<Video> allVideos = new List<Video>();
         private List<Playlist> allMusicPL = new List<Playlist>();
         private List<Playlist> allVidPL = new List<Playlist>();
+        private List<User> allUser = new List<User>();
+        private List<Workers> allWorkers = new List<Workers>();
+        
         private Server server = new Server();
+        private Admin admin = new Admin();
         
         public string SeeMusicPL() //Solo va a mostrar las playlist publicas de la app//
         {
@@ -156,14 +163,18 @@ namespace Proyecto_Grupo_6
             }
         }
 
-        public void AddSong()
+        public void AddSong(string name,string kind, string album, List<Workers> artists, List<Awards> awards,List<Workers> composers,int length)
         {
-
+            Song song = new Song();
+            song.AddSong(name, kind, album, artists, awards, composers, length);
+            allSongs.Add(song);
         }
 
-        public void AddVid()
+        public void AddVid(string name,string kind, string studio, List<Workers> directors, List<Workers> actors,int length)
         {
-
+            Video video = new Video();
+            video.AddVideo(name, kind, studio, directors, actors, length);
+            allVideos.Add(video);
         }
         
         public List<Song> SearchAndPlaySong(List<string> filter)
@@ -198,9 +209,32 @@ namespace Proyecto_Grupo_6
             return songFilter;
         }
 
-        public void SearchAndPlayVid()
+        public List<Video> SearchAndPlayVid(List<string> filter)
         {
+            List<Video> videoFilter = new List<Video>();
 
+            foreach (var b in filter)
+            {
+
+                foreach (var a in allVideos)
+                {
+
+                    if (a.GetName() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+                    if (a.GetKind() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+                    if (a.GetStudio() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+                    
+                }
+            }
+            return videoFilter;
         }
 
         public void PlayPlaylist()
@@ -278,10 +312,149 @@ namespace Proyecto_Grupo_6
 
         public string CloseApp()
         {
-            //guardar datos de usuario etc etc para recordar//
+            saveUser(server.GetUsers());                        
+            saveAdmin(admin);
+            savePlaylistS(allMusicPL);
+            savePlaylistV(allVidPL);
+            saveSongs(allSongs);
+            saveVideos(allVideos);
+            saveWorkers(allWorkers);
+            
+            
             
             return "Cerrando aplicacion";
         }
+
+        public void OpenApp()
+        {
+            allUser = LoadUser();
+            server.SetUsers(allUser);           
+            admin = LoadAdmin();
+            allMusicPL = LoadPlaylistS();
+            allVidPL = LoadPlaylistV();
+            allWorkers = LoadWorkers();
+            allSongs = LoadSongs();
+            allVideos = LoadVideo();
+            
+            
+        }
+
+        public string Login(string userName, string passWord)
+        {
+            return server.Login(userName, passWord);
+        }
+
+        public string Register(string name, string surName, string userName, string passWord, bool AVI=false)
+        {
+            return server.Register(name, surName, userName, passWord, AVI);
+        }
+
+        public void saveUser(List<User> allUser)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allUser);
+            stream.Close();
+        }
+        private List<User> LoadUser()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<User> allUser = (List<User>)formatter.Deserialize(stream);
+            stream.Close();
+            return allUser;
+        }
+        public void saveAdmin(Admin admin)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Admin.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, admin);
+            stream.Close();
+        }
+        private Admin LoadAdmin()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Admin.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Admin admin = (Admin)formatter.Deserialize(stream);
+            stream.Close();
+            return admin;
+        }
+        public void saveWorkers(List<Workers> allWorkers)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Worker.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allWorkers);
+            stream.Close();
+        }
+        private List<Workers> LoadWorkers()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Worker.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Workers> allWorkers = (List<Workers>)formatter.Deserialize(stream);
+            stream.Close();
+            return allWorkers;
+        }
+        public void savePlaylistS(List<Playlist> allMusicPL)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("SongPL.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allMusicPL);
+            stream.Close();
+        }
+        private List<Playlist> LoadPlaylistS()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("SongPL.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Playlist> allMusicPL = (List<Playlist>)formatter.Deserialize(stream);
+            stream.Close();
+            return allMusicPL;
+        }
+        public void savePlaylistV(List<Playlist> allVidPL)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("VidPL.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allVidPL);
+            stream.Close();
+        }
+        private List<Playlist> LoadPlaylistV()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("VidPL.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Playlist> allVidPL = (List<Playlist>)formatter.Deserialize(stream);
+            stream.Close();
+            return allVidPL;
+        }
+        public void saveSongs(List<Song> allSongs)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allSongs);
+            stream.Close();
+        }
+        private List<Song> LoadSongs()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Song> allSongs = (List<Song>)formatter.Deserialize(stream);
+            stream.Close();
+            return allSongs;
+        }
+        public void saveVideos(List<Video> allVideos)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allVideos);
+            stream.Close();
+        }
+        private List<Video> LoadVideo()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Videos.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            List<Video> allVideos = (List<Video>)formatter.Deserialize(stream);
+            stream.Close();
+            return allVideos;
+        }
+
 
     }
 }
