@@ -757,7 +757,7 @@ namespace Proyecto_Grupo_6
             }
 
 
-            else
+            else if(diff==1)
             {
                 List<User> allfollowed = app.GetServer().GetActive().GetFollowedUsers();
                 Console.Write("Ingrese username: ");
@@ -775,6 +775,87 @@ namespace Proyecto_Grupo_6
                     app.GetServer().GetActive().FollowUser(followUser);
                     return "Se comenzo a seguir el usuario";
                 }
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("1. Escuchar cola de musica"+Environment.NewLine+"2. Agregar cancion a la cola"+Environment.NewLine+"3. Vaciar cola de musica"+ Environment.NewLine+"4. Ver cola de video" + Environment.NewLine + "5. Agregar video a la cola" + Environment.NewLine + "6. Vaciar cola de video"+Environment.NewLine+"7. Volver atras");
+                Console.Write("==>  ");
+                string queueChoice = Console.ReadLine();
+                Console.Clear();
+                if (queueChoice == "1")
+                {
+                    if (app.GetServer().GetActive().GetQueue(0).Count() == 0)
+                    {
+                        return "La cola esta vacia!";
+                    }
+                    else
+                    {
+                        return "Se esta escuchando la cola";
+                    }
+                }
+
+                else if (queueChoice == "2")
+                {
+                    Console.Write("Ingrese nombre de la cancion: ");
+                    string name = Console.ReadLine();
+                    Song song=app.SearchforSong(name);
+                    if (song.GetName() != "")
+                    {
+                        app.GetServer().GetActive().AddSongQueue(song);
+                        return "Se agrego la cancion a la cola";
+                    }
+                    else
+                    {
+                        return "No se encontro la cancion";
+                    }
+                }
+
+                else if (queueChoice == "3")
+                {
+                    app.GetServer().GetActive().ResetQueue(0);
+                    return "Se vacio la cola";
+                }
+
+                else if (queueChoice == "4")
+                {
+                    if (app.GetServer().GetActive().GetQueue(1).Count() == 0)
+                    {
+                        return "La cola esta vacia!";
+                    }
+                    else
+                    {
+                        return "Se esta viendo la cola";
+                    }
+                }
+
+                else if (queueChoice == "5")
+                {
+                    Console.Write("Ingrese nombre de la cancion: ");
+                    string name = Console.ReadLine();
+                    Video video = app.SearchforVid(name);
+                    if (video.GetName() != "")
+                    {
+                        app.GetServer().GetActive().AddVidQueue(video);
+                        return "Se agrego la cancion a la cola";
+                    }
+                    else
+                    {
+                        return "No se encontro la cancion";
+                    }
+                }
+
+                else if (queueChoice == "6")
+                {
+                    app.GetServer().GetActive().ResetQueue(1);
+                    return "Se vacio la cola";
+                }
+
+                else
+                {
+                    return "Volviendo atras";
+                }
+
             }
         }
 
@@ -857,6 +938,16 @@ namespace Proyecto_Grupo_6
                 Console.WriteLine("LA ELITE MUSICAL TE DESEA UN BUEN VIAJE");
                 System.Threading.Thread.Sleep(2000);
             }
+        }
+
+        public void ProgramRating(App app,int diff)
+        {
+
+        }
+
+        public void ProgramReview(App app)
+        {
+
         }
 
     }

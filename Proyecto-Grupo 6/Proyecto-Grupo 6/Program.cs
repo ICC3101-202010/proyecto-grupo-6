@@ -160,12 +160,19 @@ namespace Proyecto_Grupo_6
                 {
                     Console.Clear();
                     Console.WriteLine("USTED ENTRO A MENU DE USUARIOS" + Environment.NewLine);
-                    Console.WriteLine("1. Ver usuarios que sigues"+Environment.NewLine+ "2. Buscar usuario por username y seguir" + Environment.NewLine+ "3. Volver atras" + Environment.NewLine);
+                    Console.WriteLine("Y. Tu"+Environment.NewLine+"1. Ver usuarios que sigues"+Environment.NewLine+ "2. Buscar usuario por username y seguir" + Environment.NewLine+ "3. Volver atras" + Environment.NewLine);
                     string userchoice = Console.ReadLine();
                     if (userchoice == "3")
                     {
                         continue;
                     }
+
+                    else if (userchoice == "Y")
+                    {
+                        Console.WriteLine(inp.UserMenu(app, 2));
+                        System.Threading.Thread.Sleep(2000);
+                    }
+
                     else if (userchoice == "1")
                     {
                         Console.WriteLine(inp.UserMenu(app, 0));

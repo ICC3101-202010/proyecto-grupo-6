@@ -236,33 +236,23 @@ namespace Proyecto_Grupo_6
             }
             return videoFilter;
         }
-
-        
         
 
-        public string FilterAwards()
+        public void AddToQueue(Multimedia archive, int diff)
         {
-            return "";
+            if (diff == 0)
+            {
+                server.GetActive().AddSongQueue(archive);
+            }
+            else
+            {
+                server.GetActive().AddVidQueue(archive);
+            }
         }
 
-        public string TopViewed()
+        public void ResetQueue(string queueType, int diff)
         {
-            return "";
-        }
-
-        public string TopRated()
-        {
-            return "";
-        }
-
-        public void AddToQueue(Multimedia archive)
-        {
-
-        }
-
-        public void ResetQueue(string queueType)
-        {
-
+;            server.GetActive().ResetQueue(diff);
         }
 
         public void GetQueue(string queueType)
@@ -464,6 +454,34 @@ namespace Proyecto_Grupo_6
         {
             return allSongs;
         }
+
+        public Song SearchforSong(string name)
+        {
+            Song song = new Song();
+            for (int i=0; i < allSongs.Count(); i++)
+            {
+                if (name == allSongs[i].GetName())
+                {
+                    song = allSongs[i];
+                }
+            }
+            return song;
+        }
+
+        public Video SearchforVid(string name)
+        {
+            Video video = new Video();
+            for (int i = 0; i < allVideos.Count(); i++)
+            {
+                if (name == allVideos[i].GetName())
+                {
+                    video = allVideos[i];
+                }
+            }
+            return video;
+
+        }
+
 
 
     }

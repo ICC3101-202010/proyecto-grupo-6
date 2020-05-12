@@ -166,5 +166,40 @@ namespace Proyecto_Grupo_6
         {
             return FollowedArtists;
         }
+        public void ResetQueue(int diff)
+        {
+            if (diff == 0)
+            {
+                this.SongQueue = new List<Multimedia>();
+            }
+            else
+            {
+                this.VidQueue = new List<Multimedia>();
+            }
+        }
+
+        public List<Multimedia> GetQueue(int diff)
+        {
+            if (diff == 0)
+            {
+                return this.SongQueue;
+            }
+            else
+            {
+                return this.VidQueue;
+            }
+        }
+
+        public void SetQueue(int diff, List<Multimedia> newQueue)
+        {
+            if (diff == 0)
+            {
+                this.SongQueue = newQueue;
+            }
+            else
+            {
+                this.VidQueue = newQueue;
+            }
+        }
     }
 }
