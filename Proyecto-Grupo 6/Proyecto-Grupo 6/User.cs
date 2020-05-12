@@ -146,5 +146,25 @@ namespace Proyecto_Grupo_6
         {
             return Admin;
         }
+
+        public List<User> GetFollowedUsers()
+        {
+            return FollowedUsers;
+        }
+
+        public List<Playlist> GetFollowedMusicPL()
+        {
+            return FollowedPlaylistMusic;
+        }
+
+        public List<Playlist> GetFollowedVidPL()
+        {
+            return FollowedPlaylistVid;
+        }
+
+        public List<Workers> GetFollowedArtists()
+        {
+            return FollowedArtists;
+        }
     }
 }

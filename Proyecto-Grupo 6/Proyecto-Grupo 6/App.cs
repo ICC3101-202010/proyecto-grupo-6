@@ -237,20 +237,8 @@ namespace Proyecto_Grupo_6
             return videoFilter;
         }
 
-        public void PlayPlaylist()
-        {
-
-        }
-
-        public string FilterSongs()
-        {
-            return "";
-        }
-
-        public string FilterVids()
-        {
-            return "";
-        }
+        
+        
 
         public string FilterAwards()
         {
@@ -458,6 +446,23 @@ namespace Proyecto_Grupo_6
         public Admin GetAdmin()
         {
             return admin;
+        }
+
+        public List<Playlist> GetPlaylist(int diff)
+        {
+            if (diff == 0)
+            {
+                return allMusicPL;
+            }
+            else
+            {
+                return allVidPL;
+            }
+        }
+
+        public List<Song> GetAllSongs()
+        {
+            return allSongs;
         }
 
 
