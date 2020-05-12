@@ -13,7 +13,7 @@ namespace Proyecto_Grupo_6
     [Serializable]
     abstract class Multimedia
     {
-        protected string Name;
+        protected string Name="";
         protected string Kind;
         protected int Length;
         protected string Date="";
@@ -37,11 +37,11 @@ namespace Proyecto_Grupo_6
 
         public virtual void SetRating(List<Rating> Rating)
         {
-
+            this.Rating = Rating;
         }
         public virtual void SetReview(List<Review> Review)
         {
-
+            this.Review = Review;
         }
         public virtual int GetRating()
         {
