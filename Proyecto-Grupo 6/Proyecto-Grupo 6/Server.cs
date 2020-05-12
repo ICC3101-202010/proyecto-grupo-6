@@ -12,7 +12,7 @@ namespace Proyecto_Grupo_6
     [Serializable]
     class Server
     {
-        private List<User> AllUser = new List<User>();
+        private List<User> AllUser;
         private User activeUser;
 
         public string Login(string Username, string Password)
@@ -53,7 +53,7 @@ namespace Proyecto_Grupo_6
             }
             if (counter == 1)
             {
-                return ("Login In");
+                return ("Login in...");
             }
             else if (counter == -1)
             {
@@ -124,6 +124,76 @@ namespace Proyecto_Grupo_6
         public List<User> GetUsers()
         {
             return AllUser;
+        }
+
+        public string ToggleAdmin(string Username,string Password, int diff,App app)
+        {
+            User checkuser;
+            int position = 0;
+            int counter = 0;
+            for (int i = 0; i < AllUser.Count(); i++)
+            {
+                if (Username == AllUser[i].GetUsername())
+                {
+                    checkuser = AllUser[i];
+
+
+                    if (Password == checkuser.GetPassword())
+                    {
+
+                        if (diff == 0)
+                        {
+                            AllUser[position].ToggleAdmin(true);
+                            app.GetAdmin().AddAdmin(AllUser[position]);
+                            counter += 1;
+                            break;
+                        }
+                        else
+                        {
+                            AllUser[position].ToggleAdmin(false);
+                            app.GetAdmin().RemoveAdmin(AllUser[position]);
+                            counter += 1;
+                            break;
+                        }
+
+                    }
+                    else
+                    {
+
+                        counter -= 1;
+                        break;
+                    }
+                }
+
+                else
+                {
+                    continue;
+                }
+
+
+
+
+            }
+            if (counter == 1)
+            {
+                if (diff == 0)
+                {
+                    return ("Se dio admin al usuario exitosamente");
+                }
+                else
+                {
+                    return ("Se quito admin al usuario exitosamente");
+                }
+            }
+            else if (counter == -1)
+            {
+                return ("Contraseña o Usuario Incorrecto");
+            }
+            else
+            {
+                return ("Contraseña o Usuario Incorrecto");
+
+            }
         }
 
     }

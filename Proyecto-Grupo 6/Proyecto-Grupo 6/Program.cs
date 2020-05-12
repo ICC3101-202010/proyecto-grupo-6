@@ -31,7 +31,7 @@ namespace Proyecto_Grupo_6
                     string login = app.Login(usn, psw);
                     Console.WriteLine(login);
                     System.Threading.Thread.Sleep(2000);
-                    if (login == "Login In")
+                    if (login == "Login in...")
                     {
                         break;
                     }
@@ -55,7 +55,7 @@ namespace Proyecto_Grupo_6
                     string register = app.Register(name, surn, usern, pswd);
                     Console.WriteLine(register);
                     System.Threading.Thread.Sleep(2000);
-                    if (register== "El Nombre de usuario no esta disponible")
+                    if (register== "El nombre de usuario no esta disponible")
                     {
                         continue;
                     }
@@ -74,6 +74,72 @@ namespace Proyecto_Grupo_6
                     app.CloseApp();
                     Environment.Exit(0);
                     break;
+                }
+
+                else if (loginMenu == "A")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Usted entro a manejo admin");
+                    Console.WriteLine("Ingrese adminPass (es adminadmin)");
+                    Console.Write("==>  ");
+                    string adminLogin = Console.ReadLine();
+                    if (adminLogin == "adminadmin")
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Bienvenido al Admin Manager"+Environment.NewLine);
+                        Console.WriteLine("Ingrese lo que quiere hacer"+Environment.NewLine+"1. Darle admin a un usuario"+Environment.NewLine+"2. Quitarle admin a un usuario"+Environment.NewLine+"3. Volver atras");
+                        Console.Write("==>  ");
+                        string adminchoice = Console.ReadLine();
+                        if (adminchoice == "1")
+                        {
+                            Console.Clear();
+                            Console.Write("Ingrese nombre de usuario: ");
+                            string usn = Console.ReadLine();
+                            Console.Write("Ingrese contrasena: ");
+                            string psw = Console.ReadLine();
+                            string login = app.GetServer().ToggleAdmin(usn, psw, 0, app);
+                            Console.WriteLine(login);
+                            System.Threading.Thread.Sleep(2000);
+                            if (login =="Se dio admin al usuario exitosamente")
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else if (adminchoice == "2")
+                        {
+                            Console.Clear();
+                            Console.Write("Ingrese nombre de usuario: ");
+                            string usn = Console.ReadLine();
+                            Console.Write("Ingrese contrasena: ");
+                            string psw = Console.ReadLine();
+                            string login = app.GetServer().ToggleAdmin(usn, psw, 1, app);
+                            Console.WriteLine(login);
+                            System.Threading.Thread.Sleep(2000);
+                            if (login == "Se quito admin al usuario exitosamente")
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("El adminPass es incorrecto");
+                        System.Threading.Thread.Sleep(2000);
+                        continue;
+                    }
                 }
 
                 else
@@ -113,7 +179,16 @@ namespace Proyecto_Grupo_6
                     }
                     else
                     {
-                        inp.AddMedia(app, 0);
+                        if (app.GetServer().GetActive().GetAdmin() == true)
+                        {
+                            inp.AddMedia(app, 0);
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("No tienes admin!");
+                            System.Threading.Thread.Sleep(2000);
+                        }
                     }
                 }
 
@@ -126,7 +201,7 @@ namespace Proyecto_Grupo_6
                     }
                     else if (case2 == "1")
                     {
-                        inp.SearchSong(app);
+                        inp.SearchVideo(app);
                     }
                     else if (case2 == "2")
                     {
@@ -134,7 +209,16 @@ namespace Proyecto_Grupo_6
                     }
                     else if (case2 == "A")
                     {
-                        inp.AddMedia(app, 1);
+                        if (app.GetServer().GetActive().GetAdmin() == true)
+                        {
+                            inp.AddMedia(app, 1);
+                        }
+                        else
+                        {
+                            Console.Clear();
+                            Console.WriteLine("No tienes admin!");
+                            System.Threading.Thread.Sleep(2000);
+                        }
                     }
                 }
 
