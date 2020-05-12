@@ -141,5 +141,10 @@ namespace Proyecto_Grupo_6
         {
             return this.YourVideos;
         }
+
+        public bool GetAdmin()
+        {
+            return Admin;
+        }
     }
 }

@@ -64,7 +64,7 @@ namespace Proyecto_Grupo_6
         }
         public override string GetData()
         {
-            return (this.Name + " " + this.Kind + " " + this.Date + " " + this.Studio);
+            return (this.Name + ", " +  this.Studio);
         }
         public override int GetDataNumber()
         {

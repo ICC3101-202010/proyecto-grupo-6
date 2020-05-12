@@ -14,7 +14,7 @@ namespace Proyecto_Grupo_6
         public string PrintLogin()
         {
             Console.WriteLine("BIENVENIDO A PEORESNADA");
-            Console.WriteLine("1. Iniciar Sesion" + Environment.NewLine + "2. Registrarse" + Environment.NewLine + "3. Salir");
+            Console.WriteLine("1. Iniciar Sesion" + Environment.NewLine + "2. Registrarse" + Environment.NewLine + "A. Admin settings"+Environment.NewLine+"3. Salir");
             Console.Write("==>  ");
             string choice = Console.ReadLine();
 
@@ -28,6 +28,9 @@ namespace Proyecto_Grupo_6
 
                 case "3":
                     return "3";
+
+                case "A":
+                    return "A";
 
                 default:
                     return "4";
@@ -301,7 +304,7 @@ namespace Proyecto_Grupo_6
                         List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourVideos();
                         for (int i = 0; i < userPlaylists.Count(); i++)
                         {
-                            Console.WriteLine((i + 1) + " " + userPlaylists[i].GetInfoPL() + Environment.NewLine);
+                            Console.WriteLine((i + 1) + ". " + userPlaylists[i].GetInfoPL() + Environment.NewLine);
                         }
                         Console.Write("Elija playlist: ");
                         int plChoice = Int32.Parse(Console.ReadLine()) - 1;

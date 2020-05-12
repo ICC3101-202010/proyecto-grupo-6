@@ -455,6 +455,11 @@ namespace Proyecto_Grupo_6
             return allVideos;
         }
 
+        public Admin GetAdmin()
+        {
+            return admin;
+        }
+
 
     }
 }
