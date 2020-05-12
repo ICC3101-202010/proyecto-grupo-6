@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto_Grupo_6
 {
@@ -12,12 +15,12 @@ namespace Proyecto_Grupo_6
     {
         protected string Name;
         protected string Kind;
-        protected int Lenght;
-        protected string Date;
+        protected int Length;
+        protected string Date="";
         protected int Reproductions;
         protected List<Rating> Rating;
         protected List<Review> Review;
-        protected string ImageURL;
+        protected string ImageURL="";
         protected int Size;
         protected int Likes;
         protected string Studio;
@@ -67,7 +70,7 @@ namespace Proyecto_Grupo_6
         }
         public virtual int GetDataNumber()
         {
-            return (this.Lenght + this.Likes + this.Reproductions + this.Size);
+            return (this.Length + this.Likes + this.Reproductions + this.Size);
         }
         public virtual void SetLikes(int Likes)
         {

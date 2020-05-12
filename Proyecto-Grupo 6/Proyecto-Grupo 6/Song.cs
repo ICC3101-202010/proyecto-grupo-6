@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Proyecto_Grupo_6
 {
@@ -13,13 +16,13 @@ namespace Proyecto_Grupo_6
         private List<Workers> Composer;
         private string Album;
         private string Lyrics;
-        private List<Awards> Awards;
+        private List<Awards> Awards=new List<Awards>() { };
 
         public override string Play()
         {
             return ("Se esta reproduciendo la cancion");
         }
-        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<Awards> Awards, List<Workers> Composer, int Lenght)
+        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<Awards> Awards, List<Workers> Composer, int Length)
         {
             this.Name = Name;
             this.Kind = Kind;
@@ -28,7 +31,7 @@ namespace Proyecto_Grupo_6
             this.Artist = Artist;
             this.Awards = Awards;
             this.Composer = Composer;
-            this.Lenght = Lenght;
+            this.Length = Length;
         }
         public override string Image()
         {
@@ -53,11 +56,11 @@ namespace Proyecto_Grupo_6
 
         public override string GetData()
         {
-            return (this.Name + " " + this.Album);
+            return (this.Name + ", " + this.Album);
         }
         public override int GetDataNumber()
         {
-            return (this.Lenght + this.Reproductions + this.Size + this.Likes);
+            return (this.Length + this.Reproductions + this.Size + this.Likes);
         }
         public void SetArtistSong(List<Workers> Artist)
         {
@@ -89,7 +92,7 @@ namespace Proyecto_Grupo_6
             }
             else
             {
-                return this.Artist[0].GetName();
+                return this.Artist[0].GetName()+" "+ this.Artist[0].GetSurname();
             }
         }
         public string GetComposerSong()

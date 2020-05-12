@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 
 namespace Proyecto_Grupo_6
@@ -14,9 +17,9 @@ namespace Proyecto_Grupo_6
         private User CreatorPlaylist;
         private int SizePlaylist;
         private bool Privacy;
-        private string ImagenURL;
-        private List<Multimedia> AllFiles;
-        private List<User> Followers;
+        private string ImagenURL="";
+        private List<Multimedia> AllFiles=new List<Multimedia>() { };
+        private List<User> Followers=new List<User>() { };
 
         public void CreatePlaylist(string NamePlaylist, bool Privacy, List<Multimedia> AllFiles, User Creator)
         {
@@ -46,7 +49,7 @@ namespace Proyecto_Grupo_6
         }
         public string GetInfoPL()
         {
-            return NamePlaylist + Environment.NewLine + "Created by: " + CreatorPlaylist;
+            return NamePlaylist + Environment.NewLine + "Created by: " + CreatorPlaylist.GetUsername();
         }
 
         public string GetNamePL()
