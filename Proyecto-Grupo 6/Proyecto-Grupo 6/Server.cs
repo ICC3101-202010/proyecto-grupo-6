@@ -196,5 +196,91 @@ namespace Proyecto_Grupo_6
             }
         }
 
+        public bool CheckUserExistence(string username)
+        {
+            int check = 0;
+            for(int i = 0; i < AllUser.Count(); i++)
+            {
+                if (username == AllUser[i].GetUsername())
+                {
+                    check += 1;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (check == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        public User SearchUser(string username)
+        {
+            User searchuser=new User();
+            for (int i = 0; i < AllUser.Count(); i++)
+            {
+                if (username == AllUser[i].GetUsername())
+                {
+                    searchuser = AllUser[i];
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return searchuser;
+        }
+
+        public bool CheckPLExistence(string name, int diff,App app)
+        {
+
+            int check = 0;
+            for (int i = 0; i < app.GetPlaylist(diff).Count(); i++)
+            {
+                if (name == app.GetPlaylist(diff)[i].GetNamePL())
+                {
+                    check++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (check == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
+
+        public Playlist GetSpecificPL(string name,int diff, App app)
+        {
+            List<Playlist> allPL = app.GetPlaylist(diff);
+            int check = 0;
+            for (int i = 0; i < allPL.Count(); i++)
+            {
+                if (name == allPL[i].GetNamePL())
+                {
+                    check = i;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return allPL[check];
+
+        }
+
     }
 }

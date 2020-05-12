@@ -138,14 +138,11 @@ namespace Proyecto_Grupo_6
         {
             return this.Album;
         }
-        //public string GetAwards()
-        //{
-        //string award = "";
-        //for (int i= 0; i < Awards.Count(); i++)
-        //{
-        //award += Awards[i].();
-        //}
-        //return award;
+        
+        public List<Awards> GetAwards()
+        {
+            return Awards;
+        }
 
     }
 }

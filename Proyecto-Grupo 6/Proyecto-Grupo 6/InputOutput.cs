@@ -42,11 +42,15 @@ namespace Proyecto_Grupo_6
             while (true)
             {
                 Console.WriteLine("BIENVENIDO A PEORESNADA"+Environment.NewLine);
-                Console.WriteLine("1. Modo Cancion" + Environment.NewLine + "2. Modo Video" + Environment.NewLine + "3. Salir");
+                Console.WriteLine("U. Usuarios"+Environment.NewLine+"1. Modo Cancion" + Environment.NewLine + "2. Modo Video" + Environment.NewLine + "3. Salir");
                 Console.Write("==>  ");
                 string input = Console.ReadLine();
                 switch (input)
                 {
+                    case "U":
+
+                        return "U";
+
                     case "1":
                         
                         return "1";
@@ -76,11 +80,13 @@ namespace Proyecto_Grupo_6
             {
                 Console.Clear();
                 Console.WriteLine("USTED ENTRO A MENU DE CANCIONES"+ Environment.NewLine);
-                Console.WriteLine("A. Agregar cancion"+Environment.NewLine+"1. Buscar Canciones" + Environment.NewLine + "2. Playlists" + Environment.NewLine+"3. Volver atras");
+                Console.WriteLine("A. Agregar cancion"+Environment.NewLine+"P. Seccion Premios"+Environment.NewLine+"1. Buscar Canciones" + Environment.NewLine + "2. Playlists" + Environment.NewLine+"3. Volver atras");
                 Console.Write("==>  ");
                 string input1 = Console.ReadLine();
                 switch (input1)
                 {
+                    case "P":
+                        return "P";
                     case "A":
                         return "A";
 
@@ -146,7 +152,7 @@ namespace Proyecto_Grupo_6
 
         public void SearchSong(App app)
         {
-            Console.WriteLine("ELIJA FILTRACION 1. SIMPLE O 2. MULTIPLE");
+            Console.WriteLine("ELIJA FILTRACION"+Environment.NewLine+ "1. SIMPLE"+ Environment.NewLine+"2. MULTIPLE");
             Console.Write("==>  ");
             string choice = Console.ReadLine();
             if (choice == "1")
@@ -159,6 +165,7 @@ namespace Proyecto_Grupo_6
                 {
                     Console.WriteLine(a.GetData()+", "+ a.GetArtistSong());
                 }
+                Console.WriteLine("Esta sonando la primera cancion");
                 System.Threading.Thread.Sleep(5000);
             }
             if (choice == "2")
@@ -205,10 +212,92 @@ namespace Proyecto_Grupo_6
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("1. Ver todas las playlists" + Environment.NewLine + "2. Ver tus playlists y reproducirlas o editarlas" + Environment.NewLine + "3. Crear Playlist" + Environment.NewLine + "4. Volver atras");
+                Console.WriteLine("F. Follow Playlist"+Environment.NewLine+"S. Playlist seguidas"+Environment.NewLine+"1. Ver todas las playlists" + Environment.NewLine + "2. Ver tus playlists y reproducirlas o editarlas" + Environment.NewLine + "3. Crear Playlist" + Environment.NewLine + "4. Volver atras");
                 Console.Write("==>  ");
                 string choice = Console.ReadLine();
-                if (choice == "1")
+                if (choice == "F")
+                {
+                    if (diff == 0)
+                    {
+                        Console.Write("Ingrese nombre de playlist: ");
+                        string name = Console.ReadLine();
+                        bool checkExistence = app.GetServer().CheckPLExistence(name,0,app);
+                        if (checkExistence == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("La playlist no existe");
+                            System.Threading.Thread.Sleep(2000);
+                        }
+                        else
+                        {
+                            Console.Clear();
+
+                            app.GetServer().GetActive().FollowMusicPL(app.GetServer().GetSpecificPL(name,0,app));
+                            Console.WriteLine("Seguiste a la playlist");
+                            System.Threading.Thread.Sleep(2000);
+                        }
+                    }
+
+                    else
+                    {
+                        Console.Write("Ingrese nombre de playlist: ");
+                        string name = Console.ReadLine();
+                        bool checkExistence = app.GetServer().CheckPLExistence(name, 1, app);
+                        if (checkExistence == false)
+                        {
+                            Console.Clear();
+                            Console.WriteLine("La playlist no existe");
+                            System.Threading.Thread.Sleep(2000);
+                        }
+                        else
+                        {
+                            Console.Clear();
+
+                            app.GetServer().GetActive().FollowVidPL(app.GetServer().GetSpecificPL(name, 0, app));
+                            Console.WriteLine("Seguiste a la playlist");
+                            System.Threading.Thread.Sleep(2000);
+                        }
+                    }
+                }
+
+                else if (choice == "S")
+                {
+                    Console.Clear();
+                    if (diff == 0)
+                    {
+                        List<Playlist> allFollowed = app.GetServer().GetActive().GetFollowedMusicPL();
+                        if (allFollowed.Count() != 0)
+                        {
+                            for (int i = 0; i < allFollowed.Count(); i++)
+                            {
+                                Console.WriteLine(i+1 + ". "+allFollowed[i].GetInfoPL());
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No sigues ninguna playlist");
+                        }
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                    else
+                    {
+                        List<Playlist> allFollowed = app.GetServer().GetActive().GetFollowedVidPL();
+                        if (allFollowed.Count() != 0)
+                        {
+                            for (int i = 0; i < allFollowed.Count(); i++)
+                            {
+                                Console.WriteLine(i + 1 + ". " + allFollowed[i].GetInfoPL());
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("No sigues ninguna playlist");
+                        }
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                }
+
+                else if (choice == "1")
                 {
                     if (diff == 0)
                     {
@@ -405,7 +494,49 @@ namespace Proyecto_Grupo_6
 
         public void SearchVideo(App app)
         {
+            Console.WriteLine("ELIJA FILTRACION" + Environment.NewLine + "1. SIMPLE" + Environment.NewLine + "2. MULTIPLE");
+            Console.Write("==>  ");
+            string choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                Console.Clear();
+                Console.Write("Ingrese filtro: ");
+                string filter = Console.ReadLine();
+                List<string> allFilters = new List<string>() { filter };
+                List<Video> filteredVids = app.SearchAndPlayVid(allFilters);
+                foreach(var a in filteredVids)
+                {
+                    Console.WriteLine(a.GetData());
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+            else if (choice == "2")
+            {
+                string check = "y";
+                List<string> allFilters = new List<string>();
+                while (check== "y" || check=="Y")
+                {
+                    Console.Clear();
+                    Console.Write("Ingrese filtro: ");
+                    string filter = Console.ReadLine();
+                    allFilters.Add(filter);
+                    Console.Write("Desea seguir agregando filtros? (y/n): ");
+                    check = Console.ReadLine();
 
+                }
+                List<Video> filteredVids = app.SearchAndPlayVid(allFilters);
+                foreach (var a in filteredVids)
+                {
+                    Console.WriteLine(a.GetData());
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Input invalido");
+                System.Threading.Thread.Sleep(2000);
+            }
         }
 
         public void AddMedia(App app,int diff)
@@ -602,6 +733,129 @@ namespace Proyecto_Grupo_6
                 System.Threading.Thread.Sleep(2000);
 
 
+            }
+        }
+
+        public string UserMenu(App app,int diff)
+        {
+            if (diff == 0)
+            {
+                List<User> allfollowed=app.GetServer().GetActive().GetFollowedUsers();
+                string users = "";
+                if (allfollowed.Count() != 0)
+                {
+                    for (int i = 0; i < allfollowed.Count(); i++)
+                    {
+                        users += allfollowed[i].GetUsername() + Environment.NewLine;
+                    }
+                    return users;
+                }
+                else
+                {
+                    return "No sigues a nadie";
+                }
+            }
+
+
+            else
+            {
+                List<User> allfollowed = app.GetServer().GetActive().GetFollowedUsers();
+                Console.Write("Ingrese username: ");
+                string username = Console.ReadLine();
+                bool searchtry = app.GetServer().CheckUserExistence(username);
+                if (searchtry == false)
+                {
+                    Console.Clear();
+                    return"El usuario no existe";
+
+                }
+                else
+                {
+                    User followUser=app.GetServer().SearchUser(username);
+                    app.GetServer().GetActive().FollowUser(followUser);
+                    return "Se comenzo a seguir el usuario";
+                }
+            }
+        }
+
+        public void ProgramAwards(App app)
+        {
+            List<Song> allSongs = app.GetAllSongs();
+            Console.Clear();
+            Console.WriteLine("BIENVENIDO A LA SECCION ALL STARS, DONDE SOLO HAY CANCIONES PREMIADAS"+Environment.NewLine);
+            Console.WriteLine("Elija un premio:" + Environment.NewLine + "1. Grammy" + Environment.NewLine + "2. Brit" + Environment.NewLine + "3. Ambos" + Environment.NewLine + "4. Volver atras");
+            Console.Write("==>  ");
+            string diff = Console.ReadLine();
+            if (diff == "3")
+            {
+                Console.Clear();
+                int counter = 1;
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (allSongs[i].GetAwards().Count() == 2)
+                    {
+                        Console.WriteLine(counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                        counter++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine("No existen canciones con ambos premios");
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+            else if (diff == "1")
+            {
+                Console.Clear();
+                int counter = 1;
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if ((allSongs[i].GetAwards().Count() == 1 &&(allSongs[i].GetAwards()[0].getName() == "Grammy" || allSongs[i].GetAwards()[0].getName() == "grammy")) || (allSongs[i].GetAwards().Count() == 2 &&(allSongs[i].GetAwards()[0].getName()=="Grammy"|| allSongs[i].GetAwards()[0].getName() == "grammy"|| allSongs[i].GetAwards()[1].getName() == "Grammy" || allSongs[i].GetAwards()[1].getName() == "grammy")))
+                    {
+                        Console.WriteLine(counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                        counter++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine("No existen canciones con Grammy");
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+            else if (diff == "2")
+            {
+                Console.Clear();
+                int counter = 1;
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if ((allSongs[i].GetAwards().Count() == 1 &&(allSongs[i].GetAwards()[0].getName() == "Brit" || allSongs[i].GetAwards()[0].getName() == "brit")) || (allSongs[i].GetAwards().Count() == 2&&(allSongs[i].GetAwards()[0].getName() == "Brit" || allSongs[i].GetAwards()[0].getName() == "brit"|| allSongs[i].GetAwards()[1].getName() == "Brit" || allSongs[i].GetAwards()[1].getName() == "brit")))
+                    {
+                        Console.WriteLine(counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                        counter++;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (counter == 1)
+                {
+                    Console.WriteLine("No existen canciones con Brit");
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+            else
+            {
+                Console.WriteLine("LA ELITE MUSICAL TE DESEA UN BUEN VIAJE");
+                System.Threading.Thread.Sleep(2000);
             }
         }
 

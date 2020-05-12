@@ -24,9 +24,9 @@ namespace Proyecto_Grupo_6
                 if (loginMenu == "1")
                 {
                     Console.Clear();
-                    Console.Write("Ingrese nombre de usuario: ");
+                    Console.Write("Ingrese nombre de usuario (ejemplo: hola): ");
                     string usn = Console.ReadLine();
-                    Console.Write("Ingrese contrasena: ");
+                    Console.Write("Ingrese contrasena (ejemplo: hola): ");
                     string psw = Console.ReadLine();
                     string login = app.Login(usn, psw);
                     Console.WriteLine(login);
@@ -55,14 +55,7 @@ namespace Proyecto_Grupo_6
                     string register = app.Register(name, surn, usern, pswd);
                     Console.WriteLine(register);
                     System.Threading.Thread.Sleep(2000);
-                    if (register== "El nombre de usuario no esta disponible")
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    
                     
                 }
 
@@ -162,6 +155,35 @@ namespace Proyecto_Grupo_6
                     Console.WriteLine(app.CloseApp());
                     break;
                 }
+
+                if (case1 == "U")
+                {
+                    Console.Clear();
+                    Console.WriteLine("USTED ENTRO A MENU DE USUARIOS" + Environment.NewLine);
+                    Console.WriteLine("1. Ver usuarios que sigues"+Environment.NewLine+ "2. Buscar usuario por username y seguir" + Environment.NewLine+ "3. Volver atras" + Environment.NewLine);
+                    string userchoice = Console.ReadLine();
+                    if (userchoice == "3")
+                    {
+                        continue;
+                    }
+                    else if (userchoice == "1")
+                    {
+                        Console.WriteLine(inp.UserMenu(app, 0));
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                    else if (userchoice == "2")
+                    {
+                        Console.WriteLine(inp.UserMenu(app, 1));
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Input invalido");
+                        System.Threading.Thread.Sleep(2000);
+                    }
+                }
+
                 else if (case1 == "1")
                 {
                     string case2 = inp.ProgramSong();
@@ -176,6 +198,10 @@ namespace Proyecto_Grupo_6
                     else if (case2 == "2")
                     {
                         inp.ProgramPlaylist(app, 0);
+                    }
+                    else if (case2 == "P")
+                    {
+                        inp.ProgramAwards(app);
                     }
                     else
                     {
