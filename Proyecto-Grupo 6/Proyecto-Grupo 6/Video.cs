@@ -129,5 +129,10 @@ namespace Proyecto_Grupo_6
             return Studio;
         }
 
+        public List<Review> GetListReview()
+        {
+            return this.Review;
+        }
+
     }
 }

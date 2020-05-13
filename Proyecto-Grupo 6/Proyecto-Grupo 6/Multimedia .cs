@@ -18,8 +18,9 @@ namespace Proyecto_Grupo_6
         protected int Length;
         protected string Date="";
         protected int Reproductions;
-        protected List<Rating> Rating;
-        protected List<Review> Review;
+        
+        protected List<Rating> Rating=new List<Rating>() { };
+        protected List<Review> Review = new List<Review>() { };
         protected string ImageURL="";
         protected int Size;
         protected int Likes;
@@ -92,6 +93,11 @@ namespace Proyecto_Grupo_6
         public virtual string GetName()
         {
             return Name;
+        }
+
+        public virtual List<Rating> GetListRating()
+        {
+            return this.Rating;
         }
 
     }
