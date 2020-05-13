@@ -42,11 +42,14 @@ namespace Proyecto_Grupo_6
             while (true)
             {
                 Console.WriteLine("BIENVENIDO A PEORESNADA"+Environment.NewLine);
-                Console.WriteLine("U. Usuarios"+Environment.NewLine+"1. Modo Cancion" + Environment.NewLine + "2. Modo Video" + Environment.NewLine + "3. Salir");
+                Console.WriteLine("U. Usuarios"+Environment.NewLine+"1. Modo Cancion" + Environment.NewLine + "2. Modo Video" + Environment.NewLine + "3. Salir"+Environment.NewLine+"B. Suenan canciones wuju sorpresa");
                 Console.Write("==>  ");
                 string input = Console.ReadLine();
                 switch (input)
                 {
+                    case "B":
+
+                        return "B";
                     case "U":
 
                         return "U";
@@ -80,11 +83,14 @@ namespace Proyecto_Grupo_6
             {
                 Console.Clear();
                 Console.WriteLine("USTED ENTRO A MENU DE CANCIONES"+ Environment.NewLine);
-                Console.WriteLine("A. Agregar cancion"+Environment.NewLine+"P. Seccion Premios"+Environment.NewLine+"1. Buscar Canciones" + Environment.NewLine + "2. Playlists" + Environment.NewLine+"3. Volver atras");
+                Console.WriteLine("A. Agregar cancion"+Environment.NewLine+"P. Seccion Premios"+Environment.NewLine+"R. Calificar cancion"+Environment.NewLine+"1. Buscar Canciones" + Environment.NewLine + "2. Playlists" + Environment.NewLine+"3. Volver atras");
                 Console.Write("==>  ");
                 string input1 = Console.ReadLine();
                 switch (input1)
                 {
+                    case "R":
+                        return "R";
+
                     case "P":
                         return "P";
                     case "A":
@@ -120,11 +126,14 @@ namespace Proyecto_Grupo_6
             {
                 Console.Clear();
                 Console.WriteLine("USTED ENTRO A MENU DE VIDEOS" + Environment.NewLine);
-                Console.WriteLine("A. Agregar Video"+Environment.NewLine+"1. Buscar Videos" + Environment.NewLine + "2. Playlists" + Environment.NewLine + "3. Volver atras");
+                Console.WriteLine("A. Agregar Video"+Environment.NewLine+"R. Calificar o criticar"+Environment.NewLine+"1. Buscar Videos" + Environment.NewLine + "2. Playlists" + Environment.NewLine + "3. Volver atras");
                 Console.Write("==>  ");
                 string input1 = Console.ReadLine();
                 switch (input1)
                 {
+                    case "R":
+                        return "R";
+
                     case "A":
                         return "A";
 
@@ -942,12 +951,193 @@ namespace Proyecto_Grupo_6
 
         public void ProgramRating(App app,int diff)
         {
+            if (diff == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("1. Ver rating de una cancion" + Environment.NewLine + "2. Calificar una cancion" + Environment.NewLine + "3. Volver atras");
+                Console.Write("==>  ");
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    Console.Write("Ingrese nombre de la cancion: ");
+                    string name = Console.ReadLine();
+                    Song song = app.SearchforSong(name);
+                    List<Rating> rating = song.GetListRating();
+                    Console.Clear();
+                    if (rating==null)
+                    {
+                        Console.WriteLine("La cancion no tiene calificacion");
+                    }
+                    else
+                    {
+                        Console.WriteLine(song.GetRating() + " estrellas");
+                    }
+                }
 
+                else if (choice == "2")
+                {
+                    Console.Write("Ingrese nombre de la cancion: ");
+                    string name = Console.ReadLine();
+                    Song song = app.SearchforSong(name);
+                    if (song.GetListRating() != null)
+                    {
+                        List<Rating> rating = song.GetListRating();
+                        Rating userRating = new Rating();
+                        Console.Write("Evalua la cancion de 1 a 5: ");
+                        userRating.SetRating(Convert.ToInt32(Console.ReadLine()));
+                        userRating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.Add(userRating);
+                        app.Rate(name, 0, rating);
+                        Console.WriteLine("Se agrego la calificacion");
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        List<Rating> rating = new List<Rating>();
+                        Rating userRating = new Rating();
+                        Console.Write("Evalua la cancion de 1 a 5: ");
+                        userRating.SetRating(Convert.ToInt32(Console.ReadLine()));
+                        userRating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.Add(userRating);
+                        app.Rate(name, 0, rating);
+                        Console.WriteLine("Se agrego la calificacion");
+                        Console.Clear();
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("Volviendo atras");
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
+
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("1. Ver rating de un video" + Environment.NewLine + "2. Calificar un video" + Environment.NewLine + "3. Volver atras");
+                Console.Write("==>  ");
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    Console.Write("Ingrese nombre del video: ");
+                    string name = Console.ReadLine();
+                    Video vid = app.SearchforVid(name);
+                    List<Rating> rating = vid.GetListRating();
+                    Console.Clear();
+                    if (rating==null)
+                    {
+                        Console.WriteLine("El video no tiene calificacion");
+                    }
+                    else
+                    {
+                        Console.WriteLine(vid.GetRating() + " estrellas");
+                    }
+                }
+
+                else if (choice == "2")
+                {
+                    Console.Write("Ingrese nombre del video: ");
+                    string name = Console.ReadLine();
+                    Video vid = app.SearchforVid(name);
+                    if (vid.GetListRating() != null)
+                    {
+                        List<Rating> rating = vid.GetListRating();
+                        Rating userRating = new Rating();
+                        Console.Write("Evalue el video de 1 a 5: ");
+                        userRating.SetRating(Convert.ToInt32(Console.ReadLine()));
+                        userRating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.Add(userRating);
+                        app.Rate(name, 1, rating);
+                        Console.WriteLine("Se agrego la calificacion");
+                        Console.Clear();
+                    }
+                    else
+                    {
+                        List<Rating> rating = new List<Rating>();
+                        Rating userRating = new Rating();
+                        Console.Write("Evalue el video de 1 a 5: ");
+                        userRating.SetRating(Convert.ToInt32(Console.ReadLine()));
+                        userRating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.Add(userRating);
+                        app.Rate(name, 1, rating);
+                        Console.WriteLine("Se agrego la calificacion");
+                        Console.Clear();
+                    }
+                }
+                
+
+                else
+                {
+                    Console.WriteLine("Volviendo atras");
+                }
+                System.Threading.Thread.Sleep(2000);
+            }
         }
 
         public void ProgramReview(App app)
         {
+            Console.Clear();
+            Console.WriteLine("1. Ver criticas de un video"+Environment.NewLine+"2. Dejar una critica en un video"+ Environment.NewLine+"3. Volver atras");
+            Console.Write("==>  ");
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                Console.Write("Ingrese nombre del video: ");
+                string name = Console.ReadLine();
+                Video vid = app.SearchforVid(name);
+                List<Review> review = vid.GetListReview();
+                Console.Clear();
+                if (review==null)
+                {
+                    Console.WriteLine("El video no tiene criticas");
+                }
+                else
+                {
+                    Console.WriteLine(vid.GetReview());
+                }
+            }
 
+            else if (choice == "2")
+            {
+                Console.Write("Ingrese nombre del video: ");
+                string name = Console.ReadLine();
+                Console.Clear();
+                Video vid = app.SearchforVid(name);
+                if (vid.GetListReview() != null)
+                {
+                    List<Review> review = vid.GetListReview();
+                    Review userReview = new Review();
+                    Console.Write("Pongale titulo a su critica: ");
+                    string title = Console.ReadLine();
+                    Console.Write("Deje su opinion sobre el video: ");
+                    string comment = Console.ReadLine();
+                    userReview.SetReview(title, comment);
+                    review.Add(userReview);
+                    app.ReviewVid(app.GetServer().GetActive().GetUsername(), review);
+                }
+                else
+                {
+                    List<Review> review = new List<Review>();
+                    Review userReview = new Review();
+                    Console.Write("Pongale titulo a su critica: ");
+                    string title = Console.ReadLine();
+                    Console.Write("Deje su opinion sobre el video: ");
+                    string comment = Console.ReadLine();
+                    userReview.SetReview(title, comment);
+                    review.Add(userReview);
+                    app.ReviewVid(name, review);
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Volviendo atras");
+            }
+            System.Threading.Thread.Sleep(6000);
         }
 
     }

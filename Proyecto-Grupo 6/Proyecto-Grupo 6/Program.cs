@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Media;
 
 namespace Proyecto_Grupo_6
 {
@@ -156,7 +157,31 @@ namespace Proyecto_Grupo_6
                     break;
                 }
 
-                if (case1 == "U")
+                else if (case1 == "B")
+                {
+                    SoundPlayer player = new SoundPlayer();
+                    player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\FC.wav";
+                    player.PlaySync();
+
+                    Console.WriteLine("Si desea escuchar la sig cancion marque x:");
+                    Console.WriteLine("Si quiere volver al menu, marque e:");
+                    Console.Write("==>  ");
+                    string V1 = Console.ReadLine();
+
+                    if (V1 == "x"||V1=="X")
+                    {
+                        player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "\\A Donde Vamos.wav";
+                        player.PlaySync();
+                    }
+                    else if (V1 == "e" || V1 =="E")
+                    {
+                        continue;
+                    }
+                    continue;
+                }
+
+
+                else if (case1 == "U")
                 {
                     Console.Clear();
                     Console.WriteLine("USTED ENTRO A MENU DE USUARIOS" + Environment.NewLine);
@@ -198,6 +223,10 @@ namespace Proyecto_Grupo_6
                     {
                         continue;
                     }
+                    else if (case2 == "R")
+                    {
+                        inp.ProgramRating(app, 0);
+                    }
                     else if (case2 == "1")
                     {
                         inp.SearchSong(app);
@@ -231,6 +260,27 @@ namespace Proyecto_Grupo_6
                     if (case2 == "3")
                     {
                         continue;
+                    }
+                    else if (case2 == "R")
+                    {
+                        Console.Clear();
+                        Console.WriteLine("1. Critica" + Environment.NewLine + "2. Rating");
+                        Console.Write("==>  ");
+                        string vidchoice = Console.ReadLine();
+                        if (vidchoice == "1")
+                        {
+                            inp.ProgramReview(app);
+                        }
+                        else if (vidchoice == "2")
+                        {
+                            inp.ProgramRating(app, 1);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Input invalido");
+                        }
+
+
                     }
                     else if (case2 == "1")
                     {

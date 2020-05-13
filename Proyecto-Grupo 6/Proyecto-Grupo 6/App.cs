@@ -482,7 +482,42 @@ namespace Proyecto_Grupo_6
 
         }
 
+        public void Rate(string name,int diff, List<Rating> rating)
+        {
+            if (diff == 0)
+            {
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (name == allSongs[i].GetName())
+                    {
+                        allSongs[i].SetRating(rating);
+                    }
+                }
+            }
+
+            else
+            {
+                for (int i = 0; i < allVideos.Count(); i++)
+                {
+                    if (name == allVideos[i].GetName())
+                    {
+                        allVideos[i].SetRating(rating);
+                    }
+                }
+            }
+        }
+
+        public void ReviewVid(string name, List<Review> review)
+        {
+            for (int i = 0; i < allVideos.Count(); i++)
+            {
+                if (name == allVideos[i].GetName())
+                {
+                    allVideos[i].SetReview(review);
+                }
+            }
 
 
+        }
     }
 }
