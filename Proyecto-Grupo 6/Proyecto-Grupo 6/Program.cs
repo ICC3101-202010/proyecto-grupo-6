@@ -16,6 +16,7 @@ namespace Proyecto_Grupo_6
         {
             InputOutput inp= new InputOutput();
             App app = new App();
+            
             app.OpenApp();
             while (true)
             {

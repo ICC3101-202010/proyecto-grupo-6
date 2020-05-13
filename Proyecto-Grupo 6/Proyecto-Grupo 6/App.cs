@@ -330,14 +330,14 @@ namespace Proyecto_Grupo_6
         public void saveUser(List<User> allUser)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("MyFile.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allUser);
             stream.Close();
         }
         private List<User> LoadUser()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("MyFile.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("MyFile.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<User> allUser = (List<User>)formatter.Deserialize(stream);
             stream.Close();
             return allUser;
@@ -345,14 +345,14 @@ namespace Proyecto_Grupo_6
         public void saveAdmin(Admin admin)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Admin.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("Admin.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, admin);
             stream.Close();
         }
         private Admin LoadAdmin()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Admin.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("Admin.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             Admin admin = (Admin)formatter.Deserialize(stream);
             stream.Close();
             return admin;
@@ -360,14 +360,14 @@ namespace Proyecto_Grupo_6
         public void saveWorkers(List<Workers> allWorkers)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Worker.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("Worker.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allWorkers);
             stream.Close();
         }
         private List<Workers> LoadWorkers()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Worker.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("Worker.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<Workers> allWorkers = (List<Workers>)formatter.Deserialize(stream);
             stream.Close();
             return allWorkers;
@@ -375,14 +375,14 @@ namespace Proyecto_Grupo_6
         public void savePlaylistS(List<Playlist> allMusicPL)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("SongPL.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("SongPL.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allMusicPL);
             stream.Close();
         }
         private List<Playlist> LoadPlaylistS()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("SongPL.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("SongPL.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<Playlist> allMusicPL = (List<Playlist>)formatter.Deserialize(stream);
             stream.Close();
             return allMusicPL;
@@ -390,14 +390,14 @@ namespace Proyecto_Grupo_6
         public void savePlaylistV(List<Playlist> allVidPL)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("VidPL.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("VidPL.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allVidPL);
             stream.Close();
         }
         private List<Playlist> LoadPlaylistV()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("VidPL.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("VidPL.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<Playlist> allVidPL = (List<Playlist>)formatter.Deserialize(stream);
             stream.Close();
             return allVidPL;
@@ -405,14 +405,14 @@ namespace Proyecto_Grupo_6
         public void saveSongs(List<Song> allSongs)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Songs.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("Songs.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allSongs);
             stream.Close();
         }
         private List<Song> LoadSongs()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Songs.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("Songs.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<Song> allSongs = (List<Song>)formatter.Deserialize(stream);
             stream.Close();
             return allSongs;
@@ -420,14 +420,14 @@ namespace Proyecto_Grupo_6
         public void saveVideos(List<Video> allVideos)
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Videos.bin", FileMode.Create, FileAccess.Write, FileShare.None);
+            Stream stream = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, allVideos);
             stream.Close();
         }
         private List<Video> LoadVideo()
         {
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream("Videos.bin", FileMode.Open, FileAccess.Read, FileShare.Read);
+            Stream stream = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
             List<Video> allVideos = (List<Video>)formatter.Deserialize(stream);
             stream.Close();
             return allVideos;
