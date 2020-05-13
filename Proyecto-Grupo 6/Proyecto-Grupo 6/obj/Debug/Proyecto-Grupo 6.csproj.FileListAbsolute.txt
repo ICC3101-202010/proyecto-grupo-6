@@ -1,0 +1,8 @@
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\bin\Debug\Proyecto-Grupo 6.exe.config
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\bin\Debug\Proyecto-Grupo 6.exe
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\bin\Debug\Proyecto-Grupo 6.pdb
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\obj\Debug\Proyecto-Grupo 6.csprojAssemblyReference.cache
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\obj\Debug\Proyecto-Grupo 6.exe
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\obj\Debug\Proyecto-Grupo 6.pdb
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\bin\Debug\A Donde Vamos.wav
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Proyecto-Grupo 6\Proyecto-Grupo 6\bin\Debug\FC.wav
