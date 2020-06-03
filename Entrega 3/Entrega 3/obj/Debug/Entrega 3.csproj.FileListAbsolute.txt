@@ -1,0 +1,10 @@
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe.config
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.pdb
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csprojAssemblyReference.cache
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.PSN.resources
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Properties.Resources.resources
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.GenerateResource.cache
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
+C:\Users\mathi\OneDrive\Escritorio\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Menu.resources
