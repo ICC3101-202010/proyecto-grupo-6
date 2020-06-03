@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs">
+    <Compile Include="Admin.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Atributtes.cs" />
+    <Compile Include="Awards.cs" />
+    <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="App.Designer.cs">
-      <DependentUpon>App.cs</DependentUpon>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -59,10 +63,19 @@
       <DependentUpon>Inicio.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Multimedia.cs" />
+    <Compile Include="Playlist.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="App.resx">
-      <DependentUpon>App.cs</DependentUpon>
+    <Compile Include="Rating.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="Server.cs" />
+    <Compile Include="Song.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Video.cs" />
+    <Compile Include="Workers.cs" />
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

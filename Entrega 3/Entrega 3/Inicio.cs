@@ -80,7 +80,7 @@ namespace Entrega_3
             {
                 lb_exito.Visible = true;
                 lb_rellenecampos.Visible = false;
-                App app = new App();
+                Menu app = new Menu();
                 app.Show();
                 PSN psn = new PSN();
                 psn.Hide();
@@ -100,7 +100,7 @@ namespace Entrega_3
 
         private void bt_login_Click(object sender, EventArgs e)
         {
-            App app = new App();
+            Menu app = new Menu();
             app.Show();
             PSN psn = new PSN();
             psn.Hide();

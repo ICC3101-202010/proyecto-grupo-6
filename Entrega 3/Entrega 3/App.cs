@@ -1,166 +1,523 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Entrega_3
+
+namespace Proyecto_Grupo_6
 {
-    public partial class App : Form
+    [Serializable]
+    class App
     {
-        public App()
+        private List<Song> allSongs = new List<Song>();
+        private List<Video> allVideos = new List<Video>();
+        private List<Playlist> allMusicPL = new List<Playlist>();
+        private List<Playlist> allVidPL = new List<Playlist>();
+        private List<User> allUser = new List<User>();
+        private List<Workers> allWorkers = new List<Workers>();
+
+        private Server server = new Server();
+        private Admin admin = new Admin();
+
+        public string SeeMusicPL() //Solo va a mostrar las playlist publicas de la app//
         {
-            InitializeComponent();
+            string PLinfo = "";
+            for (int i = 0; i < allMusicPL.Count(); i++)
+            {
+                if (allMusicPL[i].GetPrivacy() == false)
+                {
+                    PLinfo += allMusicPL[i].GetInfoPL() + Environment.NewLine + Environment.NewLine;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return PLinfo;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        public string SeeVidPL() //Solo va a mostrar las playlist publicas de la app//
+        {
+            string PLinfo = "";
+            for (int i = 0; i < allVidPL.Count(); i++)
+            {
+                if (allVidPL[i].GetPrivacy() == false)
+                {
+                    PLinfo += allVidPL[i].GetInfoPL() + Environment.NewLine + Environment.NewLine;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            return PLinfo;
+        }
+
+        public string SeeAllSongs()
+        {
+            string Songs = "";
+            for (int i = 0; i < allSongs.Count(); i++)
+            {
+                Songs += allSongs[i].GetData() + Environment.NewLine + allSongs[i].GetArtistSong() + Environment.NewLine + Environment.NewLine;
+            }
+            return Songs;
+        }
+
+        public string SeeAllVid()
+        {
+            string Vids = "";
+            for (int i = 0; i < allVideos.Count(); i++)
+            {
+                Vids += allVideos[i].GetData() + Environment.NewLine + Environment.NewLine;
+            }
+            return Vids;
+        }
+
+
+        public string MakePL(string PLType, string NamePlaylist, bool Privacy, List<Multimedia> AllFiles)
+        {
+            if (PLType == "Songs")
+            {
+                int counter = 0;
+                for (int i = 0; i < allMusicPL.Count(); i++)
+                {
+                    if (NamePlaylist == allMusicPL[i].GetNamePL())
+                    {
+                        counter += 1;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (counter == 0)
+                {
+                    Playlist playlist = new Playlist();
+                    if (server.GetActive().GetPrivacy() == false)
+                    {
+                        playlist.CreatePlaylist(NamePlaylist, Privacy, AllFiles, server.GetActive());
+                        allMusicPL.Add(playlist);
+                        server.AddMusicPlaylist(playlist);
+                        return "Playlist created successfully";
+                    }
+                    else
+                    {
+                        playlist.CreatePlaylist(NamePlaylist, true, AllFiles, server.GetActive()); //playlist privada porque usuario privado//
+                        allMusicPL.Add(playlist);
+                        server.AddMusicPlaylist(playlist);
+                        return "Playlist created successfully";
+                    }
+
+                }
+                else
+                {
+                    return "There's already a playlist with that name! Try again.";
+                }
+            }
+            else if (PLType == "Videos")
+            {
+                int counter = 0;
+                for (int i = 0; i < allVidPL.Count(); i++)
+                {
+                    if (NamePlaylist == allVidPL[i].GetNamePL())
+                    {
+                        counter += 1;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+                if (counter == 0)
+                {
+                    Playlist playlist = new Playlist();
+                    if (server.GetActive().GetPrivacy() == false)
+                    {
+                        playlist.CreatePlaylist(NamePlaylist, Privacy, AllFiles, server.GetActive());
+                        allVidPL.Add(playlist);
+                        server.AddVidPlaylist(playlist);
+                        return "Playlist created successfully";
+                    }
+                    else
+                    {
+                        playlist.CreatePlaylist(NamePlaylist, true, AllFiles, server.GetActive()); //playlist provada porque usuario privado//
+                        allVidPL.Add(playlist);
+                        server.AddVidPlaylist(playlist);
+                        return "Playlist created successfully";
+                    }
+                }
+                else
+                {
+                    return "There's already a playlist with that name! Try again.";
+                }
+            }
+
+            else
+            {
+                return "Invalid command";
+            }
+        }
+
+        public void AddSong(string name, string kind, string album, List<Workers> artists, List<Awards> awards, List<Workers> composers, int length)
+        {
+            Song song = new Song();
+            song.AddSong(name, kind, album, artists, awards, composers, length);
+            allSongs.Add(song);
+        }
+
+        public void AddVid(string name, string kind, string studio, List<Workers> directors, List<Workers> actors, int length)
+        {
+            Video video = new Video();
+            video.AddVideo(name, kind, studio, directors, actors, length);
+            allVideos.Add(video);
+        }
+
+        public List<Song> SearchAndPlaySong(List<string> filter)
+        {
+            List<Song> songFilter = new List<Song>();
+
+            foreach (var b in filter)
+            {
+
+                foreach (var a in allSongs)
+                {
+
+                    if (a.GetName() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetArtistSong() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetGender() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+                    if (a.GetAlbum() == b)
+                    {
+                        songFilter.Add(a);
+                    }
+
+                }
+            }
+            return songFilter;
+        }
+
+        public List<Video> SearchAndPlayVid(List<string> filter)
+        {
+            List<Video> videoFilter = new List<Video>();
+
+            foreach (var b in filter)
+            {
+
+                foreach (var a in allVideos)
+                {
+
+                    if (a.GetName() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+                    if (a.GetKind() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+                    if (a.GetStudio() == b)
+                    {
+                        videoFilter.Add(a);
+                    }
+
+                }
+            }
+            return videoFilter;
+        }
+
+
+        public void AddToQueue(Multimedia archive, int diff)
+        {
+            if (diff == 0)
+            {
+                server.GetActive().AddSongQueue(archive);
+            }
+            else
+            {
+                server.GetActive().AddVidQueue(archive);
+            }
+        }
+
+        public void ResetQueue(string queueType, int diff)
+        {
+            ; server.GetActive().ResetQueue(diff);
+        }
+
+        public void GetQueue(string queueType)
         {
 
         }
 
-        private void bt_closeregistro_Click(object sender, EventArgs e)
+        public string PlayQueue(string queueType)
         {
-            Application.Exit();
+            if (queueType == "Songs")
+            {
+                return "Escuchando cola de canciones";
+            }
+
+            else if (queueType == "Videos")
+            {
+                return "Escuchando cola de videos";
+            }
+
+            else
+            {
+                return "No se encontro la cola";
+            }
         }
 
-        private void bt_menucancion_Click(object sender, EventArgs e)
+        public bool CheckMembership(User usercheck)
         {
-            pn_settingsong.Visible = true;
+            return (usercheck.GetMember());
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        public Server GetServer()
         {
-            pn_settingsong.Visible = false;
+            return server;
         }
 
-        private void bt_secpremios_Click(object sender, EventArgs e)
+        public string CloseApp()
         {
-            pn_premio.Visible = true;
+            saveUser(server.GetUsers());
+            saveAdmin(admin);
+            savePlaylistS(allMusicPL);
+            savePlaylistV(allVidPL);
+            saveSongs(allSongs);
+            saveVideos(allVideos);
+            saveWorkers(allWorkers);
+
+
+
+            return "Cerrando aplicacion";
         }
 
-        private void bt_backpremios_Click(object sender, EventArgs e)
+        public void OpenApp()
         {
-            pn_premio.Visible = false;
+            allUser = LoadUser();
+            server.SetUsers(allUser);
+            admin = LoadAdmin();
+            allMusicPL = LoadPlaylistS();
+            allVidPL = LoadPlaylistV();
+            allWorkers = LoadWorkers();
+            allSongs = LoadSongs();
+            allVideos = LoadVideo();
+
+
         }
 
-        private void bt_calsong_Click(object sender, EventArgs e)
+        public string Login(string userName, string passWord)
         {
-            pn_calisong.Visible = true;
+            return server.Login(userName, passWord);
         }
 
-        
-
-        private void bt_buscarsong_Click(object sender, EventArgs e)
+        public string Register(string name, string surName, string userName, string passWord, bool AVI = false)
         {
-            pn_bussong.Visible = true;
+            return server.Register(name, surName, userName, passWord, AVI);
         }
 
-        private void bt_backcalisongClick(object sender, EventArgs e)
+        public void saveUser(List<User> allUser)
         {
-            pn_calisong.Visible = false;
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allUser);
+            stream.Close();
+        }
+        private List<User> LoadUser()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("MyFile.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<User> allUser = (List<User>)formatter.Deserialize(stream);
+            stream.Close();
+            return allUser;
+        }
+        public void saveAdmin(Admin admin)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Admin.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, admin);
+            stream.Close();
+        }
+        private Admin LoadAdmin()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Admin.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Admin admin = (Admin)formatter.Deserialize(stream);
+            stream.Close();
+            return admin;
+        }
+        public void saveWorkers(List<Workers> allWorkers)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Worker.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allWorkers);
+            stream.Close();
+        }
+        private List<Workers> LoadWorkers()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Worker.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<Workers> allWorkers = (List<Workers>)formatter.Deserialize(stream);
+            stream.Close();
+            return allWorkers;
+        }
+        public void savePlaylistS(List<Playlist> allMusicPL)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("SongPL.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allMusicPL);
+            stream.Close();
+        }
+        private List<Playlist> LoadPlaylistS()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("SongPL.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<Playlist> allMusicPL = (List<Playlist>)formatter.Deserialize(stream);
+            stream.Close();
+            return allMusicPL;
+        }
+        public void savePlaylistV(List<Playlist> allVidPL)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("VidPL.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allVidPL);
+            stream.Close();
+        }
+        private List<Playlist> LoadPlaylistV()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("VidPL.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<Playlist> allVidPL = (List<Playlist>)formatter.Deserialize(stream);
+            stream.Close();
+            return allVidPL;
+        }
+        public void saveSongs(List<Song> allSongs)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allSongs);
+            stream.Close();
+        }
+        private List<Song> LoadSongs()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Songs.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<Song> allSongs = (List<Song>)formatter.Deserialize(stream);
+            stream.Close();
+            return allSongs;
+        }
+        public void saveVideos(List<Video> allVideos)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, allVideos);
+            stream.Close();
+        }
+        private List<Video> LoadVideo()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Videos.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            List<Video> allVideos = (List<Video>)formatter.Deserialize(stream);
+            stream.Close();
+            return allVideos;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public Admin GetAdmin()
         {
-            pn_bussong.Visible = false;
+            return admin;
         }
 
-        
-
-        private void bt_backplay_Click(object sender, EventArgs e)
+        public List<Playlist> GetPlaylist(int diff)
         {
-            pn_playlist.Visible = false;
+            if (diff == 0)
+            {
+                return allMusicPL;
+            }
+            else
+            {
+                return allVidPL;
+            }
         }
 
-        private void bt_playlist_Click(object sender, EventArgs e)
+        public List<Song> GetAllSongs()
         {
-            pn_playlist.Visible = true;
+            return allSongs;
         }
 
-        private void bt_menuusario_Click(object sender, EventArgs e)
+        public Song SearchforSong(string name)
         {
-            pn_usuario.Visible = true;
+            Song song = new Song();
+            for (int i = 0; i < allSongs.Count(); i++)
+            {
+                if (name == allSongs[i].GetName())
+                {
+                    song = allSongs[i];
+                }
+            }
+            return song;
         }
 
-        private void bt_backusu_Click(object sender, EventArgs e)
+        public Video SearchforVid(string name)
         {
-            pn_usuario.Visible = false;
+            Video video = new Video();
+            for (int i = 0; i < allVideos.Count(); i++)
+            {
+                if (name == allVideos[i].GetName())
+                {
+                    video = allVideos[i];
+                }
+            }
+            return video;
+
         }
 
-        private void bt_ustu_Click(object sender, EventArgs e)
+        public void Rate(string name, int diff, List<Rating> rating)
         {
-            pn_tuusu.Visible = true;
+            if (diff == 0)
+            {
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (name == allSongs[i].GetName())
+                    {
+                        allSongs[i].SetRating(rating);
+                    }
+                }
+            }
+
+            else
+            {
+                for (int i = 0; i < allVideos.Count(); i++)
+                {
+                    if (name == allVideos[i].GetName())
+                    {
+                        allVideos[i].SetRating(rating);
+                    }
+                }
+            }
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        public void ReviewVid(string name, List<Review> review)
         {
-            pn_tuusu.Visible = false;
-        }
+            for (int i = 0; i < allVideos.Count(); i++)
+            {
+                if (name == allVideos[i].GetName())
+                {
+                    allVideos[i].SetReview(review);
+                }
+            }
 
-        private void bt_menuvideos_Click(object sender, EventArgs e)
-        {
-            pn_video.Visible = true;
-        }
 
-        private void bt_backvideo_Click(object sender, EventArgs e)
-        {
-            pn_video.Visible = false; 
-        }
-
-       
-
-        private void bt_calcrivideo_Click(object sender, EventArgs e)
-        {
-            pn_calivideos.Visible = true;
-        }
-
-        private void bt_backcalivideo_Click(object sender, EventArgs e)
-        {
-            pn_calivideos.Visible = false;
-        }
-
-        private void bt_critvideo_Click(object sender, EventArgs e)
-        {
-            pn_critvideo.Visible = true;
-        }
-
-        private void bt_backdarcritvideo_Click(object sender, EventArgs e)
-        {
-            pn_critvideo.Visible = false;
-        }
-
-        private void bt_rativideo_Click(object sender, EventArgs e)
-        {
-            pn_rativideo.Visible = true;
-        }
-
-        private void bt_backdarrativideo_Click(object sender, EventArgs e)
-        {
-            pn_rativideo.Visible = false; 
-        }
-
-        private void bt_busvideo_Click(object sender, EventArgs e)
-        {
-            pn_buscvideo.Visible = true;
-        }
-
-        private void bt_backfilvideo_Click(object sender, EventArgs e)
-        {
-            pn_buscvideo.Visible = false;
-        }
-
-        private void bt_playlisyvideo_Click(object sender, EventArgs e)
-        {
-            pn_playlistvideo.Visible = true;
-        }
-
-        private void bt_backplayvideo_Click(object sender, EventArgs e)
-        {
-            pn_playlistvideo.Visible = false;
         }
     }
 }
