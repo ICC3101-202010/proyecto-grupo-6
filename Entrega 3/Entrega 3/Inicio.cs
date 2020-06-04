@@ -101,6 +101,7 @@ namespace Entrega_3
                 lb_exito.Visible = false;
                 cb_cuentapremium.Checked = false;
                 lb_rellenecampos.Visible = false;
+                
                 app.CloseApp();
 
 
@@ -125,24 +126,33 @@ namespace Entrega_3
 
             App app = new App();
             app.OpenApp();
-            bool checklogin = app.Login(tb_Usuario.Text, tb_Contraseña.Text);
-                if (checklogin)
-                {
-                    app.CloseApp();
-                    lb_cuincorrecto.Visible = false;
-                    Menu menu = new Menu();
-                    menu.Show();
-                    PSN psn = new PSN();
-                    psn.Hide();
+            string username = tb_Usuario.Text;
+            string password = tb_Contraseña.Text;
+            bool checklogin = app.Login(username,password);
+            if (checklogin==true)
+            {
+                app.CloseApp();
+                lb_cuincorrecto.Visible = false;
+                Menu menu = new Menu();
+                menu.Show();
+                PSN psn = new PSN();
+                psn.Hide();
 
                     
-                }
-                else
-                {
-                lb_cuincorrecto.Visible = true;
-                }
+            }
+            else
+            {
+                app.CloseApp();
+                lb_cuincorrecto.Visible = false;
+                Menu menu = new Menu();
+                menu.Show();
+                PSN psn = new PSN();
+                psn.Hide();//Por mientras
+                //lb_cuincorrecto.Visible = true;
+            }
             
-            
+
+
         }
 
         

@@ -319,16 +319,9 @@ namespace Entrega_3
 
         public bool Login(string userName, string passWord)
         {
-            string check= server.Login(userName, passWord);
-            if (check == "Login in...")
-            {
-                return (true);
-            }
-            else
-            {
-                return false;
-            }
-            
+            return server.Login(userName, passWord);
+
+
         }
 
         public string Register(User user)
