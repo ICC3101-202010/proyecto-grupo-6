@@ -15,31 +15,21 @@ namespace Entrega_3
         private List<User> AllUser=new List<User>() {};
         private User activeUser;
 
-        public string Login(string Username, string Password)
+        public bool Login(string Username, string Password)
         {
-            User checkuser;
-            int counter = 0;
+            User checkuser=null;
+            bool found = false;
+            bool counter = false;
             for (int i = 0; i < AllUser.Count(); i++)
             {
-                if (Username == AllUser[i].GetUsername())
+                checkuser = AllUser[i];
+                if (Username == checkuser.GetUsername())
                 {
-                    checkuser = AllUser[i];
+                    
+                    found = true;
+                    break;
 
-
-                    if (Password == checkuser.GetPassword())
-                    {
-
-                        activeUser = checkuser;
-                        counter += 1;
-                        break;
-
-                    }
-                    else
-                    {
-
-                        counter -= 1;
-                        break;
-                    }
+                    
                 }
 
                 else
@@ -47,20 +37,25 @@ namespace Entrega_3
                     continue;
                 }
 
-
-
-
             }
-            if (counter == 1)
+            if (found)
             {
-                return ("Login in...");
-            }
-            
-            else
-            {
-                return ("Contraseña o Usuario Incorrecto");
+                if (Password != checkuser.GetPassword())
+                {
 
+                    
+                    counter = false;
+
+
+                }
+                else
+                {
+                    activeUser = checkuser;
+                    counter = true;
+
+                }
             }
+            return counter;
 
         }
         public string Logout()
