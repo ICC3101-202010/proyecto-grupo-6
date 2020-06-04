@@ -7,7 +7,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Proyecto_Grupo_6
+namespace Entrega_3
 {
     [Serializable]
     class User
@@ -18,11 +18,11 @@ namespace Proyecto_Grupo_6
         private string Password;
         private List<Playlist> YourMusic = new List<Playlist>() { };
         private List<Playlist> YourVideos = new List<Playlist>() { };
-        private bool AVI; //la foto de perfil la definimos momentaneamente como un bool. tiene o no//
+        
         private List<Multimedia> FaveSongs = new List<Multimedia>() { };
         private List<Multimedia> FaveVids = new List<Multimedia>() { };
         private bool AccPrivacy;
-        private bool Membership = false;
+        private bool Membership=false;
         private List<Multimedia> Downloads = new List<Multimedia>() { };
         private string Time = "";
         private List<Multimedia> SongQueue = new List<Multimedia>() { };
@@ -33,13 +33,13 @@ namespace Proyecto_Grupo_6
         private List<User> FollowedUsers = new List<User>() { };
         private bool Admin;
 
-        public void SignUp(string Name, string Surname, string Username, string Password, bool AVI)
+        public void SignUp(string Name, string Surname, string Username, string Password, bool Member)
         {
             this.Name = Name;
             this.Surname = Surname;
             this.Password = Password;
             this.Username = Username;
-            this.AVI = AVI;
+            this.Membership = Member;
         }
 
         public string GetUsername()

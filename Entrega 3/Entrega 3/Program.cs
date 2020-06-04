@@ -14,9 +14,11 @@ namespace Entrega_3
         [STAThread]
         static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PSN());
+            PSN psn = new PSN();
+            Application.Run(psn);
         }
     }
 }
