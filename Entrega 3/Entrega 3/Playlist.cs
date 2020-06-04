@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
-namespace Proyecto_Grupo_6
+namespace Entrega_3
 {
     [Serializable]
     class Playlist

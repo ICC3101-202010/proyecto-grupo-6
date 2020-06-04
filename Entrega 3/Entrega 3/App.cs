@@ -9,17 +9,17 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
 
-namespace Proyecto_Grupo_6
+namespace Entrega_3
 {
     [Serializable]
     class App
     {
-        private List<Song> allSongs = new List<Song>();
-        private List<Video> allVideos = new List<Video>();
-        private List<Playlist> allMusicPL = new List<Playlist>();
-        private List<Playlist> allVidPL = new List<Playlist>();
-        private List<User> allUser = new List<User>();
-        private List<Workers> allWorkers = new List<Workers>();
+        private List<Song> allSongs = new List<Song>() { };
+        private List<Video> allVideos = new List<Video>() { };
+        private List<Playlist> allMusicPL = new List<Playlist>() { };
+        private List<Playlist> allVidPL = new List<Playlist>() { };
+        private List<User> allUser = new List<User>() { new User()};
+        private List<Workers> allWorkers = new List<Workers>() { };
 
         private Server server = new Server();
         private Admin admin = new Admin();
@@ -322,9 +322,9 @@ namespace Proyecto_Grupo_6
             return server.Login(userName, passWord);
         }
 
-        public string Register(string name, string surName, string userName, string passWord, bool AVI = false)
+        public string Register(string name, string surName, string userName, string passWord, bool Member)
         {
-            return server.Register(name, surName, userName, passWord, AVI);
+            return server.Register(name, surName, userName, passWord, Member);
         }
 
         public void saveUser(List<User> allUser)
@@ -519,5 +519,7 @@ namespace Proyecto_Grupo_6
 
 
         }
+
+        
     }
 }

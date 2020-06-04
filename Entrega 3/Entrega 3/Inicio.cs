@@ -12,14 +12,20 @@ namespace Entrega_3
 {
     public partial class PSN : Form
     {
+
+        App app = new App();
         public PSN()
         {
             InitializeComponent();
             this.tb_Contraseña.AutoSize = false;
             this.tb_Contraseña.Size = new Size(this.tb_Contraseña.Size.Width, 50);
+
+            
         }
 
-       
+        
+
+
         private void lb_register_Click(object sender, EventArgs e)
         {
             pn_register.Visible = true;
@@ -34,6 +40,7 @@ namespace Entrega_3
             tb_inLastName.Text = "Apellido";
             lb_exito.Visible = false;
             lb_rellenecampos.Visible = false;
+            cb_cuentapremium.Checked = false;
         }
 
         private void tb_inName_TextChanged(object sender, EventArgs e)
@@ -66,9 +73,10 @@ namespace Entrega_3
         {
             
         }
-
+        
         private void bt_crearcuenta_Click(object sender, EventArgs e)
         {
+            
             if (tb_inLastName.Text == " " || tb_inName.Text == " "|| tb_inUsername.Text == " "|| tb_inContraseña.Text == " " || tb_inName.Text == "Nombre" || tb_inLastName.Text == "Apellido" || tb_inContraseña.Text == "Contraseña" || tb_inUsername.Text == "Nombre de Usuario"  )
            
             {
@@ -80,10 +88,18 @@ namespace Entrega_3
             {
                 lb_exito.Visible = true;
                 lb_rellenecampos.Visible = false;
-                Menu app = new Menu();
-                app.Show();
-                PSN psn = new PSN();
-                psn.Hide();
+                app.Register(tb_inName.Text, tb_inLastName.Text, tb_inUsername.Text, tb_inContraseña.Text, cb_cuentapremium.Checked);
+                pn_register.Visible = false;
+                tb_inName.Text = "Nombre";
+                tb_inContraseña.Text = "Contraseña";
+                tb_inUsername.Text = "Nombre de Usuario";
+                tb_inLastName.Text = "Apellido";
+                lb_exito.Visible = false;
+                cb_cuentapremium.Checked = false;
+                lb_rellenecampos.Visible = false;
+                
+
+
             }
            
         }
@@ -100,10 +116,26 @@ namespace Entrega_3
 
         private void bt_login_Click(object sender, EventArgs e)
         {
-            Menu app = new Menu();
-            app.Show();
-            PSN psn = new PSN();
-            psn.Hide();
+            
+                
+                string checklogin = app.Login(tb_Usuario.Text, tb_Contraseña.Text);
+                if (checklogin == "Login in...")
+                {
+                    lb_cuincorrecto.Visible = false;
+                    Menu menu = new Menu();
+                    menu.Show();
+                    PSN psn = new PSN();
+                    psn.Hide();
+                    
+                }
+                else
+                {
+                lb_cuincorrecto.Visible = true;
+                }
+            
+            
         }
+
+        
     }
 }

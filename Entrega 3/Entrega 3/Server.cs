@@ -7,12 +7,12 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace Proyecto_Grupo_6
+namespace Entrega_3
 {
     [Serializable]
     class Server
     {
-        private List<User> AllUser;
+        private List<User> AllUser=new List<User>() { new User() };
         private User activeUser;
 
         public string Login(string Username, string Password)
@@ -55,10 +55,7 @@ namespace Proyecto_Grupo_6
             {
                 return ("Login in...");
             }
-            else if (counter == -1)
-            {
-                return ("Contraseña o Usuario Incorrecto");
-            }
+            
             else
             {
                 return ("Contraseña o Usuario Incorrecto");
@@ -71,7 +68,7 @@ namespace Proyecto_Grupo_6
             activeUser = null;
             return ("Ha Cerrado su sesion con exito");
         }
-        public string Register(string Name, string SurName, string UserName, string Password, bool AVI)
+        public string Register(string Name, string SurName, string UserName, string Password, bool Member)
         {
             int counter = 0;
             for (int i = 0; i < AllUser.Count(); i++)
@@ -94,7 +91,7 @@ namespace Proyecto_Grupo_6
             else
             {
                 User user = new User();
-                user.SignUp(Name, SurName, UserName, Password, AVI);
+                user.SignUp(Name, SurName, UserName, Password , Member);
                 AllUser.Add(user);
                 return ("Se ha creado el usuario con exito");
 

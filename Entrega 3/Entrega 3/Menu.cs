@@ -12,9 +12,15 @@ namespace Entrega_3
 {
     public partial class Menu : Form
     {
+        App app = new App();
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public void GetApp()
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
