@@ -12,7 +12,7 @@ namespace Entrega_3
     [Serializable]
     class Server
     {
-        private List<User> AllUser=new List<User>() { new User() };
+        private List<User> AllUser=new List<User>() {};
         private User activeUser;
 
         public string Login(string Username, string Password)
@@ -68,12 +68,12 @@ namespace Entrega_3
             activeUser = null;
             return ("Ha Cerrado su sesion con exito");
         }
-        public string Register(string Name, string SurName, string UserName, string Password, bool Member)
+        public string Register(User user)
         {
             int counter = 0;
             for (int i = 0; i < AllUser.Count(); i++)
             {
-                if (UserName == AllUser[i].GetUsername())
+                if (user.GetUsername() == AllUser[i].GetUsername())
                 {
                     counter += 1;
                     break;
@@ -90,8 +90,7 @@ namespace Entrega_3
             }
             else
             {
-                User user = new User();
-                user.SignUp(Name, SurName, UserName, Password , Member);
+               
                 AllUser.Add(user);
                 return ("Se ha creado el usuario con exito");
 
@@ -219,7 +218,7 @@ namespace Entrega_3
 
         public User SearchUser(string username)
         {
-            User searchuser = new User();
+            User searchuser=null;
             for (int i = 0; i < AllUser.Count(); i++)
             {
                 if (username == AllUser[i].GetUsername())

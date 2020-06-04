@@ -33,7 +33,7 @@ namespace Entrega_3
         private List<User> FollowedUsers = new List<User>() { };
         private bool Admin;
 
-        public void SignUp(string Name, string Surname, string Username, string Password, bool Member)
+        public  User(string Name, string Surname, string Username, string Password, bool Member)
         {
             this.Name = Name;
             this.Surname = Surname;

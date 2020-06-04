@@ -11,14 +11,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Entrega_3
 {
-    [Serializable]
+    
     class App
     {
         private List<Song> allSongs = new List<Song>() { };
         private List<Video> allVideos = new List<Video>() { };
         private List<Playlist> allMusicPL = new List<Playlist>() { };
         private List<Playlist> allVidPL = new List<Playlist>() { };
-        private List<User> allUser = new List<User>() { new User()};
+        private List<User> allUser = new List<User>() { };
         private List<Workers> allWorkers = new List<Workers>() { };
 
         private Server server = new Server();
@@ -297,7 +297,7 @@ namespace Entrega_3
             saveSongs(allSongs);
             saveVideos(allVideos);
             saveWorkers(allWorkers);
-
+            
 
 
             return "Cerrando aplicacion";
@@ -313,18 +313,27 @@ namespace Entrega_3
             allWorkers = LoadWorkers();
             allSongs = LoadSongs();
             allVideos = LoadVideo();
-
+            
 
         }
 
-        public string Login(string userName, string passWord)
+        public bool Login(string userName, string passWord)
         {
-            return server.Login(userName, passWord);
+            string check= server.Login(userName, passWord);
+            if (check == "Login in...")
+            {
+                return (true);
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
-        public string Register(string name, string surName, string userName, string passWord, bool Member)
+        public string Register(User user)
         {
-            return server.Register(name, surName, userName, passWord, Member);
+            return server.Register(user);
         }
 
         public void saveUser(List<User> allUser)
