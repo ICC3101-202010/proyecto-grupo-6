@@ -13,7 +13,7 @@ namespace Entrega_3
     public partial class PSN : Form
     {
 
-        App app = new App();
+        
         public PSN()
         {
             InitializeComponent();
@@ -76,7 +76,10 @@ namespace Entrega_3
         
         private void bt_crearcuenta_Click(object sender, EventArgs e)
         {
+            App app = new App();
+            app.OpenApp();
             
+
             if (tb_inLastName.Text == " " || tb_inName.Text == " "|| tb_inUsername.Text == " "|| tb_inContraseña.Text == " " || tb_inName.Text == "Nombre" || tb_inLastName.Text == "Apellido" || tb_inContraseña.Text == "Contraseña" || tb_inUsername.Text == "Nombre de Usuario"  )
            
             {
@@ -88,7 +91,8 @@ namespace Entrega_3
             {
                 lb_exito.Visible = true;
                 lb_rellenecampos.Visible = false;
-                app.Register(tb_inName.Text, tb_inLastName.Text, tb_inUsername.Text, tb_inContraseña.Text, cb_cuentapremium.Checked);
+                User user = new User(tb_inName.Text, tb_inLastName.Text, tb_inUsername.Text, tb_inContraseña.Text, cb_cuentapremium.Checked);
+                app.Register(user);
                 pn_register.Visible = false;
                 tb_inName.Text = "Nombre";
                 tb_inContraseña.Text = "Contraseña";
@@ -97,7 +101,9 @@ namespace Entrega_3
                 lb_exito.Visible = false;
                 cb_cuentapremium.Checked = false;
                 lb_rellenecampos.Visible = false;
-                
+                app.CloseApp();
+
+
 
 
             }
@@ -116,16 +122,19 @@ namespace Entrega_3
 
         private void bt_login_Click(object sender, EventArgs e)
         {
-            
-                
-                string checklogin = app.Login(tb_Usuario.Text, tb_Contraseña.Text);
-                if (checklogin == "Login in...")
+
+            App app = new App();
+            app.OpenApp();
+            bool checklogin = app.Login(tb_Usuario.Text, tb_Contraseña.Text);
+                if (checklogin)
                 {
+                    app.CloseApp();
                     lb_cuincorrecto.Visible = false;
                     Menu menu = new Menu();
                     menu.Show();
                     PSN psn = new PSN();
                     psn.Hide();
+
                     
                 }
                 else
