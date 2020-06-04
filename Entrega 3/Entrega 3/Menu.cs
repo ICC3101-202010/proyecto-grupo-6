@@ -168,5 +168,56 @@ namespace Entrega_3
         {
             pn_playlistvideo.Visible = false;
         }
+
+
+
+        private string routesong = "";
+        private string routevideo = "";
+        private void bt_downloadsong_Click(object sender, EventArgs e)
+        {
+            if (openFilesong.ShowDialog() == DialogResult.OK)
+            {
+                routesong = openFilesong.FileName;
+            }
+        }
+        private void bt_playsong_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayersong.URL = routesong;
+            axWindowsMediaPlayersong.Ctlcontrols.play();
+        }
+
+
+        private void bt_stopsong_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayersong.Ctlcontrols.stop();
+        }
+
+        private void bt_pausesong_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayersong.Ctlcontrols.pause();
+        }
+        private void bt_pausevideo_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayervideo.Ctlcontrols.pause();
+        }
+
+        private void bt_downloadvideo_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogvideo.ShowDialog() == DialogResult.OK)
+            {
+                routevideo = openFileDialogvideo.FileName;
+            }
+        }
+
+        private void bt_playvideo_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayervideo.URL = routevideo;
+            axWindowsMediaPlayervideo.Ctlcontrols.play();
+        }
+
+        private void bt_stopvideo_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayervideo.Ctlcontrols.stop();
+        }
     }
 }
