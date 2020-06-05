@@ -219,5 +219,149 @@ namespace Entrega_3
         {
             axWindowsMediaPlayervideo.Ctlcontrols.stop();
         }
+
+        private void bt_reproducirsong_Click(object sender, EventArgs e)
+        {
+            pn_repsong.Visible = true;
+        }
+
+        private void bt_vervideo_Click(object sender, EventArgs e)
+        {
+            pn_repvideo.Visible = true;
+        }
+
+        private void pb_closeall_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bt_agregarsong_Click(object sender, EventArgs e)
+        {
+            pn_agregarcancion.Visible = true;
+        }
+
+        private void bt_backaddsongClick(object sender, EventArgs e)
+        {
+            pn_agregarcancion.Visible = false;
+            lb_exitosong.Visible = false;
+            lb_datossong.Visible = false;
+            tb_albumsong.Text = "INGRESE ALBUM DE LA CANCION";
+            tb_artistasong.Text = "INGRESE EL NOMBRE DEL ARTISTA";
+            tb_edadartsong.Text = "EDAD ARTISTA";
+            tb_generosong.Text = "INGRESE GENERO DE LA CANCION";
+            tb_nombresong.Text = "INGRESE NOMBRE DE LA CANCION";
+            tb_sexoartista.Text = "SEXO DEL ARTISTA ( HOMBRE-MUJER )";
+        }
+
+        private void bt_cargarsong_Click(object sender, EventArgs e)
+        {
+            if(tb_albumsong.Text == "" || tb_artistasong.Text == ""||tb_edadartsong.Text == "" || tb_generosong.Text == "" || tb_nombresong.Text == "" || tb_sexoartista.Text == "")
+            {
+                lb_datossong.Visible = true;
+
+            }
+            else
+            {
+                lb_datossong.Visible = false;
+                lb_exitosong.Visible = true; 
+            }
+
+        }
+
+        
+
+        private void tb_nombresong_Click(object sender, EventArgs e)
+        {
+            tb_nombresong.Text = "";
+        }
+
+        private void tb_generosong_Click(object sender, EventArgs e)
+        {
+            tb_generosong.Text = "";
+        }
+
+        private void tb_albumsong_Click(object sender, EventArgs e)
+        {
+            tb_albumsong.Text = "";
+        }
+
+        private void tb_artistasong_Click(object sender, EventArgs e)
+        {
+            tb_artistasong.Text = "";
+        }
+
+        private void tb_sexoartista_Click(object sender, EventArgs e)
+        {
+            tb_sexoartista.Text = "";
+        }
+
+        private void tb_edadartsong_Click(object sender, EventArgs e)
+        {
+            tb_edadartsong.Text = "";
+        }
+
+        private void bt_agrvideo_Click(object sender, EventArgs e)
+        {
+            pn_addvideo.Visible = true;
+        }
+
+        private void bt_backaddvideo_Click(object sender, EventArgs e)
+        {
+            pn_addvideo.Visible = false;
+            lb_datavideo.Visible = false;
+            lb_exitovideo.Visible = false;
+            tb_nombrevideo.Text = "INGRESE NOMBRE DEL VIDEO";
+            tb_generovideo.Text = "INGRESE GENERO DEL VIDEO";
+            tb_direcvideo.Text = "INGRESE NOMBRE DEL DIRECTOR DEL VIDEO";
+            tb_canalvideo.Text = "INGRESE CANAL DEL VIDEO";
+            tb_sexodirecvideo.Text = "SEXO DIRECTOR DEL VIDEO (HOMBRE-MUJER)";
+            tb_edaddirect.Text = "EDAD DEL DIRECTOR";
+        }
+
+        private void bt_cargarvideo_Click(object sender, EventArgs e)
+        {
+            if (tb_nombrevideo.Text == "" || tb_generovideo.Text == ""||tb_direcvideo.Text == ""|| tb_canalvideo.Text == ""|| tb_sexodirecvideo.Text == ""||tb_edaddirect.Text == "")
+            {
+                lb_datavideo.Visible = true;
+            }
+            else
+            {
+                lb_exitovideo.Visible = true;
+                lb_datavideo.Visible = false;
+            }
+        }
+
+        private void tb_nombrevideo_Click(object sender, EventArgs e)
+        {
+            tb_nombrevideo.Text = "";
+        }
+
+        private void tb_generovideo_Click(object sender, EventArgs e)
+        {
+            tb_generovideo.Text = "";
+        }
+
+        private void tb_canalvideo_Click(object sender, EventArgs e)
+        {
+            tb_canalvideo.Text = "";
+
+        }
+
+        private void tb_direcvideo_Click(object sender, EventArgs e)
+        {
+            tb_direcvideo.Text = "";
+        }
+
+        
+
+        private void tb_edaddirect_Click(object sender, EventArgs e)
+        {
+            tb_edaddirect.Text = "";
+        }
+
+        private void tb_sexodirecvideo_Click(object sender, EventArgs e)
+        {
+            tb_sexodirecvideo.Text = "";
+        }
     }
 }

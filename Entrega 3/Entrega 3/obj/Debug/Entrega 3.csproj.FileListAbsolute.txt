@@ -24,3 +24,18 @@ C:\Users\ecamu\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.
 C:\Users\ecamu\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.CoreCompileInputs.cache
 C:\Users\ecamu\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
 C:\Users\ecamu\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe.config
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.exe
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Entrega 3.pdb
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\Interop.WMPLib.dll
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csprojAssemblyReference.cache
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Interop.WMPLib.dll
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.ResolveComReference.cache
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Menu.resources
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.PSN.resources
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega_3.Properties.Resources.resources
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.csproj.GenerateResource.cache
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.exe
+C:\Users\JENNY\Desktop\proyecto-grupo-6\Entrega 3\Entrega 3\obj\Debug\Entrega 3.pdb
