@@ -13,7 +13,7 @@ namespace Entrega_3
     class Server
     {
         private List<User> AllUser=new List<User>() {};
-        private User activeUser;
+        private User activeUser=null;
 
         public bool Login(string Username, string Password)
         {
@@ -63,7 +63,7 @@ namespace Entrega_3
             activeUser = null;
             return ("Ha Cerrado su sesion con exito");
         }
-        public string Register(User user)
+        public bool Register(User user)
         {
             int counter = 0;
             for (int i = 0; i < AllUser.Count(); i++)
@@ -81,13 +81,13 @@ namespace Entrega_3
             }
             if (counter != 0)
             {
-                return ("El Nombre de usuario no esta disponible");
+                return (false);
             }
             else
             {
                
                 AllUser.Add(user);
-                return ("Se ha creado el usuario con exito");
+                return (true);
 
             }
         }
