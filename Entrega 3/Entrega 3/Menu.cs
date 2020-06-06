@@ -58,7 +58,7 @@ namespace Entrega_3
             pn_calisong.Visible = true;
         }
 
-        
+
 
         private void bt_buscarsong_Click(object sender, EventArgs e)
         {
@@ -75,7 +75,7 @@ namespace Entrega_3
             pn_bussong.Visible = false;
         }
 
-        
+
 
         private void bt_backplay_Click(object sender, EventArgs e)
         {
@@ -114,10 +114,10 @@ namespace Entrega_3
 
         private void bt_backvideo_Click(object sender, EventArgs e)
         {
-            pn_video.Visible = false; 
+            pn_video.Visible = false;
         }
 
-       
+
 
         private void bt_calcrivideo_Click(object sender, EventArgs e)
         {
@@ -146,7 +146,7 @@ namespace Entrega_3
 
         private void bt_backdarrativideo_Click(object sender, EventArgs e)
         {
-            pn_rativideo.Visible = false; 
+            pn_rativideo.Visible = false;
         }
 
         private void bt_busvideo_Click(object sender, EventArgs e)
@@ -255,7 +255,7 @@ namespace Entrega_3
 
         private void bt_cargarsong_Click(object sender, EventArgs e)
         {
-            if(tb_albumsong.Text == "" || tb_artistasong.Text == ""||tb_edadartsong.Text == "" || tb_generosong.Text == "" || tb_nombresong.Text == "" || tb_sexoartista.Text == "")
+            if (tb_albumsong.Text == "" || tb_artistasong.Text == "" || tb_edadartsong.Text == "" || tb_generosong.Text == "" || tb_nombresong.Text == "" || tb_sexoartista.Text == "")
             {
                 lb_datossong.Visible = true;
 
@@ -263,12 +263,12 @@ namespace Entrega_3
             else
             {
                 lb_datossong.Visible = false;
-                lb_exitosong.Visible = true; 
+                lb_exitosong.Visible = true;
             }
 
         }
 
-        
+
 
         private void tb_nombresong_Click(object sender, EventArgs e)
         {
@@ -320,7 +320,7 @@ namespace Entrega_3
 
         private void bt_cargarvideo_Click(object sender, EventArgs e)
         {
-            if (tb_nombrevideo.Text == "" || tb_generovideo.Text == ""||tb_direcvideo.Text == ""|| tb_canalvideo.Text == ""|| tb_sexodirecvideo.Text == ""||tb_edaddirect.Text == "")
+            if (tb_nombrevideo.Text == "" || tb_generovideo.Text == "" || tb_direcvideo.Text == "" || tb_canalvideo.Text == "" || tb_sexodirecvideo.Text == "" || tb_edaddirect.Text == "")
             {
                 lb_datavideo.Visible = true;
             }
@@ -352,7 +352,7 @@ namespace Entrega_3
             tb_direcvideo.Text = "";
         }
 
-        
+
 
         private void tb_edaddirect_Click(object sender, EventArgs e)
         {
@@ -362,6 +362,239 @@ namespace Entrega_3
         private void tb_sexodirecvideo_Click(object sender, EventArgs e)
         {
             tb_sexodirecvideo.Text = "";
+        }
+
+        private void bt_grammy_Click(object sender, EventArgs e)
+        {
+            lb_premios.Visible = true;
+            pn_premios.Visible = true;
+            rtb_premios.Text = "";
+            lb_premios.Text = "CANCIONES CON GRAMMY";
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+
+            int counter = 1;
+            for (int i = 0; i < allSongs.Count(); i++)
+            {
+                if ((allSongs[i].GetAwards().Count() == 1 && (allSongs[i].GetAwards()[0].getName() == "Grammy" || allSongs[i].GetAwards()[0].getName() == "grammy")) || (allSongs[i].GetAwards().Count() == 2 && (allSongs[i].GetAwards()[0].getName() == "Grammy" || allSongs[i].GetAwards()[0].getName() == "grammy" || allSongs[i].GetAwards()[1].getName() == "Grammy" || allSongs[i].GetAwards()[1].getName() == "grammy")))
+                {
+                    rtb_premios.Text=rtb_premios.Text+"\n"+(counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                    counter++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (counter == 1)
+            {
+                rtb_premios.Text=("No existen canciones con Grammy");
+            }
+        }
+
+        private void bt_brit_Click(object sender, EventArgs e)
+        {
+            lb_premios.Visible = true;
+            pn_premios.Visible = true;
+            rtb_premios.Text = "";
+            lb_premios.Text = "CANCIONES CON BRIT";
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+
+            int counter = 1;
+            for (int i = 0; i < allSongs.Count(); i++)
+            {
+                if ((allSongs[i].GetAwards().Count() == 1 && (allSongs[i].GetAwards()[0].getName() == "Brit" || allSongs[i].GetAwards()[0].getName() == "brit")) || (allSongs[i].GetAwards().Count() == 2 && (allSongs[i].GetAwards()[0].getName() == "Brit" || allSongs[i].GetAwards()[0].getName() == "brit" || allSongs[i].GetAwards()[1].getName() == "Brit" || allSongs[i].GetAwards()[1].getName() == "brit")))
+                {
+                    rtb_premios.Text = rtb_premios.Text + "\n" + (counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                    counter++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (counter == 1)
+            {
+                rtb_premios.Text=("No existen canciones con Brit");
+            }
+        }
+
+        private void bt_ambos_Click(object sender, EventArgs e)
+        {
+            lb_premios.Visible = true;
+            pn_premios.Visible = true;
+            rtb_premios.Text = "";
+            lb_premios.Text = "CANCIONES CON AMBOS PREMIOS";
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+
+            int counter = 1;
+            for (int i = 0; i < allSongs.Count(); i++)
+            {
+                if (allSongs[i].GetAwards().Count() == 2)
+                {
+                    rtb_premios.Text=rtb_premios.Text+"\n"+(counter + ". " + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong());
+                    counter++;
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            if (counter == 1)
+            {
+                rtb_premios.Text=("No existen canciones con ambos premios");
+            }
+        }
+
+        private void bt_pnpremiosback_Click(object sender, EventArgs e)
+        {
+            lb_premios.Visible = false;
+            pn_premios.Visible = false;
+            rtb_premios.Text = "";
+        }
+
+        private void bt_searchsongrat_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            int index = 0;
+            bool found = false;
+
+            if (tb_searchsongrat.Text == "")
+            {
+                lb_songrating.Text = "Rellene el campo";
+            }
+
+            else
+            {
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (tb_searchsongrat.Text == allSongs[i].GetName())
+                    {
+                        index = i;
+                        found = true;
+                    }
+                }
+                if (found)
+                {
+                    lb_songrating.Text = allSongs[index].GetRating() + " " + "estrellas";
+                }
+                else
+                {
+                    lb_songrating.Text = "No se encontro la cancion buscada";
+                }
+            }
+        }
+
+        private void bt_ratesong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            int index = 0;
+            bool found = false;
+
+            if (tb_searchsongrat.Text == "")
+            {
+                lb_songrating.Text = "Rellene el campo";
+            }
+            else
+            {
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (tb_searchsongrat.Text == allSongs[i].GetName())
+                    {
+                        index = i;
+                        found = true;
+                    }
+                }
+                if (found)
+                {
+                    if (clb_ratesong.GetItemChecked(0))
+                    {
+                        List<Rating> allRating = allSongs[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(1);
+                        allRating.Add(rating);
+                        allSongs[index].SetRating(allRating);
+
+                    }
+                    else if (clb_ratesong.GetItemChecked(1))
+                    {
+                        List<Rating> allRating = allSongs[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(2);
+                        allRating.Add(rating);
+                        allSongs[index].SetRating(allRating);
+                    }
+                    else if (clb_ratesong.GetItemChecked(2))
+                    {
+                        List<Rating> allRating = allSongs[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(3);
+                        allRating.Add(rating);
+                        allSongs[index].SetRating(allRating);
+                    }
+                    else if (clb_ratesong.GetItemChecked(3))
+                    {
+                        List<Rating> allRating = allSongs[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(4);
+                        allRating.Add(rating);
+                        allSongs[index].SetRating(allRating);
+                    }
+                    else if (clb_ratesong.GetItemChecked(4))
+                    {
+                        List<Rating> allRating = allSongs[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(5);
+                        allRating.Add(rating);
+                        allSongs[index].SetRating(allRating);
+                    }
+                    else
+                    {
+                        lb_songrating.Text = "Marque una opcion";
+                    }
+                }
+                else
+                {
+                    lb_songrating.Visible = true;
+                    lb_songrating.Text = "La cancion no pudo encontrarse";
+                }
+            }
+        }
+
+        private void bt_backsongrat_Click(object sender, EventArgs e)
+        {
+            lb_songrating.Text = "";
+            pn_songrating.Visible = false;
+            clb_ratesong.Visible = false;
+            bt_ratesong.Visible = false;
+            bt_searchsongrat.Visible = false;
+        }
+
+        private void bt_ratsong_Click(object sender, EventArgs e)
+        {
+            pn_songrating.Visible = true;
+            bt_searchsongrat.Visible = true;
+        }
+
+        private void bt_calisong_Click(object sender, EventArgs e)
+        {
+            pn_songrating.Visible = true;
+            clb_ratesong.Visible = true;
+            bt_ratesong.Visible = true;
         }
     }
 }

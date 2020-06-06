@@ -324,7 +324,7 @@ namespace Entrega_3
 
         }
 
-        public string Register(User user)
+        public bool Register(User user)
         {
             return server.Register(user);
         }

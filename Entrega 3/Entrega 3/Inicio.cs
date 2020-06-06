@@ -41,6 +41,7 @@ namespace Entrega_3
             lb_exito.Visible = false;
             lb_rellenecampos.Visible = false;
             cb_cuentapremium.Checked = false;
+            label3.Visible = false;
         }
 
         private void tb_inName_TextChanged(object sender, EventArgs e)
@@ -79,6 +80,7 @@ namespace Entrega_3
             App app = new App();
             app.OpenApp();
             
+            
 
             if (tb_inLastName.Text == " " || tb_inName.Text == " "|| tb_inUsername.Text == " "|| tb_inContraseña.Text == " " || tb_inName.Text == "Nombre" || tb_inLastName.Text == "Apellido" || tb_inContraseña.Text == "Contraseña" || tb_inUsername.Text == "Nombre de Usuario"  )
            
@@ -89,11 +91,19 @@ namespace Entrega_3
             
             else
             {
-                lb_exito.Visible = true;
+                
                 lb_rellenecampos.Visible = false;
                 User user = new User(tb_inName.Text, tb_inLastName.Text, tb_inUsername.Text, tb_inContraseña.Text, cb_cuentapremium.Checked);
-                app.Register(user);
-                pn_register.Visible = false;
+                bool checkreg=app.Register(user);
+                if (checkreg)
+                {
+                    lb_exito.Visible = true;
+                }
+                else
+                {
+                    label3.Visible = true;
+                }
+                
                 tb_inName.Text = "Nombre";
                 tb_inContraseña.Text = "Contraseña";
                 tb_inUsername.Text = "Nombre de Usuario";
