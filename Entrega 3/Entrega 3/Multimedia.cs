@@ -99,7 +99,10 @@ namespace Entrega_3
         {
             return this.Rating;
         }
-
+        public virtual string GetRoute()
+        {
+            return "";
+        }
     }
 
 

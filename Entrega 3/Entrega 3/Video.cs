@@ -15,7 +15,7 @@ namespace Entrega_3
         private List<Workers> Actors;
         private List<Workers> Directors;
 
-
+        string Route;
         public override string Play()
         {
             return ("Se esta reproduciendo el video");
@@ -24,14 +24,14 @@ namespace Entrega_3
         {
             return ("Se ha agregado un archivo imagen.jpg al video");
         }
-        public void AddVideo(string Name, string Kind, string Studio, List<Workers> Directors, List<Workers> Actors, int Length)
+        public void AddVideo(string Name, string Kind, string Studio, List<Workers> Directors, List<Workers> Actors, string Route)
         {
             this.Name = Name;
             this.Kind = Kind;
             this.Studio = Studio;
             this.Directors = Directors;
             this.Actors = Actors;
-            this.Length = Length;
+            this.Route = Route;
         }
         public override void SetRating(List<Rating> Rating)
         {
@@ -132,6 +132,10 @@ namespace Entrega_3
         public List<Review> GetListReview()
         {
             return this.Review;
+        }
+        public override string GetRoute()
+        {
+            return this.Route;
         }
 
     }
