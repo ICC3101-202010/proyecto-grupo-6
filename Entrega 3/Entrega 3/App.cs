@@ -163,17 +163,17 @@ namespace Entrega_3
             }
         }
 
-        public void AddSong(string name, string kind, string album, List<Workers> artists, List<Awards> awards, List<Workers> composers, int length)
+        public void AddSong(string name, string kind, string album, List<Workers> artists, List<Awards> awards, List<Workers> composers,string route)
         {
             Song song = new Song();
-            song.AddSong(name, kind, album, artists, awards, composers, length);
+            song.AddSong(name, kind, album, artists, awards, composers, route);
             allSongs.Add(song);
         }
 
-        public void AddVid(string name, string kind, string studio, List<Workers> directors, List<Workers> actors, int length)
+        public void AddVid(string name, string kind, string studio, List<Workers> directors, List<Workers> actors, string route)
         {
             Video video = new Video();
-            video.AddVideo(name, kind, studio, directors, actors, length);
+            video.AddVideo(name, kind, studio, directors, actors, route);
             allVideos.Add(video);
         }
 
@@ -521,7 +521,10 @@ namespace Entrega_3
 
 
         }
-
+        public List<Video> Getallvideos()
+        {
+            return allVideos;
+        }
         
     }
 }

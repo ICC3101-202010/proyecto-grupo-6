@@ -4,15 +4,28 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace Entrega_3
 {
     public partial class Menu : Form
     {
         App app = new App();
+        string NameSong, KindSong, AlbumSong,NameArtist,SexArtist,NameAward,NameAward2;
+        string NameVideo,KindVideo,NameDirector,SexDirector,StudioVideo;
+        int AgeArtist,AgeDirector;
+        int i = 0;
+        int z = 0;
+        int w = 0;
+        int x = 0;
+        private string routesong = "";
+        private string routevideo = "";
+
         public Menu()
         {
             InitializeComponent();
@@ -171,8 +184,7 @@ namespace Entrega_3
 
 
 
-        private string routesong = "";
-        private string routevideo = "";
+
         private void bt_downloadsong_Click(object sender, EventArgs e)
         {
             if (openFilesong.ShowDialog() == DialogResult.OK)
@@ -182,8 +194,27 @@ namespace Entrega_3
         }
         private void bt_playsong_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayersong.URL = routesong;
-            axWindowsMediaPlayersong.Ctlcontrols.play();
+            app.OpenApp();
+            
+            if (i > app.GetAllSongs().Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    axWindowsMediaPlayersong.URL = app.GetAllSongs()[i].GetRoute();
+                    axWindowsMediaPlayersong.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+                
+
+            app.CloseApp();
         }
 
 
@@ -211,8 +242,26 @@ namespace Entrega_3
 
         private void bt_playvideo_Click(object sender, EventArgs e)
         {
-            axWindowsMediaPlayervideo.URL = routevideo;
-            axWindowsMediaPlayervideo.Ctlcontrols.play();
+            app.OpenApp();
+            if (i > app.Getallvideos().Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    axWindowsMediaPlayervideo.URL =app.Getallvideos()[z].GetRoute();
+                    axWindowsMediaPlayervideo.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+
+            app.CloseApp();
+
         }
 
         private void bt_stopvideo_Click(object sender, EventArgs e)
@@ -252,7 +301,7 @@ namespace Entrega_3
             tb_nombresong.Text = "INGRESE NOMBRE DE LA CANCION";
             tb_sexoartista.Text = "SEXO DEL ARTISTA ( HOMBRE-MUJER )";
         }
-
+        
         private void bt_cargarsong_Click(object sender, EventArgs e)
         {
             if (tb_albumsong.Text == "" || tb_artistasong.Text == "" || tb_edadartsong.Text == "" || tb_generosong.Text == "" || tb_nombresong.Text == "" || tb_sexoartista.Text == "")
@@ -262,6 +311,46 @@ namespace Entrega_3
             }
             else
             {
+
+                if (openFilesong.ShowDialog() == DialogResult.OK)
+                {
+                    routesong = openFilesong.FileName;
+                    NameSong = tb_nombresong.Text;
+                    KindSong = tb_generosong.Text;
+                    AgeArtist = Convert.ToInt32(tb_edadartsong.Text);
+                    NameArtist = tb_artistasong.Text;
+                    SexArtist = tb_sexoartista.Text;
+                    AlbumSong = tb_albumsong.Text;
+                    Workers worker = new Workers();
+                    worker.SetName(NameArtist);
+                    worker.SetAge(AgeArtist);
+                    worker.SetSex(SexArtist);
+                    worker.SetSurname(NameArtist);
+                    Awards award = new Awards();
+                    if (cb_grammy.Checked == true)
+                    {
+                        NameAward = "Grammy";
+                        award.setName(NameAward);
+                        award.setCategory(KindSong);
+                    }
+                    if (cb_brit.Checked == true)
+                    {
+                        NameAward2 = "Brit";
+                        award.setName(NameAward2);
+                        award.setCategory(KindSong);
+                    }
+                    List<Workers> workerlist = new List<Workers>();
+                    workerlist.Add(worker);
+                    List<Awards> awardslist = new List<Awards>();
+                    awardslist.Add(award);
+                    app.OpenApp();
+                    app.AddSong(NameSong, KindSong, AlbumSong, workerlist, awardslist, workerlist, routesong);
+                    app.CloseApp();
+
+                    
+                }
+
+
                 lb_datossong.Visible = false;
                 lb_exitosong.Visible = true;
             }
@@ -326,6 +415,29 @@ namespace Entrega_3
             }
             else
             {
+                if (openFileDialogvideo.ShowDialog() == DialogResult.OK)
+                {
+                    routevideo = openFileDialogvideo.FileName;
+                    NameVideo = tb_nombrevideo.Text;
+                    KindVideo = tb_generovideo.Text;
+                    AgeDirector = Convert.ToInt32(tb_edaddirect.Text);
+                    NameDirector = tb_direcvideo.Text;
+                    SexDirector = tb_sexodirecvideo.Text;
+                    StudioVideo= tb_canalvideo.Text;
+                    Workers worker = new Workers();
+                    worker.SetName(NameDirector);
+                    worker.SetAge(AgeDirector);
+                    worker.SetSex(SexDirector);
+                    worker.SetSurname(NameDirector);
+                    List<Workers> workerlist = new List<Workers>();
+                    workerlist.Add(worker);
+                    app.OpenApp();
+                    app.AddVid(NameVideo,KindVideo,StudioVideo,workerlist,workerlist,routevideo);
+                    app.CloseApp();
+
+
+                }
+
                 lb_exitovideo.Visible = true;
                 lb_datavideo.Visible = false;
             }
@@ -362,6 +474,292 @@ namespace Entrega_3
         private void tb_sexodirecvideo_Click(object sender, EventArgs e)
         {
             tb_sexodirecvideo.Text = "";
+        }
+
+        private void bt_nextvideo_Click(object sender, EventArgs e)
+        {
+            z += 1;
+            app.OpenApp();
+            if (i <= app.Getallvideos().Count())
+            {
+                try
+                {
+                    axWindowsMediaPlayervideo.URL = app.Getallvideos()[z].GetRoute();
+                    axWindowsMediaPlayervideo.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
+            app.CloseApp();
+        }
+
+        private void pn_addvideo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tb_namesongcola_Click(object sender, EventArgs e)
+        {
+            tb_namesongcola.Text = "";
+        }
+
+        private void tb_nameartistcola_Click(object sender, EventArgs e)
+        {
+            tb_nameartistcola.Text = "";
+        }
+
+        private void bt_backaddcola_Click(object sender, EventArgs e)
+        {
+            pn_addsongcola.Visible = false;
+            pn_tuusu.Visible = true;
+            rtb_songsaddcola.Clear();
+        }
+
+        private void bt_agrcolasong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_addsongcola_Click(object sender, EventArgs e)
+        {
+            string namesongcola, nameartistcola,exist;
+            namesongcola = tb_namesongcola.Text;
+            nameartistcola = tb_nameartistcola.Text;
+            exist = "";
+            app.OpenApp();
+           
+            
+            foreach(var a in app.GetAllSongs() )
+            {
+                if (a.GetName()==namesongcola && a.GetArtistSong() == nameartistcola)
+                {
+                    app.AddToQueue(a, 0);
+                    lb_addsongcorrectlycola.Text = "CANCION AÑADIDA CORRECTAMENTE";
+                    break;
+                }
+                else
+                {
+                    exist = "si";
+                    continue;
+                }
+            }
+            if (exist == "si")
+            {
+                lb_addsongcorrectlycola.Text = "ERROR AL INGRESAR CANCION A LA COLA";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_agrcolasong_Click_1(object sender, EventArgs e)
+        {
+            pn_addsongcola.Visible = true;
+            pn_tuusu.Visible = false;
+            app.OpenApp();
+            foreach(var a in app.GetAllSongs())
+            {
+                rtb_songsaddcola.Text += "cancion: " + a.GetName() + "," + " artista: " + a.GetArtistSong()+"\n";
+            }
+        }
+
+        private void bt_esccolasong_Click(object sender, EventArgs e)
+        {
+            pn_repcola.Visible = true;
+            pn_tuusu.Visible = false;
+        }
+
+        private void bt_vercolvideo_Click(object sender, EventArgs e)
+        {
+            pn_repvideocola.Visible = true;
+            pn_tuusu.Visible = false;
+        }
+
+        private void bt_agrecolavideo_Click(object sender, EventArgs e)
+        {
+            pn_addcolavideo.Visible = true;
+            pn_tuusu.Visible = false;
+            app.OpenApp();
+            foreach(var a in app.Getallvideos())
+            {
+                rtb_addvideocola.Text += "video: " + a.GetName() + " director: " + a.GetDirectorsVideo() + "\n";
+            }
+            app.CloseApp();
+        }
+
+        private void pn_tuusu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bt_Backcola_Click(object sender, EventArgs e)
+        {
+            pn_repcola.Visible = false;
+            pn_tuusu.Visible = true;
+        }
+
+        private void bt_repcola_Click(object sender, EventArgs e)
+        {
+            app.OpenApp();
+            if (w > app.GetServer().GetActive().GetQueue(0).Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    axWMP_Repcola.URL = app.GetServer().GetActive().GetQueue(0)[w].GetRoute();
+                    axWMP_Repcola.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+
+            app.CloseApp();
+        }
+
+        private void bt_pausecola_Click(object sender, EventArgs e)
+        {
+            axWMP_Repcola.Ctlcontrols.pause();
+        }
+
+        private void bt_nextcola_Click(object sender, EventArgs e)
+        {
+            w+= 1;
+            app.OpenApp();
+            if (w <= app.GetServer().GetActive().GetQueue(0).Count())
+            {
+                try
+                {
+                    axWindowsMediaPlayervideo.URL = app.GetServer().GetActive().GetQueue(0)[w].GetRoute();
+                    axWindowsMediaPlayervideo.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
+            app.CloseApp();
+        }
+
+        private void pn_repcola_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bt_backaddvideocola_Click(object sender, EventArgs e)
+        {
+            pn_addcolavideo.Visible = false;
+            pn_tuusu.Visible = true;
+            rtb_addvideocola.Clear();
+        }
+
+        private void tb_namevideocola_Click(object sender, EventArgs e)
+        {
+            tb_namevideocola.Text = "";
+        }
+
+        private void tb_directorvideocola_Click(object sender, EventArgs e)
+        {
+            tb_directorvideocola.Text = "";
+        }
+
+        private void bt_addvideocola_Click(object sender, EventArgs e)
+        {
+            string namevideo, namedirector,existe;
+            namevideo = tb_namevideocola.Text;
+            namedirector = tb_directorvideocola.Text;
+            existe = "";
+            app.OpenApp();
+
+
+            foreach (var a in app.Getallvideos())
+            {
+                if (a.GetName() == namevideo && a.GetDirectorsVideo() == namedirector)
+                {
+                    app.AddToQueue(a, 1);
+                    lb_addvideocola.Text = "VIDEO AÑADIDO CORRECTAMENTE";
+                    break;
+                }
+                else
+                {
+                    existe = "si";
+                    continue;
+                }
+            }
+            if (existe == "si")
+            {
+                lb_addvideocola.Text = "VIDEO NO ENCONTRADO";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_repvideocola_Click(object sender, EventArgs e)
+        {
+            app.OpenApp();
+            if (x > app.GetServer().GetActive().GetQueue(1).Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    WMPrepvideocola.URL = app.GetServer().GetActive().GetQueue(1)[x].GetRoute();
+                    WMPrepvideocola.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+
+            app.CloseApp();
+        }
+
+        private void bt_pausevideocola_Click(object sender, EventArgs e)
+        {
+            WMPrepvideocola.Ctlcontrols.pause();
+        }
+
+        private void bt_nextvideocola_Click(object sender, EventArgs e)
+        {
+            x += 1;
+            app.OpenApp();
+            if (x <= app.GetServer().GetActive().GetQueue(0).Count())
+            {
+                try
+                {
+                    WMPrepvideocola.URL = app.GetServer().GetActive().GetQueue(1)[x].GetRoute();
+                    WMPrepvideocola.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
+            app.CloseApp();
+        }
+
+        private void bt_backrepvideocola_Click(object sender, EventArgs e)
+        {
+            pn_repvideocola.Visible = false;
+            pn_tuusu.Visible = true;
         }
 
         private void bt_grammy_Click(object sender, EventArgs e)
@@ -458,6 +856,30 @@ namespace Entrega_3
             rtb_premios.Text = "";
         }
 
+        private void bt_nextsong_Click(object sender, EventArgs e)
+        {
+            i += 1;
+            app.OpenApp();
+            if (i <= app.GetAllSongs().Count())
+            {
+                try
+                {
+                    axWindowsMediaPlayersong.URL = app.GetAllSongs()[i].GetRoute();
+                    axWindowsMediaPlayersong.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
+            app.CloseApp();
+        }
+
+
         private void bt_searchsongrat_Click(object sender, EventArgs e)
         {
             App app = new App();
@@ -490,6 +912,11 @@ namespace Entrega_3
                     lb_songrating.Text = "No se encontro la cancion buscada";
                 }
             }
+        }
+
+        private void tb_edadartsong_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void bt_ratesong_Click(object sender, EventArgs e)
@@ -597,4 +1024,5 @@ namespace Entrega_3
             bt_ratesong.Visible = true;
         }
     }
+    
 }

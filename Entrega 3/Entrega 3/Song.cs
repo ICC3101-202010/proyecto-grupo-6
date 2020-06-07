@@ -17,12 +17,13 @@ namespace Entrega_3
         private string Album;
         private string Lyrics;
         private List<Awards> Awards = new List<Awards>() { };
+        private string Route;
 
         public override string Play()
         {
             return ("Se esta reproduciendo la cancion");
         }
-        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<Awards> Awards, List<Workers> Composer, int Length)
+        public void AddSong(string Name, string Kind, string Album, List<Workers> Artist, List<Awards> Awards, List<Workers> Composer, string Route)
         {
             this.Name = Name;
             this.Kind = Kind;
@@ -31,7 +32,8 @@ namespace Entrega_3
             this.Artist = Artist;
             this.Awards = Awards;
             this.Composer = Composer;
-            this.Length = Length;
+            this.Route = Route;
+
         }
         public override string Image()
         {
@@ -143,6 +145,9 @@ namespace Entrega_3
         {
             return Awards;
         }
-
+        public override string GetRoute()
+        {
+            return this.Route;
+        }
     }
 }
