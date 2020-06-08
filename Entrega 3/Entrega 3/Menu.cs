@@ -1343,6 +1343,298 @@ namespace Entrega_3
             label20.Text = "Buscar y Seguir Usuario";
         }
 
+        private void bt_backcritVid_Click(object sender, EventArgs e)
+        {
+            pn_vidCrit.Visible = false;
+            tb_critTitle.Text = "";
+            tb_vidCrit.Text = "";
+            bt_commcritVid.Visible = false;
+            tb_critTitle.Visible = false;
+            rtb_critVid.Text = "";
+            label24.Visible = false;
+            rtb_critVid.ReadOnly = true;
+            bt_searchcritVid.Visible = true;
+        }
+
+        private void bt_searchcritVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+
+            string name = tb_vidCrit.Text;
+            Video vid = app.SearchforVid(name);
+            List<Review> review = vid.GetListReview();
+            
+            if (review == null)
+            {
+                rtb_critVid.Text=("El video no tiene criticas");
+            }
+            else
+            {
+                rtb_critVid.Text = (vid.GetReview());
+            }
+            app.CloseApp();
+        }
+
+        private void bt_commcritVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+
+            string name = tb_vidCrit.Text;
+            
+            Video vid = app.SearchforVid(name);
+            if (vid.GetListReview() != null)
+            {
+                List<Review> review = vid.GetListReview();
+                Review userReview = new Review();
+                
+                string title = tb_critTitle.Text;
+                rtb_critVid.ReadOnly = false;
+                string comment = rtb_critVid.Text;
+                userReview.SetReview(title, comment);
+                review.Add(userReview);
+                app.ReviewVid(app.GetServer().GetActive().GetUsername(), review);
+            }
+            else
+            {
+                List<Review> review = new List<Review>();
+                Review userReview = new Review();
+                string title = tb_critTitle.Text;
+                rtb_critVid.ReadOnly = false;
+                string comment = rtb_critVid.Text;
+                userReview.SetReview(title, comment);
+                review.Add(userReview);
+                app.ReviewVid(name, review);
+            }
+            app.CloseApp();
+        }
+
+        private void rtb_critVid_Click(object sender, EventArgs e)
+        {
+            rtb_critVid.Text="";
+        }
+
+        private void bt_makecritvideo_Click(object sender, EventArgs e)
+        {
+            pn_vidCrit.Visible = true;
+            tb_critTitle.Visible = true;
+            rtb_critVid.Text = "Agregue su comentario aqui";
+            bt_searchcritVid.Visible = false;
+            bt_commcritVid.Visible = true;
+            label24.Visible = true;
+            label22.Text = "Criticar un video";
+        }
+
+        private void bt_vercriticavideo_Click(object sender, EventArgs e)
+        {
+            pn_vidCrit.Visible = true;
+            rtb_critVid.Text = "";
+            label24.Visible = false;
+            label22.Text = "Ver criticas de un video";
+        }
+
+        private void bt_backratiVid_Click(object sender, EventArgs e)
+        {
+            pn_vidRating.Visible = false;
+            clb_rateVid.Visible = false;
+            bt_rateVid.Visible = false;
+            bt_searchratVid.Visible = true;
+            tb_ratingVid.Text = "";
+        }
+
+        private void bt_searchratVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVid = app.Getallvideos();
+            int index = 0;
+            bool found = false;
+
+            if (tb_ratingVid.Text == "")
+            {
+                tb_ratingVid.Text = "Rellene el campo";
+            }
+
+            else
+            {
+                for (int i = 0; i < allVid.Count(); i++)
+                {
+                    if (tb_ratingVid.Text == allVid[i].GetName())
+                    {
+                        index = i;
+                        found = true;
+                    }
+                }
+                if (found)
+                {
+                    lb_vidRating.Text = allVid[index].GetRating() + " " + "estrellas";
+                }
+                else
+                {
+                    lb_vidRating.Text = "No se encontro el video buscado";
+                }
+            }
+            app.CloseApp();
+        }
+
+        private void bt_rateVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVid = app.Getallvideos();
+            int index = 0;
+            bool found = false;
+
+            if (tb_ratingVid.Text == "")
+            {
+                tb_ratingVid.Text = "Rellene el campo";
+            }
+            else
+            {
+                for (int i = 0; i < allVid.Count(); i++)
+                {
+                    if (tb_ratingVid.Text == allVid[i].GetName())
+                    {
+                        index = i;
+                        found = true;
+                    }
+                }
+                if (found)
+                {
+                    if (clb_rateVid.GetItemChecked(0))
+                    {
+                        List<Rating> allRating = allVid[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(1);
+                        allRating.Add(rating);
+                        allVid[index].SetRating(allRating);
+
+                    }
+                    else if (clb_rateVid.GetItemChecked(1))
+                    {
+                        List<Rating> allRating = allVid[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(2);
+                        allRating.Add(rating);
+                        allVid[index].SetRating(allRating);
+                    }
+                    else if (clb_rateVid.GetItemChecked(2))
+                    {
+                        List<Rating> allRating = allVid[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(3);
+                        allRating.Add(rating);
+                        allVid[index].SetRating(allRating);
+                    }
+                    else if (clb_rateVid.GetItemChecked(3))
+                    {
+                        List<Rating> allRating = allVid[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(4);
+                        allRating.Add(rating);
+                        allVid[index].SetRating(allRating);
+                    }
+                    else if (clb_rateVid.GetItemChecked(4))
+                    {
+                        List<Rating> allRating = allVid[index].GetListRating();
+                        Rating rating = new Rating();
+                        rating.SetUser(app.GetServer().GetActive().GetUsername());
+                        rating.SetRating(5);
+                        allRating.Add(rating);
+                        allVid[index].SetRating(allRating);
+                    }
+                    else
+                    {
+                        tb_ratingVid.Text = "Marque una opcion";
+                    }
+                }
+                else
+                {
+
+                    tb_ratingVid.Text = "El video no pudo encontrarse";
+                }
+            }
+            app.CloseApp();
+        }
+
+        private void bt_verrativideo_Click(object sender, EventArgs e)
+        {
+            tb_ratingVid.Text = "";
+            pn_vidRating.Visible = true;
+            clb_rateVid.Visible = false;
+            bt_rateVid.Visible = false;
+            bt_searchratVid.Visible = true;
+        }
+
+        private void bt_darrativideo_Click(object sender, EventArgs e)
+        {
+            tb_ratingVid.Text = "";
+            pn_vidRating.Visible = true;
+            clb_rateVid.Visible = true;
+            bt_rateVid.Visible = true;
+            bt_searchratVid.Visible = false;
+
+        }
+
+        private void tb_ratingVid_TextChanged(object sender, EventArgs e)
+        {
+            tb_ratingVid.Text = "";
+        }
+
+        private void bt_backvidSearch_Click(object sender, EventArgs e)
+        {
+            pn_searchVid.Visible = false;
+            tb_vidSearch.Text = "";
+            rtb_vidSearch.Text = "";
+        }
+
+        private void bt_searchVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<string> filterList = new List<string>();
+            char[] delimit = { ' ', ',' };
+            string[] stringlist = tb_vidSearch.Text.Split(delimit);
+            foreach (var filter in stringlist)
+            {
+                filterList.Add(filter);
+            }
+            List<Video> filteredList = app.SearchAndPlayVid(filterList);
+            if (filteredList.Count != 0)
+            {
+                foreach (var a in filteredList)
+                {
+                    rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + (a.GetData());
+                }
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No se encontraron videos con esos parametros";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_multivideo_Click(object sender, EventArgs e)
+        {
+            pn_searchVid.Visible = true;
+            tb_vidSearch.Text = "";
+            rtb_vidSearch.Text = "";
+            label27.Text = "Busqueda Multiple";
+        }
+
+        private void bt_simvideo_Click(object sender, EventArgs e)
+        {
+            pn_searchVid.Visible = true;
+            tb_vidSearch.Text = "";
+            rtb_vidSearch.Text = "";
+            label27.Text = "Busqueda Simple";
+        }
+
         private void bt_grammy_Click(object sender, EventArgs e)
         {
             lb_premios.Visible = true;
@@ -1602,6 +1894,7 @@ namespace Entrega_3
         {
             pn_songrating.Visible = true;
             bt_searchsongrat.Visible = true;
+            bt_ratesong.Visible = false;
         }
 
         private void bt_calisong_Click(object sender, EventArgs e)
@@ -1609,6 +1902,7 @@ namespace Entrega_3
             pn_songrating.Visible = true;
             clb_ratesong.Visible = true;
             bt_ratesong.Visible = true;
+            bt_searchsongrat.Visible = false;
         }
     }
     
