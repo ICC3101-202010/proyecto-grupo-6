@@ -202,6 +202,34 @@
             this.bt_nextvideocola = new System.Windows.Forms.Button();
             this.bt_repvideocola = new System.Windows.Forms.Button();
             this.WMPrepvideocola = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pn_songPL = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tb_editsongPL = new System.Windows.Forms.TextBox();
+            this.bt_deletesongPL = new System.Windows.Forms.Button();
+            this.bt_addsongPL = new System.Windows.Forms.Button();
+            this.rtb_songPL = new System.Windows.Forms.RichTextBox();
+            this.bt_searchsongPL = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lb_songPLTitle = new System.Windows.Forms.Label();
+            this.tb_searchsongPL = new System.Windows.Forms.TextBox();
+            this.bt_backsongPL = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.bt_createsongPL = new System.Windows.Forms.Button();
+            this.cb_privsongPL = new System.Windows.Forms.CheckBox();
+            this.pn_vidPL = new System.Windows.Forms.Panel();
+            this.tb_VidPL = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lb_vidPL = new System.Windows.Forms.Label();
+            this.rtb_vidPL = new System.Windows.Forms.RichTextBox();
+            this.bt_backvidPL = new System.Windows.Forms.Button();
+            this.bt_searchvidPL = new System.Windows.Forms.Button();
+            this.bt_createvidPL = new System.Windows.Forms.Button();
+            this.bt_addvidPL = new System.Windows.Forms.Button();
+            this.bt_deletevidPL = new System.Windows.Forms.Button();
+            this.cb_privvidPL = new System.Windows.Forms.CheckBox();
+            this.tb_editvidPL = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -233,6 +261,8 @@
             this.pn_addcolavideo.SuspendLayout();
             this.pn_repvideocola.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.WMPrepvideocola)).BeginInit();
+            this.pn_songPL.SuspendLayout();
+            this.pn_vidPL.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -761,6 +791,7 @@
             this.bt_allplay.TabIndex = 7;
             this.bt_allplay.Text = "VER TODAS LAS PLAYLIST";
             this.bt_allplay.UseVisualStyleBackColor = true;
+            this.bt_allplay.Click += new System.EventHandler(this.bt_allplay_Click);
             // 
             // bt_crearplay
             // 
@@ -775,6 +806,7 @@
             this.bt_crearplay.TabIndex = 9;
             this.bt_crearplay.Text = "CREAR PLAYLIST";
             this.bt_crearplay.UseVisualStyleBackColor = true;
+            this.bt_crearplay.Click += new System.EventHandler(this.bt_crearplay_Click);
             // 
             // bt_seguiplay
             // 
@@ -789,6 +821,7 @@
             this.bt_seguiplay.TabIndex = 7;
             this.bt_seguiplay.Text = "PLAYLIST SEGUIDAS";
             this.bt_seguiplay.UseVisualStyleBackColor = true;
+            this.bt_seguiplay.Click += new System.EventHandler(this.bt_seguiplay_Click);
             // 
             // bt_editarplay
             // 
@@ -803,6 +836,7 @@
             this.bt_editarplay.TabIndex = 8;
             this.bt_editarplay.Text = "EDITAR PLAYLIST";
             this.bt_editarplay.UseVisualStyleBackColor = true;
+            this.bt_editarplay.Click += new System.EventHandler(this.bt_editarplay_Click);
             // 
             // bt_folplay
             // 
@@ -817,6 +851,7 @@
             this.bt_folplay.TabIndex = 7;
             this.bt_folplay.Text = "FOLLOW PLAYLIST";
             this.bt_folplay.UseVisualStyleBackColor = true;
+            this.bt_folplay.Click += new System.EventHandler(this.bt_folplay_Click);
             // 
             // bt_repplay
             // 
@@ -1451,6 +1486,7 @@
             this.bt_verplayvideo.TabIndex = 7;
             this.bt_verplayvideo.Text = "VER TODAS LAS PLAYLIST";
             this.bt_verplayvideo.UseVisualStyleBackColor = true;
+            this.bt_verplayvideo.Click += new System.EventHandler(this.bt_verplayvideo_Click);
             // 
             // bt_crearplayvideo
             // 
@@ -1465,6 +1501,7 @@
             this.bt_crearplayvideo.TabIndex = 9;
             this.bt_crearplayvideo.Text = "CREAR PLAYLIST";
             this.bt_crearplayvideo.UseVisualStyleBackColor = true;
+            this.bt_crearplayvideo.Click += new System.EventHandler(this.bt_crearplayvideo_Click);
             // 
             // bt_playseguivideo
             // 
@@ -1479,6 +1516,7 @@
             this.bt_playseguivideo.TabIndex = 7;
             this.bt_playseguivideo.Text = "PLAYLIST SEGUIDAS";
             this.bt_playseguivideo.UseVisualStyleBackColor = true;
+            this.bt_playseguivideo.Click += new System.EventHandler(this.bt_playseguivideo_Click);
             // 
             // bt_ediplayvideo
             // 
@@ -1493,6 +1531,7 @@
             this.bt_ediplayvideo.TabIndex = 8;
             this.bt_ediplayvideo.Text = "EDITAR PLAYLIST";
             this.bt_ediplayvideo.UseVisualStyleBackColor = true;
+            this.bt_ediplayvideo.Click += new System.EventHandler(this.bt_ediplayvideo_Click);
             // 
             // bt_folplayvideo
             // 
@@ -1507,6 +1546,7 @@
             this.bt_folplayvideo.TabIndex = 7;
             this.bt_folplayvideo.Text = "FOLLOW PLAYLIST";
             this.bt_folplayvideo.UseVisualStyleBackColor = true;
+            this.bt_folplayvideo.Click += new System.EventHandler(this.bt_folplayvideo_Click);
             // 
             // bt_reproplayvideo
             // 
@@ -2443,12 +2483,317 @@
             this.WMPrepvideocola.Size = new System.Drawing.Size(372, 265);
             this.WMPrepvideocola.TabIndex = 0;
             // 
+            // pn_songPL
+            // 
+            this.pn_songPL.Controls.Add(this.cb_privsongPL);
+            this.pn_songPL.Controls.Add(this.bt_createsongPL);
+            this.pn_songPL.Controls.Add(this.label15);
+            this.pn_songPL.Controls.Add(this.label14);
+            this.pn_songPL.Controls.Add(this.label13);
+            this.pn_songPL.Controls.Add(this.tb_editsongPL);
+            this.pn_songPL.Controls.Add(this.bt_deletesongPL);
+            this.pn_songPL.Controls.Add(this.bt_addsongPL);
+            this.pn_songPL.Controls.Add(this.rtb_songPL);
+            this.pn_songPL.Controls.Add(this.bt_searchsongPL);
+            this.pn_songPL.Controls.Add(this.label12);
+            this.pn_songPL.Controls.Add(this.lb_songPLTitle);
+            this.pn_songPL.Controls.Add(this.tb_searchsongPL);
+            this.pn_songPL.Controls.Add(this.bt_backsongPL);
+            this.pn_songPL.Location = new System.Drawing.Point(813, 93);
+            this.pn_songPL.Name = "pn_songPL";
+            this.pn_songPL.Size = new System.Drawing.Size(562, 427);
+            this.pn_songPL.TabIndex = 21;
+            this.pn_songPL.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(376, 329);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(0, 17);
+            this.label14.TabIndex = 10;
+            this.label14.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(376, 305);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(138, 17);
+            this.label13.TabIndex = 9;
+            this.label13.Text = "El numero no encaja";
+            this.label13.Visible = false;
+            // 
+            // tb_editsongPL
+            // 
+            this.tb_editsongPL.Location = new System.Drawing.Point(370, 268);
+            this.tb_editsongPL.Name = "tb_editsongPL";
+            this.tb_editsongPL.Size = new System.Drawing.Size(180, 22);
+            this.tb_editsongPL.TabIndex = 8;
+            this.tb_editsongPL.Visible = false;
+            // 
+            // bt_deletesongPL
+            // 
+            this.bt_deletesongPL.Location = new System.Drawing.Point(379, 164);
+            this.bt_deletesongPL.Name = "bt_deletesongPL";
+            this.bt_deletesongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_deletesongPL.TabIndex = 7;
+            this.bt_deletesongPL.Text = "Eliminar";
+            this.bt_deletesongPL.UseVisualStyleBackColor = true;
+            this.bt_deletesongPL.Visible = false;
+            this.bt_deletesongPL.Click += new System.EventHandler(this.bt_deletesongPL_Click);
+            // 
+            // bt_addsongPL
+            // 
+            this.bt_addsongPL.Location = new System.Drawing.Point(379, 131);
+            this.bt_addsongPL.Name = "bt_addsongPL";
+            this.bt_addsongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_addsongPL.TabIndex = 6;
+            this.bt_addsongPL.Text = "Agregar";
+            this.bt_addsongPL.UseVisualStyleBackColor = true;
+            this.bt_addsongPL.Visible = false;
+            this.bt_addsongPL.Click += new System.EventHandler(this.bt_addsongPL_Click);
+            // 
+            // rtb_songPL
+            // 
+            this.rtb_songPL.Location = new System.Drawing.Point(41, 131);
+            this.rtb_songPL.Name = "rtb_songPL";
+            this.rtb_songPL.ReadOnly = true;
+            this.rtb_songPL.Size = new System.Drawing.Size(323, 236);
+            this.rtb_songPL.TabIndex = 5;
+            this.rtb_songPL.Text = "";
+            // 
+            // bt_searchsongPL
+            // 
+            this.bt_searchsongPL.Location = new System.Drawing.Point(379, 89);
+            this.bt_searchsongPL.Name = "bt_searchsongPL";
+            this.bt_searchsongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchsongPL.TabIndex = 4;
+            this.bt_searchsongPL.Text = "Search";
+            this.bt_searchsongPL.UseVisualStyleBackColor = true;
+            this.bt_searchsongPL.Click += new System.EventHandler(this.bt_searchsongPL_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(40, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(106, 17);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Nombre Playlist";
+            // 
+            // lb_songPLTitle
+            // 
+            this.lb_songPLTitle.AutoSize = true;
+            this.lb_songPLTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_songPLTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lb_songPLTitle.Location = new System.Drawing.Point(38, 29);
+            this.lb_songPLTitle.Name = "lb_songPLTitle";
+            this.lb_songPLTitle.Size = new System.Drawing.Size(0, 25);
+            this.lb_songPLTitle.TabIndex = 2;
+            // 
+            // tb_searchsongPL
+            // 
+            this.tb_searchsongPL.Location = new System.Drawing.Point(38, 89);
+            this.tb_searchsongPL.Name = "tb_searchsongPL";
+            this.tb_searchsongPL.Size = new System.Drawing.Size(326, 22);
+            this.tb_searchsongPL.TabIndex = 1;
+            // 
+            // bt_backsongPL
+            // 
+            this.bt_backsongPL.Location = new System.Drawing.Point(26, 395);
+            this.bt_backsongPL.Name = "bt_backsongPL";
+            this.bt_backsongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_backsongPL.TabIndex = 0;
+            this.bt_backsongPL.Text = "Back";
+            this.bt_backsongPL.UseVisualStyleBackColor = true;
+            this.bt_backsongPL.Click += new System.EventHandler(this.bt_backsongPL_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(365, 204);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(194, 51);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Ingrese nombre de\r\ncancion a agregar o\r\nnumero de cancion a eliminar";
+            this.label15.Visible = false;
+            // 
+            // bt_createsongPL
+            // 
+            this.bt_createsongPL.Location = new System.Drawing.Point(464, 88);
+            this.bt_createsongPL.Name = "bt_createsongPL";
+            this.bt_createsongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_createsongPL.TabIndex = 12;
+            this.bt_createsongPL.Text = "Create";
+            this.bt_createsongPL.UseVisualStyleBackColor = true;
+            this.bt_createsongPL.Visible = false;
+            this.bt_createsongPL.Click += new System.EventHandler(this.bt_createsongPL_Click);
+            // 
+            // cb_privsongPL
+            // 
+            this.cb_privsongPL.AutoSize = true;
+            this.cb_privsongPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cb_privsongPL.Location = new System.Drawing.Point(247, 384);
+            this.cb_privsongPL.Name = "cb_privsongPL";
+            this.cb_privsongPL.Size = new System.Drawing.Size(126, 21);
+            this.cb_privsongPL.TabIndex = 13;
+            this.cb_privsongPL.Text = "Playlist Privada";
+            this.cb_privsongPL.UseVisualStyleBackColor = true;
+            this.cb_privsongPL.Visible = false;
+            // 
+            // pn_vidPL
+            // 
+            this.pn_vidPL.Controls.Add(this.label17);
+            this.pn_vidPL.Controls.Add(this.tb_editvidPL);
+            this.pn_vidPL.Controls.Add(this.cb_privvidPL);
+            this.pn_vidPL.Controls.Add(this.bt_deletevidPL);
+            this.pn_vidPL.Controls.Add(this.bt_addvidPL);
+            this.pn_vidPL.Controls.Add(this.bt_createvidPL);
+            this.pn_vidPL.Controls.Add(this.bt_searchvidPL);
+            this.pn_vidPL.Controls.Add(this.bt_backvidPL);
+            this.pn_vidPL.Controls.Add(this.rtb_vidPL);
+            this.pn_vidPL.Controls.Add(this.lb_vidPL);
+            this.pn_vidPL.Controls.Add(this.label16);
+            this.pn_vidPL.Controls.Add(this.tb_VidPL);
+            this.pn_vidPL.Location = new System.Drawing.Point(813, 94);
+            this.pn_vidPL.Name = "pn_vidPL";
+            this.pn_vidPL.Size = new System.Drawing.Size(562, 423);
+            this.pn_vidPL.TabIndex = 22;
+            this.pn_vidPL.Visible = false;
+            // 
+            // tb_VidPL
+            // 
+            this.tb_VidPL.Location = new System.Drawing.Point(46, 74);
+            this.tb_VidPL.Name = "tb_VidPL";
+            this.tb_VidPL.Size = new System.Drawing.Size(276, 22);
+            this.tb_VidPL.TabIndex = 0;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(44, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 17);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Nombre Playlist";
+            // 
+            // lb_vidPL
+            // 
+            this.lb_vidPL.AutoSize = true;
+            this.lb_vidPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_vidPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_vidPL.Location = new System.Drawing.Point(44, 18);
+            this.lb_vidPL.Name = "lb_vidPL";
+            this.lb_vidPL.Size = new System.Drawing.Size(0, 25);
+            this.lb_vidPL.TabIndex = 2;
+            // 
+            // rtb_vidPL
+            // 
+            this.rtb_vidPL.Location = new System.Drawing.Point(47, 116);
+            this.rtb_vidPL.Name = "rtb_vidPL";
+            this.rtb_vidPL.ReadOnly = true;
+            this.rtb_vidPL.Size = new System.Drawing.Size(190, 236);
+            this.rtb_vidPL.TabIndex = 3;
+            this.rtb_vidPL.Text = "";
+            // 
+            // bt_backvidPL
+            // 
+            this.bt_backvidPL.Location = new System.Drawing.Point(46, 370);
+            this.bt_backvidPL.Name = "bt_backvidPL";
+            this.bt_backvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_backvidPL.TabIndex = 4;
+            this.bt_backvidPL.Text = "Back";
+            this.bt_backvidPL.UseVisualStyleBackColor = true;
+            this.bt_backvidPL.Click += new System.EventHandler(this.bt_backvidPL_Click);
+            // 
+            // bt_searchvidPL
+            // 
+            this.bt_searchvidPL.Location = new System.Drawing.Point(328, 74);
+            this.bt_searchvidPL.Name = "bt_searchvidPL";
+            this.bt_searchvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchvidPL.TabIndex = 5;
+            this.bt_searchvidPL.Text = "Search";
+            this.bt_searchvidPL.UseVisualStyleBackColor = true;
+            this.bt_searchvidPL.Click += new System.EventHandler(this.bt_searchvidPL_Click);
+            // 
+            // bt_createvidPL
+            // 
+            this.bt_createvidPL.Location = new System.Drawing.Point(409, 76);
+            this.bt_createvidPL.Name = "bt_createvidPL";
+            this.bt_createvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_createvidPL.TabIndex = 6;
+            this.bt_createvidPL.Text = "Create";
+            this.bt_createvidPL.UseVisualStyleBackColor = true;
+            this.bt_createvidPL.Visible = false;
+            this.bt_createvidPL.Click += new System.EventHandler(this.bt_createvidPL_Click);
+            // 
+            // bt_addvidPL
+            // 
+            this.bt_addvidPL.Location = new System.Drawing.Point(260, 130);
+            this.bt_addvidPL.Name = "bt_addvidPL";
+            this.bt_addvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_addvidPL.TabIndex = 7;
+            this.bt_addvidPL.Text = "Agregar";
+            this.bt_addvidPL.UseVisualStyleBackColor = true;
+            this.bt_addvidPL.Visible = false;
+            this.bt_addvidPL.Click += new System.EventHandler(this.bt_addvidPL_Click);
+            // 
+            // bt_deletevidPL
+            // 
+            this.bt_deletevidPL.Location = new System.Drawing.Point(260, 163);
+            this.bt_deletevidPL.Name = "bt_deletevidPL";
+            this.bt_deletevidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_deletevidPL.TabIndex = 8;
+            this.bt_deletevidPL.Text = "Eliminar";
+            this.bt_deletevidPL.UseVisualStyleBackColor = true;
+            this.bt_deletevidPL.Visible = false;
+            this.bt_deletevidPL.Click += new System.EventHandler(this.bt_deletevidPL_Click);
+            // 
+            // cb_privvidPL
+            // 
+            this.cb_privvidPL.AutoSize = true;
+            this.cb_privvidPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cb_privvidPL.Location = new System.Drawing.Point(247, 329);
+            this.cb_privvidPL.Name = "cb_privvidPL";
+            this.cb_privvidPL.Size = new System.Drawing.Size(126, 21);
+            this.cb_privvidPL.TabIndex = 9;
+            this.cb_privvidPL.Text = "Playlist Privada";
+            this.cb_privvidPL.UseVisualStyleBackColor = true;
+            this.cb_privvidPL.Visible = false;
+            // 
+            // tb_editvidPL
+            // 
+            this.tb_editvidPL.Location = new System.Drawing.Point(260, 269);
+            this.tb_editvidPL.Name = "tb_editvidPL";
+            this.tb_editvidPL.Size = new System.Drawing.Size(171, 22);
+            this.tb_editvidPL.TabIndex = 10;
+            this.tb_editvidPL.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(258, 196);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(120, 68);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Nombre de\r\nvideo a agregar o\r\nnumero de video\r\na eliminar";
+            this.label17.Visible = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_vidPL);
+            this.Controls.Add(this.pn_songPL);
             this.Controls.Add(this.pn_addsongcola);
             this.Controls.Add(this.pn_addcolavideo);
             this.Controls.Add(this.pn_repcola);
@@ -2525,6 +2870,10 @@
             this.pn_addcolavideo.PerformLayout();
             this.pn_repvideocola.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.WMPrepvideocola)).EndInit();
+            this.pn_songPL.ResumeLayout(false);
+            this.pn_songPL.PerformLayout();
+            this.pn_vidPL.ResumeLayout(false);
+            this.pn_vidPL.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2704,5 +3053,33 @@
         private System.Windows.Forms.Button bt_nextvideocola;
         private System.Windows.Forms.Button bt_repvideocola;
         private AxWMPLib.AxWindowsMediaPlayer WMPrepvideocola;
+        private System.Windows.Forms.Panel pn_songPL;
+        private System.Windows.Forms.Button bt_backsongPL;
+        private System.Windows.Forms.Label lb_songPLTitle;
+        private System.Windows.Forms.TextBox tb_searchsongPL;
+        private System.Windows.Forms.Button bt_searchsongPL;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RichTextBox rtb_songPL;
+        private System.Windows.Forms.Button bt_deletesongPL;
+        private System.Windows.Forms.Button bt_addsongPL;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tb_editsongPL;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button bt_createsongPL;
+        private System.Windows.Forms.CheckBox cb_privsongPL;
+        private System.Windows.Forms.Panel pn_vidPL;
+        private System.Windows.Forms.Button bt_deletevidPL;
+        private System.Windows.Forms.Button bt_addvidPL;
+        private System.Windows.Forms.Button bt_createvidPL;
+        private System.Windows.Forms.Button bt_searchvidPL;
+        private System.Windows.Forms.Button bt_backvidPL;
+        private System.Windows.Forms.RichTextBox rtb_vidPL;
+        private System.Windows.Forms.Label lb_vidPL;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tb_VidPL;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox tb_editvidPL;
+        private System.Windows.Forms.CheckBox cb_privvidPL;
     }
 }

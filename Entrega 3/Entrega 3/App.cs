@@ -297,6 +297,7 @@ namespace Entrega_3
             saveSongs(allSongs);
             saveVideos(allVideos);
             saveWorkers(allWorkers);
+            saveServer(server);
             
 
 
@@ -313,6 +314,7 @@ namespace Entrega_3
             allWorkers = LoadWorkers();
             allSongs = LoadSongs();
             allVideos = LoadVideo();
+            server = LoadServer();
             
 
         }
@@ -327,6 +329,23 @@ namespace Entrega_3
         public bool Register(User user)
         {
             return server.Register(user);
+        }
+
+        public void saveServer(Server server)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Server.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, server);
+            stream.Close();
+        }
+
+        private Server LoadServer()
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream("Server.bin", FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            Server server = (Server)formatter.Deserialize(stream);
+            stream.Close();
+            return server;
         }
 
         public void saveUser(List<User> allUser)

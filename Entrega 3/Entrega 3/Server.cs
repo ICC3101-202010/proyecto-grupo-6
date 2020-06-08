@@ -13,7 +13,7 @@ namespace Entrega_3
     class Server
     {
         private List<User> AllUser=new List<User>() {};
-        private User activeUser=null;
+        private User activeUser = null;
 
         public bool Login(string Username, string Password)
         {
@@ -271,6 +271,11 @@ namespace Entrega_3
             }
             return allPL[check];
 
+        }
+
+        public void SetActive(User user)
+        {
+            activeUser = user;
         }
 
     }
