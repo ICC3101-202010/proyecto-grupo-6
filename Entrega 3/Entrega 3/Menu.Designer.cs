@@ -237,6 +237,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.rtb_searchSong = new System.Windows.Forms.RichTextBox();
+            this.pn_menuUser = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tb_User = new System.Windows.Forms.TextBox();
+            this.bt_backmenuUser = new System.Windows.Forms.Button();
+            this.bt_searchUser = new System.Windows.Forms.Button();
+            this.rtb_menuUser = new System.Windows.Forms.RichTextBox();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -271,6 +278,7 @@
             this.pn_songPL.SuspendLayout();
             this.pn_vidPL.SuspendLayout();
             this.pn_searchSong.SuspendLayout();
+            this.pn_menuUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -934,6 +942,7 @@
             this.bt_bususu.TabIndex = 10;
             this.bt_bususu.Text = "BUSCAR USUARIO";
             this.bt_bususu.UseVisualStyleBackColor = true;
+            this.bt_bususu.Click += new System.EventHandler(this.bt_bususu_Click);
             // 
             // bt_ussegui
             // 
@@ -948,6 +957,7 @@
             this.bt_ussegui.TabIndex = 9;
             this.bt_ussegui.Text = "SEGUIDOS";
             this.bt_ussegui.UseVisualStyleBackColor = true;
+            this.bt_ussegui.Click += new System.EventHandler(this.bt_ussegui_Click);
             // 
             // pn_tuusu
             // 
@@ -2868,12 +2878,83 @@
             this.rtb_searchSong.TabIndex = 5;
             this.rtb_searchSong.Text = "";
             // 
+            // pn_menuUser
+            // 
+            this.pn_menuUser.Controls.Add(this.label21);
+            this.pn_menuUser.Controls.Add(this.rtb_menuUser);
+            this.pn_menuUser.Controls.Add(this.bt_searchUser);
+            this.pn_menuUser.Controls.Add(this.bt_backmenuUser);
+            this.pn_menuUser.Controls.Add(this.tb_User);
+            this.pn_menuUser.Controls.Add(this.label20);
+            this.pn_menuUser.Location = new System.Drawing.Point(819, 89);
+            this.pn_menuUser.Name = "pn_menuUser";
+            this.pn_menuUser.Size = new System.Drawing.Size(556, 440);
+            this.pn_menuUser.TabIndex = 24;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(177, 25);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Usuarios Seguidos";
+            // 
+            // tb_User
+            // 
+            this.tb_User.Location = new System.Drawing.Point(20, 73);
+            this.tb_User.Name = "tb_User";
+            this.tb_User.Size = new System.Drawing.Size(309, 22);
+            this.tb_User.TabIndex = 1;
+            // 
+            // bt_backmenuUser
+            // 
+            this.bt_backmenuUser.Location = new System.Drawing.Point(25, 386);
+            this.bt_backmenuUser.Name = "bt_backmenuUser";
+            this.bt_backmenuUser.Size = new System.Drawing.Size(75, 23);
+            this.bt_backmenuUser.TabIndex = 2;
+            this.bt_backmenuUser.Text = "Back";
+            this.bt_backmenuUser.UseVisualStyleBackColor = true;
+            this.bt_backmenuUser.Click += new System.EventHandler(this.bt_backmenuUser_Click);
+            // 
+            // bt_searchUser
+            // 
+            this.bt_searchUser.Location = new System.Drawing.Point(350, 72);
+            this.bt_searchUser.Name = "bt_searchUser";
+            this.bt_searchUser.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchUser.TabIndex = 3;
+            this.bt_searchUser.Text = "Search";
+            this.bt_searchUser.UseVisualStyleBackColor = true;
+            this.bt_searchUser.Click += new System.EventHandler(this.bt_searchUser_Click);
+            // 
+            // rtb_menuUser
+            // 
+            this.rtb_menuUser.Location = new System.Drawing.Point(22, 125);
+            this.rtb_menuUser.Name = "rtb_menuUser";
+            this.rtb_menuUser.Size = new System.Drawing.Size(294, 244);
+            this.rtb_menuUser.TabIndex = 4;
+            this.rtb_menuUser.Text = "";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label21.Location = new System.Drawing.Point(17, 43);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(129, 17);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Nombre de usuario";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_menuUser);
             this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_vidPL);
             this.Controls.Add(this.pn_songPL);
@@ -2959,6 +3040,8 @@
             this.pn_vidPL.PerformLayout();
             this.pn_searchSong.ResumeLayout(false);
             this.pn_searchSong.PerformLayout();
+            this.pn_menuUser.ResumeLayout(false);
+            this.pn_menuUser.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3173,5 +3256,12 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.RichTextBox rtb_searchSong;
+        private System.Windows.Forms.Panel pn_menuUser;
+        private System.Windows.Forms.Button bt_backmenuUser;
+        private System.Windows.Forms.TextBox tb_User;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button bt_searchUser;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.RichTextBox rtb_menuUser;
     }
 }

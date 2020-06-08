@@ -1277,7 +1277,70 @@ namespace Entrega_3
             pn_searchSong.Visible = true;
             tb_searchSong.Text = "";
             rtb_searchSong.Text = "";
-            label18.Text = "Busqueda Simple";
+            label18.Text = "Busqueda Multiple";
+        }
+
+        private void bt_backmenuUser_Click(object sender, EventArgs e)
+        {
+            pn_menuUser.Visible = false;
+            rtb_menuUser.Text = "";
+            tb_User.Text = "";
+        }
+
+        private void bt_searchUser_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<User> allfollowed = app.GetServer().GetActive().GetFollowedUsers();
+            
+            string username = tb_User.Text;
+            bool searchtry = app.GetServer().CheckUserExistence(username);
+            if (searchtry == false)
+            {
+
+                rtb_menuUser.Text = "El usuario no existe";
+
+            }
+            else
+            {
+                User followUser = app.GetServer().SearchUser(username);
+                app.GetServer().GetActive().FollowUser(followUser);
+                rtb_menuUser.Text = "Se comenzo a seguir el usuario";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_ussegui_Click(object sender, EventArgs e)
+        {
+            pn_menuUser.Visible = true;
+            tb_User.Visible = false;
+            bt_searchUser.Visible = false;
+            label20.Text = "Usuarios Seguidos";
+            App app = new App();
+            app.OpenApp();
+            List<User> allfollowed = app.GetServer().GetActive().GetFollowedUsers();
+            string users = "";
+            if (allfollowed.Count() != 0)
+            {
+                for (int i = 0; i < allfollowed.Count(); i++)
+                {
+                    users += allfollowed[i].GetUsername() + Environment.NewLine;
+                }
+                rtb_menuUser.Text = users;
+            }
+            else
+            {
+                rtb_menuUser.Text=  "No sigues a nadie";
+            }
+            app.CloseApp(); 
+        }
+
+        private void bt_bususu_Click(object sender, EventArgs e)
+        {
+            pn_menuUser.Visible = true;
+            tb_User.Visible = true;
+            bt_searchUser.Visible = true;
+            label20.Text = "Buscar y Seguir Usuario";
         }
 
         private void bt_grammy_Click(object sender, EventArgs e)
