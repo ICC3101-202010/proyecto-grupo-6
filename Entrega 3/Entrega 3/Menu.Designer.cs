@@ -203,6 +203,9 @@
             this.bt_repvideocola = new System.Windows.Forms.Button();
             this.WMPrepvideocola = new AxWMPLib.AxWindowsMediaPlayer();
             this.pn_songPL = new System.Windows.Forms.Panel();
+            this.cb_privsongPL = new System.Windows.Forms.CheckBox();
+            this.bt_createsongPL = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tb_editsongPL = new System.Windows.Forms.TextBox();
@@ -214,22 +217,26 @@
             this.lb_songPLTitle = new System.Windows.Forms.Label();
             this.tb_searchsongPL = new System.Windows.Forms.TextBox();
             this.bt_backsongPL = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.bt_createsongPL = new System.Windows.Forms.Button();
-            this.cb_privsongPL = new System.Windows.Forms.CheckBox();
             this.pn_vidPL = new System.Windows.Forms.Panel();
-            this.tb_VidPL = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.lb_vidPL = new System.Windows.Forms.Label();
-            this.rtb_vidPL = new System.Windows.Forms.RichTextBox();
-            this.bt_backvidPL = new System.Windows.Forms.Button();
-            this.bt_searchvidPL = new System.Windows.Forms.Button();
-            this.bt_createvidPL = new System.Windows.Forms.Button();
-            this.bt_addvidPL = new System.Windows.Forms.Button();
-            this.bt_deletevidPL = new System.Windows.Forms.Button();
-            this.cb_privvidPL = new System.Windows.Forms.CheckBox();
-            this.tb_editvidPL = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.tb_editvidPL = new System.Windows.Forms.TextBox();
+            this.cb_privvidPL = new System.Windows.Forms.CheckBox();
+            this.bt_deletevidPL = new System.Windows.Forms.Button();
+            this.bt_addvidPL = new System.Windows.Forms.Button();
+            this.bt_createvidPL = new System.Windows.Forms.Button();
+            this.bt_searchvidPL = new System.Windows.Forms.Button();
+            this.bt_backvidPL = new System.Windows.Forms.Button();
+            this.rtb_vidPL = new System.Windows.Forms.RichTextBox();
+            this.lb_vidPL = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tb_VidPL = new System.Windows.Forms.TextBox();
+            this.pn_searchSong = new System.Windows.Forms.Panel();
+            this.bt_backsearchSong = new System.Windows.Forms.Button();
+            this.tb_searchSong = new System.Windows.Forms.TextBox();
+            this.bt_searchSong = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.rtb_searchSong = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -263,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WMPrepvideocola)).BeginInit();
             this.pn_songPL.SuspendLayout();
             this.pn_vidPL.SuspendLayout();
+            this.pn_searchSong.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -720,6 +728,7 @@
             this.bt_busmulti.TabIndex = 6;
             this.bt_busmulti.Text = "MULTIPLE";
             this.bt_busmulti.UseVisualStyleBackColor = true;
+            this.bt_busmulti.Click += new System.EventHandler(this.bt_busmulti_Click);
             // 
             // bt_bussim
             // 
@@ -734,6 +743,7 @@
             this.bt_bussim.TabIndex = 6;
             this.bt_bussim.Text = "SIMPLE";
             this.bt_bussim.UseVisualStyleBackColor = true;
+            this.bt_bussim.Click += new System.EventHandler(this.bt_bussim_Click);
             // 
             // label4
             // 
@@ -2505,6 +2515,40 @@
             this.pn_songPL.TabIndex = 21;
             this.pn_songPL.Visible = false;
             // 
+            // cb_privsongPL
+            // 
+            this.cb_privsongPL.AutoSize = true;
+            this.cb_privsongPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cb_privsongPL.Location = new System.Drawing.Point(247, 384);
+            this.cb_privsongPL.Name = "cb_privsongPL";
+            this.cb_privsongPL.Size = new System.Drawing.Size(126, 21);
+            this.cb_privsongPL.TabIndex = 13;
+            this.cb_privsongPL.Text = "Playlist Privada";
+            this.cb_privsongPL.UseVisualStyleBackColor = true;
+            this.cb_privsongPL.Visible = false;
+            // 
+            // bt_createsongPL
+            // 
+            this.bt_createsongPL.Location = new System.Drawing.Point(464, 88);
+            this.bt_createsongPL.Name = "bt_createsongPL";
+            this.bt_createsongPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_createsongPL.TabIndex = 12;
+            this.bt_createsongPL.Text = "Create";
+            this.bt_createsongPL.UseVisualStyleBackColor = true;
+            this.bt_createsongPL.Visible = false;
+            this.bt_createsongPL.Click += new System.EventHandler(this.bt_createsongPL_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(365, 204);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(194, 51);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Ingrese nombre de\r\ncancion a agregar o\r\nnumero de cancion a eliminar";
+            this.label15.Visible = false;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -2612,40 +2656,6 @@
             this.bt_backsongPL.UseVisualStyleBackColor = true;
             this.bt_backsongPL.Click += new System.EventHandler(this.bt_backsongPL_Click);
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(365, 204);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(194, 51);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Ingrese nombre de\r\ncancion a agregar o\r\nnumero de cancion a eliminar";
-            this.label15.Visible = false;
-            // 
-            // bt_createsongPL
-            // 
-            this.bt_createsongPL.Location = new System.Drawing.Point(464, 88);
-            this.bt_createsongPL.Name = "bt_createsongPL";
-            this.bt_createsongPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_createsongPL.TabIndex = 12;
-            this.bt_createsongPL.Text = "Create";
-            this.bt_createsongPL.UseVisualStyleBackColor = true;
-            this.bt_createsongPL.Visible = false;
-            this.bt_createsongPL.Click += new System.EventHandler(this.bt_createsongPL_Click);
-            // 
-            // cb_privsongPL
-            // 
-            this.cb_privsongPL.AutoSize = true;
-            this.cb_privsongPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cb_privsongPL.Location = new System.Drawing.Point(247, 384);
-            this.cb_privsongPL.Name = "cb_privsongPL";
-            this.cb_privsongPL.Size = new System.Drawing.Size(126, 21);
-            this.cb_privsongPL.TabIndex = 13;
-            this.cb_privsongPL.Text = "Playlist Privada";
-            this.cb_privsongPL.UseVisualStyleBackColor = true;
-            this.cb_privsongPL.Visible = false;
-            // 
             // pn_vidPL
             // 
             this.pn_vidPL.Controls.Add(this.label17);
@@ -2666,94 +2676,24 @@
             this.pn_vidPL.TabIndex = 22;
             this.pn_vidPL.Visible = false;
             // 
-            // tb_VidPL
+            // label17
             // 
-            this.tb_VidPL.Location = new System.Drawing.Point(46, 74);
-            this.tb_VidPL.Name = "tb_VidPL";
-            this.tb_VidPL.Size = new System.Drawing.Size(276, 22);
-            this.tb_VidPL.TabIndex = 0;
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(258, 196);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(120, 68);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Nombre de\r\nvideo a agregar o\r\nnumero de video\r\na eliminar";
+            this.label17.Visible = false;
             // 
-            // label16
+            // tb_editvidPL
             // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(44, 50);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 17);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Nombre Playlist";
-            // 
-            // lb_vidPL
-            // 
-            this.lb_vidPL.AutoSize = true;
-            this.lb_vidPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_vidPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_vidPL.Location = new System.Drawing.Point(44, 18);
-            this.lb_vidPL.Name = "lb_vidPL";
-            this.lb_vidPL.Size = new System.Drawing.Size(0, 25);
-            this.lb_vidPL.TabIndex = 2;
-            // 
-            // rtb_vidPL
-            // 
-            this.rtb_vidPL.Location = new System.Drawing.Point(47, 116);
-            this.rtb_vidPL.Name = "rtb_vidPL";
-            this.rtb_vidPL.ReadOnly = true;
-            this.rtb_vidPL.Size = new System.Drawing.Size(190, 236);
-            this.rtb_vidPL.TabIndex = 3;
-            this.rtb_vidPL.Text = "";
-            // 
-            // bt_backvidPL
-            // 
-            this.bt_backvidPL.Location = new System.Drawing.Point(46, 370);
-            this.bt_backvidPL.Name = "bt_backvidPL";
-            this.bt_backvidPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_backvidPL.TabIndex = 4;
-            this.bt_backvidPL.Text = "Back";
-            this.bt_backvidPL.UseVisualStyleBackColor = true;
-            this.bt_backvidPL.Click += new System.EventHandler(this.bt_backvidPL_Click);
-            // 
-            // bt_searchvidPL
-            // 
-            this.bt_searchvidPL.Location = new System.Drawing.Point(328, 74);
-            this.bt_searchvidPL.Name = "bt_searchvidPL";
-            this.bt_searchvidPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_searchvidPL.TabIndex = 5;
-            this.bt_searchvidPL.Text = "Search";
-            this.bt_searchvidPL.UseVisualStyleBackColor = true;
-            this.bt_searchvidPL.Click += new System.EventHandler(this.bt_searchvidPL_Click);
-            // 
-            // bt_createvidPL
-            // 
-            this.bt_createvidPL.Location = new System.Drawing.Point(409, 76);
-            this.bt_createvidPL.Name = "bt_createvidPL";
-            this.bt_createvidPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_createvidPL.TabIndex = 6;
-            this.bt_createvidPL.Text = "Create";
-            this.bt_createvidPL.UseVisualStyleBackColor = true;
-            this.bt_createvidPL.Visible = false;
-            this.bt_createvidPL.Click += new System.EventHandler(this.bt_createvidPL_Click);
-            // 
-            // bt_addvidPL
-            // 
-            this.bt_addvidPL.Location = new System.Drawing.Point(260, 130);
-            this.bt_addvidPL.Name = "bt_addvidPL";
-            this.bt_addvidPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_addvidPL.TabIndex = 7;
-            this.bt_addvidPL.Text = "Agregar";
-            this.bt_addvidPL.UseVisualStyleBackColor = true;
-            this.bt_addvidPL.Visible = false;
-            this.bt_addvidPL.Click += new System.EventHandler(this.bt_addvidPL_Click);
-            // 
-            // bt_deletevidPL
-            // 
-            this.bt_deletevidPL.Location = new System.Drawing.Point(260, 163);
-            this.bt_deletevidPL.Name = "bt_deletevidPL";
-            this.bt_deletevidPL.Size = new System.Drawing.Size(75, 23);
-            this.bt_deletevidPL.TabIndex = 8;
-            this.bt_deletevidPL.Text = "Eliminar";
-            this.bt_deletevidPL.UseVisualStyleBackColor = true;
-            this.bt_deletevidPL.Visible = false;
-            this.bt_deletevidPL.Click += new System.EventHandler(this.bt_deletevidPL_Click);
+            this.tb_editvidPL.Location = new System.Drawing.Point(260, 269);
+            this.tb_editvidPL.Name = "tb_editvidPL";
+            this.tb_editvidPL.Size = new System.Drawing.Size(171, 22);
+            this.tb_editvidPL.TabIndex = 10;
+            this.tb_editvidPL.Visible = false;
             // 
             // cb_privvidPL
             // 
@@ -2767,24 +2707,166 @@
             this.cb_privvidPL.UseVisualStyleBackColor = true;
             this.cb_privvidPL.Visible = false;
             // 
-            // tb_editvidPL
+            // bt_deletevidPL
             // 
-            this.tb_editvidPL.Location = new System.Drawing.Point(260, 269);
-            this.tb_editvidPL.Name = "tb_editvidPL";
-            this.tb_editvidPL.Size = new System.Drawing.Size(171, 22);
-            this.tb_editvidPL.TabIndex = 10;
-            this.tb_editvidPL.Visible = false;
+            this.bt_deletevidPL.Location = new System.Drawing.Point(260, 163);
+            this.bt_deletevidPL.Name = "bt_deletevidPL";
+            this.bt_deletevidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_deletevidPL.TabIndex = 8;
+            this.bt_deletevidPL.Text = "Eliminar";
+            this.bt_deletevidPL.UseVisualStyleBackColor = true;
+            this.bt_deletevidPL.Visible = false;
+            this.bt_deletevidPL.Click += new System.EventHandler(this.bt_deletevidPL_Click);
             // 
-            // label17
+            // bt_addvidPL
             // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(258, 196);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(120, 68);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Nombre de\r\nvideo a agregar o\r\nnumero de video\r\na eliminar";
-            this.label17.Visible = false;
+            this.bt_addvidPL.Location = new System.Drawing.Point(260, 130);
+            this.bt_addvidPL.Name = "bt_addvidPL";
+            this.bt_addvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_addvidPL.TabIndex = 7;
+            this.bt_addvidPL.Text = "Agregar";
+            this.bt_addvidPL.UseVisualStyleBackColor = true;
+            this.bt_addvidPL.Visible = false;
+            this.bt_addvidPL.Click += new System.EventHandler(this.bt_addvidPL_Click);
+            // 
+            // bt_createvidPL
+            // 
+            this.bt_createvidPL.Location = new System.Drawing.Point(409, 76);
+            this.bt_createvidPL.Name = "bt_createvidPL";
+            this.bt_createvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_createvidPL.TabIndex = 6;
+            this.bt_createvidPL.Text = "Create";
+            this.bt_createvidPL.UseVisualStyleBackColor = true;
+            this.bt_createvidPL.Visible = false;
+            this.bt_createvidPL.Click += new System.EventHandler(this.bt_createvidPL_Click);
+            // 
+            // bt_searchvidPL
+            // 
+            this.bt_searchvidPL.Location = new System.Drawing.Point(328, 74);
+            this.bt_searchvidPL.Name = "bt_searchvidPL";
+            this.bt_searchvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchvidPL.TabIndex = 5;
+            this.bt_searchvidPL.Text = "Search";
+            this.bt_searchvidPL.UseVisualStyleBackColor = true;
+            this.bt_searchvidPL.Click += new System.EventHandler(this.bt_searchvidPL_Click);
+            // 
+            // bt_backvidPL
+            // 
+            this.bt_backvidPL.Location = new System.Drawing.Point(46, 370);
+            this.bt_backvidPL.Name = "bt_backvidPL";
+            this.bt_backvidPL.Size = new System.Drawing.Size(75, 23);
+            this.bt_backvidPL.TabIndex = 4;
+            this.bt_backvidPL.Text = "Back";
+            this.bt_backvidPL.UseVisualStyleBackColor = true;
+            this.bt_backvidPL.Click += new System.EventHandler(this.bt_backvidPL_Click);
+            // 
+            // rtb_vidPL
+            // 
+            this.rtb_vidPL.Location = new System.Drawing.Point(47, 116);
+            this.rtb_vidPL.Name = "rtb_vidPL";
+            this.rtb_vidPL.ReadOnly = true;
+            this.rtb_vidPL.Size = new System.Drawing.Size(190, 236);
+            this.rtb_vidPL.TabIndex = 3;
+            this.rtb_vidPL.Text = "";
+            // 
+            // lb_vidPL
+            // 
+            this.lb_vidPL.AutoSize = true;
+            this.lb_vidPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_vidPL.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_vidPL.Location = new System.Drawing.Point(44, 18);
+            this.lb_vidPL.Name = "lb_vidPL";
+            this.lb_vidPL.Size = new System.Drawing.Size(0, 25);
+            this.lb_vidPL.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(44, 50);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 17);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Nombre Playlist";
+            // 
+            // tb_VidPL
+            // 
+            this.tb_VidPL.Location = new System.Drawing.Point(46, 74);
+            this.tb_VidPL.Name = "tb_VidPL";
+            this.tb_VidPL.Size = new System.Drawing.Size(276, 22);
+            this.tb_VidPL.TabIndex = 0;
+            // 
+            // pn_searchSong
+            // 
+            this.pn_searchSong.Controls.Add(this.rtb_searchSong);
+            this.pn_searchSong.Controls.Add(this.label19);
+            this.pn_searchSong.Controls.Add(this.label18);
+            this.pn_searchSong.Controls.Add(this.bt_searchSong);
+            this.pn_searchSong.Controls.Add(this.tb_searchSong);
+            this.pn_searchSong.Controls.Add(this.bt_backsearchSong);
+            this.pn_searchSong.Location = new System.Drawing.Point(817, 92);
+            this.pn_searchSong.Name = "pn_searchSong";
+            this.pn_searchSong.Size = new System.Drawing.Size(561, 437);
+            this.pn_searchSong.TabIndex = 23;
+            this.pn_searchSong.Visible = false;
+            // 
+            // bt_backsearchSong
+            // 
+            this.bt_backsearchSong.Location = new System.Drawing.Point(22, 394);
+            this.bt_backsearchSong.Name = "bt_backsearchSong";
+            this.bt_backsearchSong.Size = new System.Drawing.Size(75, 23);
+            this.bt_backsearchSong.TabIndex = 0;
+            this.bt_backsearchSong.Text = "Back";
+            this.bt_backsearchSong.UseVisualStyleBackColor = true;
+            this.bt_backsearchSong.Click += new System.EventHandler(this.bt_backsearchSong_Click);
+            // 
+            // tb_searchSong
+            // 
+            this.tb_searchSong.Location = new System.Drawing.Point(39, 76);
+            this.tb_searchSong.Name = "tb_searchSong";
+            this.tb_searchSong.Size = new System.Drawing.Size(321, 22);
+            this.tb_searchSong.TabIndex = 1;
+            // 
+            // bt_searchSong
+            // 
+            this.bt_searchSong.Location = new System.Drawing.Point(379, 76);
+            this.bt_searchSong.Name = "bt_searchSong";
+            this.bt_searchSong.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchSong.TabIndex = 2;
+            this.bt_searchSong.Text = "Search";
+            this.bt_searchSong.UseVisualStyleBackColor = true;
+            this.bt_searchSong.Click += new System.EventHandler(this.bt_searchSong_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(33, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(166, 25);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Busqueda Simple";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label19.Location = new System.Drawing.Point(40, 53);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(369, 17);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Filtros de busqueda (si son multiples, delimitar con coma)";
+            // 
+            // rtb_searchSong
+            // 
+            this.rtb_searchSong.Location = new System.Drawing.Point(42, 116);
+            this.rtb_searchSong.Name = "rtb_searchSong";
+            this.rtb_searchSong.ReadOnly = true;
+            this.rtb_searchSong.Size = new System.Drawing.Size(289, 261);
+            this.rtb_searchSong.TabIndex = 5;
+            this.rtb_searchSong.Text = "";
             // 
             // Menu
             // 
@@ -2792,6 +2874,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_vidPL);
             this.Controls.Add(this.pn_songPL);
             this.Controls.Add(this.pn_addsongcola);
@@ -2874,6 +2957,8 @@
             this.pn_songPL.PerformLayout();
             this.pn_vidPL.ResumeLayout(false);
             this.pn_vidPL.PerformLayout();
+            this.pn_searchSong.ResumeLayout(false);
+            this.pn_searchSong.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3081,5 +3166,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox tb_editvidPL;
         private System.Windows.Forms.CheckBox cb_privvidPL;
+        private System.Windows.Forms.Panel pn_searchSong;
+        private System.Windows.Forms.Button bt_backsearchSong;
+        private System.Windows.Forms.Button bt_searchSong;
+        private System.Windows.Forms.TextBox tb_searchSong;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.RichTextBox rtb_searchSong;
     }
 }
