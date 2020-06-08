@@ -244,6 +244,32 @@
             this.bt_searchUser = new System.Windows.Forms.Button();
             this.rtb_menuUser = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.pn_vidCrit = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tb_vidCrit = new System.Windows.Forms.TextBox();
+            this.bt_backcritVid = new System.Windows.Forms.Button();
+            this.bt_commcritVid = new System.Windows.Forms.Button();
+            this.bt_searchcritVid = new System.Windows.Forms.Button();
+            this.rtb_critVid = new System.Windows.Forms.RichTextBox();
+            this.tb_critTitle = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.pn_vidRating = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tb_ratingVid = new System.Windows.Forms.TextBox();
+            this.bt_backratiVid = new System.Windows.Forms.Button();
+            this.bt_searchratVid = new System.Windows.Forms.Button();
+            this.bt_rateVid = new System.Windows.Forms.Button();
+            this.lb_vidRating = new System.Windows.Forms.Label();
+            this.clb_rateVid = new System.Windows.Forms.CheckedListBox();
+            this.pn_searchVid = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.tb_vidSearch = new System.Windows.Forms.TextBox();
+            this.rtb_vidSearch = new System.Windows.Forms.RichTextBox();
+            this.bt_searchVid = new System.Windows.Forms.Button();
+            this.bt_backvidSearch = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -279,6 +305,9 @@
             this.pn_vidPL.SuspendLayout();
             this.pn_searchSong.SuspendLayout();
             this.pn_menuUser.SuspendLayout();
+            this.pn_vidCrit.SuspendLayout();
+            this.pn_vidRating.SuspendLayout();
+            this.pn_searchVid.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -309,7 +338,7 @@
             this.bt_closeregistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bt_closeregistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_closeregistro.ImageLocation = "http://icons.iconarchive.com/icons/icojam/blue-bits/24/symbol-delete-icon.png";
-            this.bt_closeregistro.Location = new System.Drawing.Point(1760, 4);
+            this.bt_closeregistro.Location = new System.Drawing.Point(1682, 36);
             this.bt_closeregistro.Margin = new System.Windows.Forms.Padding(4);
             this.bt_closeregistro.Name = "bt_closeregistro";
             this.bt_closeregistro.Size = new System.Drawing.Size(33, 30);
@@ -1299,6 +1328,7 @@
             this.bt_makecritvideo.TabIndex = 2;
             this.bt_makecritvideo.Text = "HACER CRITICA A UN VIDEO";
             this.bt_makecritvideo.UseVisualStyleBackColor = true;
+            this.bt_makecritvideo.Click += new System.EventHandler(this.bt_makecritvideo_Click);
             // 
             // bt_vercriticavideo
             // 
@@ -1313,6 +1343,7 @@
             this.bt_vercriticavideo.TabIndex = 1;
             this.bt_vercriticavideo.Text = "VER CRITICA VIDEO";
             this.bt_vercriticavideo.UseVisualStyleBackColor = true;
+            this.bt_vercriticavideo.Click += new System.EventHandler(this.bt_vercriticavideo_Click);
             // 
             // label5
             // 
@@ -1367,6 +1398,7 @@
             this.bt_darrativideo.TabIndex = 15;
             this.bt_darrativideo.Text = "DAR RATING VIDEO";
             this.bt_darrativideo.UseVisualStyleBackColor = true;
+            this.bt_darrativideo.Click += new System.EventHandler(this.bt_darrativideo_Click);
             // 
             // label6
             // 
@@ -1392,6 +1424,7 @@
             this.bt_verrativideo.TabIndex = 13;
             this.bt_verrativideo.Text = "VER RATING VIDEO";
             this.bt_verrativideo.UseVisualStyleBackColor = true;
+            this.bt_verrativideo.Click += new System.EventHandler(this.bt_verrativideo_Click);
             // 
             // pn_buscvideo
             // 
@@ -1435,6 +1468,7 @@
             this.bt_multivideo.TabIndex = 2;
             this.bt_multivideo.Text = "MULTIPLE";
             this.bt_multivideo.UseVisualStyleBackColor = true;
+            this.bt_multivideo.Click += new System.EventHandler(this.bt_multivideo_Click);
             // 
             // bt_simvideo
             // 
@@ -1449,6 +1483,7 @@
             this.bt_simvideo.TabIndex = 1;
             this.bt_simvideo.Text = "SIMPLE";
             this.bt_simvideo.UseVisualStyleBackColor = true;
+            this.bt_simvideo.Click += new System.EventHandler(this.bt_simvideo_Click);
             // 
             // label7
             // 
@@ -2890,6 +2925,7 @@
             this.pn_menuUser.Name = "pn_menuUser";
             this.pn_menuUser.Size = new System.Drawing.Size(556, 440);
             this.pn_menuUser.TabIndex = 24;
+            this.pn_menuUser.Visible = false;
             // 
             // label20
             // 
@@ -2948,12 +2984,293 @@
             this.label21.TabIndex = 5;
             this.label21.Text = "Nombre de usuario";
             // 
+            // pn_vidCrit
+            // 
+            this.pn_vidCrit.Controls.Add(this.label24);
+            this.pn_vidCrit.Controls.Add(this.tb_critTitle);
+            this.pn_vidCrit.Controls.Add(this.rtb_critVid);
+            this.pn_vidCrit.Controls.Add(this.bt_searchcritVid);
+            this.pn_vidCrit.Controls.Add(this.bt_commcritVid);
+            this.pn_vidCrit.Controls.Add(this.bt_backcritVid);
+            this.pn_vidCrit.Controls.Add(this.tb_vidCrit);
+            this.pn_vidCrit.Controls.Add(this.label23);
+            this.pn_vidCrit.Controls.Add(this.label22);
+            this.pn_vidCrit.Location = new System.Drawing.Point(910, 89);
+            this.pn_vidCrit.Name = "pn_vidCrit";
+            this.pn_vidCrit.Size = new System.Drawing.Size(562, 456);
+            this.pn_vidCrit.TabIndex = 25;
+            this.pn_vidCrit.Visible = false;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label22.Location = new System.Drawing.Point(33, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(113, 25);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Ver Criticas";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label23.Location = new System.Drawing.Point(44, 60);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(119, 17);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "Nombre del video";
+            // 
+            // tb_vidCrit
+            // 
+            this.tb_vidCrit.Location = new System.Drawing.Point(51, 86);
+            this.tb_vidCrit.Name = "tb_vidCrit";
+            this.tb_vidCrit.Size = new System.Drawing.Size(284, 22);
+            this.tb_vidCrit.TabIndex = 2;
+            // 
+            // bt_backcritVid
+            // 
+            this.bt_backcritVid.Location = new System.Drawing.Point(34, 386);
+            this.bt_backcritVid.Name = "bt_backcritVid";
+            this.bt_backcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_backcritVid.TabIndex = 3;
+            this.bt_backcritVid.Text = "Back";
+            this.bt_backcritVid.UseVisualStyleBackColor = true;
+            this.bt_backcritVid.Click += new System.EventHandler(this.bt_backcritVid_Click);
+            // 
+            // bt_commcritVid
+            // 
+            this.bt_commcritVid.Location = new System.Drawing.Point(422, 86);
+            this.bt_commcritVid.Name = "bt_commcritVid";
+            this.bt_commcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_commcritVid.TabIndex = 4;
+            this.bt_commcritVid.Text = "Publish";
+            this.bt_commcritVid.UseVisualStyleBackColor = true;
+            this.bt_commcritVid.Click += new System.EventHandler(this.bt_commcritVid_Click);
+            // 
+            // bt_searchcritVid
+            // 
+            this.bt_searchcritVid.Location = new System.Drawing.Point(341, 86);
+            this.bt_searchcritVid.Name = "bt_searchcritVid";
+            this.bt_searchcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchcritVid.TabIndex = 5;
+            this.bt_searchcritVid.Text = "Search";
+            this.bt_searchcritVid.UseVisualStyleBackColor = true;
+            this.bt_searchcritVid.Click += new System.EventHandler(this.bt_searchcritVid_Click);
+            // 
+            // rtb_critVid
+            // 
+            this.rtb_critVid.Location = new System.Drawing.Point(50, 156);
+            this.rtb_critVid.Name = "rtb_critVid";
+            this.rtb_critVid.Size = new System.Drawing.Size(255, 213);
+            this.rtb_critVid.TabIndex = 6;
+            this.rtb_critVid.Text = "Agregue su comentario aqui";
+            this.rtb_critVid.Click += new System.EventHandler(this.rtb_critVid_Click);
+            // 
+            // tb_critTitle
+            // 
+            this.tb_critTitle.Location = new System.Drawing.Point(52, 131);
+            this.tb_critTitle.Name = "tb_critTitle";
+            this.tb_critTitle.Size = new System.Drawing.Size(202, 22);
+            this.tb_critTitle.TabIndex = 7;
+            this.tb_critTitle.Visible = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Location = new System.Drawing.Point(51, 111);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(119, 17);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "Titulo de la critica";
+            // 
+            // pn_vidRating
+            // 
+            this.pn_vidRating.Controls.Add(this.clb_rateVid);
+            this.pn_vidRating.Controls.Add(this.lb_vidRating);
+            this.pn_vidRating.Controls.Add(this.bt_rateVid);
+            this.pn_vidRating.Controls.Add(this.bt_searchratVid);
+            this.pn_vidRating.Controls.Add(this.bt_backratiVid);
+            this.pn_vidRating.Controls.Add(this.tb_ratingVid);
+            this.pn_vidRating.Controls.Add(this.label26);
+            this.pn_vidRating.Controls.Add(this.label25);
+            this.pn_vidRating.Location = new System.Drawing.Point(916, 90);
+            this.pn_vidRating.Name = "pn_vidRating";
+            this.pn_vidRating.Size = new System.Drawing.Size(488, 442);
+            this.pn_vidRating.TabIndex = 26;
+            this.pn_vidRating.Visible = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label25.Location = new System.Drawing.Point(34, 25);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(123, 25);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Rating Video";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(28, 84);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(168, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Ingrese nombre del video";
+            // 
+            // tb_ratingVid
+            // 
+            this.tb_ratingVid.Location = new System.Drawing.Point(28, 113);
+            this.tb_ratingVid.Name = "tb_ratingVid";
+            this.tb_ratingVid.Size = new System.Drawing.Size(285, 22);
+            this.tb_ratingVid.TabIndex = 2;
+            this.tb_ratingVid.TextChanged += new System.EventHandler(this.tb_ratingVid_TextChanged);
+            // 
+            // bt_backratiVid
+            // 
+            this.bt_backratiVid.Location = new System.Drawing.Point(24, 362);
+            this.bt_backratiVid.Name = "bt_backratiVid";
+            this.bt_backratiVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_backratiVid.TabIndex = 3;
+            this.bt_backratiVid.Text = "Back";
+            this.bt_backratiVid.UseVisualStyleBackColor = true;
+            this.bt_backratiVid.Click += new System.EventHandler(this.bt_backratiVid_Click);
+            // 
+            // bt_searchratVid
+            // 
+            this.bt_searchratVid.Location = new System.Drawing.Point(319, 113);
+            this.bt_searchratVid.Name = "bt_searchratVid";
+            this.bt_searchratVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchratVid.TabIndex = 4;
+            this.bt_searchratVid.Text = "Search";
+            this.bt_searchratVid.UseVisualStyleBackColor = true;
+            this.bt_searchratVid.Click += new System.EventHandler(this.bt_searchratVid_Click);
+            // 
+            // bt_rateVid
+            // 
+            this.bt_rateVid.Location = new System.Drawing.Point(210, 266);
+            this.bt_rateVid.Name = "bt_rateVid";
+            this.bt_rateVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_rateVid.TabIndex = 5;
+            this.bt_rateVid.Text = "Rate";
+            this.bt_rateVid.UseVisualStyleBackColor = true;
+            this.bt_rateVid.Visible = false;
+            this.bt_rateVid.Click += new System.EventHandler(this.bt_rateVid_Click);
+            // 
+            // lb_vidRating
+            // 
+            this.lb_vidRating.AutoSize = true;
+            this.lb_vidRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_vidRating.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_vidRating.Location = new System.Drawing.Point(31, 155);
+            this.lb_vidRating.Name = "lb_vidRating";
+            this.lb_vidRating.Size = new System.Drawing.Size(0, 25);
+            this.lb_vidRating.TabIndex = 6;
+            // 
+            // clb_rateVid
+            // 
+            this.clb_rateVid.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.clb_rateVid.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.clb_rateVid.FormattingEnabled = true;
+            this.clb_rateVid.Items.AddRange(new object[] {
+            "1 estrella",
+            "2 estrellas",
+            "3 estrellas",
+            "4 estrellas",
+            "5 estrellas"});
+            this.clb_rateVid.Location = new System.Drawing.Point(69, 206);
+            this.clb_rateVid.Name = "clb_rateVid";
+            this.clb_rateVid.Size = new System.Drawing.Size(120, 89);
+            this.clb_rateVid.TabIndex = 7;
+            this.clb_rateVid.Visible = false;
+            // 
+            // pn_searchVid
+            // 
+            this.pn_searchVid.Controls.Add(this.bt_backvidSearch);
+            this.pn_searchVid.Controls.Add(this.bt_searchVid);
+            this.pn_searchVid.Controls.Add(this.rtb_vidSearch);
+            this.pn_searchVid.Controls.Add(this.tb_vidSearch);
+            this.pn_searchVid.Controls.Add(this.label28);
+            this.pn_searchVid.Controls.Add(this.label27);
+            this.pn_searchVid.Location = new System.Drawing.Point(918, 87);
+            this.pn_searchVid.Name = "pn_searchVid";
+            this.pn_searchVid.Size = new System.Drawing.Size(463, 439);
+            this.pn_searchVid.TabIndex = 27;
+            this.pn_searchVid.Visible = false;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label27.Location = new System.Drawing.Point(27, 21);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(166, 25);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Busqueda Simple";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label28.Location = new System.Drawing.Point(31, 71);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(369, 17);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Filtros de busqueda (si son multiples, delimitar con coma)";
+            // 
+            // tb_vidSearch
+            // 
+            this.tb_vidSearch.Location = new System.Drawing.Point(34, 101);
+            this.tb_vidSearch.Name = "tb_vidSearch";
+            this.tb_vidSearch.Size = new System.Drawing.Size(293, 22);
+            this.tb_vidSearch.TabIndex = 2;
+            // 
+            // rtb_vidSearch
+            // 
+            this.rtb_vidSearch.Location = new System.Drawing.Point(39, 140);
+            this.rtb_vidSearch.Name = "rtb_vidSearch";
+            this.rtb_vidSearch.ReadOnly = true;
+            this.rtb_vidSearch.Size = new System.Drawing.Size(258, 231);
+            this.rtb_vidSearch.TabIndex = 3;
+            this.rtb_vidSearch.Text = "";
+            // 
+            // bt_searchVid
+            // 
+            this.bt_searchVid.Location = new System.Drawing.Point(343, 99);
+            this.bt_searchVid.Name = "bt_searchVid";
+            this.bt_searchVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchVid.TabIndex = 4;
+            this.bt_searchVid.Text = "Search";
+            this.bt_searchVid.UseVisualStyleBackColor = true;
+            this.bt_searchVid.Click += new System.EventHandler(this.bt_searchVid_Click);
+            // 
+            // bt_backvidSearch
+            // 
+            this.bt_backvidSearch.Location = new System.Drawing.Point(39, 390);
+            this.bt_backvidSearch.Name = "bt_backvidSearch";
+            this.bt_backvidSearch.Size = new System.Drawing.Size(75, 23);
+            this.bt_backvidSearch.TabIndex = 5;
+            this.bt_backvidSearch.Text = "Back";
+            this.bt_backvidSearch.UseVisualStyleBackColor = true;
+            this.bt_backvidSearch.Click += new System.EventHandler(this.bt_backvidSearch_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_searchVid);
+            this.Controls.Add(this.pn_vidRating);
+            this.Controls.Add(this.pn_vidCrit);
             this.Controls.Add(this.pn_menuUser);
             this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_vidPL);
@@ -3042,6 +3359,12 @@
             this.pn_searchSong.PerformLayout();
             this.pn_menuUser.ResumeLayout(false);
             this.pn_menuUser.PerformLayout();
+            this.pn_vidCrit.ResumeLayout(false);
+            this.pn_vidCrit.PerformLayout();
+            this.pn_vidRating.ResumeLayout(false);
+            this.pn_vidRating.PerformLayout();
+            this.pn_searchVid.ResumeLayout(false);
+            this.pn_searchVid.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3263,5 +3586,31 @@
         private System.Windows.Forms.Button bt_searchUser;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.RichTextBox rtb_menuUser;
+        private System.Windows.Forms.Panel pn_vidCrit;
+        private System.Windows.Forms.Button bt_searchcritVid;
+        private System.Windows.Forms.Button bt_commcritVid;
+        private System.Windows.Forms.Button bt_backcritVid;
+        private System.Windows.Forms.TextBox tb_vidCrit;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.RichTextBox rtb_critVid;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox tb_critTitle;
+        private System.Windows.Forms.Panel pn_vidRating;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Button bt_rateVid;
+        private System.Windows.Forms.Button bt_searchratVid;
+        private System.Windows.Forms.Button bt_backratiVid;
+        private System.Windows.Forms.TextBox tb_ratingVid;
+        private System.Windows.Forms.CheckedListBox clb_rateVid;
+        private System.Windows.Forms.Label lb_vidRating;
+        private System.Windows.Forms.Panel pn_searchVid;
+        private System.Windows.Forms.Button bt_backvidSearch;
+        private System.Windows.Forms.Button bt_searchVid;
+        private System.Windows.Forms.RichTextBox rtb_vidSearch;
+        private System.Windows.Forms.TextBox tb_vidSearch;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
     }
 }
