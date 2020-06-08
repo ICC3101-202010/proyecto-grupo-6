@@ -1232,6 +1232,54 @@ namespace Entrega_3
             pn_vidPL.Visible = true;
         }
 
+        private void bt_bussim_Click(object sender, EventArgs e)
+        {
+            pn_searchSong.Visible = true;
+            tb_searchSong.Text = "";
+            rtb_searchSong.Text = "";
+            label18.Text = "Busqueda Simple";
+
+        }
+
+        private void bt_backsearchSong_Click(object sender, EventArgs e)
+        {
+            pn_searchSong.Visible = false;
+        }
+
+        private void bt_searchSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<string> filterList = new List<string>();
+            char[] delimit = { ' ', ',' };
+            string[] stringlist = tb_searchSong.Text.Split(delimit);
+            foreach (var filter in stringlist)
+            {
+                filterList.Add(filter);
+            }
+            List<Song> filteredList = app.SearchAndPlaySong(filterList);
+            if (filteredList.Count != 0)
+            {
+                foreach (var a in filteredList)
+                {
+                    rtb_searchSong.Text = rtb_searchSong.Text + "\n" + (a.GetData() + ", " + a.GetArtistSong());
+                }
+            }
+            else
+            {
+                rtb_searchSong.Text = "No se encontraron canciones con esos parametros";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_busmulti_Click(object sender, EventArgs e)
+        {
+            pn_searchSong.Visible = true;
+            tb_searchSong.Text = "";
+            rtb_searchSong.Text = "";
+            label18.Text = "Busqueda Simple";
+        }
+
         private void bt_grammy_Click(object sender, EventArgs e)
         {
             lb_premios.Visible = true;
