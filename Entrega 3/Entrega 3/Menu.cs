@@ -15,7 +15,7 @@ namespace Entrega_3
 {
     public partial class Menu : Form
     {
-        App app = new App();
+        
         string NameSong, KindSong, AlbumSong,NameArtist,SexArtist,NameAward,NameAward2;
         string NameVideo,KindVideo,NameDirector,SexDirector,StudioVideo;
         int AgeArtist,AgeDirector;
@@ -194,6 +194,7 @@ namespace Entrega_3
         }
         private void bt_playsong_Click(object sender, EventArgs e)
         {
+            App app = new App();
             app.OpenApp();
             
             if (i > app.GetAllSongs().Count())
@@ -242,6 +243,7 @@ namespace Entrega_3
 
         private void bt_playvideo_Click(object sender, EventArgs e)
         {
+            App app = new App();
             app.OpenApp();
             if (i > app.Getallvideos().Count())
             {
@@ -314,6 +316,7 @@ namespace Entrega_3
 
                 if (openFilesong.ShowDialog() == DialogResult.OK)
                 {
+                    App app = new App();
                     routesong = openFilesong.FileName;
                     NameSong = tb_nombresong.Text;
                     KindSong = tb_generosong.Text;
@@ -409,6 +412,7 @@ namespace Entrega_3
 
         private void bt_cargarvideo_Click(object sender, EventArgs e)
         {
+            App app = new App();
             if (tb_nombrevideo.Text == "" || tb_generovideo.Text == "" || tb_direcvideo.Text == "" || tb_canalvideo.Text == "" || tb_sexodirecvideo.Text == "" || tb_edaddirect.Text == "")
             {
                 lb_datavideo.Visible = true;
@@ -478,6 +482,7 @@ namespace Entrega_3
 
         private void bt_nextvideo_Click(object sender, EventArgs e)
         {
+            App app = new App();
             z += 1;
             app.OpenApp();
             if (i <= app.Getallvideos().Count())
@@ -528,6 +533,7 @@ namespace Entrega_3
 
         private void bt_addsongcola_Click(object sender, EventArgs e)
         {
+            App app = new App();
             string namesongcola, nameartistcola,exist;
             namesongcola = tb_namesongcola.Text;
             nameartistcola = tb_nameartistcola.Text;
@@ -558,6 +564,7 @@ namespace Entrega_3
 
         private void bt_agrcolasong_Click_1(object sender, EventArgs e)
         {
+            App app = new App();
             pn_addsongcola.Visible = true;
             pn_tuusu.Visible = false;
             app.OpenApp();
@@ -565,6 +572,7 @@ namespace Entrega_3
             {
                 rtb_songsaddcola.Text += "cancion: " + a.GetName() + "," + " artista: " + a.GetArtistSong()+"\n";
             }
+            app.CloseApp();
         }
 
         private void bt_esccolasong_Click(object sender, EventArgs e)
@@ -581,6 +589,7 @@ namespace Entrega_3
 
         private void bt_agrecolavideo_Click(object sender, EventArgs e)
         {
+            App app = new App();
             pn_addcolavideo.Visible = true;
             pn_tuusu.Visible = false;
             app.OpenApp();
@@ -604,6 +613,7 @@ namespace Entrega_3
 
         private void bt_repcola_Click(object sender, EventArgs e)
         {
+            App app = new App();
             app.OpenApp();
             if (w > app.GetServer().GetActive().GetQueue(0).Count())
             {
@@ -632,7 +642,8 @@ namespace Entrega_3
 
         private void bt_nextcola_Click(object sender, EventArgs e)
         {
-            w+= 1;
+            App app = new App();
+            w += 1;
             app.OpenApp();
             if (w <= app.GetServer().GetActive().GetQueue(0).Count())
             {
@@ -677,6 +688,7 @@ namespace Entrega_3
 
         private void bt_addvideocola_Click(object sender, EventArgs e)
         {
+            App app = new App();
             string namevideo, namedirector,existe;
             namevideo = tb_namevideocola.Text;
             namedirector = tb_directorvideocola.Text;
@@ -707,6 +719,7 @@ namespace Entrega_3
 
         private void bt_repvideocola_Click(object sender, EventArgs e)
         {
+            App app = new App();
             app.OpenApp();
             if (x > app.GetServer().GetActive().GetQueue(1).Count())
             {
@@ -735,6 +748,7 @@ namespace Entrega_3
 
         private void bt_nextvideocola_Click(object sender, EventArgs e)
         {
+            App app = new App();
             x += 1;
             app.OpenApp();
             if (x <= app.GetServer().GetActive().GetQueue(0).Count())
@@ -760,6 +774,462 @@ namespace Entrega_3
         {
             pn_repvideocola.Visible = false;
             pn_tuusu.Visible = true;
+        }
+
+        private void bt_folplay_Click(object sender, EventArgs e)
+        {
+            pn_songPL.Visible = true;
+            tb_searchsongPL.Visible = true;
+            bt_searchsongPL.Visible = true;
+            label12.Visible = true;
+            lb_songPLTitle.Text = "Follow Playlist";
+        }
+
+        private void bt_backsongPL_Click(object sender, EventArgs e)
+        {
+            pn_songPL.Visible = false;
+            tb_searchsongPL.Text = "";
+            tb_searchsongPL.Visible = true;
+            cb_privsongPL.Visible = false;
+            rtb_songPL.Text = "";
+            bt_addsongPL.Visible = false;
+            bt_deletesongPL.Visible = false;
+            label13.Visible = false;
+            label14.Visible = false;
+            label15.Visible = false;
+            tb_editsongPL.Visible = false;
+            label12.Text = "Nombre Playlist";
+            label12.Visible = false;
+            bt_searchsongPL.Visible = true;
+            bt_createsongPL.Visible = false;
+            cb_privsongPL.Checked = false;
+        }
+
+        private void bt_searchsongPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            label12.Visible = true;
+            bool checkExistence = app.GetServer().CheckPLExistence(tb_searchsongPL.Text, 0, app);
+            if (checkExistence == false)
+            {
+                
+                rtb_songPL.Text=("La playlist no existe");
+                
+            }
+            else
+            {
+                app.GetServer().GetActive().FollowMusicPL(app.GetServer().GetSpecificPL(tb_searchsongPL.Text, 0, app));
+                rtb_songPL.Text=("Seguiste a la playlist");
+                
+            }
+            app.CloseApp();
+        }
+
+        private void bt_seguiplay_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            pn_songPL.Visible = true;
+            tb_searchsongPL.Visible = false;
+            bt_searchsongPL.Visible = false;
+            label12.Visible = false;
+            lb_songPLTitle.Text = "Playlist seguidas";
+            List<Playlist> allFollowed = app.GetServer().GetActive().GetFollowedMusicPL();
+            if (allFollowed.Count() != 0)
+            {
+                for (int i = 0; i < allFollowed.Count(); i++)
+                {
+                    rtb_songPL.Text=rtb_songPL.Text+"\n"+(i + 1 + ". " + allFollowed[i].GetInfoPL());
+                }
+            }
+            else
+            {
+                rtb_songPL.Text=("No sigues ninguna playlist");
+            }
+            app.CloseApp();
+        }
+
+        private void bt_allplay_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            pn_songPL.Visible = true;
+            tb_searchsongPL.Visible = false;
+            bt_searchsongPL.Visible = false;
+            label12.Visible = false;
+            lb_songPLTitle.Text = "Todas las Playlist";
+            if (app.SeeMusicPL() != "")
+            {
+                rtb_songPL.Text = app.SeeMusicPL();
+            }
+            else
+            {
+                rtb_songPL.Text = "El programa no tiene playlists para mostrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_addsongPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            
+            try
+            {
+                List<string> searchParameter = new List<string>() { tb_editsongPL.Text };
+                rtb_songPL.Text=(app.GetServer().GetActive().GetYourMusic()[Convert.ToInt32(tb_searchsongPL.Text)-1].AddMedia(app.SearchAndPlaySong(searchParameter)[0]));
+                if ((rtb_songPL.Text == "Se anadio la cancion con exito"))
+                {
+                    label14.Text = "Se anadio la cancion con exito";
+                    label14.Visible = true;
+                }
+                else
+                {
+                    label14.Text = "No se encontro la cancion";
+                    label14.Visible = true;
+                }
+            }
+            catch (FormatException a)
+            {
+                label12.Text = "Ingrese un valor correcto";
+                label14.Text = "Ingrese valor correcto";
+                label14.Visible = true;
+            }
+            catch(ArgumentOutOfRangeException a)
+            {
+                label12.Text = "Ingrese un valor correcto";
+                
+                label14.Visible = true;
+            }
+            app.CloseApp();
+        }
+
+        private void bt_deletesongPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourMusic();
+            try
+            {
+                int choiceDelete = Int32.Parse(tb_editsongPL.Text);
+                rtb_songPL.Text=(app.GetServer().GetActive().GetYourMusic()[Convert.ToInt32(tb_searchsongPL.Text)-1].DeleteMedia(userPlaylists[Convert.ToInt32(tb_searchsongPL.Text)-1].GetAllMedia()[choiceDelete]));
+            }
+            catch (FormatException a)
+            {
+                label12.Text = "Ingrese un valor correcto";
+                label14.Text = "Ingrese valor correcto";
+                label14.Visible = true;
+            }
+            catch (ArgumentOutOfRangeException a)
+            {
+                label12.Text = "Ingrese un valor correcto";
+
+                label14.Visible = true;
+            }
+            app.CloseApp();
+        }
+
+        private void bt_editarplay_Click(object sender, EventArgs e)
+        {
+            lb_songPLTitle.Text = "Editar Playlist";
+            bt_searchsongPL.Visible = false;
+            label12.Text = "Escriba el numero de la playlista editar";
+            pn_songPL.Visible = true;
+            label15.Visible = true;
+            bt_addsongPL.Visible = true;
+            bt_deletesongPL.Visible = true;
+            tb_editsongPL.Visible = true;
+            App app = new App();
+            app.OpenApp();
+            try
+            {
+                List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourMusic();
+            
+                for (int i = 0; i < userPlaylists.Count(); i++)
+                {
+                    rtb_songPL.Text = rtb_songPL.Text + "\n" +i+1+". "+ userPlaylists[i].GetNamePL() + "\n" + "\n";
+                    if (userPlaylists[i].GetAllMedia().Count() >1)
+                    {
+                        for (int a = 0; a < userPlaylists[i].GetAllMedia().Count(); a++)
+                        {
+                            if (a == 0)
+                            {
+                                rtb_songPL.Text = rtb_songPL.Text;
+                            }
+                            else
+                            {
+                                rtb_songPL.Text = rtb_songPL.Text + "\n" + a + ". " + userPlaylists[i].GetAllMedia()[a].GetData();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        rtb_songPL.Text = rtb_songPL.Text + "No tiene canciones";
+                    }
+                    rtb_songPL.Text = rtb_songPL.Text + "\n" + "---------------------------------" + "\n";
+                }
+                
+            }
+            catch(NullReferenceException k)
+            {
+                rtb_songPL.Text = "No existen playlists";
+            }
+            app.CloseApp();
+            
+        }
+
+        private void bt_crearplay_Click(object sender, EventArgs e)
+        {
+            pn_songPL.Visible = true;
+            label12.Visible = true;
+            bt_createsongPL.Visible = true;
+            lb_songPLTitle.Text="Crear Playlist";
+            bt_searchsongPL.Visible = false;
+            cb_privsongPL.Visible = true;
+            label12.Visible = true;
+        }
+
+        private void bt_createsongPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            Song song = new Song();
+            if (tb_searchsongPL.Text != "")
+            {
+                rtb_songPL.Text=app.MakePL("Songs", tb_searchsongPL.Text, cb_privsongPL.Checked, new List<Multimedia>() { song });
+            }
+            else
+            {
+                rtb_songPL.Text = "Pongale nombre a la playlist";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_addvidPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+
+            try
+            {
+                List<string> searchParameter = new List<string>() { tb_editvidPL.Text };
+                rtb_vidPL.Text = (app.GetServer().GetActive().GetYourVideos()[Convert.ToInt32(tb_VidPL.Text) - 1].AddMedia(app.SearchAndPlayVid(searchParameter)[0]));
+                if ((rtb_vidPL.Text == "Se anadio la cancion con exito"))
+                {
+                    rtb_vidPL.Text = "Se anadio la cancion con exito";
+                    
+                }
+                else
+                {
+                    rtb_vidPL.Text = "No se encontro la cancion";
+                    
+                }
+            }
+            catch (FormatException a)
+            {
+                rtb_vidPL.Text = "Ingrese un valor correcto";
+                
+            }
+            catch (ArgumentOutOfRangeException a)
+            {
+                rtb_vidPL.Text = "Ingrese un valor correcto";
+
+                
+            }
+            app.CloseApp();
+        }
+
+        private void bt_backvidPL_Click(object sender, EventArgs e)
+        {
+            pn_vidPL.Visible = false;
+            label16.Visible = true;
+            label16.Text = "Nombre Playlist";
+            tb_VidPL.Visible = true;
+            bt_searchvidPL.Visible = true;
+            rtb_vidPL.Text = "";
+            tb_VidPL.Text = "";
+            cb_privvidPL.Checked = false;
+            bt_addvidPL.Visible = false;
+            bt_deletevidPL.Visible = false;
+            tb_editvidPL.Visible = false;
+            tb_editvidPL.Text = "";
+            bt_createvidPL.Visible = false;
+            label17.Visible = false;
+        }
+
+        private void bt_searchvidPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            label16.Visible = true;
+            tb_VidPL.Visible = true;
+            bt_searchvidPL.Visible = true;
+            bool checkExistence = app.GetServer().CheckPLExistence(tb_VidPL.Text, 1, app);
+            if (checkExistence == false)
+            {
+
+                rtb_vidPL.Text = ("La playlist no existe");
+
+            }
+            else
+            {
+                app.GetServer().GetActive().FollowMusicPL(app.GetServer().GetSpecificPL(tb_VidPL.Text, 1, app));
+                rtb_vidPL.Text = ("Seguiste a la playlist");
+
+            }
+            app.CloseApp();
+        }
+
+        private void bt_createvidPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            Video vid = new Video();
+            if (tb_VidPL.Text != "")
+            {
+                rtb_vidPL.Text = app.MakePL("Videos", tb_VidPL.Text, cb_privvidPL.Checked, new List<Multimedia>() { vid });
+            }
+            else
+            {
+                rtb_vidPL.Text = "Pongale nombre a la playlist";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_folplayvideo_Click(object sender, EventArgs e)
+        {
+            pn_vidPL.Visible = true;
+            lb_vidPL.Text="Follow Playlist";
+        }
+
+        private void bt_playseguivideo_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            bt_searchvidPL.Visible = false;
+            tb_VidPL.Visible = false;
+            label16.Visible = false;
+            lb_vidPL.Text = "Playlist Seguidas";
+            List<Playlist> allFollowed = app.GetServer().GetActive().GetFollowedVidPL();
+            if (allFollowed.Count() != 0)
+            {
+                for (int i = 0; i < allFollowed.Count(); i++)
+                {
+                    rtb_vidPL.Text = rtb_vidPL.Text + "\n" + (i + 1 + ". " + allFollowed[i].GetInfoPL());
+                }
+            }
+            else
+            {
+                rtb_vidPL.Text = ("No sigues ninguna playlist");
+            }
+            app.CloseApp();
+
+
+        }
+
+        private void bt_verplayvideo_Click(object sender, EventArgs e)
+        {
+            pn_vidPL.Visible = true;
+            bt_searchvidPL.Visible = false;
+            tb_VidPL.Visible = false;
+            label16.Visible = false;
+            App app = new App();
+            app.OpenApp();
+            lb_vidPL.Text = "Todas las Playlist";
+            if (app.SeeVidPL() != "")
+            {
+                rtb_vidPL.Text = app.SeeVidPL();
+            }
+            else
+            {
+                rtb_vidPL.Text = "El programa no tiene playlists para mostrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_ediplayvideo_Click(object sender, EventArgs e)
+        {
+            pn_vidPL.Visible = true;
+            bt_searchvidPL.Visible = true;
+            tb_VidPL.Visible = true;
+            label16.Visible = true;
+            bt_addvidPL.Visible = true;
+            bt_deletevidPL.Visible = true;
+            label17.Visible = true;
+            tb_editvidPL.Visible = true;
+            label16.Text = "Ingrese numero de la playlist";
+            App app = new App();
+            app.OpenApp();
+            try
+            {
+                List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourVideos();
+
+                for (int i = 0; i < userPlaylists.Count(); i++)
+                {
+                    rtb_vidPL.Text = rtb_vidPL.Text + "\n" + i + 1 + ". " + userPlaylists[i].GetNamePL() + "\n" + "\n";
+                    if (userPlaylists[i].GetAllMedia().Count() > 1)
+                    {
+                        for (int a = 0; a < userPlaylists[i].GetAllMedia().Count(); a++)
+                        {
+                            if (a == 0)
+                            {
+                                rtb_vidPL.Text = rtb_vidPL.Text;
+                            }
+                            else
+                            {
+                                rtb_vidPL.Text = rtb_vidPL.Text + "\n" + a + ". " + userPlaylists[i].GetAllMedia()[a].GetData();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        rtb_vidPL.Text = rtb_vidPL.Text + "No tiene videos";
+                    }
+                    rtb_vidPL.Text = rtb_vidPL.Text + "\n" + "---------------------------------" + "\n";
+                }
+
+            }
+            catch (NullReferenceException k)
+            {
+                rtb_vidPL.Text = "No existen playlists";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_deletevidPL_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Playlist> userPlaylists = app.GetServer().GetActive().GetYourVideos();
+            try
+            {
+                int choiceDelete = Int32.Parse(tb_editvidPL.Text);
+                rtb_vidPL.Text = (app.GetServer().GetActive().GetYourVideos()[Convert.ToInt32(tb_VidPL.Text) - 1].DeleteMedia(userPlaylists[Convert.ToInt32(tb_VidPL.Text) - 1].GetAllMedia()[choiceDelete]));
+            }
+            catch (FormatException a)
+            {
+                rtb_vidPL.Text = "Ingrese un valor correcto";
+                
+            }
+            catch (ArgumentOutOfRangeException a)
+            {
+                rtb_vidPL.Text = "Ingrese un valor correcto";
+
+                
+            }
+            app.CloseApp();
+        }
+
+        private void bt_crearplayvideo_Click(object sender, EventArgs e)
+        {
+            lb_vidPL.Text = "Crear Playlist";
+            tb_VidPL.Visible = true;
+            bt_searchvidPL.Visible = false;
+            label16.Visible = true;
+            cb_privvidPL.Visible = true;
+            bt_createvidPL.Visible = true;
+            pn_vidPL.Visible = true;
         }
 
         private void bt_grammy_Click(object sender, EventArgs e)
@@ -789,6 +1259,7 @@ namespace Entrega_3
             {
                 rtb_premios.Text=("No existen canciones con Grammy");
             }
+            app.CloseApp();
         }
 
         private void bt_brit_Click(object sender, EventArgs e)
@@ -818,6 +1289,7 @@ namespace Entrega_3
             {
                 rtb_premios.Text=("No existen canciones con Brit");
             }
+            app.CloseApp();
         }
 
         private void bt_ambos_Click(object sender, EventArgs e)
@@ -847,6 +1319,7 @@ namespace Entrega_3
             {
                 rtb_premios.Text=("No existen canciones con ambos premios");
             }
+            app.CloseApp();
         }
 
         private void bt_pnpremiosback_Click(object sender, EventArgs e)
@@ -858,6 +1331,7 @@ namespace Entrega_3
 
         private void bt_nextsong_Click(object sender, EventArgs e)
         {
+            App app = new App();
             i += 1;
             app.OpenApp();
             if (i <= app.GetAllSongs().Count())
@@ -912,6 +1386,7 @@ namespace Entrega_3
                     lb_songrating.Text = "No se encontro la cancion buscada";
                 }
             }
+            app.CloseApp();
         }
 
         private void tb_edadartsong_TextChanged(object sender, EventArgs e)
@@ -1000,6 +1475,7 @@ namespace Entrega_3
                     lb_songrating.Text = "La cancion no pudo encontrarse";
                 }
             }
+            app.CloseApp();
         }
 
         private void bt_backsongrat_Click(object sender, EventArgs e)

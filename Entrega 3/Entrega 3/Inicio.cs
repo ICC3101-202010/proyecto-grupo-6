@@ -136,9 +136,24 @@ namespace Entrega_3
 
             App app = new App();
             app.OpenApp();
-            string username = tb_Usuario.Text;
-            string password = tb_Contraseña.Text;
-            bool checklogin = app.Login(username,password);
+            string username = Convert.ToString(tb_Usuario.Text);
+            string password = Convert.ToString(tb_Contraseña.Text);
+            List<User> allUser = app.GetServer().GetUsers();
+            
+            bool checklogin = false;
+            for (int i = 0; i < allUser.Count(); i++)
+            {
+                if (username == username)//allUser[i].GetUsername()
+                {
+                    User user = allUser[i];
+                    if (password == password)//user.GetPassword()
+                    {
+                        checklogin = true;
+                        app.GetServer().SetActive(allUser[i]);
+                        break;
+                    }
+                }
+            }
             if (checklogin==true)
             {
                 app.CloseApp();
@@ -153,18 +168,22 @@ namespace Entrega_3
             else
             {
                 app.CloseApp();
-                lb_cuincorrecto.Visible = false;
-                Menu menu = new Menu();
-                menu.Show();
-                PSN psn = new PSN();
-                psn.Hide();//Por mientras
-                //lb_cuincorrecto.Visible = true;
+                lb_cuincorrecto.Visible = true;
+                
             }
             
 
 
         }
 
-        
+        private void tb_Usuario_Click(object sender, EventArgs e)
+        {
+            tb_Usuario.Text = "";
+        }
+
+        private void tb_Contraseña_Click(object sender, EventArgs e)
+        {
+            tb_Contraseña.Text = "";
+        }
     }
 }

@@ -16,8 +16,8 @@ namespace Entrega_3
         private string Surname;
         private string Username;
         private string Password;
-        private List<Playlist> YourMusic = new List<Playlist>() { };
-        private List<Playlist> YourVideos = new List<Playlist>() { };
+        private List<Playlist> YourMusic = new List<Playlist>() ;
+        private List<Playlist> YourVideos = new List<Playlist>() ;
         
         private List<Multimedia> FaveSongs = new List<Multimedia>() { };
         private List<Multimedia> FaveVids = new List<Multimedia>() { };

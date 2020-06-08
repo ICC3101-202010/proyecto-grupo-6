@@ -329,6 +329,7 @@
             this.tb_Contraseña.Size = new System.Drawing.Size(465, 53);
             this.tb_Contraseña.TabIndex = 4;
             this.tb_Contraseña.UseSystemPasswordChar = true;
+            this.tb_Contraseña.Click += new System.EventHandler(this.tb_Contraseña_Click);
             // 
             // tb_Usuario
             // 
@@ -339,6 +340,7 @@
             this.tb_Usuario.Name = "tb_Usuario";
             this.tb_Usuario.Size = new System.Drawing.Size(465, 61);
             this.tb_Usuario.TabIndex = 3;
+            this.tb_Usuario.Click += new System.EventHandler(this.tb_Usuario_Click);
             // 
             // pictureBox2
             // 
