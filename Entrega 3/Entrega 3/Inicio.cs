@@ -52,10 +52,7 @@ namespace Entrega_3
             label3.Visible = false;
         }
 
-        private void tb_inName_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void tb_inName_Click(object sender, EventArgs e)
         {
@@ -106,17 +103,18 @@ namespace Entrega_3
                 if (checkreg)
                 {
                     lb_exito.Visible = true;
+                    label3.Visible = false;
                 }
                 else
                 {
                     label3.Visible = true;
+                    lb_exito.Visible = false;
                 }
                 
                 tb_inName.Text = "Nombre";
                 tb_inContraseña.Text = "Contraseña";
                 tb_inUsername.Text = "Nombre de Usuario";
                 tb_inLastName.Text = "Apellido";
-                lb_exito.Visible = false;
                 cb_cuentapremium.Checked = false;
                 lb_rellenecampos.Visible = false;
                 
@@ -174,6 +172,8 @@ namespace Entrega_3
                 menu.Show();
                 PSN psn = new PSN();
                 psn.Hide();
+                tb_Usuario.Text = "";
+                tb_Contraseña.Text = "";
 
                     
             }
