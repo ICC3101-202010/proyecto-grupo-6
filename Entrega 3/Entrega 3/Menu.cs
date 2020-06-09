@@ -1000,7 +1000,7 @@ namespace Entrega_3
             
                 for (int i = 0; i < userPlaylists.Count(); i++)
                 {
-                    rtb_songPL.Text = rtb_songPL.Text + "\n" +i+1+". "+ userPlaylists[i].GetNamePL() + "\n" + "\n";
+                    rtb_songPL.Text = rtb_songPL.Text + "\n" +(Convert.ToInt32(i)+1)+". "+ userPlaylists[i].GetNamePL() + "\n" + "\n";
                     if (userPlaylists[i].GetAllMedia().Count() >1)
                     {
                         for (int a = 0; a < userPlaylists[i].GetAllMedia().Count(); a++)
@@ -1219,7 +1219,7 @@ namespace Entrega_3
 
                 for (int i = 0; i < userPlaylists.Count(); i++)
                 {
-                    rtb_vidPL.Text = rtb_vidPL.Text + "\n" + i + 1 + ". " + userPlaylists[i].GetNamePL() + "\n" + "\n";
+                    rtb_vidPL.Text = rtb_vidPL.Text + "\n" + (Convert.ToInt32(i) + 1) + ". " + userPlaylists[i].GetNamePL() + "\n" + "\n";
                     if (userPlaylists[i].GetAllMedia().Count() > 1)
                     {
                         for (int a = 0; a < userPlaylists[i].GetAllMedia().Count(); a++)
