@@ -293,12 +293,34 @@
             this.bt_deletevideoqueue = new System.Windows.Forms.Button();
             this.bt_backdeletevideoqueue = new System.Windows.Forms.Button();
             this.pn_Admin = new System.Windows.Forms.Panel();
+            this.lb_Admin = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.tb_Admin = new System.Windows.Forms.TextBox();
             this.bt_backAdmin = new System.Windows.Forms.Button();
             this.bt_enterAdmin = new System.Windows.Forms.Button();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.lb_Admin = new System.Windows.Forms.Label();
+            this.bt_Artist = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.bt_Settings = new System.Windows.Forms.Button();
+            this.pn_Artists = new System.Windows.Forms.Panel();
+            this.bt_followedArtists = new System.Windows.Forms.Button();
+            this.bt_followArtists = new System.Windows.Forms.Button();
+            this.bt_backArtists = new System.Windows.Forms.Button();
+            this.pn_ArtistEdit = new System.Windows.Forms.Panel();
+            this.bt_backArtistedit = new System.Windows.Forms.Button();
+            this.bt_enterArtist = new System.Windows.Forms.Button();
+            this.tb_searchArtist = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.lb_followArtist = new System.Windows.Forms.Label();
+            this.rtb_Artist = new System.Windows.Forms.RichTextBox();
+            this.pn_Settings = new System.Windows.Forms.Panel();
+            this.label32 = new System.Windows.Forms.Label();
+            this.lb_SettUN = new System.Windows.Forms.Label();
+            this.bt_backsettings = new System.Windows.Forms.Button();
+            this.bt_settApply = new System.Windows.Forms.Button();
+            this.cb_AccPriv = new System.Windows.Forms.CheckBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -346,6 +368,9 @@
             this.pn_deletesongqueue.SuspendLayout();
             this.pn_deletevideoqueue.SuspendLayout();
             this.pn_Admin.SuspendLayout();
+            this.pn_Artists.SuspendLayout();
+            this.pn_ArtistEdit.SuspendLayout();
+            this.pn_Settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -400,6 +425,9 @@
             // pn_opciones
             // 
             this.pn_opciones.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pn_opciones.Controls.Add(this.bt_Settings);
+            this.pn_opciones.Controls.Add(this.panel5);
+            this.pn_opciones.Controls.Add(this.bt_Artist);
             this.pn_opciones.Controls.Add(this.panel3);
             this.pn_opciones.Controls.Add(this.panel4);
             this.pn_opciones.Controls.Add(this.panel2);
@@ -3545,6 +3573,38 @@
             this.pn_Admin.TabIndex = 28;
             this.pn_Admin.Visible = false;
             // 
+            // lb_Admin
+            // 
+            this.lb_Admin.AutoSize = true;
+            this.lb_Admin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_Admin.Location = new System.Drawing.Point(67, 200);
+            this.lb_Admin.Name = "lb_Admin";
+            this.lb_Admin.Size = new System.Drawing.Size(148, 17);
+            this.lb_Admin.TabIndex = 5;
+            this.lb_Admin.Text = "Contrasena incorrecta";
+            this.lb_Admin.Visible = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label30.Location = new System.Drawing.Point(172, 75);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(172, 36);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "AdminGate";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label29.Location = new System.Drawing.Point(66, 145);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(377, 17);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Se requiere permiso de admin para ingresar (adminadmin)";
+            // 
             // tb_Admin
             // 
             this.tb_Admin.Location = new System.Drawing.Point(69, 168);
@@ -3573,37 +3633,257 @@
             this.bt_enterAdmin.UseVisualStyleBackColor = true;
             this.bt_enterAdmin.Click += new System.EventHandler(this.bt_enterAdmin_Click);
             // 
-            // label29
+            // bt_Artist
             // 
-            this.label29.AutoSize = true;
-            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label29.Location = new System.Drawing.Point(66, 145);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(377, 17);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "Se requiere permiso de admin para ingresar (adminadmin)";
+            this.bt_Artist.FlatAppearance.BorderSize = 0;
+            this.bt_Artist.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.bt_Artist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Artist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Artist.Location = new System.Drawing.Point(17, 268);
+            this.bt_Artist.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_Artist.Name = "bt_Artist";
+            this.bt_Artist.Size = new System.Drawing.Size(244, 41);
+            this.bt_Artist.TabIndex = 5;
+            this.bt_Artist.Text = "ARTISTAS";
+            this.bt_Artist.UseVisualStyleBackColor = true;
+            this.bt_Artist.Click += new System.EventHandler(this.bt_Artist_Click);
             // 
-            // label30
+            // panel5
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label30.Location = new System.Drawing.Point(172, 75);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(172, 36);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "AdminGate";
+            this.panel5.BackColor = System.Drawing.Color.Blue;
+            this.panel5.Location = new System.Drawing.Point(4, 268);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(15, 41);
+            this.panel5.TabIndex = 4;
             // 
-            // lb_Admin
+            // bt_Settings
             // 
-            this.lb_Admin.AutoSize = true;
-            this.lb_Admin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_Admin.Location = new System.Drawing.Point(67, 200);
-            this.lb_Admin.Name = "lb_Admin";
-            this.lb_Admin.Size = new System.Drawing.Size(148, 17);
-            this.lb_Admin.TabIndex = 5;
-            this.lb_Admin.Text = "Contrasena incorrecta";
-            this.lb_Admin.Visible = false;
+            this.bt_Settings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Settings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.bt_Settings.Location = new System.Drawing.Point(167, 561);
+            this.bt_Settings.Name = "bt_Settings";
+            this.bt_Settings.Size = new System.Drawing.Size(75, 38);
+            this.bt_Settings.TabIndex = 6;
+            this.bt_Settings.Text = "Settings";
+            this.bt_Settings.UseVisualStyleBackColor = true;
+            this.bt_Settings.Click += new System.EventHandler(this.bt_Settings_Click);
+            // 
+            // pn_Artists
+            // 
+            this.pn_Artists.BackColor = System.Drawing.Color.Blue;
+            this.pn_Artists.Controls.Add(this.bt_backArtists);
+            this.pn_Artists.Controls.Add(this.bt_followArtists);
+            this.pn_Artists.Controls.Add(this.bt_followedArtists);
+            this.pn_Artists.Location = new System.Drawing.Point(259, 79);
+            this.pn_Artists.Name = "pn_Artists";
+            this.pn_Artists.Size = new System.Drawing.Size(200, 419);
+            this.pn_Artists.TabIndex = 29;
+            this.pn_Artists.Visible = false;
+            // 
+            // bt_followedArtists
+            // 
+            this.bt_followedArtists.FlatAppearance.BorderSize = 0;
+            this.bt_followedArtists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_followedArtists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_followedArtists.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_followedArtists.Location = new System.Drawing.Point(3, 60);
+            this.bt_followedArtists.Name = "bt_followedArtists";
+            this.bt_followedArtists.Size = new System.Drawing.Size(194, 68);
+            this.bt_followedArtists.TabIndex = 0;
+            this.bt_followedArtists.Text = "ARTISTAS SEGUIDOS";
+            this.bt_followedArtists.UseVisualStyleBackColor = true;
+            this.bt_followedArtists.Click += new System.EventHandler(this.bt_followedArtists_Click);
+            // 
+            // bt_followArtists
+            // 
+            this.bt_followArtists.FlatAppearance.BorderSize = 0;
+            this.bt_followArtists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_followArtists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_followArtists.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_followArtists.Location = new System.Drawing.Point(3, 175);
+            this.bt_followArtists.Name = "bt_followArtists";
+            this.bt_followArtists.Size = new System.Drawing.Size(194, 68);
+            this.bt_followArtists.TabIndex = 1;
+            this.bt_followArtists.Text = "SEGUIR ARTISTA";
+            this.bt_followArtists.UseVisualStyleBackColor = true;
+            this.bt_followArtists.Click += new System.EventHandler(this.bt_followArtists_Click);
+            // 
+            // bt_backArtists
+            // 
+            this.bt_backArtists.FlatAppearance.BorderSize = 0;
+            this.bt_backArtists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_backArtists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_backArtists.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_backArtists.Location = new System.Drawing.Point(3, 292);
+            this.bt_backArtists.Name = "bt_backArtists";
+            this.bt_backArtists.Size = new System.Drawing.Size(194, 68);
+            this.bt_backArtists.TabIndex = 2;
+            this.bt_backArtists.Text = "BACK";
+            this.bt_backArtists.UseVisualStyleBackColor = true;
+            this.bt_backArtists.Click += new System.EventHandler(this.bt_backArtists_Click);
+            // 
+            // pn_ArtistEdit
+            // 
+            this.pn_ArtistEdit.Controls.Add(this.rtb_Artist);
+            this.pn_ArtistEdit.Controls.Add(this.lb_followArtist);
+            this.pn_ArtistEdit.Controls.Add(this.label31);
+            this.pn_ArtistEdit.Controls.Add(this.tb_searchArtist);
+            this.pn_ArtistEdit.Controls.Add(this.bt_enterArtist);
+            this.pn_ArtistEdit.Controls.Add(this.bt_backArtistedit);
+            this.pn_ArtistEdit.Location = new System.Drawing.Point(461, 78);
+            this.pn_ArtistEdit.Name = "pn_ArtistEdit";
+            this.pn_ArtistEdit.Size = new System.Drawing.Size(606, 445);
+            this.pn_ArtistEdit.TabIndex = 30;
+            this.pn_ArtistEdit.Visible = false;
+            // 
+            // bt_backArtistedit
+            // 
+            this.bt_backArtistedit.Location = new System.Drawing.Point(22, 397);
+            this.bt_backArtistedit.Name = "bt_backArtistedit";
+            this.bt_backArtistedit.Size = new System.Drawing.Size(75, 23);
+            this.bt_backArtistedit.TabIndex = 0;
+            this.bt_backArtistedit.Text = "Back";
+            this.bt_backArtistedit.UseVisualStyleBackColor = true;
+            this.bt_backArtistedit.Click += new System.EventHandler(this.bt_backArtistedit_Click);
+            // 
+            // bt_enterArtist
+            // 
+            this.bt_enterArtist.Location = new System.Drawing.Point(363, 96);
+            this.bt_enterArtist.Name = "bt_enterArtist";
+            this.bt_enterArtist.Size = new System.Drawing.Size(75, 23);
+            this.bt_enterArtist.TabIndex = 1;
+            this.bt_enterArtist.Text = "Enter";
+            this.bt_enterArtist.UseVisualStyleBackColor = true;
+            this.bt_enterArtist.Click += new System.EventHandler(this.bt_enterArtist_Click);
+            // 
+            // tb_searchArtist
+            // 
+            this.tb_searchArtist.Location = new System.Drawing.Point(50, 96);
+            this.tb_searchArtist.Name = "tb_searchArtist";
+            this.tb_searchArtist.Size = new System.Drawing.Size(297, 22);
+            this.tb_searchArtist.TabIndex = 2;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label31.Location = new System.Drawing.Point(48, 21);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(77, 25);
+            this.label31.TabIndex = 3;
+            this.label31.Text = "Artistas";
+            // 
+            // lb_followArtist
+            // 
+            this.lb_followArtist.AutoSize = true;
+            this.lb_followArtist.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_followArtist.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lb_followArtist.Location = new System.Drawing.Point(48, 76);
+            this.lb_followArtist.Name = "lb_followArtist";
+            this.lb_followArtist.Size = new System.Drawing.Size(179, 17);
+            this.lb_followArtist.TabIndex = 4;
+            this.lb_followArtist.Text = "Nombre del artista a seguir";
+            // 
+            // rtb_Artist
+            // 
+            this.rtb_Artist.Location = new System.Drawing.Point(51, 138);
+            this.rtb_Artist.Name = "rtb_Artist";
+            this.rtb_Artist.ReadOnly = true;
+            this.rtb_Artist.Size = new System.Drawing.Size(286, 232);
+            this.rtb_Artist.TabIndex = 5;
+            this.rtb_Artist.Text = "";
+            // 
+            // pn_Settings
+            // 
+            this.pn_Settings.Controls.Add(this.label34);
+            this.pn_Settings.Controls.Add(this.label33);
+            this.pn_Settings.Controls.Add(this.cb_AccPriv);
+            this.pn_Settings.Controls.Add(this.bt_settApply);
+            this.pn_Settings.Controls.Add(this.bt_backsettings);
+            this.pn_Settings.Controls.Add(this.lb_SettUN);
+            this.pn_Settings.Controls.Add(this.label32);
+            this.pn_Settings.Location = new System.Drawing.Point(461, 84);
+            this.pn_Settings.Name = "pn_Settings";
+            this.pn_Settings.Size = new System.Drawing.Size(593, 433);
+            this.pn_Settings.TabIndex = 31;
+            this.pn_Settings.Visible = false;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label32.Location = new System.Drawing.Point(27, 27);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(131, 36);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Settings";
+            // 
+            // lb_SettUN
+            // 
+            this.lb_SettUN.AutoSize = true;
+            this.lb_SettUN.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_SettUN.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_SettUN.Location = new System.Drawing.Point(33, 82);
+            this.lb_SettUN.Name = "lb_SettUN";
+            this.lb_SettUN.Size = new System.Drawing.Size(0, 36);
+            this.lb_SettUN.TabIndex = 1;
+            // 
+            // bt_backsettings
+            // 
+            this.bt_backsettings.Location = new System.Drawing.Point(17, 384);
+            this.bt_backsettings.Name = "bt_backsettings";
+            this.bt_backsettings.Size = new System.Drawing.Size(75, 23);
+            this.bt_backsettings.TabIndex = 2;
+            this.bt_backsettings.Text = "Back";
+            this.bt_backsettings.UseVisualStyleBackColor = true;
+            this.bt_backsettings.Click += new System.EventHandler(this.bt_backsettings_Click);
+            // 
+            // bt_settApply
+            // 
+            this.bt_settApply.Location = new System.Drawing.Point(184, 159);
+            this.bt_settApply.Name = "bt_settApply";
+            this.bt_settApply.Size = new System.Drawing.Size(75, 33);
+            this.bt_settApply.TabIndex = 3;
+            this.bt_settApply.Text = "Apply";
+            this.bt_settApply.UseVisualStyleBackColor = true;
+            this.bt_settApply.Click += new System.EventHandler(this.bt_settApply_Click);
+            // 
+            // cb_AccPriv
+            // 
+            this.cb_AccPriv.AutoSize = true;
+            this.cb_AccPriv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cb_AccPriv.Location = new System.Drawing.Point(33, 161);
+            this.cb_AccPriv.Name = "cb_AccPriv";
+            this.cb_AccPriv.Size = new System.Drawing.Size(127, 21);
+            this.cb_AccPriv.TabIndex = 4;
+            this.cb_AccPriv.Text = "Cuenta Privada";
+            this.cb_AccPriv.UseVisualStyleBackColor = true;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label33.Location = new System.Drawing.Point(30, 224);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(161, 17);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Se cambio exitosamente";
+            this.label33.Visible = false;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label34.Location = new System.Drawing.Point(30, 133);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(211, 17);
+            this.label34.TabIndex = 6;
+            this.label34.Text = "Cambiar privacidad de la cuenta";
             // 
             // Menu
             // 
@@ -3611,6 +3891,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_Settings);
+            this.Controls.Add(this.pn_ArtistEdit);
+            this.Controls.Add(this.pn_Artists);
             this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_repvideoplaylist);
             this.Controls.Add(this.pn_repplyalistsong);
@@ -3729,6 +4012,11 @@
             this.pn_deletevideoqueue.PerformLayout();
             this.pn_Admin.ResumeLayout(false);
             this.pn_Admin.PerformLayout();
+            this.pn_Artists.ResumeLayout(false);
+            this.pn_ArtistEdit.ResumeLayout(false);
+            this.pn_ArtistEdit.PerformLayout();
+            this.pn_Settings.ResumeLayout(false);
+            this.pn_Settings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4005,5 +4293,27 @@
         private System.Windows.Forms.Label lb_Admin;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button bt_Settings;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button bt_Artist;
+        private System.Windows.Forms.Panel pn_Artists;
+        private System.Windows.Forms.Button bt_backArtists;
+        private System.Windows.Forms.Button bt_followArtists;
+        private System.Windows.Forms.Button bt_followedArtists;
+        private System.Windows.Forms.Panel pn_ArtistEdit;
+        private System.Windows.Forms.Button bt_enterArtist;
+        private System.Windows.Forms.Button bt_backArtistedit;
+        private System.Windows.Forms.RichTextBox rtb_Artist;
+        private System.Windows.Forms.Label lb_followArtist;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox tb_searchArtist;
+        private System.Windows.Forms.Panel pn_Settings;
+        private System.Windows.Forms.Button bt_backsettings;
+        private System.Windows.Forms.Label lb_SettUN;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Button bt_settApply;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.CheckBox cb_AccPriv;
     }
 }
