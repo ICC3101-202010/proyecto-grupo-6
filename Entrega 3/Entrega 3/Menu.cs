@@ -298,6 +298,7 @@ namespace Entrega_3
 
         private void bt_agregarsong_Click(object sender, EventArgs e)
         {
+            pn_Admin.Visible = true;
             pn_agregarcancion.Visible = true;
         }
 
@@ -410,6 +411,7 @@ namespace Entrega_3
 
         private void bt_agrvideo_Click(object sender, EventArgs e)
         {
+            pn_Admin.Visible = true;
             pn_addvideo.Visible = true;
         }
 
@@ -1982,6 +1984,33 @@ namespace Entrega_3
         private void pn_repplyalistsong_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void bt_backAdmin_Click(object sender, EventArgs e)
+        {
+            pn_Admin.Visible = false;
+            tb_Admin.Text = "";
+            pn_agregarcancion.Visible = false;
+            pn_addvideo.Visible = false;
+        }
+
+        private void tb_Admin_Click(object sender, EventArgs e)
+        {
+            tb_Admin.Text = "";
+        }
+
+        private void bt_enterAdmin_Click(object sender, EventArgs e)
+        {
+            if (tb_Admin.Text == "adminadmin")
+            {
+                pn_Admin.Visible = false;
+                lb_Admin.Visible = true;
+                tb_Admin.Text = "";
+            }
+            else
+            {
+                lb_Admin.Visible = true;
+            }
         }
 
         private void bt_nextaskplsong_Click(object sender, EventArgs e)

@@ -81,11 +81,11 @@ namespace Entrega_3
             if (media is Song)
             {
                 bool checkDelete = false;
-                foreach (var a in AllFiles)
+                for (int a=0;a < AllFiles.Count();a++)
                 {
-                    if (media.GetName() == a.GetName() && media.GetHashCode() == a.GetHashCode())
+                    if (media.GetName() == AllFiles[a].GetName() && media.GetHashCode() == AllFiles[a].GetHashCode())
                     {
-                        AllFiles.Remove(a);
+                        AllFiles.Remove(AllFiles[a]);
                         checkDelete = true;
                     }
                     else
@@ -105,11 +105,11 @@ namespace Entrega_3
             else
             {
                 bool checkDelete = false;
-                foreach (var a in AllFiles)
+                for (int a= 0; a < AllFiles.Count(); a++)
                 {
-                    if (media.GetName() == a.GetName() && media.GetHashCode() == a.GetHashCode())
+                    if (media.GetName() == AllFiles[a].GetName() && media.GetHashCode() == AllFiles[a].GetHashCode())
                     {
-                        AllFiles.Remove(a);
+                        AllFiles.Remove(AllFiles[a]);
                         checkDelete = true;
                     }
                     else

@@ -281,17 +281,24 @@
             this.rtb_namesongplaylist = new System.Windows.Forms.RichTextBox();
             this.pn_repplyalistsong = new System.Windows.Forms.Panel();
             this.bt_backrepplsong = new System.Windows.Forms.Button();
-            this.bt_nextsongplaylistsong = new System.Windows.Forms.Button();
             this.bt_repplaylistsong = new System.Windows.Forms.Button();
             this.WMPrepsongplaylist = new AxWMPLib.AxWindowsMediaPlayer();
+            this.bt_nextsongplaylistsong = new System.Windows.Forms.Button();
             this.pn_deletesongqueue = new System.Windows.Forms.Panel();
-            this.bt_backdeletesongcola = new System.Windows.Forms.Button();
-            this.bt_deletesongcola = new System.Windows.Forms.Button();
             this.lb_deletesongcola = new System.Windows.Forms.Label();
+            this.bt_deletesongcola = new System.Windows.Forms.Button();
+            this.bt_backdeletesongcola = new System.Windows.Forms.Button();
             this.pn_deletevideoqueue = new System.Windows.Forms.Panel();
-            this.bt_backdeletevideoqueue = new System.Windows.Forms.Button();
-            this.bt_deletevideoqueue = new System.Windows.Forms.Button();
             this.lb_deletevideoqueue = new System.Windows.Forms.Label();
+            this.bt_deletevideoqueue = new System.Windows.Forms.Button();
+            this.bt_backdeletevideoqueue = new System.Windows.Forms.Button();
+            this.pn_Admin = new System.Windows.Forms.Panel();
+            this.tb_Admin = new System.Windows.Forms.TextBox();
+            this.bt_backAdmin = new System.Windows.Forms.Button();
+            this.bt_enterAdmin = new System.Windows.Forms.Button();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.lb_Admin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -338,6 +345,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.WMPrepsongplaylist)).BeginInit();
             this.pn_deletesongqueue.SuspendLayout();
             this.pn_deletevideoqueue.SuspendLayout();
+            this.pn_Admin.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -3414,16 +3422,6 @@
             this.bt_backrepplsong.UseVisualStyleBackColor = true;
             this.bt_backrepplsong.Click += new System.EventHandler(this.bt_backrepplsong_Click);
             // 
-            // bt_nextsongplaylistsong
-            // 
-            this.bt_nextsongplaylistsong.Location = new System.Drawing.Point(328, 424);
-            this.bt_nextsongplaylistsong.Name = "bt_nextsongplaylistsong";
-            this.bt_nextsongplaylistsong.Size = new System.Drawing.Size(146, 56);
-            this.bt_nextsongplaylistsong.TabIndex = 2;
-            this.bt_nextsongplaylistsong.Text = "Siguiente";
-            this.bt_nextsongplaylistsong.UseVisualStyleBackColor = true;
-            this.bt_nextsongplaylistsong.Click += new System.EventHandler(this.bt_nextsongplaylistsong_Click);
-            // 
             // bt_repplaylistsong
             // 
             this.bt_repplaylistsong.Location = new System.Drawing.Point(120, 424);
@@ -3443,6 +3441,16 @@
             this.WMPrepsongplaylist.Size = new System.Drawing.Size(690, 315);
             this.WMPrepsongplaylist.TabIndex = 0;
             // 
+            // bt_nextsongplaylistsong
+            // 
+            this.bt_nextsongplaylistsong.Location = new System.Drawing.Point(328, 424);
+            this.bt_nextsongplaylistsong.Name = "bt_nextsongplaylistsong";
+            this.bt_nextsongplaylistsong.Size = new System.Drawing.Size(146, 56);
+            this.bt_nextsongplaylistsong.TabIndex = 2;
+            this.bt_nextsongplaylistsong.Text = "Siguiente";
+            this.bt_nextsongplaylistsong.UseVisualStyleBackColor = true;
+            this.bt_nextsongplaylistsong.Click += new System.EventHandler(this.bt_nextsongplaylistsong_Click);
+            // 
             // pn_deletesongqueue
             // 
             this.pn_deletesongqueue.Controls.Add(this.lb_deletesongcola);
@@ -3454,15 +3462,14 @@
             this.pn_deletesongqueue.TabIndex = 14;
             this.pn_deletesongqueue.Visible = false;
             // 
-            // bt_backdeletesongcola
+            // lb_deletesongcola
             // 
-            this.bt_backdeletesongcola.Location = new System.Drawing.Point(23, 275);
-            this.bt_backdeletesongcola.Name = "bt_backdeletesongcola";
-            this.bt_backdeletesongcola.Size = new System.Drawing.Size(97, 52);
-            this.bt_backdeletesongcola.TabIndex = 0;
-            this.bt_backdeletesongcola.Text = "Volver";
-            this.bt_backdeletesongcola.UseVisualStyleBackColor = true;
-            this.bt_backdeletesongcola.Click += new System.EventHandler(this.bt_backdeletesongcola_Click);
+            this.lb_deletesongcola.AutoSize = true;
+            this.lb_deletesongcola.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_deletesongcola.Location = new System.Drawing.Point(47, 34);
+            this.lb_deletesongcola.Name = "lb_deletesongcola";
+            this.lb_deletesongcola.Size = new System.Drawing.Size(0, 17);
+            this.lb_deletesongcola.TabIndex = 2;
             // 
             // bt_deletesongcola
             // 
@@ -3474,14 +3481,15 @@
             this.bt_deletesongcola.UseVisualStyleBackColor = true;
             this.bt_deletesongcola.Click += new System.EventHandler(this.bt_deletesongcola_Click);
             // 
-            // lb_deletesongcola
+            // bt_backdeletesongcola
             // 
-            this.lb_deletesongcola.AutoSize = true;
-            this.lb_deletesongcola.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_deletesongcola.Location = new System.Drawing.Point(47, 34);
-            this.lb_deletesongcola.Name = "lb_deletesongcola";
-            this.lb_deletesongcola.Size = new System.Drawing.Size(0, 17);
-            this.lb_deletesongcola.TabIndex = 2;
+            this.bt_backdeletesongcola.Location = new System.Drawing.Point(23, 275);
+            this.bt_backdeletesongcola.Name = "bt_backdeletesongcola";
+            this.bt_backdeletesongcola.Size = new System.Drawing.Size(97, 52);
+            this.bt_backdeletesongcola.TabIndex = 0;
+            this.bt_backdeletesongcola.Text = "Volver";
+            this.bt_backdeletesongcola.UseVisualStyleBackColor = true;
+            this.bt_backdeletesongcola.Click += new System.EventHandler(this.bt_backdeletesongcola_Click);
             // 
             // pn_deletevideoqueue
             // 
@@ -3494,15 +3502,14 @@
             this.pn_deletevideoqueue.TabIndex = 14;
             this.pn_deletevideoqueue.Visible = false;
             // 
-            // bt_backdeletevideoqueue
+            // lb_deletevideoqueue
             // 
-            this.bt_backdeletevideoqueue.Location = new System.Drawing.Point(11, 261);
-            this.bt_backdeletevideoqueue.Name = "bt_backdeletevideoqueue";
-            this.bt_backdeletevideoqueue.Size = new System.Drawing.Size(89, 41);
-            this.bt_backdeletevideoqueue.TabIndex = 0;
-            this.bt_backdeletevideoqueue.Text = "Volver";
-            this.bt_backdeletevideoqueue.UseVisualStyleBackColor = true;
-            this.bt_backdeletevideoqueue.Click += new System.EventHandler(this.bt_backdeletevideoqueue_Click);
+            this.lb_deletevideoqueue.AutoSize = true;
+            this.lb_deletevideoqueue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_deletevideoqueue.Location = new System.Drawing.Point(42, 35);
+            this.lb_deletevideoqueue.Name = "lb_deletevideoqueue";
+            this.lb_deletevideoqueue.Size = new System.Drawing.Size(0, 17);
+            this.lb_deletevideoqueue.TabIndex = 2;
             // 
             // bt_deletevideoqueue
             // 
@@ -3514,14 +3521,89 @@
             this.bt_deletevideoqueue.UseVisualStyleBackColor = true;
             this.bt_deletevideoqueue.Click += new System.EventHandler(this.bt_deletevideoqueue_Click);
             // 
-            // lb_deletevideoqueue
+            // bt_backdeletevideoqueue
             // 
-            this.lb_deletevideoqueue.AutoSize = true;
-            this.lb_deletevideoqueue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_deletevideoqueue.Location = new System.Drawing.Point(42, 35);
-            this.lb_deletevideoqueue.Name = "lb_deletevideoqueue";
-            this.lb_deletevideoqueue.Size = new System.Drawing.Size(0, 17);
-            this.lb_deletevideoqueue.TabIndex = 2;
+            this.bt_backdeletevideoqueue.Location = new System.Drawing.Point(11, 261);
+            this.bt_backdeletevideoqueue.Name = "bt_backdeletevideoqueue";
+            this.bt_backdeletevideoqueue.Size = new System.Drawing.Size(89, 41);
+            this.bt_backdeletevideoqueue.TabIndex = 0;
+            this.bt_backdeletevideoqueue.Text = "Volver";
+            this.bt_backdeletevideoqueue.UseVisualStyleBackColor = true;
+            this.bt_backdeletevideoqueue.Click += new System.EventHandler(this.bt_backdeletevideoqueue_Click);
+            // 
+            // pn_Admin
+            // 
+            this.pn_Admin.Controls.Add(this.lb_Admin);
+            this.pn_Admin.Controls.Add(this.label30);
+            this.pn_Admin.Controls.Add(this.label29);
+            this.pn_Admin.Controls.Add(this.tb_Admin);
+            this.pn_Admin.Controls.Add(this.bt_backAdmin);
+            this.pn_Admin.Controls.Add(this.bt_enterAdmin);
+            this.pn_Admin.Location = new System.Drawing.Point(483, 91);
+            this.pn_Admin.Name = "pn_Admin";
+            this.pn_Admin.Size = new System.Drawing.Size(869, 541);
+            this.pn_Admin.TabIndex = 28;
+            this.pn_Admin.Visible = false;
+            // 
+            // tb_Admin
+            // 
+            this.tb_Admin.Location = new System.Drawing.Point(69, 168);
+            this.tb_Admin.Name = "tb_Admin";
+            this.tb_Admin.Size = new System.Drawing.Size(330, 22);
+            this.tb_Admin.TabIndex = 2;
+            this.tb_Admin.Click += new System.EventHandler(this.tb_Admin_Click);
+            // 
+            // bt_backAdmin
+            // 
+            this.bt_backAdmin.Location = new System.Drawing.Point(27, 338);
+            this.bt_backAdmin.Name = "bt_backAdmin";
+            this.bt_backAdmin.Size = new System.Drawing.Size(75, 23);
+            this.bt_backAdmin.TabIndex = 1;
+            this.bt_backAdmin.Text = "Back";
+            this.bt_backAdmin.UseVisualStyleBackColor = true;
+            this.bt_backAdmin.Click += new System.EventHandler(this.bt_backAdmin_Click);
+            // 
+            // bt_enterAdmin
+            // 
+            this.bt_enterAdmin.Location = new System.Drawing.Point(420, 166);
+            this.bt_enterAdmin.Name = "bt_enterAdmin";
+            this.bt_enterAdmin.Size = new System.Drawing.Size(75, 23);
+            this.bt_enterAdmin.TabIndex = 0;
+            this.bt_enterAdmin.Text = "Enter";
+            this.bt_enterAdmin.UseVisualStyleBackColor = true;
+            this.bt_enterAdmin.Click += new System.EventHandler(this.bt_enterAdmin_Click);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label29.Location = new System.Drawing.Point(66, 145);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(377, 17);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Se requiere permiso de admin para ingresar (adminadmin)";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label30.Location = new System.Drawing.Point(172, 75);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(172, 36);
+            this.label30.TabIndex = 4;
+            this.label30.Text = "AdminGate";
+            // 
+            // lb_Admin
+            // 
+            this.lb_Admin.AutoSize = true;
+            this.lb_Admin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_Admin.Location = new System.Drawing.Point(67, 200);
+            this.lb_Admin.Name = "lb_Admin";
+            this.lb_Admin.Size = new System.Drawing.Size(148, 17);
+            this.lb_Admin.TabIndex = 5;
+            this.lb_Admin.Text = "Contrasena incorrecta";
+            this.lb_Admin.Visible = false;
             // 
             // Menu
             // 
@@ -3529,6 +3611,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_repvideoplaylist);
             this.Controls.Add(this.pn_repplyalistsong);
             this.Controls.Add(this.pn_addsongcola);
@@ -3644,6 +3727,8 @@
             this.pn_deletesongqueue.PerformLayout();
             this.pn_deletevideoqueue.ResumeLayout(false);
             this.pn_deletevideoqueue.PerformLayout();
+            this.pn_Admin.ResumeLayout(false);
+            this.pn_Admin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3913,5 +3998,12 @@
         private System.Windows.Forms.Label lb_deletevideoqueue;
         private System.Windows.Forms.Button bt_deletevideoqueue;
         private System.Windows.Forms.Button bt_backdeletevideoqueue;
+        private System.Windows.Forms.Panel pn_Admin;
+        private System.Windows.Forms.Button bt_backAdmin;
+        private System.Windows.Forms.Button bt_enterAdmin;
+        private System.Windows.Forms.TextBox tb_Admin;
+        private System.Windows.Forms.Label lb_Admin;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
     }
 }
