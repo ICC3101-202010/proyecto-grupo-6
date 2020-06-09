@@ -149,5 +149,29 @@ namespace Entrega_3
         {
             return this.Route;
         }
+        public string GetArtistName()
+        {
+            if (Artist.Count() > 1)
+            {
+                string artist = "";
+                for (int i = 0; i < Artist.Count(); i++)
+                {
+                    artist += Artist[i].GetName() ;
+                    if (i == (Artist.Count() - 1))
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        artist += ", ";
+                    }
+                }
+                return artist;
+            }
+            else
+            {
+                return this.Artist[0].GetName() ;
+            }
+        }
     }
 }

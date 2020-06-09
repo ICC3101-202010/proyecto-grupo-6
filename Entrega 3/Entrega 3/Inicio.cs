@@ -29,6 +29,14 @@ namespace Entrega_3
         private void lb_register_Click(object sender, EventArgs e)
         {
             pn_register.Visible = true;
+            panel1.Visible =true;
+
+            App app = new App();
+            app.OpenApp();
+            string username = Convert.ToString(tb_Usuario.Text);
+            string password = Convert.ToString(tb_Contraseña.Text);
+            List<User> allUser = app.GetServer().GetUsers();
+
         }
 
         private void bt_backresgister_Click(object sender, EventArgs e)
@@ -51,23 +59,23 @@ namespace Entrega_3
 
         private void tb_inName_Click(object sender, EventArgs e)
         {
-            tb_inName.Text = " ";
+            tb_inName.Text = "";
         }
 
       
         private void tb_inLastName_Click(object sender, EventArgs e)
         {
-            tb_inLastName.Text = " ";
+            tb_inLastName.Text = "";
         }
 
         private void tb_inUsername_Click(object sender, EventArgs e)
         {
-            tb_inUsername.Text = " ";
+            tb_inUsername.Text = "";
         }
 
         private void tb_inContraseña_Click(object sender, EventArgs e)
         {
-            tb_inContraseña.Text = " ";
+            tb_inContraseña.Text = "";
         }
 
         private void listb_tipodecuenta_SelectedIndexChanged(object sender, EventArgs e)
@@ -82,7 +90,7 @@ namespace Entrega_3
             
             
 
-            if (tb_inLastName.Text == " " || tb_inName.Text == " "|| tb_inUsername.Text == " "|| tb_inContraseña.Text == " " || tb_inName.Text == "Nombre" || tb_inLastName.Text == "Apellido" || tb_inContraseña.Text == "Contraseña" || tb_inUsername.Text == "Nombre de Usuario"  )
+            if (tb_inLastName.Text == "" || tb_inName.Text == ""|| tb_inUsername.Text == ""|| tb_inContraseña.Text == "" || tb_inName.Text == "Nombre" || tb_inLastName.Text == "Apellido" || tb_inContraseña.Text == "Contraseña" || tb_inUsername.Text == "Nombre de Usuario"  )
            
             {
                 lb_rellenecampos.Visible = true;
@@ -139,15 +147,19 @@ namespace Entrega_3
             string username = Convert.ToString(tb_Usuario.Text);
             string password = Convert.ToString(tb_Contraseña.Text);
             List<User> allUser = app.GetServer().GetUsers();
-            
             bool checklogin = false;
+
             for (int i = 0; i < allUser.Count(); i++)
             {
-                if (username == username)//allUser[i].GetUsername()
+                if (username == allUser[i].GetUsername())//allUser[i].GetUsername()
                 {
+                   
                     User user = allUser[i];
-                    if (password == password)//user.GetPassword()
+                   ;
+
+                    if (password == user.GetPassword())//user.GetPassword()
                     {
+                        
                         checklogin = true;
                         app.GetServer().SetActive(allUser[i]);
                         break;
@@ -178,12 +190,37 @@ namespace Entrega_3
 
         private void tb_Usuario_Click(object sender, EventArgs e)
         {
-            tb_Usuario.Text = "";
+            tb_Usuario.Clear();
         }
 
         private void tb_Contraseña_Click(object sender, EventArgs e)
         {
-            tb_Contraseña.Text = "";
+            tb_Contraseña.Clear();
+        }
+
+        private void pn_verquesucede_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tb_Usuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_Contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_inUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_inLastName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

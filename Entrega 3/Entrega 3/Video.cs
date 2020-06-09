@@ -137,6 +137,15 @@ namespace Entrega_3
         {
             return this.Route;
         }
+        public string GetNameDirector()
+        {
+            string directors = "";
+            for (int i = 0; i < Directors.Count(); i++)
+            {
+                directors += Directors[i].GetName();
+            }
+            return directors;
+        }
 
     }
 }

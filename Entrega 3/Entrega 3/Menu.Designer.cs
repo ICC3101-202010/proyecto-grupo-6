@@ -121,18 +121,14 @@
             this.bt_folplayvideo = new System.Windows.Forms.Button();
             this.bt_reproplayvideo = new System.Windows.Forms.Button();
             this.pn_repvideo = new System.Windows.Forms.Panel();
+            this.bt_backrepvideo = new System.Windows.Forms.Button();
             this.bt_nextvideo = new System.Windows.Forms.Button();
-            this.bt_stopvideo = new System.Windows.Forms.Button();
-            this.bt_pausevideo = new System.Windows.Forms.Button();
             this.bt_playvideo = new System.Windows.Forms.Button();
-            this.bt_downloadvideo = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayervideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.pn_repsong = new System.Windows.Forms.Panel();
+            this.bt_backrepsong = new System.Windows.Forms.Button();
             this.bt_nextsong = new System.Windows.Forms.Button();
-            this.bt_stopsong = new System.Windows.Forms.Button();
-            this.bt_pausesong = new System.Windows.Forms.Button();
             this.bt_playsong = new System.Windows.Forms.Button();
-            this.bt_downloadsong = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayersong = new AxWMPLib.AxWindowsMediaPlayer();
             this.openFilesong = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialogvideo = new System.Windows.Forms.OpenFileDialog();
@@ -178,7 +174,6 @@
             this.pn_repcola = new System.Windows.Forms.Panel();
             this.bt_nextcola = new System.Windows.Forms.Button();
             this.bt_Backcola = new System.Windows.Forms.Button();
-            this.bt_pausecola = new System.Windows.Forms.Button();
             this.bt_repcola = new System.Windows.Forms.Button();
             this.axWMP_Repcola = new AxWMPLib.AxWindowsMediaPlayer();
             this.pn_addsongcola = new System.Windows.Forms.Panel();
@@ -198,7 +193,6 @@
             this.bt_backaddvideocola = new System.Windows.Forms.Button();
             this.pn_repvideocola = new System.Windows.Forms.Panel();
             this.bt_backrepvideocola = new System.Windows.Forms.Button();
-            this.bt_pausevideocola = new System.Windows.Forms.Button();
             this.bt_nextvideocola = new System.Windows.Forms.Button();
             this.bt_repvideocola = new System.Windows.Forms.Button();
             this.WMPrepvideocola = new AxWMPLib.AxWindowsMediaPlayer();
@@ -231,45 +225,73 @@
             this.label16 = new System.Windows.Forms.Label();
             this.tb_VidPL = new System.Windows.Forms.TextBox();
             this.pn_searchSong = new System.Windows.Forms.Panel();
-            this.bt_backsearchSong = new System.Windows.Forms.Button();
-            this.tb_searchSong = new System.Windows.Forms.TextBox();
-            this.bt_searchSong = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.rtb_searchSong = new System.Windows.Forms.RichTextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.bt_searchSong = new System.Windows.Forms.Button();
+            this.tb_searchSong = new System.Windows.Forms.TextBox();
+            this.bt_backsearchSong = new System.Windows.Forms.Button();
             this.pn_menuUser = new System.Windows.Forms.Panel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.tb_User = new System.Windows.Forms.TextBox();
-            this.bt_backmenuUser = new System.Windows.Forms.Button();
-            this.bt_searchUser = new System.Windows.Forms.Button();
-            this.rtb_menuUser = new System.Windows.Forms.RichTextBox();
             this.label21 = new System.Windows.Forms.Label();
+            this.rtb_menuUser = new System.Windows.Forms.RichTextBox();
+            this.bt_searchUser = new System.Windows.Forms.Button();
+            this.bt_backmenuUser = new System.Windows.Forms.Button();
+            this.tb_User = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.pn_vidCrit = new System.Windows.Forms.Panel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tb_vidCrit = new System.Windows.Forms.TextBox();
-            this.bt_backcritVid = new System.Windows.Forms.Button();
-            this.bt_commcritVid = new System.Windows.Forms.Button();
-            this.bt_searchcritVid = new System.Windows.Forms.Button();
-            this.rtb_critVid = new System.Windows.Forms.RichTextBox();
-            this.tb_critTitle = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
+            this.tb_critTitle = new System.Windows.Forms.TextBox();
+            this.rtb_critVid = new System.Windows.Forms.RichTextBox();
+            this.bt_searchcritVid = new System.Windows.Forms.Button();
+            this.bt_commcritVid = new System.Windows.Forms.Button();
+            this.bt_backcritVid = new System.Windows.Forms.Button();
+            this.tb_vidCrit = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.pn_vidRating = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.tb_ratingVid = new System.Windows.Forms.TextBox();
-            this.bt_backratiVid = new System.Windows.Forms.Button();
-            this.bt_searchratVid = new System.Windows.Forms.Button();
-            this.bt_rateVid = new System.Windows.Forms.Button();
-            this.lb_vidRating = new System.Windows.Forms.Label();
             this.clb_rateVid = new System.Windows.Forms.CheckedListBox();
+            this.lb_vidRating = new System.Windows.Forms.Label();
+            this.bt_rateVid = new System.Windows.Forms.Button();
+            this.bt_searchratVid = new System.Windows.Forms.Button();
+            this.bt_backratiVid = new System.Windows.Forms.Button();
+            this.tb_ratingVid = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.pn_searchVid = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.tb_vidSearch = new System.Windows.Forms.TextBox();
-            this.rtb_vidSearch = new System.Windows.Forms.RichTextBox();
-            this.bt_searchVid = new System.Windows.Forms.Button();
             this.bt_backvidSearch = new System.Windows.Forms.Button();
+            this.bt_searchVid = new System.Windows.Forms.Button();
+            this.rtb_vidSearch = new System.Windows.Forms.RichTextBox();
+            this.tb_vidSearch = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.pn_repvideoplaylist = new System.Windows.Forms.Panel();
+            this.bt_backrepvideoplaylist = new System.Windows.Forms.Button();
+            this.bt_nextvideoplaylist = new System.Windows.Forms.Button();
+            this.bt_repvideoplaylist = new System.Windows.Forms.Button();
+            this.WMPrepvideoplaylist = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pn_askvideoplaylist = new System.Windows.Forms.Panel();
+            this.tb_asknamevideoplaylist = new System.Windows.Forms.TextBox();
+            this.bt_nextaskvideoplaylist = new System.Windows.Forms.Button();
+            this.bt_backaskvideoplaylist = new System.Windows.Forms.Button();
+            this.rtb_playlistvideosname = new System.Windows.Forms.RichTextBox();
+            this.pn_asksongplaylist = new System.Windows.Forms.Panel();
+            this.bt_nextaskplsong = new System.Windows.Forms.Button();
+            this.bt_backaskplsong = new System.Windows.Forms.Button();
+            this.tb_askplaylistsong = new System.Windows.Forms.TextBox();
+            this.rtb_namesongplaylist = new System.Windows.Forms.RichTextBox();
+            this.pn_repplyalistsong = new System.Windows.Forms.Panel();
+            this.bt_backrepplsong = new System.Windows.Forms.Button();
+            this.bt_nextsongplaylistsong = new System.Windows.Forms.Button();
+            this.bt_repplaylistsong = new System.Windows.Forms.Button();
+            this.WMPrepsongplaylist = new AxWMPLib.AxWindowsMediaPlayer();
+            this.pn_deletesongqueue = new System.Windows.Forms.Panel();
+            this.bt_backdeletesongcola = new System.Windows.Forms.Button();
+            this.bt_deletesongcola = new System.Windows.Forms.Button();
+            this.lb_deletesongcola = new System.Windows.Forms.Label();
+            this.pn_deletevideoqueue = new System.Windows.Forms.Panel();
+            this.bt_backdeletevideoqueue = new System.Windows.Forms.Button();
+            this.bt_deletevideoqueue = new System.Windows.Forms.Button();
+            this.lb_deletevideoqueue = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_closeregistro)).BeginInit();
@@ -308,6 +330,14 @@
             this.pn_vidCrit.SuspendLayout();
             this.pn_vidRating.SuspendLayout();
             this.pn_searchVid.SuspendLayout();
+            this.pn_repvideoplaylist.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WMPrepvideoplaylist)).BeginInit();
+            this.pn_askvideoplaylist.SuspendLayout();
+            this.pn_asksongplaylist.SuspendLayout();
+            this.pn_repplyalistsong.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.WMPrepsongplaylist)).BeginInit();
+            this.pn_deletesongqueue.SuspendLayout();
+            this.pn_deletevideoqueue.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -913,6 +943,7 @@
             this.bt_repplay.TabIndex = 7;
             this.bt_repplay.Text = "REPRODUCIR PLAYLIST";
             this.bt_repplay.UseVisualStyleBackColor = true;
+            this.bt_repplay.Click += new System.EventHandler(this.bt_repplay_Click);
             // 
             // pn_usuario
             // 
@@ -1048,6 +1079,7 @@
             this.bt_vaccolavideo.TabIndex = 14;
             this.bt_vaccolavideo.Text = "VACIAR COLA VIDEOS";
             this.bt_vaccolavideo.UseVisualStyleBackColor = true;
+            this.bt_vaccolavideo.Click += new System.EventHandler(this.bt_vaccolavideo_Click);
             // 
             // bt_agrcolasong
             // 
@@ -1092,6 +1124,7 @@
             this.bt_vaccolasong.TabIndex = 11;
             this.bt_vaccolasong.Text = "VACIAR COLA CANCIONES";
             this.bt_vaccolasong.UseVisualStyleBackColor = true;
+            this.bt_vaccolasong.Click += new System.EventHandler(this.bt_vaccolasong_Click);
             // 
             // bt_vercolvideo
             // 
@@ -1616,167 +1649,128 @@
             this.bt_reproplayvideo.TabIndex = 7;
             this.bt_reproplayvideo.Text = "REPRODUCIR PLAYLIST";
             this.bt_reproplayvideo.UseVisualStyleBackColor = true;
+            this.bt_reproplayvideo.Click += new System.EventHandler(this.bt_reproplayvideo_Click);
             // 
             // pn_repvideo
             // 
-            this.pn_repvideo.BackColor = System.Drawing.Color.Silver;
+            this.pn_repvideo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.pn_repvideo.Controls.Add(this.bt_backrepvideo);
             this.pn_repvideo.Controls.Add(this.bt_nextvideo);
-            this.pn_repvideo.Controls.Add(this.bt_stopvideo);
-            this.pn_repvideo.Controls.Add(this.bt_pausevideo);
             this.pn_repvideo.Controls.Add(this.bt_playvideo);
-            this.pn_repvideo.Controls.Add(this.bt_downloadvideo);
             this.pn_repvideo.Controls.Add(this.axWindowsMediaPlayervideo);
-            this.pn_repvideo.Location = new System.Drawing.Point(947, 90);
+            this.pn_repvideo.Location = new System.Drawing.Point(480, 90);
             this.pn_repvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_repvideo.Name = "pn_repvideo";
-            this.pn_repvideo.Size = new System.Drawing.Size(408, 263);
+            this.pn_repvideo.Size = new System.Drawing.Size(879, 545);
             this.pn_repvideo.TabIndex = 15;
             this.pn_repvideo.Visible = false;
             // 
+            // bt_backrepvideo
+            // 
+            this.bt_backrepvideo.BackColor = System.Drawing.Color.White;
+            this.bt_backrepvideo.Location = new System.Drawing.Point(725, 490);
+            this.bt_backrepvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_backrepvideo.Name = "bt_backrepvideo";
+            this.bt_backrepvideo.Size = new System.Drawing.Size(105, 36);
+            this.bt_backrepvideo.TabIndex = 6;
+            this.bt_backrepvideo.Text = "Volver";
+            this.bt_backrepvideo.UseVisualStyleBackColor = false;
+            this.bt_backrepvideo.Click += new System.EventHandler(this.bt_backrepvideo_Click);
+            // 
             // bt_nextvideo
             // 
-            this.bt_nextvideo.Location = new System.Drawing.Point(261, 197);
+            this.bt_nextvideo.BackColor = System.Drawing.Color.White;
+            this.bt_nextvideo.Location = new System.Drawing.Point(221, 492);
             this.bt_nextvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_nextvideo.Name = "bt_nextvideo";
-            this.bt_nextvideo.Size = new System.Drawing.Size(75, 36);
+            this.bt_nextvideo.Size = new System.Drawing.Size(105, 36);
             this.bt_nextvideo.TabIndex = 5;
-            this.bt_nextvideo.Text = "siguiente";
-            this.bt_nextvideo.UseVisualStyleBackColor = true;
+            this.bt_nextvideo.Text = "Siguiente";
+            this.bt_nextvideo.UseVisualStyleBackColor = false;
             this.bt_nextvideo.Click += new System.EventHandler(this.bt_nextvideo_Click);
-            // 
-            // bt_stopvideo
-            // 
-            this.bt_stopvideo.Location = new System.Drawing.Point(342, 197);
-            this.bt_stopvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_stopvideo.Name = "bt_stopvideo";
-            this.bt_stopvideo.Size = new System.Drawing.Size(66, 36);
-            this.bt_stopvideo.TabIndex = 4;
-            this.bt_stopvideo.Text = "parar";
-            this.bt_stopvideo.UseVisualStyleBackColor = true;
-            this.bt_stopvideo.Click += new System.EventHandler(this.bt_stopvideo_Click);
-            // 
-            // bt_pausevideo
-            // 
-            this.bt_pausevideo.Location = new System.Drawing.Point(177, 197);
-            this.bt_pausevideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_pausevideo.Name = "bt_pausevideo";
-            this.bt_pausevideo.Size = new System.Drawing.Size(77, 36);
-            this.bt_pausevideo.TabIndex = 3;
-            this.bt_pausevideo.Text = "pausa";
-            this.bt_pausevideo.UseVisualStyleBackColor = true;
-            this.bt_pausevideo.Click += new System.EventHandler(this.bt_pausevideo_Click);
             // 
             // bt_playvideo
             // 
-            this.bt_playvideo.Location = new System.Drawing.Point(85, 197);
+            this.bt_playvideo.BackColor = System.Drawing.Color.White;
+            this.bt_playvideo.Location = new System.Drawing.Point(80, 492);
             this.bt_playvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_playvideo.Name = "bt_playvideo";
-            this.bt_playvideo.Size = new System.Drawing.Size(85, 36);
+            this.bt_playvideo.Size = new System.Drawing.Size(105, 36);
             this.bt_playvideo.TabIndex = 2;
-            this.bt_playvideo.Text = "reproducir";
-            this.bt_playvideo.UseVisualStyleBackColor = true;
+            this.bt_playvideo.Text = "Reproducir";
+            this.bt_playvideo.UseVisualStyleBackColor = false;
             this.bt_playvideo.Click += new System.EventHandler(this.bt_playvideo_Click);
-            // 
-            // bt_downloadvideo
-            // 
-            this.bt_downloadvideo.Location = new System.Drawing.Point(13, 197);
-            this.bt_downloadvideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_downloadvideo.Name = "bt_downloadvideo";
-            this.bt_downloadvideo.Size = new System.Drawing.Size(65, 36);
-            this.bt_downloadvideo.TabIndex = 1;
-            this.bt_downloadvideo.Text = "cargar";
-            this.bt_downloadvideo.UseVisualStyleBackColor = true;
-            this.bt_downloadvideo.Click += new System.EventHandler(this.bt_downloadvideo_Click);
             // 
             // axWindowsMediaPlayervideo
             // 
             this.axWindowsMediaPlayervideo.Enabled = true;
-            this.axWindowsMediaPlayervideo.Location = new System.Drawing.Point(53, 7);
+            this.axWindowsMediaPlayervideo.Location = new System.Drawing.Point(64, 22);
             this.axWindowsMediaPlayervideo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.axWindowsMediaPlayervideo.Name = "axWindowsMediaPlayervideo";
             this.axWindowsMediaPlayervideo.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayervideo.OcxState")));
-            this.axWindowsMediaPlayervideo.Size = new System.Drawing.Size(244, 162);
+            this.axWindowsMediaPlayervideo.Size = new System.Drawing.Size(757, 369);
             this.axWindowsMediaPlayervideo.TabIndex = 0;
             // 
             // pn_repsong
             // 
-            this.pn_repsong.BackColor = System.Drawing.Color.Silver;
+            this.pn_repsong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.pn_repsong.Controls.Add(this.bt_backrepsong);
             this.pn_repsong.Controls.Add(this.bt_nextsong);
-            this.pn_repsong.Controls.Add(this.bt_stopsong);
-            this.pn_repsong.Controls.Add(this.bt_pausesong);
             this.pn_repsong.Controls.Add(this.bt_playsong);
-            this.pn_repsong.Controls.Add(this.bt_downloadsong);
             this.pn_repsong.Controls.Add(this.axWindowsMediaPlayersong);
-            this.pn_repsong.Location = new System.Drawing.Point(947, 359);
+            this.pn_repsong.Location = new System.Drawing.Point(480, 79);
             this.pn_repsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pn_repsong.Name = "pn_repsong";
-            this.pn_repsong.Size = new System.Drawing.Size(408, 263);
+            this.pn_repsong.Size = new System.Drawing.Size(912, 558);
             this.pn_repsong.TabIndex = 16;
             this.pn_repsong.Visible = false;
             // 
+            // bt_backrepsong
+            // 
+            this.bt_backrepsong.BackColor = System.Drawing.Color.White;
+            this.bt_backrepsong.ImageKey = "(ninguno)";
+            this.bt_backrepsong.Location = new System.Drawing.Point(768, 499);
+            this.bt_backrepsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_backrepsong.Name = "bt_backrepsong";
+            this.bt_backrepsong.Size = new System.Drawing.Size(84, 36);
+            this.bt_backrepsong.TabIndex = 6;
+            this.bt_backrepsong.Text = "Volver";
+            this.bt_backrepsong.UseVisualStyleBackColor = false;
+            this.bt_backrepsong.Click += new System.EventHandler(this.bt_backrepsong_Click);
+            // 
             // bt_nextsong
             // 
-            this.bt_nextsong.Location = new System.Drawing.Point(260, 198);
+            this.bt_nextsong.BackColor = System.Drawing.Color.White;
+            this.bt_nextsong.Location = new System.Drawing.Point(249, 499);
             this.bt_nextsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_nextsong.Name = "bt_nextsong";
             this.bt_nextsong.Size = new System.Drawing.Size(84, 36);
             this.bt_nextsong.TabIndex = 5;
             this.bt_nextsong.Text = "siguiente";
-            this.bt_nextsong.UseVisualStyleBackColor = true;
+            this.bt_nextsong.UseVisualStyleBackColor = false;
             this.bt_nextsong.Click += new System.EventHandler(this.bt_nextsong_Click);
-            // 
-            // bt_stopsong
-            // 
-            this.bt_stopsong.Location = new System.Drawing.Point(350, 196);
-            this.bt_stopsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_stopsong.Name = "bt_stopsong";
-            this.bt_stopsong.Size = new System.Drawing.Size(58, 37);
-            this.bt_stopsong.TabIndex = 4;
-            this.bt_stopsong.Text = "parar";
-            this.bt_stopsong.UseVisualStyleBackColor = true;
-            this.bt_stopsong.Click += new System.EventHandler(this.bt_stopsong_Click);
-            // 
-            // bt_pausesong
-            // 
-            this.bt_pausesong.Location = new System.Drawing.Point(177, 197);
-            this.bt_pausesong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_pausesong.Name = "bt_pausesong";
-            this.bt_pausesong.Size = new System.Drawing.Size(77, 36);
-            this.bt_pausesong.TabIndex = 3;
-            this.bt_pausesong.Text = "pausa";
-            this.bt_pausesong.UseVisualStyleBackColor = true;
-            this.bt_pausesong.Click += new System.EventHandler(this.bt_pausesong_Click);
             // 
             // bt_playsong
             // 
-            this.bt_playsong.Location = new System.Drawing.Point(85, 197);
+            this.bt_playsong.BackColor = System.Drawing.Color.White;
+            this.bt_playsong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_playsong.Location = new System.Drawing.Point(116, 499);
             this.bt_playsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_playsong.Name = "bt_playsong";
             this.bt_playsong.Size = new System.Drawing.Size(85, 36);
             this.bt_playsong.TabIndex = 2;
             this.bt_playsong.Text = "reproducir";
-            this.bt_playsong.UseVisualStyleBackColor = true;
+            this.bt_playsong.UseVisualStyleBackColor = false;
             this.bt_playsong.Click += new System.EventHandler(this.bt_playsong_Click);
-            // 
-            // bt_downloadsong
-            // 
-            this.bt_downloadsong.Location = new System.Drawing.Point(13, 197);
-            this.bt_downloadsong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_downloadsong.Name = "bt_downloadsong";
-            this.bt_downloadsong.Size = new System.Drawing.Size(65, 36);
-            this.bt_downloadsong.TabIndex = 1;
-            this.bt_downloadsong.Text = "cargar";
-            this.bt_downloadsong.UseVisualStyleBackColor = true;
-            this.bt_downloadsong.Click += new System.EventHandler(this.bt_downloadsong_Click);
             // 
             // axWindowsMediaPlayersong
             // 
             this.axWindowsMediaPlayersong.Enabled = true;
-            this.axWindowsMediaPlayersong.Location = new System.Drawing.Point(38, 15);
+            this.axWindowsMediaPlayersong.Location = new System.Drawing.Point(87, 15);
             this.axWindowsMediaPlayersong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.axWindowsMediaPlayersong.Name = "axWindowsMediaPlayersong";
             this.axWindowsMediaPlayersong.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayersong.OcxState")));
-            this.axWindowsMediaPlayersong.Size = new System.Drawing.Size(244, 162);
+            this.axWindowsMediaPlayersong.Size = new System.Drawing.Size(763, 387);
             this.axWindowsMediaPlayersong.TabIndex = 0;
             // 
             // openFilesong
@@ -2275,19 +2269,18 @@
             // 
             this.pn_repcola.Controls.Add(this.bt_nextcola);
             this.pn_repcola.Controls.Add(this.bt_Backcola);
-            this.pn_repcola.Controls.Add(this.bt_pausecola);
             this.pn_repcola.Controls.Add(this.bt_repcola);
             this.pn_repcola.Controls.Add(this.axWMP_Repcola);
             this.pn_repcola.Location = new System.Drawing.Point(480, 90);
             this.pn_repcola.Name = "pn_repcola";
-            this.pn_repcola.Size = new System.Drawing.Size(503, 356);
+            this.pn_repcola.Size = new System.Drawing.Size(876, 549);
             this.pn_repcola.TabIndex = 11;
             this.pn_repcola.Visible = false;
             this.pn_repcola.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_repcola_Paint);
             // 
             // bt_nextcola
             // 
-            this.bt_nextcola.Location = new System.Drawing.Point(267, 298);
+            this.bt_nextcola.Location = new System.Drawing.Point(207, 487);
             this.bt_nextcola.Name = "bt_nextcola";
             this.bt_nextcola.Size = new System.Drawing.Size(100, 43);
             this.bt_nextcola.TabIndex = 4;
@@ -2297,7 +2290,7 @@
             // 
             // bt_Backcola
             // 
-            this.bt_Backcola.Location = new System.Drawing.Point(389, 298);
+            this.bt_Backcola.Location = new System.Drawing.Point(753, 485);
             this.bt_Backcola.Name = "bt_Backcola";
             this.bt_Backcola.Size = new System.Drawing.Size(100, 43);
             this.bt_Backcola.TabIndex = 3;
@@ -2305,19 +2298,9 @@
             this.bt_Backcola.UseVisualStyleBackColor = true;
             this.bt_Backcola.Click += new System.EventHandler(this.bt_Backcola_Click);
             // 
-            // bt_pausecola
-            // 
-            this.bt_pausecola.Location = new System.Drawing.Point(146, 298);
-            this.bt_pausecola.Name = "bt_pausecola";
-            this.bt_pausecola.Size = new System.Drawing.Size(100, 43);
-            this.bt_pausecola.TabIndex = 2;
-            this.bt_pausecola.Text = "Pausa";
-            this.bt_pausecola.UseVisualStyleBackColor = true;
-            this.bt_pausecola.Click += new System.EventHandler(this.bt_pausecola_Click);
-            // 
             // bt_repcola
             // 
-            this.bt_repcola.Location = new System.Drawing.Point(22, 298);
+            this.bt_repcola.Location = new System.Drawing.Point(46, 487);
             this.bt_repcola.Name = "bt_repcola";
             this.bt_repcola.Size = new System.Drawing.Size(100, 43);
             this.bt_repcola.TabIndex = 1;
@@ -2331,7 +2314,7 @@
             this.axWMP_Repcola.Location = new System.Drawing.Point(40, 7);
             this.axWMP_Repcola.Name = "axWMP_Repcola";
             this.axWMP_Repcola.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWMP_Repcola.OcxState")));
-            this.axWMP_Repcola.Size = new System.Drawing.Size(402, 272);
+            this.axWMP_Repcola.Size = new System.Drawing.Size(781, 378);
             this.axWMP_Repcola.TabIndex = 0;
             // 
             // pn_addsongcola
@@ -2479,54 +2462,46 @@
             // pn_repvideocola
             // 
             this.pn_repvideocola.Controls.Add(this.bt_backrepvideocola);
-            this.pn_repvideocola.Controls.Add(this.bt_pausevideocola);
             this.pn_repvideocola.Controls.Add(this.bt_nextvideocola);
             this.pn_repvideocola.Controls.Add(this.bt_repvideocola);
             this.pn_repvideocola.Controls.Add(this.WMPrepvideocola);
-            this.pn_repvideocola.Location = new System.Drawing.Point(470, 90);
+            this.pn_repvideocola.Location = new System.Drawing.Point(480, 90);
             this.pn_repvideocola.Name = "pn_repvideocola";
-            this.pn_repvideocola.Size = new System.Drawing.Size(565, 425);
+            this.pn_repvideocola.Size = new System.Drawing.Size(893, 549);
             this.pn_repvideocola.TabIndex = 14;
             this.pn_repvideocola.Visible = false;
             // 
             // bt_backrepvideocola
             // 
-            this.bt_backrepvideocola.Location = new System.Drawing.Point(430, 329);
+            this.bt_backrepvideocola.BackColor = System.Drawing.Color.White;
+            this.bt_backrepvideocola.Location = new System.Drawing.Point(701, 480);
             this.bt_backrepvideocola.Name = "bt_backrepvideocola";
             this.bt_backrepvideocola.Size = new System.Drawing.Size(94, 52);
             this.bt_backrepvideocola.TabIndex = 4;
             this.bt_backrepvideocola.Text = "Volver";
-            this.bt_backrepvideocola.UseVisualStyleBackColor = true;
+            this.bt_backrepvideocola.UseVisualStyleBackColor = false;
             this.bt_backrepvideocola.Click += new System.EventHandler(this.bt_backrepvideocola_Click);
-            // 
-            // bt_pausevideocola
-            // 
-            this.bt_pausevideocola.Location = new System.Drawing.Point(177, 328);
-            this.bt_pausevideocola.Name = "bt_pausevideocola";
-            this.bt_pausevideocola.Size = new System.Drawing.Size(96, 53);
-            this.bt_pausevideocola.TabIndex = 3;
-            this.bt_pausevideocola.Text = "Pausar";
-            this.bt_pausevideocola.UseVisualStyleBackColor = true;
-            this.bt_pausevideocola.Click += new System.EventHandler(this.bt_pausevideocola_Click);
             // 
             // bt_nextvideocola
             // 
-            this.bt_nextvideocola.Location = new System.Drawing.Point(310, 329);
+            this.bt_nextvideocola.BackColor = System.Drawing.Color.White;
+            this.bt_nextvideocola.Location = new System.Drawing.Point(303, 480);
             this.bt_nextvideocola.Name = "bt_nextvideocola";
             this.bt_nextvideocola.Size = new System.Drawing.Size(94, 52);
             this.bt_nextvideocola.TabIndex = 2;
             this.bt_nextvideocola.Text = "Siguiente";
-            this.bt_nextvideocola.UseVisualStyleBackColor = true;
+            this.bt_nextvideocola.UseVisualStyleBackColor = false;
             this.bt_nextvideocola.Click += new System.EventHandler(this.bt_nextvideocola_Click);
             // 
             // bt_repvideocola
             // 
-            this.bt_repvideocola.Location = new System.Drawing.Point(36, 328);
+            this.bt_repvideocola.BackColor = System.Drawing.Color.White;
+            this.bt_repvideocola.Location = new System.Drawing.Point(137, 483);
             this.bt_repvideocola.Name = "bt_repvideocola";
             this.bt_repvideocola.Size = new System.Drawing.Size(96, 51);
             this.bt_repvideocola.TabIndex = 1;
             this.bt_repvideocola.Text = "Reproducir";
-            this.bt_repvideocola.UseVisualStyleBackColor = true;
+            this.bt_repvideocola.UseVisualStyleBackColor = false;
             this.bt_repvideocola.Click += new System.EventHandler(this.bt_repvideocola_Click);
             // 
             // WMPrepvideocola
@@ -2535,7 +2510,7 @@
             this.WMPrepvideocola.Location = new System.Drawing.Point(92, 16);
             this.WMPrepvideocola.Name = "WMPrepvideocola";
             this.WMPrepvideocola.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPrepvideocola.OcxState")));
-            this.WMPrepvideocola.Size = new System.Drawing.Size(372, 265);
+            this.WMPrepvideocola.Size = new System.Drawing.Size(695, 365);
             this.WMPrepvideocola.TabIndex = 0;
             // 
             // pn_songPL
@@ -2855,43 +2830,14 @@
             this.pn_searchSong.TabIndex = 23;
             this.pn_searchSong.Visible = false;
             // 
-            // bt_backsearchSong
+            // rtb_searchSong
             // 
-            this.bt_backsearchSong.Location = new System.Drawing.Point(22, 394);
-            this.bt_backsearchSong.Name = "bt_backsearchSong";
-            this.bt_backsearchSong.Size = new System.Drawing.Size(75, 23);
-            this.bt_backsearchSong.TabIndex = 0;
-            this.bt_backsearchSong.Text = "Back";
-            this.bt_backsearchSong.UseVisualStyleBackColor = true;
-            this.bt_backsearchSong.Click += new System.EventHandler(this.bt_backsearchSong_Click);
-            // 
-            // tb_searchSong
-            // 
-            this.tb_searchSong.Location = new System.Drawing.Point(39, 76);
-            this.tb_searchSong.Name = "tb_searchSong";
-            this.tb_searchSong.Size = new System.Drawing.Size(321, 22);
-            this.tb_searchSong.TabIndex = 1;
-            // 
-            // bt_searchSong
-            // 
-            this.bt_searchSong.Location = new System.Drawing.Point(379, 76);
-            this.bt_searchSong.Name = "bt_searchSong";
-            this.bt_searchSong.Size = new System.Drawing.Size(75, 23);
-            this.bt_searchSong.TabIndex = 2;
-            this.bt_searchSong.Text = "Search";
-            this.bt_searchSong.UseVisualStyleBackColor = true;
-            this.bt_searchSong.Click += new System.EventHandler(this.bt_searchSong_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label18.Location = new System.Drawing.Point(33, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(166, 25);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "Busqueda Simple";
+            this.rtb_searchSong.Location = new System.Drawing.Point(42, 116);
+            this.rtb_searchSong.Name = "rtb_searchSong";
+            this.rtb_searchSong.ReadOnly = true;
+            this.rtb_searchSong.Size = new System.Drawing.Size(289, 261);
+            this.rtb_searchSong.TabIndex = 5;
+            this.rtb_searchSong.Text = "";
             // 
             // label19
             // 
@@ -2904,14 +2850,43 @@
             this.label19.TabIndex = 4;
             this.label19.Text = "Filtros de busqueda (si son multiples, delimitar con coma)";
             // 
-            // rtb_searchSong
+            // label18
             // 
-            this.rtb_searchSong.Location = new System.Drawing.Point(42, 116);
-            this.rtb_searchSong.Name = "rtb_searchSong";
-            this.rtb_searchSong.ReadOnly = true;
-            this.rtb_searchSong.Size = new System.Drawing.Size(289, 261);
-            this.rtb_searchSong.TabIndex = 5;
-            this.rtb_searchSong.Text = "";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label18.Location = new System.Drawing.Point(33, 11);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(166, 25);
+            this.label18.TabIndex = 3;
+            this.label18.Text = "Busqueda Simple";
+            // 
+            // bt_searchSong
+            // 
+            this.bt_searchSong.Location = new System.Drawing.Point(379, 76);
+            this.bt_searchSong.Name = "bt_searchSong";
+            this.bt_searchSong.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchSong.TabIndex = 2;
+            this.bt_searchSong.Text = "Search";
+            this.bt_searchSong.UseVisualStyleBackColor = true;
+            this.bt_searchSong.Click += new System.EventHandler(this.bt_searchSong_Click);
+            // 
+            // tb_searchSong
+            // 
+            this.tb_searchSong.Location = new System.Drawing.Point(39, 76);
+            this.tb_searchSong.Name = "tb_searchSong";
+            this.tb_searchSong.Size = new System.Drawing.Size(321, 22);
+            this.tb_searchSong.TabIndex = 1;
+            // 
+            // bt_backsearchSong
+            // 
+            this.bt_backsearchSong.Location = new System.Drawing.Point(22, 394);
+            this.bt_backsearchSong.Name = "bt_backsearchSong";
+            this.bt_backsearchSong.Size = new System.Drawing.Size(75, 23);
+            this.bt_backsearchSong.TabIndex = 0;
+            this.bt_backsearchSong.Text = "Back";
+            this.bt_backsearchSong.UseVisualStyleBackColor = true;
+            this.bt_backsearchSong.Click += new System.EventHandler(this.bt_backsearchSong_Click);
             // 
             // pn_menuUser
             // 
@@ -2927,33 +2902,24 @@
             this.pn_menuUser.TabIndex = 24;
             this.pn_menuUser.Visible = false;
             // 
-            // label20
+            // label21
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label20.Location = new System.Drawing.Point(0, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(177, 25);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Usuarios Seguidos";
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label21.Location = new System.Drawing.Point(17, 43);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(129, 17);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "Nombre de usuario";
             // 
-            // tb_User
+            // rtb_menuUser
             // 
-            this.tb_User.Location = new System.Drawing.Point(20, 73);
-            this.tb_User.Name = "tb_User";
-            this.tb_User.Size = new System.Drawing.Size(309, 22);
-            this.tb_User.TabIndex = 1;
-            // 
-            // bt_backmenuUser
-            // 
-            this.bt_backmenuUser.Location = new System.Drawing.Point(25, 386);
-            this.bt_backmenuUser.Name = "bt_backmenuUser";
-            this.bt_backmenuUser.Size = new System.Drawing.Size(75, 23);
-            this.bt_backmenuUser.TabIndex = 2;
-            this.bt_backmenuUser.Text = "Back";
-            this.bt_backmenuUser.UseVisualStyleBackColor = true;
-            this.bt_backmenuUser.Click += new System.EventHandler(this.bt_backmenuUser_Click);
+            this.rtb_menuUser.Location = new System.Drawing.Point(22, 125);
+            this.rtb_menuUser.Name = "rtb_menuUser";
+            this.rtb_menuUser.Size = new System.Drawing.Size(294, 244);
+            this.rtb_menuUser.TabIndex = 4;
+            this.rtb_menuUser.Text = "";
             // 
             // bt_searchUser
             // 
@@ -2965,24 +2931,33 @@
             this.bt_searchUser.UseVisualStyleBackColor = true;
             this.bt_searchUser.Click += new System.EventHandler(this.bt_searchUser_Click);
             // 
-            // rtb_menuUser
+            // bt_backmenuUser
             // 
-            this.rtb_menuUser.Location = new System.Drawing.Point(22, 125);
-            this.rtb_menuUser.Name = "rtb_menuUser";
-            this.rtb_menuUser.Size = new System.Drawing.Size(294, 244);
-            this.rtb_menuUser.TabIndex = 4;
-            this.rtb_menuUser.Text = "";
+            this.bt_backmenuUser.Location = new System.Drawing.Point(25, 386);
+            this.bt_backmenuUser.Name = "bt_backmenuUser";
+            this.bt_backmenuUser.Size = new System.Drawing.Size(75, 23);
+            this.bt_backmenuUser.TabIndex = 2;
+            this.bt_backmenuUser.Text = "Back";
+            this.bt_backmenuUser.UseVisualStyleBackColor = true;
+            this.bt_backmenuUser.Click += new System.EventHandler(this.bt_backmenuUser_Click);
             // 
-            // label21
+            // tb_User
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(17, 43);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(129, 17);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "Nombre de usuario";
+            this.tb_User.Location = new System.Drawing.Point(20, 73);
+            this.tb_User.Name = "tb_User";
+            this.tb_User.Size = new System.Drawing.Size(309, 22);
+            this.tb_User.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(177, 25);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Usuarios Seguidos";
             // 
             // pn_vidCrit
             // 
@@ -3001,16 +2976,70 @@
             this.pn_vidCrit.TabIndex = 25;
             this.pn_vidCrit.Visible = false;
             // 
-            // label22
+            // label24
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(33, 12);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(113, 25);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Ver Criticas";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label24.Location = new System.Drawing.Point(51, 111);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(119, 17);
+            this.label24.TabIndex = 8;
+            this.label24.Text = "Titulo de la critica";
+            // 
+            // tb_critTitle
+            // 
+            this.tb_critTitle.Location = new System.Drawing.Point(52, 131);
+            this.tb_critTitle.Name = "tb_critTitle";
+            this.tb_critTitle.Size = new System.Drawing.Size(202, 22);
+            this.tb_critTitle.TabIndex = 7;
+            this.tb_critTitle.Visible = false;
+            // 
+            // rtb_critVid
+            // 
+            this.rtb_critVid.Location = new System.Drawing.Point(50, 156);
+            this.rtb_critVid.Name = "rtb_critVid";
+            this.rtb_critVid.Size = new System.Drawing.Size(255, 213);
+            this.rtb_critVid.TabIndex = 6;
+            this.rtb_critVid.Text = "Agregue su comentario aqui";
+            this.rtb_critVid.Click += new System.EventHandler(this.rtb_critVid_Click);
+            // 
+            // bt_searchcritVid
+            // 
+            this.bt_searchcritVid.Location = new System.Drawing.Point(341, 86);
+            this.bt_searchcritVid.Name = "bt_searchcritVid";
+            this.bt_searchcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchcritVid.TabIndex = 5;
+            this.bt_searchcritVid.Text = "Search";
+            this.bt_searchcritVid.UseVisualStyleBackColor = true;
+            this.bt_searchcritVid.Click += new System.EventHandler(this.bt_searchcritVid_Click);
+            // 
+            // bt_commcritVid
+            // 
+            this.bt_commcritVid.Location = new System.Drawing.Point(422, 86);
+            this.bt_commcritVid.Name = "bt_commcritVid";
+            this.bt_commcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_commcritVid.TabIndex = 4;
+            this.bt_commcritVid.Text = "Publish";
+            this.bt_commcritVid.UseVisualStyleBackColor = true;
+            this.bt_commcritVid.Click += new System.EventHandler(this.bt_commcritVid_Click);
+            // 
+            // bt_backcritVid
+            // 
+            this.bt_backcritVid.Location = new System.Drawing.Point(34, 386);
+            this.bt_backcritVid.Name = "bt_backcritVid";
+            this.bt_backcritVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_backcritVid.TabIndex = 3;
+            this.bt_backcritVid.Text = "Back";
+            this.bt_backcritVid.UseVisualStyleBackColor = true;
+            this.bt_backcritVid.Click += new System.EventHandler(this.bt_backcritVid_Click);
+            // 
+            // tb_vidCrit
+            // 
+            this.tb_vidCrit.Location = new System.Drawing.Point(51, 86);
+            this.tb_vidCrit.Name = "tb_vidCrit";
+            this.tb_vidCrit.Size = new System.Drawing.Size(284, 22);
+            this.tb_vidCrit.TabIndex = 2;
             // 
             // label23
             // 
@@ -3023,70 +3052,16 @@
             this.label23.TabIndex = 1;
             this.label23.Text = "Nombre del video";
             // 
-            // tb_vidCrit
+            // label22
             // 
-            this.tb_vidCrit.Location = new System.Drawing.Point(51, 86);
-            this.tb_vidCrit.Name = "tb_vidCrit";
-            this.tb_vidCrit.Size = new System.Drawing.Size(284, 22);
-            this.tb_vidCrit.TabIndex = 2;
-            // 
-            // bt_backcritVid
-            // 
-            this.bt_backcritVid.Location = new System.Drawing.Point(34, 386);
-            this.bt_backcritVid.Name = "bt_backcritVid";
-            this.bt_backcritVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_backcritVid.TabIndex = 3;
-            this.bt_backcritVid.Text = "Back";
-            this.bt_backcritVid.UseVisualStyleBackColor = true;
-            this.bt_backcritVid.Click += new System.EventHandler(this.bt_backcritVid_Click);
-            // 
-            // bt_commcritVid
-            // 
-            this.bt_commcritVid.Location = new System.Drawing.Point(422, 86);
-            this.bt_commcritVid.Name = "bt_commcritVid";
-            this.bt_commcritVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_commcritVid.TabIndex = 4;
-            this.bt_commcritVid.Text = "Publish";
-            this.bt_commcritVid.UseVisualStyleBackColor = true;
-            this.bt_commcritVid.Click += new System.EventHandler(this.bt_commcritVid_Click);
-            // 
-            // bt_searchcritVid
-            // 
-            this.bt_searchcritVid.Location = new System.Drawing.Point(341, 86);
-            this.bt_searchcritVid.Name = "bt_searchcritVid";
-            this.bt_searchcritVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_searchcritVid.TabIndex = 5;
-            this.bt_searchcritVid.Text = "Search";
-            this.bt_searchcritVid.UseVisualStyleBackColor = true;
-            this.bt_searchcritVid.Click += new System.EventHandler(this.bt_searchcritVid_Click);
-            // 
-            // rtb_critVid
-            // 
-            this.rtb_critVid.Location = new System.Drawing.Point(50, 156);
-            this.rtb_critVid.Name = "rtb_critVid";
-            this.rtb_critVid.Size = new System.Drawing.Size(255, 213);
-            this.rtb_critVid.TabIndex = 6;
-            this.rtb_critVid.Text = "Agregue su comentario aqui";
-            this.rtb_critVid.Click += new System.EventHandler(this.rtb_critVid_Click);
-            // 
-            // tb_critTitle
-            // 
-            this.tb_critTitle.Location = new System.Drawing.Point(52, 131);
-            this.tb_critTitle.Name = "tb_critTitle";
-            this.tb_critTitle.Size = new System.Drawing.Size(202, 22);
-            this.tb_critTitle.TabIndex = 7;
-            this.tb_critTitle.Visible = false;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label24.Location = new System.Drawing.Point(51, 111);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(119, 17);
-            this.label24.TabIndex = 8;
-            this.label24.Text = "Titulo de la critica";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label22.Location = new System.Drawing.Point(33, 12);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(113, 25);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "Ver Criticas";
             // 
             // pn_vidRating
             // 
@@ -3103,76 +3078,6 @@
             this.pn_vidRating.Size = new System.Drawing.Size(488, 442);
             this.pn_vidRating.TabIndex = 26;
             this.pn_vidRating.Visible = false;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label25.Location = new System.Drawing.Point(34, 25);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(123, 25);
-            this.label25.TabIndex = 0;
-            this.label25.Text = "Rating Video";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(28, 84);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(168, 17);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Ingrese nombre del video";
-            // 
-            // tb_ratingVid
-            // 
-            this.tb_ratingVid.Location = new System.Drawing.Point(28, 113);
-            this.tb_ratingVid.Name = "tb_ratingVid";
-            this.tb_ratingVid.Size = new System.Drawing.Size(285, 22);
-            this.tb_ratingVid.TabIndex = 2;
-            this.tb_ratingVid.TextChanged += new System.EventHandler(this.tb_ratingVid_TextChanged);
-            // 
-            // bt_backratiVid
-            // 
-            this.bt_backratiVid.Location = new System.Drawing.Point(24, 362);
-            this.bt_backratiVid.Name = "bt_backratiVid";
-            this.bt_backratiVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_backratiVid.TabIndex = 3;
-            this.bt_backratiVid.Text = "Back";
-            this.bt_backratiVid.UseVisualStyleBackColor = true;
-            this.bt_backratiVid.Click += new System.EventHandler(this.bt_backratiVid_Click);
-            // 
-            // bt_searchratVid
-            // 
-            this.bt_searchratVid.Location = new System.Drawing.Point(319, 113);
-            this.bt_searchratVid.Name = "bt_searchratVid";
-            this.bt_searchratVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_searchratVid.TabIndex = 4;
-            this.bt_searchratVid.Text = "Search";
-            this.bt_searchratVid.UseVisualStyleBackColor = true;
-            this.bt_searchratVid.Click += new System.EventHandler(this.bt_searchratVid_Click);
-            // 
-            // bt_rateVid
-            // 
-            this.bt_rateVid.Location = new System.Drawing.Point(210, 266);
-            this.bt_rateVid.Name = "bt_rateVid";
-            this.bt_rateVid.Size = new System.Drawing.Size(75, 23);
-            this.bt_rateVid.TabIndex = 5;
-            this.bt_rateVid.Text = "Rate";
-            this.bt_rateVid.UseVisualStyleBackColor = true;
-            this.bt_rateVid.Visible = false;
-            this.bt_rateVid.Click += new System.EventHandler(this.bt_rateVid_Click);
-            // 
-            // lb_vidRating
-            // 
-            this.lb_vidRating.AutoSize = true;
-            this.lb_vidRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_vidRating.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lb_vidRating.Location = new System.Drawing.Point(31, 155);
-            this.lb_vidRating.Name = "lb_vidRating";
-            this.lb_vidRating.Size = new System.Drawing.Size(0, 25);
-            this.lb_vidRating.TabIndex = 6;
             // 
             // clb_rateVid
             // 
@@ -3191,6 +3096,76 @@
             this.clb_rateVid.TabIndex = 7;
             this.clb_rateVid.Visible = false;
             // 
+            // lb_vidRating
+            // 
+            this.lb_vidRating.AutoSize = true;
+            this.lb_vidRating.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_vidRating.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_vidRating.Location = new System.Drawing.Point(31, 155);
+            this.lb_vidRating.Name = "lb_vidRating";
+            this.lb_vidRating.Size = new System.Drawing.Size(0, 25);
+            this.lb_vidRating.TabIndex = 6;
+            // 
+            // bt_rateVid
+            // 
+            this.bt_rateVid.Location = new System.Drawing.Point(210, 266);
+            this.bt_rateVid.Name = "bt_rateVid";
+            this.bt_rateVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_rateVid.TabIndex = 5;
+            this.bt_rateVid.Text = "Rate";
+            this.bt_rateVid.UseVisualStyleBackColor = true;
+            this.bt_rateVid.Visible = false;
+            this.bt_rateVid.Click += new System.EventHandler(this.bt_rateVid_Click);
+            // 
+            // bt_searchratVid
+            // 
+            this.bt_searchratVid.Location = new System.Drawing.Point(319, 113);
+            this.bt_searchratVid.Name = "bt_searchratVid";
+            this.bt_searchratVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_searchratVid.TabIndex = 4;
+            this.bt_searchratVid.Text = "Search";
+            this.bt_searchratVid.UseVisualStyleBackColor = true;
+            this.bt_searchratVid.Click += new System.EventHandler(this.bt_searchratVid_Click);
+            // 
+            // bt_backratiVid
+            // 
+            this.bt_backratiVid.Location = new System.Drawing.Point(24, 362);
+            this.bt_backratiVid.Name = "bt_backratiVid";
+            this.bt_backratiVid.Size = new System.Drawing.Size(75, 23);
+            this.bt_backratiVid.TabIndex = 3;
+            this.bt_backratiVid.Text = "Back";
+            this.bt_backratiVid.UseVisualStyleBackColor = true;
+            this.bt_backratiVid.Click += new System.EventHandler(this.bt_backratiVid_Click);
+            // 
+            // tb_ratingVid
+            // 
+            this.tb_ratingVid.Location = new System.Drawing.Point(28, 113);
+            this.tb_ratingVid.Name = "tb_ratingVid";
+            this.tb_ratingVid.Size = new System.Drawing.Size(285, 22);
+            this.tb_ratingVid.TabIndex = 2;
+            this.tb_ratingVid.TextChanged += new System.EventHandler(this.tb_ratingVid_TextChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label26.Location = new System.Drawing.Point(28, 84);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(168, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Ingrese nombre del video";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label25.Location = new System.Drawing.Point(34, 25);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(123, 25);
+            this.label25.TabIndex = 0;
+            this.label25.Text = "Rating Video";
+            // 
             // pn_searchVid
             // 
             this.pn_searchVid.Controls.Add(this.bt_backvidSearch);
@@ -3205,42 +3180,15 @@
             this.pn_searchVid.TabIndex = 27;
             this.pn_searchVid.Visible = false;
             // 
-            // label27
+            // bt_backvidSearch
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(27, 21);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(166, 25);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Busqueda Simple";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label28.Location = new System.Drawing.Point(31, 71);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(369, 17);
-            this.label28.TabIndex = 1;
-            this.label28.Text = "Filtros de busqueda (si son multiples, delimitar con coma)";
-            // 
-            // tb_vidSearch
-            // 
-            this.tb_vidSearch.Location = new System.Drawing.Point(34, 101);
-            this.tb_vidSearch.Name = "tb_vidSearch";
-            this.tb_vidSearch.Size = new System.Drawing.Size(293, 22);
-            this.tb_vidSearch.TabIndex = 2;
-            // 
-            // rtb_vidSearch
-            // 
-            this.rtb_vidSearch.Location = new System.Drawing.Point(39, 140);
-            this.rtb_vidSearch.Name = "rtb_vidSearch";
-            this.rtb_vidSearch.ReadOnly = true;
-            this.rtb_vidSearch.Size = new System.Drawing.Size(258, 231);
-            this.rtb_vidSearch.TabIndex = 3;
-            this.rtb_vidSearch.Text = "";
+            this.bt_backvidSearch.Location = new System.Drawing.Point(39, 390);
+            this.bt_backvidSearch.Name = "bt_backvidSearch";
+            this.bt_backvidSearch.Size = new System.Drawing.Size(75, 23);
+            this.bt_backvidSearch.TabIndex = 5;
+            this.bt_backvidSearch.Text = "Back";
+            this.bt_backvidSearch.UseVisualStyleBackColor = true;
+            this.bt_backvidSearch.Click += new System.EventHandler(this.bt_backvidSearch_Click);
             // 
             // bt_searchVid
             // 
@@ -3252,15 +3200,328 @@
             this.bt_searchVid.UseVisualStyleBackColor = true;
             this.bt_searchVid.Click += new System.EventHandler(this.bt_searchVid_Click);
             // 
-            // bt_backvidSearch
+            // rtb_vidSearch
             // 
-            this.bt_backvidSearch.Location = new System.Drawing.Point(39, 390);
-            this.bt_backvidSearch.Name = "bt_backvidSearch";
-            this.bt_backvidSearch.Size = new System.Drawing.Size(75, 23);
-            this.bt_backvidSearch.TabIndex = 5;
-            this.bt_backvidSearch.Text = "Back";
-            this.bt_backvidSearch.UseVisualStyleBackColor = true;
-            this.bt_backvidSearch.Click += new System.EventHandler(this.bt_backvidSearch_Click);
+            this.rtb_vidSearch.Location = new System.Drawing.Point(39, 140);
+            this.rtb_vidSearch.Name = "rtb_vidSearch";
+            this.rtb_vidSearch.ReadOnly = true;
+            this.rtb_vidSearch.Size = new System.Drawing.Size(258, 231);
+            this.rtb_vidSearch.TabIndex = 3;
+            this.rtb_vidSearch.Text = "";
+            // 
+            // tb_vidSearch
+            // 
+            this.tb_vidSearch.Location = new System.Drawing.Point(34, 101);
+            this.tb_vidSearch.Name = "tb_vidSearch";
+            this.tb_vidSearch.Size = new System.Drawing.Size(293, 22);
+            this.tb_vidSearch.TabIndex = 2;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label28.Location = new System.Drawing.Point(31, 71);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(369, 17);
+            this.label28.TabIndex = 1;
+            this.label28.Text = "Filtros de busqueda (si son multiples, delimitar con coma)";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label27.Location = new System.Drawing.Point(27, 21);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(166, 25);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Busqueda Simple";
+            // 
+            // pn_repvideoplaylist
+            // 
+            this.pn_repvideoplaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.pn_repvideoplaylist.Controls.Add(this.bt_backrepvideoplaylist);
+            this.pn_repvideoplaylist.Controls.Add(this.bt_nextvideoplaylist);
+            this.pn_repvideoplaylist.Controls.Add(this.bt_repvideoplaylist);
+            this.pn_repvideoplaylist.Controls.Add(this.WMPrepvideoplaylist);
+            this.pn_repvideoplaylist.Location = new System.Drawing.Point(480, 90);
+            this.pn_repvideoplaylist.Name = "pn_repvideoplaylist";
+            this.pn_repvideoplaylist.Size = new System.Drawing.Size(879, 547);
+            this.pn_repvideoplaylist.TabIndex = 14;
+            this.pn_repvideoplaylist.Visible = false;
+            this.pn_repvideoplaylist.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_repvideoplaylist_Paint);
+            // 
+            // bt_backrepvideoplaylist
+            // 
+            this.bt_backrepvideoplaylist.Location = new System.Drawing.Point(676, 471);
+            this.bt_backrepvideoplaylist.Name = "bt_backrepvideoplaylist";
+            this.bt_backrepvideoplaylist.Size = new System.Drawing.Size(141, 53);
+            this.bt_backrepvideoplaylist.TabIndex = 3;
+            this.bt_backrepvideoplaylist.Text = "Volver";
+            this.bt_backrepvideoplaylist.UseVisualStyleBackColor = true;
+            this.bt_backrepvideoplaylist.Click += new System.EventHandler(this.bt_backrepvideoplaylist_Click);
+            // 
+            // bt_nextvideoplaylist
+            // 
+            this.bt_nextvideoplaylist.Location = new System.Drawing.Point(313, 471);
+            this.bt_nextvideoplaylist.Name = "bt_nextvideoplaylist";
+            this.bt_nextvideoplaylist.Size = new System.Drawing.Size(141, 53);
+            this.bt_nextvideoplaylist.TabIndex = 2;
+            this.bt_nextvideoplaylist.Text = "Siguiente";
+            this.bt_nextvideoplaylist.UseVisualStyleBackColor = true;
+            this.bt_nextvideoplaylist.Click += new System.EventHandler(this.bt_nextvideoplaylist_Click);
+            // 
+            // bt_repvideoplaylist
+            // 
+            this.bt_repvideoplaylist.Location = new System.Drawing.Point(74, 473);
+            this.bt_repvideoplaylist.Name = "bt_repvideoplaylist";
+            this.bt_repvideoplaylist.Size = new System.Drawing.Size(141, 53);
+            this.bt_repvideoplaylist.TabIndex = 1;
+            this.bt_repvideoplaylist.Text = "Reproducir";
+            this.bt_repvideoplaylist.UseVisualStyleBackColor = true;
+            this.bt_repvideoplaylist.Click += new System.EventHandler(this.bt_repvideoplaylist_Click);
+            // 
+            // WMPrepvideoplaylist
+            // 
+            this.WMPrepvideoplaylist.Enabled = true;
+            this.WMPrepvideoplaylist.Location = new System.Drawing.Point(60, 14);
+            this.WMPrepvideoplaylist.Name = "WMPrepvideoplaylist";
+            this.WMPrepvideoplaylist.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPrepvideoplaylist.OcxState")));
+            this.WMPrepvideoplaylist.Size = new System.Drawing.Size(776, 347);
+            this.WMPrepvideoplaylist.TabIndex = 0;
+            // 
+            // pn_askvideoplaylist
+            // 
+            this.pn_askvideoplaylist.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.pn_askvideoplaylist.Controls.Add(this.tb_asknamevideoplaylist);
+            this.pn_askvideoplaylist.Controls.Add(this.bt_nextaskvideoplaylist);
+            this.pn_askvideoplaylist.Controls.Add(this.bt_backaskvideoplaylist);
+            this.pn_askvideoplaylist.Controls.Add(this.rtb_playlistvideosname);
+            this.pn_askvideoplaylist.Location = new System.Drawing.Point(480, 90);
+            this.pn_askvideoplaylist.Name = "pn_askvideoplaylist";
+            this.pn_askvideoplaylist.Size = new System.Drawing.Size(274, 544);
+            this.pn_askvideoplaylist.TabIndex = 14;
+            this.pn_askvideoplaylist.Visible = false;
+            // 
+            // tb_asknamevideoplaylist
+            // 
+            this.tb_asknamevideoplaylist.Location = new System.Drawing.Point(31, 323);
+            this.tb_asknamevideoplaylist.Name = "tb_asknamevideoplaylist";
+            this.tb_asknamevideoplaylist.Size = new System.Drawing.Size(217, 22);
+            this.tb_asknamevideoplaylist.TabIndex = 3;
+            this.tb_asknamevideoplaylist.Text = "Ingrese nombre de la playlist";
+            this.tb_asknamevideoplaylist.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_asknamevideoplaylist.Click += new System.EventHandler(this.tb_asknamevideoplaylist_Click);
+            // 
+            // bt_nextaskvideoplaylist
+            // 
+            this.bt_nextaskvideoplaylist.Location = new System.Drawing.Point(161, 440);
+            this.bt_nextaskvideoplaylist.Name = "bt_nextaskvideoplaylist";
+            this.bt_nextaskvideoplaylist.Size = new System.Drawing.Size(88, 41);
+            this.bt_nextaskvideoplaylist.TabIndex = 2;
+            this.bt_nextaskvideoplaylist.Text = "Siguiente";
+            this.bt_nextaskvideoplaylist.UseVisualStyleBackColor = true;
+            this.bt_nextaskvideoplaylist.Click += new System.EventHandler(this.bt_nextaskvideoplaylist_Click);
+            // 
+            // bt_backaskvideoplaylist
+            // 
+            this.bt_backaskvideoplaylist.Location = new System.Drawing.Point(20, 440);
+            this.bt_backaskvideoplaylist.Name = "bt_backaskvideoplaylist";
+            this.bt_backaskvideoplaylist.Size = new System.Drawing.Size(88, 41);
+            this.bt_backaskvideoplaylist.TabIndex = 1;
+            this.bt_backaskvideoplaylist.Text = "Volver";
+            this.bt_backaskvideoplaylist.UseVisualStyleBackColor = true;
+            this.bt_backaskvideoplaylist.Click += new System.EventHandler(this.bt_backaskvideoplaylist_Click);
+            // 
+            // rtb_playlistvideosname
+            // 
+            this.rtb_playlistvideosname.Location = new System.Drawing.Point(43, 40);
+            this.rtb_playlistvideosname.Name = "rtb_playlistvideosname";
+            this.rtb_playlistvideosname.Size = new System.Drawing.Size(206, 231);
+            this.rtb_playlistvideosname.TabIndex = 0;
+            this.rtb_playlistvideosname.Text = "";
+            // 
+            // pn_asksongplaylist
+            // 
+            this.pn_asksongplaylist.Controls.Add(this.bt_nextaskplsong);
+            this.pn_asksongplaylist.Controls.Add(this.bt_backaskplsong);
+            this.pn_asksongplaylist.Controls.Add(this.tb_askplaylistsong);
+            this.pn_asksongplaylist.Controls.Add(this.rtb_namesongplaylist);
+            this.pn_asksongplaylist.Location = new System.Drawing.Point(480, 90);
+            this.pn_asksongplaylist.Name = "pn_asksongplaylist";
+            this.pn_asksongplaylist.Size = new System.Drawing.Size(274, 541);
+            this.pn_asksongplaylist.TabIndex = 14;
+            this.pn_asksongplaylist.Visible = false;
+            // 
+            // bt_nextaskplsong
+            // 
+            this.bt_nextaskplsong.Location = new System.Drawing.Point(161, 446);
+            this.bt_nextaskplsong.Name = "bt_nextaskplsong";
+            this.bt_nextaskplsong.Size = new System.Drawing.Size(96, 50);
+            this.bt_nextaskplsong.TabIndex = 3;
+            this.bt_nextaskplsong.Text = "Siguiente";
+            this.bt_nextaskplsong.UseVisualStyleBackColor = true;
+            this.bt_nextaskplsong.Click += new System.EventHandler(this.bt_nextaskplsong_Click);
+            // 
+            // bt_backaskplsong
+            // 
+            this.bt_backaskplsong.Location = new System.Drawing.Point(25, 449);
+            this.bt_backaskplsong.Name = "bt_backaskplsong";
+            this.bt_backaskplsong.Size = new System.Drawing.Size(96, 50);
+            this.bt_backaskplsong.TabIndex = 2;
+            this.bt_backaskplsong.Text = "Volver";
+            this.bt_backaskplsong.UseVisualStyleBackColor = true;
+            this.bt_backaskplsong.Click += new System.EventHandler(this.bt_backaskplsong_Click);
+            // 
+            // tb_askplaylistsong
+            // 
+            this.tb_askplaylistsong.Location = new System.Drawing.Point(43, 362);
+            this.tb_askplaylistsong.Name = "tb_askplaylistsong";
+            this.tb_askplaylistsong.Size = new System.Drawing.Size(206, 22);
+            this.tb_askplaylistsong.TabIndex = 1;
+            this.tb_askplaylistsong.Text = "Ingrese nombre de la playlist";
+            this.tb_askplaylistsong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_askplaylistsong.Click += new System.EventHandler(this.tb_askplaylistsong_Click);
+            // 
+            // rtb_namesongplaylist
+            // 
+            this.rtb_namesongplaylist.Location = new System.Drawing.Point(42, 29);
+            this.rtb_namesongplaylist.Name = "rtb_namesongplaylist";
+            this.rtb_namesongplaylist.Size = new System.Drawing.Size(207, 304);
+            this.rtb_namesongplaylist.TabIndex = 0;
+            this.rtb_namesongplaylist.Text = "";
+            // 
+            // pn_repplyalistsong
+            // 
+            this.pn_repplyalistsong.Controls.Add(this.bt_backrepplsong);
+            this.pn_repplyalistsong.Controls.Add(this.bt_repplaylistsong);
+            this.pn_repplyalistsong.Controls.Add(this.WMPrepsongplaylist);
+            this.pn_repplyalistsong.Controls.Add(this.bt_nextsongplaylistsong);
+            this.pn_repplyalistsong.Location = new System.Drawing.Point(480, 90);
+            this.pn_repplyalistsong.Name = "pn_repplyalistsong";
+            this.pn_repplyalistsong.Size = new System.Drawing.Size(901, 549);
+            this.pn_repplyalistsong.TabIndex = 14;
+            this.pn_repplyalistsong.Visible = false;
+            this.pn_repplyalistsong.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_repplyalistsong_Paint);
+            // 
+            // bt_backrepplsong
+            // 
+            this.bt_backrepplsong.Location = new System.Drawing.Point(666, 419);
+            this.bt_backrepplsong.Name = "bt_backrepplsong";
+            this.bt_backrepplsong.Size = new System.Drawing.Size(146, 56);
+            this.bt_backrepplsong.TabIndex = 3;
+            this.bt_backrepplsong.Text = "Volver";
+            this.bt_backrepplsong.UseVisualStyleBackColor = true;
+            this.bt_backrepplsong.Click += new System.EventHandler(this.bt_backrepplsong_Click);
+            // 
+            // bt_nextsongplaylistsong
+            // 
+            this.bt_nextsongplaylistsong.Location = new System.Drawing.Point(328, 424);
+            this.bt_nextsongplaylistsong.Name = "bt_nextsongplaylistsong";
+            this.bt_nextsongplaylistsong.Size = new System.Drawing.Size(146, 56);
+            this.bt_nextsongplaylistsong.TabIndex = 2;
+            this.bt_nextsongplaylistsong.Text = "Siguiente";
+            this.bt_nextsongplaylistsong.UseVisualStyleBackColor = true;
+            this.bt_nextsongplaylistsong.Click += new System.EventHandler(this.bt_nextsongplaylistsong_Click);
+            // 
+            // bt_repplaylistsong
+            // 
+            this.bt_repplaylistsong.Location = new System.Drawing.Point(120, 424);
+            this.bt_repplaylistsong.Name = "bt_repplaylistsong";
+            this.bt_repplaylistsong.Size = new System.Drawing.Size(146, 56);
+            this.bt_repplaylistsong.TabIndex = 1;
+            this.bt_repplaylistsong.Text = "Reproducir";
+            this.bt_repplaylistsong.UseVisualStyleBackColor = true;
+            this.bt_repplaylistsong.Click += new System.EventHandler(this.bt_repplaylistsong_Click);
+            // 
+            // WMPrepsongplaylist
+            // 
+            this.WMPrepsongplaylist.Enabled = true;
+            this.WMPrepsongplaylist.Location = new System.Drawing.Point(116, 34);
+            this.WMPrepsongplaylist.Name = "WMPrepsongplaylist";
+            this.WMPrepsongplaylist.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WMPrepsongplaylist.OcxState")));
+            this.WMPrepsongplaylist.Size = new System.Drawing.Size(690, 315);
+            this.WMPrepsongplaylist.TabIndex = 0;
+            // 
+            // pn_deletesongqueue
+            // 
+            this.pn_deletesongqueue.Controls.Add(this.lb_deletesongcola);
+            this.pn_deletesongqueue.Controls.Add(this.bt_deletesongcola);
+            this.pn_deletesongqueue.Controls.Add(this.bt_backdeletesongcola);
+            this.pn_deletesongqueue.Location = new System.Drawing.Point(480, 90);
+            this.pn_deletesongqueue.Name = "pn_deletesongqueue";
+            this.pn_deletesongqueue.Size = new System.Drawing.Size(246, 361);
+            this.pn_deletesongqueue.TabIndex = 14;
+            this.pn_deletesongqueue.Visible = false;
+            // 
+            // bt_backdeletesongcola
+            // 
+            this.bt_backdeletesongcola.Location = new System.Drawing.Point(23, 275);
+            this.bt_backdeletesongcola.Name = "bt_backdeletesongcola";
+            this.bt_backdeletesongcola.Size = new System.Drawing.Size(97, 52);
+            this.bt_backdeletesongcola.TabIndex = 0;
+            this.bt_backdeletesongcola.Text = "Volver";
+            this.bt_backdeletesongcola.UseVisualStyleBackColor = true;
+            this.bt_backdeletesongcola.Click += new System.EventHandler(this.bt_backdeletesongcola_Click);
+            // 
+            // bt_deletesongcola
+            // 
+            this.bt_deletesongcola.Location = new System.Drawing.Point(139, 273);
+            this.bt_deletesongcola.Name = "bt_deletesongcola";
+            this.bt_deletesongcola.Size = new System.Drawing.Size(97, 52);
+            this.bt_deletesongcola.TabIndex = 1;
+            this.bt_deletesongcola.Text = "Borrar";
+            this.bt_deletesongcola.UseVisualStyleBackColor = true;
+            this.bt_deletesongcola.Click += new System.EventHandler(this.bt_deletesongcola_Click);
+            // 
+            // lb_deletesongcola
+            // 
+            this.lb_deletesongcola.AutoSize = true;
+            this.lb_deletesongcola.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_deletesongcola.Location = new System.Drawing.Point(47, 34);
+            this.lb_deletesongcola.Name = "lb_deletesongcola";
+            this.lb_deletesongcola.Size = new System.Drawing.Size(0, 17);
+            this.lb_deletesongcola.TabIndex = 2;
+            // 
+            // pn_deletevideoqueue
+            // 
+            this.pn_deletevideoqueue.Controls.Add(this.lb_deletevideoqueue);
+            this.pn_deletevideoqueue.Controls.Add(this.bt_deletevideoqueue);
+            this.pn_deletevideoqueue.Controls.Add(this.bt_backdeletevideoqueue);
+            this.pn_deletevideoqueue.Location = new System.Drawing.Point(480, 90);
+            this.pn_deletevideoqueue.Name = "pn_deletevideoqueue";
+            this.pn_deletevideoqueue.Size = new System.Drawing.Size(243, 361);
+            this.pn_deletevideoqueue.TabIndex = 14;
+            this.pn_deletevideoqueue.Visible = false;
+            // 
+            // bt_backdeletevideoqueue
+            // 
+            this.bt_backdeletevideoqueue.Location = new System.Drawing.Point(11, 261);
+            this.bt_backdeletevideoqueue.Name = "bt_backdeletevideoqueue";
+            this.bt_backdeletevideoqueue.Size = new System.Drawing.Size(89, 41);
+            this.bt_backdeletevideoqueue.TabIndex = 0;
+            this.bt_backdeletevideoqueue.Text = "Volver";
+            this.bt_backdeletevideoqueue.UseVisualStyleBackColor = true;
+            this.bt_backdeletevideoqueue.Click += new System.EventHandler(this.bt_backdeletevideoqueue_Click);
+            // 
+            // bt_deletevideoqueue
+            // 
+            this.bt_deletevideoqueue.Location = new System.Drawing.Point(146, 261);
+            this.bt_deletevideoqueue.Name = "bt_deletevideoqueue";
+            this.bt_deletevideoqueue.Size = new System.Drawing.Size(87, 41);
+            this.bt_deletevideoqueue.TabIndex = 1;
+            this.bt_deletevideoqueue.Text = "Borrar";
+            this.bt_deletevideoqueue.UseVisualStyleBackColor = true;
+            this.bt_deletevideoqueue.Click += new System.EventHandler(this.bt_deletevideoqueue_Click);
+            // 
+            // lb_deletevideoqueue
+            // 
+            this.lb_deletevideoqueue.AutoSize = true;
+            this.lb_deletevideoqueue.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lb_deletevideoqueue.Location = new System.Drawing.Point(42, 35);
+            this.lb_deletevideoqueue.Name = "lb_deletevideoqueue";
+            this.lb_deletevideoqueue.Size = new System.Drawing.Size(0, 17);
+            this.lb_deletevideoqueue.TabIndex = 2;
             // 
             // Menu
             // 
@@ -3268,6 +3529,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1798, 710);
+            this.Controls.Add(this.pn_repvideoplaylist);
+            this.Controls.Add(this.pn_repplyalistsong);
+            this.Controls.Add(this.pn_addsongcola);
+            this.Controls.Add(this.pn_addcolavideo);
+            this.Controls.Add(this.pn_repcola);
+            this.Controls.Add(this.pn_repvideocola);
+            this.Controls.Add(this.pn_repvideo);
+            this.Controls.Add(this.pn_repsong);
+            this.Controls.Add(this.pn_playlist);
+            this.Controls.Add(this.pn_playlistvideo);
+            this.Controls.Add(this.pn_tuusu);
+            this.Controls.Add(this.pn_deletevideoqueue);
+            this.Controls.Add(this.pn_deletesongqueue);
+            this.Controls.Add(this.pn_agregarcancion);
+            this.Controls.Add(this.pn_asksongplaylist);
+            this.Controls.Add(this.pn_askvideoplaylist);
             this.Controls.Add(this.pn_searchVid);
             this.Controls.Add(this.pn_vidRating);
             this.Controls.Add(this.pn_vidCrit);
@@ -3275,13 +3552,6 @@
             this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_vidPL);
             this.Controls.Add(this.pn_songPL);
-            this.Controls.Add(this.pn_addsongcola);
-            this.Controls.Add(this.pn_addcolavideo);
-            this.Controls.Add(this.pn_repcola);
-            this.Controls.Add(this.pn_tuusu);
-            this.Controls.Add(this.pn_repvideocola);
-            this.Controls.Add(this.pn_repvideo);
-            this.Controls.Add(this.pn_playlist);
             this.Controls.Add(this.pn_buscvideo);
             this.Controls.Add(this.pn_calivideos);
             this.Controls.Add(this.pn_premio);
@@ -3291,15 +3561,12 @@
             this.Controls.Add(this.pn_opciones);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pn_songrating);
-            this.Controls.Add(this.pn_repsong);
-            this.Controls.Add(this.pn_agregarcancion);
-            this.Controls.Add(this.pn_usuario);
-            this.Controls.Add(this.pn_video);
-            this.Controls.Add(this.pn_settingsong);
             this.Controls.Add(this.pn_addvideo);
-            this.Controls.Add(this.pn_playlistvideo);
             this.Controls.Add(this.pn_rativideo);
             this.Controls.Add(this.pn_premios);
+            this.Controls.Add(this.pn_video);
+            this.Controls.Add(this.pn_settingsong);
+            this.Controls.Add(this.pn_usuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -3365,6 +3632,18 @@
             this.pn_vidRating.PerformLayout();
             this.pn_searchVid.ResumeLayout(false);
             this.pn_searchVid.PerformLayout();
+            this.pn_repvideoplaylist.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WMPrepvideoplaylist)).EndInit();
+            this.pn_askvideoplaylist.ResumeLayout(false);
+            this.pn_askvideoplaylist.PerformLayout();
+            this.pn_asksongplaylist.ResumeLayout(false);
+            this.pn_asksongplaylist.PerformLayout();
+            this.pn_repplyalistsong.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.WMPrepsongplaylist)).EndInit();
+            this.pn_deletesongqueue.ResumeLayout(false);
+            this.pn_deletesongqueue.PerformLayout();
+            this.pn_deletevideoqueue.ResumeLayout(false);
+            this.pn_deletevideoqueue.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3463,16 +3742,10 @@
         private System.Windows.Forms.Button bt_folplayvideo;
         private System.Windows.Forms.Button bt_reproplayvideo;
         private System.Windows.Forms.Panel pn_repvideo;
-        private System.Windows.Forms.Button bt_stopvideo;
-        private System.Windows.Forms.Button bt_pausevideo;
         private System.Windows.Forms.Button bt_playvideo;
-        private System.Windows.Forms.Button bt_downloadvideo;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayervideo;
         private System.Windows.Forms.Panel pn_repsong;
-        private System.Windows.Forms.Button bt_stopsong;
-        private System.Windows.Forms.Button bt_pausesong;
         private System.Windows.Forms.Button bt_playsong;
-        private System.Windows.Forms.Button bt_downloadsong;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayersong;
         private System.Windows.Forms.OpenFileDialog openFilesong;
         private System.Windows.Forms.OpenFileDialog openFileDialogvideo;
@@ -3520,7 +3793,6 @@
         private System.Windows.Forms.Panel pn_repcola;
         private System.Windows.Forms.Button bt_nextcola;
         private System.Windows.Forms.Button bt_Backcola;
-        private System.Windows.Forms.Button bt_pausecola;
         private System.Windows.Forms.Button bt_repcola;
         private AxWMPLib.AxWindowsMediaPlayer axWMP_Repcola;
         private System.Windows.Forms.Panel pn_addsongcola;
@@ -3540,7 +3812,6 @@
         private System.Windows.Forms.Label lb_addvideocola;
         private System.Windows.Forms.Panel pn_repvideocola;
         private System.Windows.Forms.Button bt_backrepvideocola;
-        private System.Windows.Forms.Button bt_pausevideocola;
         private System.Windows.Forms.Button bt_nextvideocola;
         private System.Windows.Forms.Button bt_repvideocola;
         private AxWMPLib.AxWindowsMediaPlayer WMPrepvideocola;
@@ -3612,5 +3883,35 @@
         private System.Windows.Forms.TextBox tb_vidSearch;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button bt_backrepsong;
+        private System.Windows.Forms.Button bt_backrepvideo;
+        private System.Windows.Forms.Panel pn_repvideoplaylist;
+        private System.Windows.Forms.Button bt_backrepvideoplaylist;
+        private System.Windows.Forms.Button bt_nextvideoplaylist;
+        private System.Windows.Forms.Button bt_repvideoplaylist;
+        private AxWMPLib.AxWindowsMediaPlayer WMPrepvideoplaylist;
+        private System.Windows.Forms.Panel pn_askvideoplaylist;
+        private System.Windows.Forms.TextBox tb_asknamevideoplaylist;
+        private System.Windows.Forms.Button bt_nextaskvideoplaylist;
+        private System.Windows.Forms.Button bt_backaskvideoplaylist;
+        private System.Windows.Forms.RichTextBox rtb_playlistvideosname;
+        private System.Windows.Forms.Panel pn_asksongplaylist;
+        private System.Windows.Forms.TextBox tb_askplaylistsong;
+        private System.Windows.Forms.RichTextBox rtb_namesongplaylist;
+        private System.Windows.Forms.Button bt_nextaskplsong;
+        private System.Windows.Forms.Button bt_backaskplsong;
+        private System.Windows.Forms.Panel pn_repplyalistsong;
+        private System.Windows.Forms.Button bt_backrepplsong;
+        private System.Windows.Forms.Button bt_nextsongplaylistsong;
+        private System.Windows.Forms.Button bt_repplaylistsong;
+        private AxWMPLib.AxWindowsMediaPlayer WMPrepsongplaylist;
+        private System.Windows.Forms.Panel pn_deletesongqueue;
+        private System.Windows.Forms.Label lb_deletesongcola;
+        private System.Windows.Forms.Button bt_deletesongcola;
+        private System.Windows.Forms.Button bt_backdeletesongcola;
+        private System.Windows.Forms.Panel pn_deletevideoqueue;
+        private System.Windows.Forms.Label lb_deletevideoqueue;
+        private System.Windows.Forms.Button bt_deletevideoqueue;
+        private System.Windows.Forms.Button bt_backdeletevideoqueue;
     }
 }
