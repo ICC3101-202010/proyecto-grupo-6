@@ -167,6 +167,10 @@ namespace Entrega_3
         {
             Song song = new Song();
             song.AddSong(name, kind, album, artists, awards, composers, route);
+            for (int i = 0; i < artists.Count(); i++)
+            {
+                allWorkers.Add(artists[i]);
+            }
             allSongs.Add(song);
         }
 
@@ -174,6 +178,10 @@ namespace Entrega_3
         {
             Video video = new Video();
             video.AddVideo(name, kind, studio, directors, actors, route);
+            for (int i = 0; i < actors.Count(); i++)
+            {
+                allWorkers.Add(actors[i]);
+            }
             allVideos.Add(video);
         }
 
@@ -543,6 +551,11 @@ namespace Entrega_3
         public List<Video> Getallvideos()
         {
             return allVideos;
+        }
+
+        public List<Workers> GetWorkers()
+        {
+            return allWorkers;
         }
         
     }

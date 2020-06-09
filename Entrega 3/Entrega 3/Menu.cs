@@ -298,8 +298,19 @@ namespace Entrega_3
 
         private void bt_agregarsong_Click(object sender, EventArgs e)
         {
-            pn_Admin.Visible = true;
+            
             pn_agregarcancion.Visible = true;
+            App app = new App();
+            app.OpenApp();
+            if (app.GetServer().GetActive().GetAdmin())
+            {
+                pn_Admin.Visible = false;
+            }
+            else
+            {
+                pn_Admin.Visible = true;
+            }
+            app.CloseApp();
         }
 
         private void bt_backaddsongClick(object sender, EventArgs e)
@@ -411,8 +422,19 @@ namespace Entrega_3
 
         private void bt_agrvideo_Click(object sender, EventArgs e)
         {
-            pn_Admin.Visible = true;
+            
             pn_addvideo.Visible = true;
+            App app = new App();
+            app.OpenApp();
+            if (app.GetServer().GetActive().GetAdmin())
+            {
+                pn_Admin.Visible = false;
+            }
+            else
+            {
+                pn_Admin.Visible = true;
+            }
+            app.CloseApp();
         }
 
         private void bt_backaddvideo_Click(object sender, EventArgs e)
@@ -1997,20 +2019,129 @@ namespace Entrega_3
         private void tb_Admin_Click(object sender, EventArgs e)
         {
             tb_Admin.Text = "";
+            
         }
 
         private void bt_enterAdmin_Click(object sender, EventArgs e)
         {
-            if (tb_Admin.Text == "adminadmin")
+            App app = new App();
+            app.OpenApp();
+            if (app.GetServer().GetActive().GetAdmin() == false)
             {
-                pn_Admin.Visible = false;
-                lb_Admin.Visible = true;
-                tb_Admin.Text = "";
+                if (tb_Admin.Text == "adminadmin")
+                {
+                    pn_Admin.Visible = false;
+                    lb_Admin.Visible = true;
+                    tb_Admin.Text = "";
+                    app.GetServer().GetActive().ToggleAdmin(true);
+                }
+                else
+                {
+                    lb_Admin.Visible = true;
+                }
+            }
+            app.CloseApp();
+        }
+
+        private void bt_Artist_Click(object sender, EventArgs e)
+        {
+            pn_Artists.Visible = true;
+        }
+
+        private void bt_Settings_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            lb_SettUN.Text = "User: "+app.GetServer().GetActive().GetUsername();
+            pn_Settings.Visible = true;
+            cb_AccPriv.Checked = app.GetServer().GetActive().GetPrivacy();
+            app.CloseApp();
+        }
+
+        private void bt_backArtists_Click(object sender, EventArgs e)
+        {
+            pn_Artists.Visible = false;
+        }
+
+        private void bt_followArtists_Click(object sender, EventArgs e)
+        {
+            pn_ArtistEdit.Visible = true;
+            bt_enterArtist.Visible = true;
+            lb_followArtist.Visible = true;
+            tb_searchArtist.Visible = true;
+            tb_searchArtist.Text = "";
+            rtb_Artist.Text = "";
+        }
+
+        private void bt_followedArtists_Click(object sender, EventArgs e)
+        {
+            pn_ArtistEdit.Visible = true;
+            bt_enterArtist.Visible = false;
+            lb_followArtist.Visible = false;
+            tb_searchArtist.Visible = false;
+            tb_searchArtist.Text = "";
+            rtb_Artist.Text = "";
+            App app = new App();
+            app.OpenApp();
+
+            List<Workers> artists = app.GetServer().GetActive().GetFollowedArtists();
+
+            if (artists.Count != 0)
+            {
+                for (int i = 0; i < artists.Count(); i++)
+                {
+                    rtb_Artist.Text = rtb_Artist.Text + "\n" + artists[i].GetName() + " " + artists[i].GetSurname()+ "\n";
+                }
             }
             else
             {
-                lb_Admin.Visible = true;
+                rtb_Artist.Text = "No sigue artistas";
             }
+            app.CloseApp();
+        }
+
+        private void bt_backArtistedit_Click(object sender, EventArgs e)
+        {
+            pn_ArtistEdit.Visible = false;
+            bt_enterArtist.Visible = true;
+        }
+
+        private void bt_enterArtist_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Workers> allWorkers = app.GetWorkers();
+            if (allWorkers.Count() != 0)
+            {
+                for (int i = 0; i < allWorkers.Count(); i++)
+                {
+                    if (tb_searchArtist.Text == allWorkers[i].GetName() + " " + allWorkers[i].GetSurname())
+                    {
+                        app.GetServer().GetActive().FollowArtist(allWorkers[i]);
+                        rtb_Artist.Text = "Se siguio al artista exitosamente";
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                rtb_Artist.Text = "No hay artistas para seguir";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_backsettings_Click(object sender, EventArgs e)
+        {
+            pn_Settings.Visible = false;
+            label33.Visible = false;
+        }
+
+        private void bt_settApply_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            app.GetServer().GetActive().TogglePrivacy(cb_AccPriv.Checked);
+            app.CloseApp();
         }
 
         private void bt_nextaskplsong_Click(object sender, EventArgs e)
