@@ -265,7 +265,7 @@
             this.tb_inName.TabIndex = 1;
             this.tb_inName.Text = "Nombre";
             this.tb_inName.Click += new System.EventHandler(this.tb_inName_Click);
-            this.tb_inName.TextChanged += new System.EventHandler(this.tb_inName_TextChanged);
+           
             // 
             // label1
             // 

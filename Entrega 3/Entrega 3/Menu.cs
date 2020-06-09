@@ -2144,6 +2144,19 @@ namespace Entrega_3
             app.CloseApp();
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
+       
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void bt_nextaskplsong_Click(object sender, EventArgs e)
         {
             pn_asksongplaylist.Visible = false;
