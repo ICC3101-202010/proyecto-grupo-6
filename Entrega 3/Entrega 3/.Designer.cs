@@ -236,6 +236,7 @@
             this.tb_inUsername.TabIndex = 3;
             this.tb_inUsername.Text = "Nombre de Usuario";
             this.tb_inUsername.Click += new System.EventHandler(this.tb_inUsername_Click);
+            this.tb_inUsername.TextChanged += new System.EventHandler(this.tb_inUsername_TextChanged);
             // 
             // tb_inLastName
             // 
@@ -249,6 +250,7 @@
             this.tb_inLastName.TabIndex = 2;
             this.tb_inLastName.Text = "Apellido";
             this.tb_inLastName.Click += new System.EventHandler(this.tb_inLastName_Click);
+            this.tb_inLastName.TextChanged += new System.EventHandler(this.tb_inLastName_TextChanged);
             // 
             // tb_inName
             // 
@@ -330,6 +332,7 @@
             this.tb_Contraseña.TabIndex = 4;
             this.tb_Contraseña.UseSystemPasswordChar = true;
             this.tb_Contraseña.Click += new System.EventHandler(this.tb_Contraseña_Click);
+            this.tb_Contraseña.TextChanged += new System.EventHandler(this.tb_Contraseña_TextChanged);
             // 
             // tb_Usuario
             // 
@@ -341,6 +344,7 @@
             this.tb_Usuario.Size = new System.Drawing.Size(465, 61);
             this.tb_Usuario.TabIndex = 3;
             this.tb_Usuario.Click += new System.EventHandler(this.tb_Usuario_Click);
+            this.tb_Usuario.TextChanged += new System.EventHandler(this.tb_Usuario_TextChanged);
             // 
             // pictureBox2
             // 
