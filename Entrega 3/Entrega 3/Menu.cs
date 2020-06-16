@@ -1410,6 +1410,7 @@ namespace Entrega_3
             label24.Visible = false;
             rtb_critVid.ReadOnly = true;
             bt_searchcritVid.Visible = true;
+            tb_vidCrit.Text="";
         }
 
         private void bt_searchcritVid_Click(object sender, EventArgs e)
