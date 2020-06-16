@@ -351,10 +351,11 @@ namespace Entrega_3
                     worker.SetAge(AgeArtist);
                     worker.SetSex(SexArtist);
                     worker.SetSurname(NameArtist);
-                    Awards award = new Awards();
+                    
                     List<Awards> awardslist = new List<Awards>();
                     if (cb_grammy.Checked == true)
                     {
+                        Awards award = new Awards();
                         NameAward = "Grammy";
                         award.setName(NameAward);
                         award.setCategory(KindSong);
@@ -362,6 +363,7 @@ namespace Entrega_3
                     }
                     if (cb_brit.Checked == true)
                     {
+                        Awards award = new Awards();
                         NameAward2 = "Brit";
                         award.setName(NameAward2);
                         award.setCategory(KindSong);
@@ -855,6 +857,7 @@ namespace Entrega_3
             bt_searchsongPL.Visible = true;
             bt_createsongPL.Visible = false;
             cb_privsongPL.Checked = false;
+            tb_editsongPL.Text = "";
         }
 
         private void bt_searchsongPL_Click(object sender, EventArgs e)
@@ -987,6 +990,7 @@ namespace Entrega_3
             lb_songPLTitle.Text = "Editar Playlist";
             bt_searchsongPL.Visible = false;
             label12.Text = "Escriba el numero de la playlista editar";
+            label12.Visible = true;
             pn_songPL.Visible = true;
             label15.Visible = true;
             bt_addsongPL.Visible = true;
@@ -1303,7 +1307,7 @@ namespace Entrega_3
             App app = new App();
             app.OpenApp();
             List<string> filterList = new List<string>();
-            char[] delimit = { ' ', ',' };
+            char[] delimit = { ',' };
             string[] stringlist = tb_searchSong.Text.Split(delimit);
             foreach (var filter in stringlist)
             {
@@ -1650,7 +1654,7 @@ namespace Entrega_3
             App app = new App();
             app.OpenApp();
             List<string> filterList = new List<string>();
-            char[] delimit = { ' ', ',' };
+            char[] delimit = {  ',' };
             string[] stringlist = tb_vidSearch.Text.Split(delimit);
             foreach (var filter in stringlist)
             {
@@ -2156,6 +2160,8 @@ namespace Entrega_3
         {
             Application.Exit();
         }
+
+        
 
         private void bt_nextaskplsong_Click(object sender, EventArgs e)
         {
