@@ -381,7 +381,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-8, -5);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1855, 90);
             this.panel1.TabIndex = 0;
@@ -390,7 +390,7 @@
             // 
             this.pictureBox1.ImageLocation = "http://icons.iconarchive.com/icons/iconleak/atrous/128/piano-keyboard-icon.png";
             this.pictureBox1.Location = new System.Drawing.Point(24, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(75, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -421,7 +421,7 @@
             this.pn_settingsong.Controls.Add(this.bt_secpremios);
             this.pn_settingsong.Controls.Add(this.bt_agregarsong);
             this.pn_settingsong.Location = new System.Drawing.Point(253, 79);
-            this.pn_settingsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_settingsong.Margin = new System.Windows.Forms.Padding(4);
             this.pn_settingsong.Name = "pn_settingsong";
             this.pn_settingsong.Size = new System.Drawing.Size(220, 560);
             this.pn_settingsong.TabIndex = 2;
@@ -434,7 +434,7 @@
             this.bt_reproducirsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_reproducirsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_reproducirsong.Location = new System.Drawing.Point(0, 430);
-            this.bt_reproducirsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_reproducirsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_reproducirsong.Name = "bt_reproducirsong";
             this.bt_reproducirsong.Size = new System.Drawing.Size(221, 55);
             this.bt_reproducirsong.TabIndex = 7;
@@ -449,7 +449,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.Location = new System.Drawing.Point(40, 492);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(149, 52);
             this.button5.TabIndex = 8;
@@ -464,7 +464,7 @@
             this.bt_playlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_playlist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_playlist.Location = new System.Drawing.Point(0, 354);
-            this.bt_playlist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_playlist.Margin = new System.Windows.Forms.Padding(4);
             this.bt_playlist.Name = "bt_playlist";
             this.bt_playlist.Size = new System.Drawing.Size(216, 52);
             this.bt_playlist.TabIndex = 7;
@@ -479,7 +479,7 @@
             this.bt_calsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_calsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_calsong.Location = new System.Drawing.Point(0, 192);
-            this.bt_calsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_calsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_calsong.Name = "bt_calsong";
             this.bt_calsong.Size = new System.Drawing.Size(236, 52);
             this.bt_calsong.TabIndex = 6;
@@ -494,7 +494,7 @@
             this.bt_buscarsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_buscarsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_buscarsong.Location = new System.Drawing.Point(0, 277);
-            this.bt_buscarsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_buscarsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_buscarsong.Name = "bt_buscarsong";
             this.bt_buscarsong.Size = new System.Drawing.Size(220, 52);
             this.bt_buscarsong.TabIndex = 5;
@@ -509,7 +509,7 @@
             this.bt_secpremios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_secpremios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_secpremios.Location = new System.Drawing.Point(0, 113);
-            this.bt_secpremios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_secpremios.Margin = new System.Windows.Forms.Padding(4);
             this.bt_secpremios.Name = "bt_secpremios";
             this.bt_secpremios.Size = new System.Drawing.Size(236, 52);
             this.bt_secpremios.TabIndex = 4;
@@ -524,7 +524,7 @@
             this.bt_agregarsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_agregarsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_agregarsong.Location = new System.Drawing.Point(0, 41);
-            this.bt_agregarsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_agregarsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_agregarsong.Name = "bt_agregarsong";
             this.bt_agregarsong.Size = new System.Drawing.Size(221, 52);
             this.bt_agregarsong.TabIndex = 3;
@@ -541,7 +541,7 @@
             this.pn_premio.Controls.Add(this.bt_grammy);
             this.pn_premio.Controls.Add(this.label2);
             this.pn_premio.Location = new System.Drawing.Point(473, 79);
-            this.pn_premio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_premio.Margin = new System.Windows.Forms.Padding(4);
             this.pn_premio.Name = "pn_premio";
             this.pn_premio.Size = new System.Drawing.Size(240, 357);
             this.pn_premio.TabIndex = 3;
@@ -554,7 +554,7 @@
             this.bt_backpremios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backpremios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backpremios.Location = new System.Drawing.Point(37, 287);
-            this.bt_backpremios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backpremios.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backpremios.Name = "bt_backpremios";
             this.bt_backpremios.Size = new System.Drawing.Size(149, 52);
             this.bt_backpremios.TabIndex = 9;
@@ -569,7 +569,7 @@
             this.bt_ambos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ambos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ambos.Location = new System.Drawing.Point(4, 204);
-            this.bt_ambos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_ambos.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ambos.Name = "bt_ambos";
             this.bt_ambos.Size = new System.Drawing.Size(236, 52);
             this.bt_ambos.TabIndex = 6;
@@ -584,7 +584,7 @@
             this.bt_brit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_brit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_brit.Location = new System.Drawing.Point(0, 132);
-            this.bt_brit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_brit.Margin = new System.Windows.Forms.Padding(4);
             this.bt_brit.Name = "bt_brit";
             this.bt_brit.Size = new System.Drawing.Size(240, 52);
             this.bt_brit.TabIndex = 5;
@@ -599,7 +599,7 @@
             this.bt_grammy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_grammy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_grammy.Location = new System.Drawing.Point(4, 73);
-            this.bt_grammy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_grammy.Margin = new System.Windows.Forms.Padding(4);
             this.bt_grammy.Name = "bt_grammy";
             this.bt_grammy.Size = new System.Drawing.Size(239, 52);
             this.bt_grammy.TabIndex = 4;
@@ -626,7 +626,7 @@
             this.pn_calisong.Controls.Add(this.bt_ratsong);
             this.pn_calisong.Controls.Add(this.label3);
             this.pn_calisong.Location = new System.Drawing.Point(473, 79);
-            this.pn_calisong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_calisong.Margin = new System.Windows.Forms.Padding(4);
             this.pn_calisong.Name = "pn_calisong";
             this.pn_calisong.Size = new System.Drawing.Size(240, 357);
             this.pn_calisong.TabIndex = 4;
@@ -639,7 +639,7 @@
             this.bt_backcalisong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backcalisong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backcalisong.Location = new System.Drawing.Point(72, 297);
-            this.bt_backcalisong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backcalisong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backcalisong.Name = "bt_backcalisong";
             this.bt_backcalisong.Size = new System.Drawing.Size(100, 41);
             this.bt_backcalisong.TabIndex = 5;
@@ -654,7 +654,7 @@
             this.bt_calisong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_calisong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_calisong.Location = new System.Drawing.Point(4, 188);
-            this.bt_calisong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_calisong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_calisong.Name = "bt_calisong";
             this.bt_calisong.Size = new System.Drawing.Size(236, 52);
             this.bt_calisong.TabIndex = 5;
@@ -669,7 +669,7 @@
             this.bt_ratsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ratsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ratsong.Location = new System.Drawing.Point(0, 96);
-            this.bt_ratsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_ratsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ratsong.Name = "bt_ratsong";
             this.bt_ratsong.Size = new System.Drawing.Size(240, 54);
             this.bt_ratsong.TabIndex = 5;
@@ -696,7 +696,7 @@
             this.pn_bussong.Controls.Add(this.bt_bussim);
             this.pn_bussong.Controls.Add(this.label4);
             this.pn_bussong.Location = new System.Drawing.Point(473, 79);
-            this.pn_bussong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_bussong.Margin = new System.Windows.Forms.Padding(4);
             this.pn_bussong.Name = "pn_bussong";
             this.pn_bussong.Size = new System.Drawing.Size(240, 357);
             this.pn_bussong.TabIndex = 5;
@@ -709,7 +709,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(61, 292);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 39);
             this.button1.TabIndex = 6;
@@ -724,7 +724,7 @@
             this.bt_busmulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_busmulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_busmulti.Location = new System.Drawing.Point(0, 192);
-            this.bt_busmulti.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_busmulti.Margin = new System.Windows.Forms.Padding(4);
             this.bt_busmulti.Name = "bt_busmulti";
             this.bt_busmulti.Size = new System.Drawing.Size(243, 44);
             this.bt_busmulti.TabIndex = 6;
@@ -739,7 +739,7 @@
             this.bt_bussim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_bussim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_bussim.Location = new System.Drawing.Point(0, 96);
-            this.bt_bussim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_bussim.Margin = new System.Windows.Forms.Padding(4);
             this.bt_bussim.Name = "bt_bussim";
             this.bt_bussim.Size = new System.Drawing.Size(243, 52);
             this.bt_bussim.TabIndex = 6;
@@ -769,7 +769,7 @@
             this.pn_playlist.Controls.Add(this.bt_folplay);
             this.pn_playlist.Controls.Add(this.bt_repplay);
             this.pn_playlist.Location = new System.Drawing.Point(473, 79);
-            this.pn_playlist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_playlist.Margin = new System.Windows.Forms.Padding(4);
             this.pn_playlist.Name = "pn_playlist";
             this.pn_playlist.Size = new System.Drawing.Size(240, 357);
             this.pn_playlist.TabIndex = 6;
@@ -782,7 +782,7 @@
             this.bt_backplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backplay.Location = new System.Drawing.Point(72, 325);
-            this.bt_backplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backplay.Name = "bt_backplay";
             this.bt_backplay.Size = new System.Drawing.Size(100, 28);
             this.bt_backplay.TabIndex = 10;
@@ -797,7 +797,7 @@
             this.bt_allplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_allplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_allplay.Location = new System.Drawing.Point(4, 127);
-            this.bt_allplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_allplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_allplay.Name = "bt_allplay";
             this.bt_allplay.Size = new System.Drawing.Size(236, 49);
             this.bt_allplay.TabIndex = 7;
@@ -812,7 +812,7 @@
             this.bt_crearplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_crearplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_crearplay.Location = new System.Drawing.Point(4, 284);
-            this.bt_crearplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_crearplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_crearplay.Name = "bt_crearplay";
             this.bt_crearplay.Size = new System.Drawing.Size(236, 28);
             this.bt_crearplay.TabIndex = 9;
@@ -827,7 +827,7 @@
             this.bt_seguiplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_seguiplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_seguiplay.Location = new System.Drawing.Point(0, 73);
-            this.bt_seguiplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_seguiplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_seguiplay.Name = "bt_seguiplay";
             this.bt_seguiplay.Size = new System.Drawing.Size(236, 28);
             this.bt_seguiplay.TabIndex = 7;
@@ -842,7 +842,7 @@
             this.bt_editarplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_editarplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_editarplay.Location = new System.Drawing.Point(4, 238);
-            this.bt_editarplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_editarplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_editarplay.Name = "bt_editarplay";
             this.bt_editarplay.Size = new System.Drawing.Size(236, 28);
             this.bt_editarplay.TabIndex = 8;
@@ -857,7 +857,7 @@
             this.bt_folplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_folplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_folplay.Location = new System.Drawing.Point(0, 18);
-            this.bt_folplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_folplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_folplay.Name = "bt_folplay";
             this.bt_folplay.Size = new System.Drawing.Size(240, 28);
             this.bt_folplay.TabIndex = 7;
@@ -872,7 +872,7 @@
             this.bt_repplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_repplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_repplay.Location = new System.Drawing.Point(0, 188);
-            this.bt_repplay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_repplay.Margin = new System.Windows.Forms.Padding(4);
             this.bt_repplay.Name = "bt_repplay";
             this.bt_repplay.Size = new System.Drawing.Size(236, 28);
             this.bt_repplay.TabIndex = 7;
@@ -888,7 +888,7 @@
             this.pn_usuario.Controls.Add(this.bt_bususu);
             this.pn_usuario.Controls.Add(this.bt_ussegui);
             this.pn_usuario.Location = new System.Drawing.Point(253, 79);
-            this.pn_usuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_usuario.Margin = new System.Windows.Forms.Padding(4);
             this.pn_usuario.Name = "pn_usuario";
             this.pn_usuario.Size = new System.Drawing.Size(220, 560);
             this.pn_usuario.TabIndex = 7;
@@ -901,7 +901,7 @@
             this.bt_backusu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backusu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backusu.Location = new System.Drawing.Point(43, 496);
-            this.bt_backusu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backusu.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backusu.Name = "bt_backusu";
             this.bt_backusu.Size = new System.Drawing.Size(135, 41);
             this.bt_backusu.TabIndex = 11;
@@ -916,7 +916,7 @@
             this.bt_ustu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ustu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ustu.Location = new System.Drawing.Point(0, 57);
-            this.bt_ustu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_ustu.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ustu.Name = "bt_ustu";
             this.bt_ustu.Size = new System.Drawing.Size(220, 48);
             this.bt_ustu.TabIndex = 8;
@@ -931,7 +931,7 @@
             this.bt_bususu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_bususu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_bususu.Location = new System.Drawing.Point(0, 231);
-            this.bt_bususu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_bususu.Margin = new System.Windows.Forms.Padding(4);
             this.bt_bususu.Name = "bt_bususu";
             this.bt_bususu.Size = new System.Drawing.Size(221, 38);
             this.bt_bususu.TabIndex = 10;
@@ -946,7 +946,7 @@
             this.bt_ussegui.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ussegui.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ussegui.Location = new System.Drawing.Point(0, 135);
-            this.bt_ussegui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_ussegui.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ussegui.Name = "bt_ussegui";
             this.bt_ussegui.Size = new System.Drawing.Size(221, 49);
             this.bt_ussegui.TabIndex = 9;
@@ -965,7 +965,7 @@
             this.pn_tuusu.Controls.Add(this.bt_vaccolasong);
             this.pn_tuusu.Controls.Add(this.bt_vercolvideo);
             this.pn_tuusu.Location = new System.Drawing.Point(473, 79);
-            this.pn_tuusu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_tuusu.Margin = new System.Windows.Forms.Padding(4);
             this.pn_tuusu.Name = "pn_tuusu";
             this.pn_tuusu.Size = new System.Drawing.Size(240, 357);
             this.pn_tuusu.TabIndex = 8;
@@ -978,7 +978,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.Location = new System.Drawing.Point(67, 319);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(100, 42);
             this.button9.TabIndex = 15;
@@ -993,7 +993,7 @@
             this.bt_esccolasong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_esccolasong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_esccolasong.Location = new System.Drawing.Point(0, 21);
-            this.bt_esccolasong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_esccolasong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_esccolasong.Name = "bt_esccolasong";
             this.bt_esccolasong.Size = new System.Drawing.Size(240, 48);
             this.bt_esccolasong.TabIndex = 9;
@@ -1008,7 +1008,7 @@
             this.bt_vaccolavideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_vaccolavideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_vaccolavideo.Location = new System.Drawing.Point(4, 268);
-            this.bt_vaccolavideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_vaccolavideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_vaccolavideo.Name = "bt_vaccolavideo";
             this.bt_vaccolavideo.Size = new System.Drawing.Size(236, 28);
             this.bt_vaccolavideo.TabIndex = 14;
@@ -1023,7 +1023,7 @@
             this.bt_agrcolasong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_agrcolasong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_agrcolasong.Location = new System.Drawing.Point(0, 71);
-            this.bt_agrcolasong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_agrcolasong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_agrcolasong.Name = "bt_agrcolasong";
             this.bt_agrcolasong.Size = new System.Drawing.Size(240, 60);
             this.bt_agrcolasong.TabIndex = 10;
@@ -1038,7 +1038,7 @@
             this.bt_agrecolavideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_agrecolavideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_agrecolavideo.Location = new System.Drawing.Point(0, 219);
-            this.bt_agrecolavideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_agrecolavideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_agrecolavideo.Name = "bt_agrecolavideo";
             this.bt_agrecolavideo.Size = new System.Drawing.Size(240, 50);
             this.bt_agrecolavideo.TabIndex = 13;
@@ -1053,7 +1053,7 @@
             this.bt_vaccolasong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_vaccolasong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_vaccolasong.Location = new System.Drawing.Point(0, 135);
-            this.bt_vaccolasong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_vaccolasong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_vaccolasong.Name = "bt_vaccolasong";
             this.bt_vaccolasong.Size = new System.Drawing.Size(240, 49);
             this.bt_vaccolasong.TabIndex = 11;
@@ -1068,7 +1068,7 @@
             this.bt_vercolvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_vercolvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_vercolvideo.Location = new System.Drawing.Point(0, 187);
-            this.bt_vercolvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_vercolvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_vercolvideo.Name = "bt_vercolvideo";
             this.bt_vercolvideo.Size = new System.Drawing.Size(240, 28);
             this.bt_vercolvideo.TabIndex = 12;
@@ -1086,7 +1086,7 @@
             this.pn_video.Controls.Add(this.bt_calcrivideo);
             this.pn_video.Controls.Add(this.bt_busvideo);
             this.pn_video.Location = new System.Drawing.Point(253, 79);
-            this.pn_video.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_video.Margin = new System.Windows.Forms.Padding(4);
             this.pn_video.Name = "pn_video";
             this.pn_video.Size = new System.Drawing.Size(220, 560);
             this.pn_video.TabIndex = 9;
@@ -1099,7 +1099,7 @@
             this.bt_backvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backvideo.Location = new System.Drawing.Point(69, 510);
-            this.bt_backvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backvideo.Name = "bt_backvideo";
             this.bt_backvideo.Size = new System.Drawing.Size(108, 46);
             this.bt_backvideo.TabIndex = 14;
@@ -1114,7 +1114,7 @@
             this.bt_playlisyvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_playlisyvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_playlisyvideo.Location = new System.Drawing.Point(0, 313);
-            this.bt_playlisyvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_playlisyvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_playlisyvideo.Name = "bt_playlisyvideo";
             this.bt_playlisyvideo.Size = new System.Drawing.Size(221, 44);
             this.bt_playlisyvideo.TabIndex = 15;
@@ -1129,7 +1129,7 @@
             this.bt_vervideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_vervideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_vervideo.Location = new System.Drawing.Point(0, 398);
-            this.bt_vervideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_vervideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_vervideo.Name = "bt_vervideo";
             this.bt_vervideo.Size = new System.Drawing.Size(221, 46);
             this.bt_vervideo.TabIndex = 13;
@@ -1144,7 +1144,7 @@
             this.bt_agrvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_agrvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_agrvideo.Location = new System.Drawing.Point(0, 68);
-            this.bt_agrvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_agrvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_agrvideo.Name = "bt_agrvideo";
             this.bt_agrvideo.Size = new System.Drawing.Size(220, 42);
             this.bt_agrvideo.TabIndex = 10;
@@ -1159,7 +1159,7 @@
             this.bt_calcrivideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_calcrivideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_calcrivideo.Location = new System.Drawing.Point(0, 145);
-            this.bt_calcrivideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_calcrivideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_calcrivideo.Name = "bt_calcrivideo";
             this.bt_calcrivideo.Size = new System.Drawing.Size(220, 55);
             this.bt_calcrivideo.TabIndex = 11;
@@ -1174,7 +1174,7 @@
             this.bt_busvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_busvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_busvideo.Location = new System.Drawing.Point(0, 235);
-            this.bt_busvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_busvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_busvideo.Name = "bt_busvideo";
             this.bt_busvideo.Size = new System.Drawing.Size(220, 46);
             this.bt_busvideo.TabIndex = 12;
@@ -1190,7 +1190,7 @@
             this.pn_calivideos.Controls.Add(this.bt_critvideo);
             this.pn_calivideos.Controls.Add(this.bt_rativideo);
             this.pn_calivideos.Location = new System.Drawing.Point(473, 79);
-            this.pn_calivideos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_calivideos.Margin = new System.Windows.Forms.Padding(4);
             this.pn_calivideos.Name = "pn_calivideos";
             this.pn_calivideos.Size = new System.Drawing.Size(240, 357);
             this.pn_calivideos.TabIndex = 10;
@@ -1202,7 +1202,7 @@
             this.bt_label.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_label.Location = new System.Drawing.Point(8, 11);
-            this.bt_label.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_label.Margin = new System.Windows.Forms.Padding(4);
             this.bt_label.Name = "bt_label";
             this.bt_label.Size = new System.Drawing.Size(221, 68);
             this.bt_label.TabIndex = 14;
@@ -1216,7 +1216,7 @@
             this.bt_backcalivideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backcalivideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backcalivideo.Location = new System.Drawing.Point(64, 263);
-            this.bt_backcalivideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backcalivideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backcalivideo.Name = "bt_backcalivideo";
             this.bt_backcalivideo.Size = new System.Drawing.Size(108, 49);
             this.bt_backcalivideo.TabIndex = 13;
@@ -1231,7 +1231,7 @@
             this.bt_critvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_critvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_critvideo.Location = new System.Drawing.Point(0, 100);
-            this.bt_critvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_critvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_critvideo.Name = "bt_critvideo";
             this.bt_critvideo.Size = new System.Drawing.Size(240, 39);
             this.bt_critvideo.TabIndex = 11;
@@ -1246,7 +1246,7 @@
             this.bt_rativideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_rativideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_rativideo.Location = new System.Drawing.Point(0, 175);
-            this.bt_rativideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_rativideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_rativideo.Name = "bt_rativideo";
             this.bt_rativideo.Size = new System.Drawing.Size(236, 37);
             this.bt_rativideo.TabIndex = 12;
@@ -1262,7 +1262,7 @@
             this.pn_critvideo.Controls.Add(this.bt_vercriticavideo);
             this.pn_critvideo.Controls.Add(this.label5);
             this.pn_critvideo.Location = new System.Drawing.Point(713, 79);
-            this.pn_critvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_critvideo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_critvideo.Name = "pn_critvideo";
             this.pn_critvideo.Size = new System.Drawing.Size(239, 357);
             this.pn_critvideo.TabIndex = 11;
@@ -1275,7 +1275,7 @@
             this.bt_backdarcritvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backdarcritvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backdarcritvideo.Location = new System.Drawing.Point(68, 283);
-            this.bt_backdarcritvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backdarcritvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backdarcritvideo.Name = "bt_backdarcritvideo";
             this.bt_backdarcritvideo.Size = new System.Drawing.Size(100, 55);
             this.bt_backdarcritvideo.TabIndex = 3;
@@ -1290,7 +1290,7 @@
             this.bt_makecritvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_makecritvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_makecritvideo.Location = new System.Drawing.Point(0, 180);
-            this.bt_makecritvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_makecritvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_makecritvideo.Name = "bt_makecritvideo";
             this.bt_makecritvideo.Size = new System.Drawing.Size(227, 49);
             this.bt_makecritvideo.TabIndex = 2;
@@ -1305,7 +1305,7 @@
             this.bt_vercriticavideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_vercriticavideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_vercriticavideo.Location = new System.Drawing.Point(0, 96);
-            this.bt_vercriticavideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_vercriticavideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_vercriticavideo.Name = "bt_vercriticavideo";
             this.bt_vercriticavideo.Size = new System.Drawing.Size(227, 52);
             this.bt_vercriticavideo.TabIndex = 1;
@@ -1332,7 +1332,7 @@
             this.pn_rativideo.Controls.Add(this.label6);
             this.pn_rativideo.Controls.Add(this.bt_verrativideo);
             this.pn_rativideo.Location = new System.Drawing.Point(713, 79);
-            this.pn_rativideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_rativideo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_rativideo.Name = "pn_rativideo";
             this.pn_rativideo.Size = new System.Drawing.Size(189, 357);
             this.pn_rativideo.TabIndex = 12;
@@ -1345,7 +1345,7 @@
             this.bt_backdarrativideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backdarrativideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backdarrativideo.Location = new System.Drawing.Point(36, 300);
-            this.bt_backdarrativideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backdarrativideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backdarrativideo.Name = "bt_backdarrativideo";
             this.bt_backdarrativideo.Size = new System.Drawing.Size(115, 53);
             this.bt_backdarrativideo.TabIndex = 14;
@@ -1360,7 +1360,7 @@
             this.bt_darrativideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_darrativideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_darrativideo.Location = new System.Drawing.Point(0, 175);
-            this.bt_darrativideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_darrativideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_darrativideo.Name = "bt_darrativideo";
             this.bt_darrativideo.Size = new System.Drawing.Size(189, 44);
             this.bt_darrativideo.TabIndex = 15;
@@ -1386,7 +1386,7 @@
             this.bt_verrativideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_verrativideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_verrativideo.Location = new System.Drawing.Point(4, 79);
-            this.bt_verrativideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_verrativideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_verrativideo.Name = "bt_verrativideo";
             this.bt_verrativideo.Size = new System.Drawing.Size(185, 70);
             this.bt_verrativideo.TabIndex = 13;
@@ -1402,7 +1402,7 @@
             this.pn_buscvideo.Controls.Add(this.bt_simvideo);
             this.pn_buscvideo.Controls.Add(this.label7);
             this.pn_buscvideo.Location = new System.Drawing.Point(473, 79);
-            this.pn_buscvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_buscvideo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_buscvideo.Name = "pn_buscvideo";
             this.pn_buscvideo.Size = new System.Drawing.Size(240, 357);
             this.pn_buscvideo.TabIndex = 13;
@@ -1415,7 +1415,7 @@
             this.bt_backfilvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backfilvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backfilvideo.Location = new System.Drawing.Point(63, 282);
-            this.bt_backfilvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backfilvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backfilvideo.Name = "bt_backfilvideo";
             this.bt_backfilvideo.Size = new System.Drawing.Size(124, 50);
             this.bt_backfilvideo.TabIndex = 3;
@@ -1430,7 +1430,7 @@
             this.bt_multivideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_multivideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_multivideo.Location = new System.Drawing.Point(4, 180);
-            this.bt_multivideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_multivideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_multivideo.Name = "bt_multivideo";
             this.bt_multivideo.Size = new System.Drawing.Size(236, 42);
             this.bt_multivideo.TabIndex = 2;
@@ -1445,7 +1445,7 @@
             this.bt_simvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_simvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_simvideo.Location = new System.Drawing.Point(0, 90);
-            this.bt_simvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_simvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_simvideo.Name = "bt_simvideo";
             this.bt_simvideo.Size = new System.Drawing.Size(240, 63);
             this.bt_simvideo.TabIndex = 1;
@@ -1475,7 +1475,7 @@
             this.pn_playlistvideo.Controls.Add(this.bt_folplayvideo);
             this.pn_playlistvideo.Controls.Add(this.bt_reproplayvideo);
             this.pn_playlistvideo.Location = new System.Drawing.Point(473, 79);
-            this.pn_playlistvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_playlistvideo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_playlistvideo.Name = "pn_playlistvideo";
             this.pn_playlistvideo.Size = new System.Drawing.Size(240, 357);
             this.pn_playlistvideo.TabIndex = 14;
@@ -1488,7 +1488,7 @@
             this.bt_backplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backplayvideo.Location = new System.Drawing.Point(72, 325);
-            this.bt_backplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backplayvideo.Name = "bt_backplayvideo";
             this.bt_backplayvideo.Size = new System.Drawing.Size(100, 28);
             this.bt_backplayvideo.TabIndex = 10;
@@ -1503,7 +1503,7 @@
             this.bt_verplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_verplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_verplayvideo.Location = new System.Drawing.Point(4, 127);
-            this.bt_verplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_verplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_verplayvideo.Name = "bt_verplayvideo";
             this.bt_verplayvideo.Size = new System.Drawing.Size(236, 49);
             this.bt_verplayvideo.TabIndex = 7;
@@ -1518,7 +1518,7 @@
             this.bt_crearplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_crearplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_crearplayvideo.Location = new System.Drawing.Point(4, 284);
-            this.bt_crearplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_crearplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_crearplayvideo.Name = "bt_crearplayvideo";
             this.bt_crearplayvideo.Size = new System.Drawing.Size(236, 28);
             this.bt_crearplayvideo.TabIndex = 9;
@@ -1533,7 +1533,7 @@
             this.bt_playseguivideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_playseguivideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_playseguivideo.Location = new System.Drawing.Point(0, 73);
-            this.bt_playseguivideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_playseguivideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_playseguivideo.Name = "bt_playseguivideo";
             this.bt_playseguivideo.Size = new System.Drawing.Size(236, 28);
             this.bt_playseguivideo.TabIndex = 7;
@@ -1548,7 +1548,7 @@
             this.bt_ediplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ediplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_ediplayvideo.Location = new System.Drawing.Point(4, 238);
-            this.bt_ediplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_ediplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_ediplayvideo.Name = "bt_ediplayvideo";
             this.bt_ediplayvideo.Size = new System.Drawing.Size(236, 28);
             this.bt_ediplayvideo.TabIndex = 8;
@@ -1563,7 +1563,7 @@
             this.bt_folplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_folplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_folplayvideo.Location = new System.Drawing.Point(0, 18);
-            this.bt_folplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_folplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_folplayvideo.Name = "bt_folplayvideo";
             this.bt_folplayvideo.Size = new System.Drawing.Size(240, 28);
             this.bt_folplayvideo.TabIndex = 7;
@@ -1578,7 +1578,7 @@
             this.bt_reproplayvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_reproplayvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_reproplayvideo.Location = new System.Drawing.Point(0, 188);
-            this.bt_reproplayvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_reproplayvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_reproplayvideo.Name = "bt_reproplayvideo";
             this.bt_reproplayvideo.Size = new System.Drawing.Size(236, 28);
             this.bt_reproplayvideo.TabIndex = 7;
@@ -1750,7 +1750,7 @@
             this.pn_agregarcancion.Controls.Add(this.tb_sexoartista);
             this.pn_agregarcancion.Controls.Add(this.tb_generosong);
             this.pn_agregarcancion.Location = new System.Drawing.Point(473, 79);
-            this.pn_agregarcancion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_agregarcancion.Margin = new System.Windows.Forms.Padding(4);
             this.pn_agregarcancion.Name = "pn_agregarcancion";
             this.pn_agregarcancion.Size = new System.Drawing.Size(936, 560);
             this.pn_agregarcancion.TabIndex = 17;
@@ -1798,7 +1798,7 @@
             this.bt_backaddsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_backaddsong.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.bt_backaddsong.Location = new System.Drawing.Point(37, 478);
-            this.bt_backaddsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backaddsong.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backaddsong.Name = "bt_backaddsong";
             this.bt_backaddsong.Size = new System.Drawing.Size(115, 43);
             this.bt_backaddsong.TabIndex = 9;
@@ -1811,7 +1811,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.button2.Location = new System.Drawing.Point(673, 473);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(121, 46);
             this.button2.TabIndex = 8;
@@ -1837,7 +1837,7 @@
             this.tb_edadartsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_edadartsong.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_edadartsong.Location = new System.Drawing.Point(45, 379);
-            this.tb_edadartsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_edadartsong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_edadartsong.Name = "tb_edadartsong";
             this.tb_edadartsong.Size = new System.Drawing.Size(140, 26);
             this.tb_edadartsong.TabIndex = 6;
@@ -1862,7 +1862,7 @@
             this.tb_nombresong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_nombresong.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_nombresong.Location = new System.Drawing.Point(44, 69);
-            this.tb_nombresong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_nombresong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nombresong.Name = "tb_nombresong";
             this.tb_nombresong.Size = new System.Drawing.Size(309, 26);
             this.tb_nombresong.TabIndex = 4;
@@ -1874,7 +1874,7 @@
             this.tb_albumsong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_albumsong.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_albumsong.Location = new System.Drawing.Point(44, 187);
-            this.tb_albumsong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_albumsong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_albumsong.Name = "tb_albumsong";
             this.tb_albumsong.Size = new System.Drawing.Size(309, 26);
             this.tb_albumsong.TabIndex = 3;
@@ -1886,7 +1886,7 @@
             this.tb_artistasong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_artistasong.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_artistasong.Location = new System.Drawing.Point(45, 247);
-            this.tb_artistasong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_artistasong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_artistasong.Name = "tb_artistasong";
             this.tb_artistasong.Size = new System.Drawing.Size(321, 26);
             this.tb_artistasong.TabIndex = 2;
@@ -1898,7 +1898,7 @@
             this.tb_sexoartista.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_sexoartista.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_sexoartista.Location = new System.Drawing.Point(45, 313);
-            this.tb_sexoartista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_sexoartista.Margin = new System.Windows.Forms.Padding(4);
             this.tb_sexoartista.Name = "tb_sexoartista";
             this.tb_sexoartista.Size = new System.Drawing.Size(344, 26);
             this.tb_sexoartista.TabIndex = 1;
@@ -1910,7 +1910,7 @@
             this.tb_generosong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_generosong.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_generosong.Location = new System.Drawing.Point(44, 127);
-            this.tb_generosong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_generosong.Margin = new System.Windows.Forms.Padding(4);
             this.tb_generosong.Name = "tb_generosong";
             this.tb_generosong.Size = new System.Drawing.Size(309, 26);
             this.tb_generosong.TabIndex = 0;
@@ -1931,7 +1931,7 @@
             this.pn_addvideo.Controls.Add(this.tb_nombrevideo);
             this.pn_addvideo.Controls.Add(this.label9);
             this.pn_addvideo.Location = new System.Drawing.Point(475, 79);
-            this.pn_addvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_addvideo.Margin = new System.Windows.Forms.Padding(4);
             this.pn_addvideo.Name = "pn_addvideo";
             this.pn_addvideo.Size = new System.Drawing.Size(932, 560);
             this.pn_addvideo.TabIndex = 18;
@@ -1970,7 +1970,7 @@
             this.bt_cargarvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cargarvideo.ForeColor = System.Drawing.Color.Blue;
             this.bt_cargarvideo.Location = new System.Drawing.Point(627, 496);
-            this.bt_cargarvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_cargarvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_cargarvideo.Name = "bt_cargarvideo";
             this.bt_cargarvideo.Size = new System.Drawing.Size(124, 48);
             this.bt_cargarvideo.TabIndex = 8;
@@ -1984,7 +1984,7 @@
             this.bt_backaddvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backaddvideo.ForeColor = System.Drawing.Color.Blue;
             this.bt_backaddvideo.Location = new System.Drawing.Point(39, 496);
-            this.bt_backaddvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_backaddvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_backaddvideo.Name = "bt_backaddvideo";
             this.bt_backaddvideo.Size = new System.Drawing.Size(100, 49);
             this.bt_backaddvideo.TabIndex = 7;
@@ -1997,7 +1997,7 @@
             this.tb_generovideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_generovideo.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_generovideo.Location = new System.Drawing.Point(39, 135);
-            this.tb_generovideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_generovideo.Margin = new System.Windows.Forms.Padding(4);
             this.tb_generovideo.Name = "tb_generovideo";
             this.tb_generovideo.Size = new System.Drawing.Size(269, 26);
             this.tb_generovideo.TabIndex = 6;
@@ -2009,7 +2009,7 @@
             this.tb_canalvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_canalvideo.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_canalvideo.Location = new System.Drawing.Point(37, 194);
-            this.tb_canalvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_canalvideo.Margin = new System.Windows.Forms.Padding(4);
             this.tb_canalvideo.Name = "tb_canalvideo";
             this.tb_canalvideo.Size = new System.Drawing.Size(271, 26);
             this.tb_canalvideo.TabIndex = 5;
@@ -2021,7 +2021,7 @@
             this.tb_direcvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_direcvideo.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_direcvideo.Location = new System.Drawing.Point(39, 256);
-            this.tb_direcvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_direcvideo.Margin = new System.Windows.Forms.Padding(4);
             this.tb_direcvideo.Name = "tb_direcvideo";
             this.tb_direcvideo.Size = new System.Drawing.Size(405, 26);
             this.tb_direcvideo.TabIndex = 4;
@@ -2033,7 +2033,7 @@
             this.tb_sexodirecvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_sexodirecvideo.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_sexodirecvideo.Location = new System.Drawing.Point(39, 313);
-            this.tb_sexodirecvideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_sexodirecvideo.Margin = new System.Windows.Forms.Padding(4);
             this.tb_sexodirecvideo.Name = "tb_sexodirecvideo";
             this.tb_sexodirecvideo.Size = new System.Drawing.Size(427, 26);
             this.tb_sexodirecvideo.TabIndex = 3;
@@ -2045,7 +2045,7 @@
             this.tb_edaddirect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_edaddirect.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_edaddirect.Location = new System.Drawing.Point(37, 379);
-            this.tb_edaddirect.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_edaddirect.Margin = new System.Windows.Forms.Padding(4);
             this.tb_edaddirect.Name = "tb_edaddirect";
             this.tb_edaddirect.Size = new System.Drawing.Size(204, 26);
             this.tb_edaddirect.TabIndex = 2;
@@ -2057,7 +2057,7 @@
             this.tb_nombrevideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_nombrevideo.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tb_nombrevideo.Location = new System.Drawing.Point(39, 80);
-            this.tb_nombrevideo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tb_nombrevideo.Margin = new System.Windows.Forms.Padding(4);
             this.tb_nombrevideo.Name = "tb_nombrevideo";
             this.tb_nombrevideo.Size = new System.Drawing.Size(269, 26);
             this.tb_nombrevideo.TabIndex = 1;
@@ -4056,7 +4056,7 @@
             this.bt_menucancion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_menucancion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_menucancion.Location = new System.Drawing.Point(20, 41);
-            this.bt_menucancion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_menucancion.Margin = new System.Windows.Forms.Padding(4);
             this.bt_menucancion.Name = "bt_menucancion";
             this.bt_menucancion.Size = new System.Drawing.Size(244, 41);
             this.bt_menucancion.TabIndex = 2;
@@ -4071,7 +4071,7 @@
             this.bt_menuusario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_menuusario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_menuusario.Location = new System.Drawing.Point(20, 192);
-            this.bt_menuusario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_menuusario.Margin = new System.Windows.Forms.Padding(4);
             this.bt_menuusario.Name = "bt_menuusario";
             this.bt_menuusario.Size = new System.Drawing.Size(244, 41);
             this.bt_menuusario.TabIndex = 3;
@@ -4086,7 +4086,7 @@
             this.bt_menuvideos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_menuvideos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_menuvideos.Location = new System.Drawing.Point(20, 113);
-            this.bt_menuvideos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_menuvideos.Margin = new System.Windows.Forms.Padding(4);
             this.bt_menuvideos.Name = "bt_menuvideos";
             this.bt_menuvideos.Size = new System.Drawing.Size(244, 41);
             this.bt_menuvideos.TabIndex = 4;
@@ -4098,7 +4098,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Blue;
             this.panel2.Location = new System.Drawing.Point(4, 41);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(15, 41);
             this.panel2.TabIndex = 2;
@@ -4107,7 +4107,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Blue;
             this.panel4.Location = new System.Drawing.Point(4, 113);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(15, 41);
             this.panel4.TabIndex = 4;
@@ -4116,7 +4116,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Blue;
             this.panel3.Location = new System.Drawing.Point(4, 192);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(15, 41);
             this.panel3.TabIndex = 3;
@@ -4128,7 +4128,7 @@
             this.bt_Artist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Artist.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Artist.Location = new System.Drawing.Point(17, 268);
-            this.bt_Artist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bt_Artist.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Artist.Name = "bt_Artist";
             this.bt_Artist.Size = new System.Drawing.Size(244, 41);
             this.bt_Artist.TabIndex = 5;
@@ -4140,7 +4140,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.Blue;
             this.panel5.Location = new System.Drawing.Point(4, 268);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(15, 41);
             this.panel5.TabIndex = 4;
@@ -4166,7 +4166,7 @@
             this.pictureBox2.ImageLocation = "http://icons.iconarchive.com/icons/icons8/windows-8/64/Programming-Delete-Sign-ic" +
     "on.png";
             this.pictureBox2.Location = new System.Drawing.Point(17, 559);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(81, 58);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4178,7 +4178,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Blue;
             this.panel6.Location = new System.Drawing.Point(4, 346);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(15, 41);
             this.panel6.TabIndex = 33;
@@ -4199,7 +4199,7 @@
             this.pn_opciones.Controls.Add(this.bt_menuusario);
             this.pn_opciones.Controls.Add(this.bt_menucancion);
             this.pn_opciones.Location = new System.Drawing.Point(-4, 79);
-            this.pn_opciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_opciones.Margin = new System.Windows.Forms.Padding(4);
             this.pn_opciones.Name = "pn_opciones";
             this.pn_opciones.Size = new System.Drawing.Size(264, 631);
             this.pn_opciones.TabIndex = 1;
@@ -4209,7 +4209,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(107, 559);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(143, 58);
             this.button3.TabIndex = 32;
@@ -4223,6 +4223,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1460, 710);
+            this.Controls.Add(this.pn_vidCrit);
             this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_premios);
             this.Controls.Add(this.pn_premio);
@@ -4237,7 +4238,6 @@
             this.Controls.Add(this.pn_songPL);
             this.Controls.Add(this.pn_repplyalistsong);
             this.Controls.Add(this.pn_searchVid);
-            this.Controls.Add(this.pn_vidCrit);
             this.Controls.Add(this.pn_repvideoplaylist);
             this.Controls.Add(this.pn_asksongplaylist);
             this.Controls.Add(this.pn_playlistvideo);
@@ -4267,7 +4267,7 @@
             this.Controls.Add(this.pn_usuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
