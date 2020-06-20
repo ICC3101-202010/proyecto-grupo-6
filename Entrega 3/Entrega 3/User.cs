@@ -201,5 +201,15 @@ namespace Entrega_3
                 this.VidQueue = newQueue;
             }
         }
+        
+        public List<Multimedia> GetFavSongs()
+        {
+            return FaveSongs;
+        }
+
+        public List<Multimedia> GetFavVids()
+        {
+            return FaveVids;
+        }
     }
 }

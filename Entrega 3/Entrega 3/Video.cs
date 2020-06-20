@@ -57,7 +57,7 @@ namespace Entrega_3
             string review = "";
             for (int i = 0; i < Review.Count(); i++)
             {
-                review += Review[i].GetUser() + ":" + Review[i].GetReview() + Environment.NewLine + Environment.NewLine;
+                review +=  Review[i].GetReview() + Environment.NewLine + Environment.NewLine;
 
             }
             return review;
