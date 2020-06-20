@@ -26,6 +26,8 @@ namespace Entrega_3
         int c = 0;
         int t = 0;
         int s = 0;
+        int h = 0;
+        int v = 0;
         string existe1 = "";
         private string routesong = "";
         private string routevideo = "";
@@ -2344,6 +2346,128 @@ namespace Entrega_3
                 }
             }
 
+            app.CloseApp();
+        }
+
+        private void bt_repfavsongs_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            if (h > app.GetServer().GetActive().GetFavSongs().Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    WMP_repfavsongs.URL = app.GetServer().GetActive().GetFavSongs()[h].GetRoute();
+                    WMP_repfavsongs.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+
+            app.CloseApp();
+        }
+
+        private void bt_nextfavsong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            h += 1;
+            app.OpenApp();
+            if (h <= app.GetServer().GetActive().GetFavSongs().Count())
+            {
+                try
+                {
+                    WMP_repfavsongs.URL = app.GetServer().GetActive().GetFavSongs()[h].GetRoute();
+                    WMP_repfavsongs.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
+            app.CloseApp();
+        }
+
+        private void bt_PlayFavSong_Click(object sender, EventArgs e)
+        {
+            pn_repfavsongs.Visible = true;
+            pn_FavMenu.Visible = false;
+        }
+
+        private void bt_backfavsong_Click(object sender, EventArgs e)
+        {
+            pn_repfavsongs.Visible = false;
+            pn_FavMenu.Visible = true;
+            WMP_repfavsongs.Ctlcontrols.stop();
+        }
+
+        private void bt_backrepfavvideo_Click(object sender, EventArgs e)
+        {
+            pn_FavMenu.Visible = true;
+            pn_repfavvideo.Visible = false;
+            WMP_repfavvideo.Ctlcontrols.stop();
+        }
+
+        private void bt_PlayFavVid_Click(object sender, EventArgs e)
+        {
+            pn_FavMenu.Visible = false;
+            pn_repfavvideo.Visible = true;
+        }
+
+        private void bt_repfavvideo_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            if (v > app.GetServer().GetActive().GetFavVids().Count())
+            {
+
+            }
+            else
+            {
+                try
+                {
+                    WMP_repfavvideo.URL = app.GetServer().GetActive().GetFavVids()[v].GetRoute();
+                    WMP_repfavvideo.Ctlcontrols.play();
+                }
+                catch
+                {
+
+                }
+            }
+
+            app.CloseApp();
+        }
+
+        private void bt_nextfavvideo_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            v += 1;
+            app.OpenApp();
+            if (v <= app.GetServer().GetActive().GetFavVids().Count())
+            {
+                try
+                {
+                    WMP_repfavvideo.URL = app.GetServer().GetActive().GetFavVids()[v].GetRoute();
+                    WMP_repfavvideo.Ctlcontrols.play();
+
+                }
+
+                catch
+                {
+
+                }
+
+
+            }
             app.CloseApp();
         }
 
