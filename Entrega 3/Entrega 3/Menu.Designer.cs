@@ -341,15 +341,15 @@
             this.bt_backfavpanel = new System.Windows.Forms.Button();
             this.lb_Fav = new System.Windows.Forms.Label();
             this.pn_repfavsongs = new System.Windows.Forms.Panel();
-            this.WMP_repfavsongs = new AxWMPLib.AxWindowsMediaPlayer();
-            this.bt_repfavsongs = new System.Windows.Forms.Button();
-            this.bt_nextfavsong = new System.Windows.Forms.Button();
             this.bt_backfavsong = new System.Windows.Forms.Button();
+            this.bt_nextfavsong = new System.Windows.Forms.Button();
+            this.bt_repfavsongs = new System.Windows.Forms.Button();
+            this.WMP_repfavsongs = new AxWMPLib.AxWindowsMediaPlayer();
             this.pn_repfavvideo = new System.Windows.Forms.Panel();
-            this.WMP_repfavvideo = new AxWMPLib.AxWindowsMediaPlayer();
-            this.bt_repfavvideo = new System.Windows.Forms.Button();
-            this.bt_nextfavvideo = new System.Windows.Forms.Button();
             this.bt_backrepfavvideo = new System.Windows.Forms.Button();
+            this.bt_nextfavvideo = new System.Windows.Forms.Button();
+            this.bt_repfavvideo = new System.Windows.Forms.Button();
+            this.WMP_repfavvideo = new AxWMPLib.AxWindowsMediaPlayer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_settingsong.SuspendLayout();
@@ -4285,7 +4285,7 @@
             this.bt_Favs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.bt_Favs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Favs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Favs.Location = new System.Drawing.Point(15, 342);
+            this.bt_Favs.Location = new System.Drawing.Point(15, 341);
             this.bt_Favs.Margin = new System.Windows.Forms.Padding(4);
             this.bt_Favs.Name = "bt_Favs";
             this.bt_Favs.Size = new System.Drawing.Size(244, 41);
@@ -4476,6 +4476,42 @@
             this.pn_repfavsongs.TabIndex = 3;
             this.pn_repfavsongs.Visible = false;
             // 
+            // bt_backfavsong
+            // 
+            this.bt_backfavsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_backfavsong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_backfavsong.Location = new System.Drawing.Point(744, 421);
+            this.bt_backfavsong.Name = "bt_backfavsong";
+            this.bt_backfavsong.Size = new System.Drawing.Size(141, 53);
+            this.bt_backfavsong.TabIndex = 3;
+            this.bt_backfavsong.Text = "BACK";
+            this.bt_backfavsong.UseVisualStyleBackColor = true;
+            this.bt_backfavsong.Click += new System.EventHandler(this.bt_backfavsong_Click);
+            // 
+            // bt_nextfavsong
+            // 
+            this.bt_nextfavsong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_nextfavsong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_nextfavsong.Location = new System.Drawing.Point(273, 424);
+            this.bt_nextfavsong.Name = "bt_nextfavsong";
+            this.bt_nextfavsong.Size = new System.Drawing.Size(141, 53);
+            this.bt_nextfavsong.TabIndex = 2;
+            this.bt_nextfavsong.Text = "NEXT";
+            this.bt_nextfavsong.UseVisualStyleBackColor = true;
+            this.bt_nextfavsong.Click += new System.EventHandler(this.bt_nextfavsong_Click);
+            // 
+            // bt_repfavsongs
+            // 
+            this.bt_repfavsongs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_repfavsongs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_repfavsongs.Location = new System.Drawing.Point(55, 424);
+            this.bt_repfavsongs.Name = "bt_repfavsongs";
+            this.bt_repfavsongs.Size = new System.Drawing.Size(141, 53);
+            this.bt_repfavsongs.TabIndex = 1;
+            this.bt_repfavsongs.Text = "PLAY";
+            this.bt_repfavsongs.UseVisualStyleBackColor = true;
+            this.bt_repfavsongs.Click += new System.EventHandler(this.bt_repfavsongs_Click);
+            // 
             // WMP_repfavsongs
             // 
             this.WMP_repfavsongs.Enabled = true;
@@ -4485,36 +4521,6 @@
             this.WMP_repfavsongs.Size = new System.Drawing.Size(537, 281);
             this.WMP_repfavsongs.TabIndex = 0;
             // 
-            // bt_repfavsongs
-            // 
-            this.bt_repfavsongs.Location = new System.Drawing.Point(55, 424);
-            this.bt_repfavsongs.Name = "bt_repfavsongs";
-            this.bt_repfavsongs.Size = new System.Drawing.Size(141, 53);
-            this.bt_repfavsongs.TabIndex = 1;
-            this.bt_repfavsongs.Text = "PLAY";
-            this.bt_repfavsongs.UseVisualStyleBackColor = true;
-            this.bt_repfavsongs.Click += new System.EventHandler(this.bt_repfavsongs_Click);
-            // 
-            // bt_nextfavsong
-            // 
-            this.bt_nextfavsong.Location = new System.Drawing.Point(273, 424);
-            this.bt_nextfavsong.Name = "bt_nextfavsong";
-            this.bt_nextfavsong.Size = new System.Drawing.Size(141, 53);
-            this.bt_nextfavsong.TabIndex = 2;
-            this.bt_nextfavsong.Text = "NEXT";
-            this.bt_nextfavsong.UseVisualStyleBackColor = true;
-            this.bt_nextfavsong.Click += new System.EventHandler(this.bt_nextfavsong_Click);
-            // 
-            // bt_backfavsong
-            // 
-            this.bt_backfavsong.Location = new System.Drawing.Point(744, 421);
-            this.bt_backfavsong.Name = "bt_backfavsong";
-            this.bt_backfavsong.Size = new System.Drawing.Size(141, 53);
-            this.bt_backfavsong.TabIndex = 3;
-            this.bt_backfavsong.Text = "BACK";
-            this.bt_backfavsong.UseVisualStyleBackColor = true;
-            this.bt_backfavsong.Click += new System.EventHandler(this.bt_backfavsong_Click);
-            // 
             // pn_repfavvideo
             // 
             this.pn_repfavvideo.Controls.Add(this.bt_backrepfavvideo);
@@ -4523,9 +4529,45 @@
             this.pn_repfavvideo.Controls.Add(this.WMP_repfavvideo);
             this.pn_repfavvideo.Location = new System.Drawing.Point(480, 90);
             this.pn_repfavvideo.Name = "pn_repfavvideo";
-            this.pn_repfavvideo.Size = new System.Drawing.Size(936, 534);
+            this.pn_repfavvideo.Size = new System.Drawing.Size(936, 620);
             this.pn_repfavvideo.TabIndex = 3;
             this.pn_repfavvideo.Visible = false;
+            // 
+            // bt_backrepfavvideo
+            // 
+            this.bt_backrepfavvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_backrepfavvideo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_backrepfavvideo.Location = new System.Drawing.Point(716, 519);
+            this.bt_backrepfavvideo.Name = "bt_backrepfavvideo";
+            this.bt_backrepfavvideo.Size = new System.Drawing.Size(152, 56);
+            this.bt_backrepfavvideo.TabIndex = 3;
+            this.bt_backrepfavvideo.Text = "BACK";
+            this.bt_backrepfavvideo.UseVisualStyleBackColor = true;
+            this.bt_backrepfavvideo.Click += new System.EventHandler(this.bt_backrepfavvideo_Click);
+            // 
+            // bt_nextfavvideo
+            // 
+            this.bt_nextfavvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_nextfavvideo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_nextfavvideo.Location = new System.Drawing.Point(309, 522);
+            this.bt_nextfavvideo.Name = "bt_nextfavvideo";
+            this.bt_nextfavvideo.Size = new System.Drawing.Size(152, 56);
+            this.bt_nextfavvideo.TabIndex = 2;
+            this.bt_nextfavvideo.Text = "NEXT";
+            this.bt_nextfavvideo.UseVisualStyleBackColor = true;
+            this.bt_nextfavvideo.Click += new System.EventHandler(this.bt_nextfavvideo_Click);
+            // 
+            // bt_repfavvideo
+            // 
+            this.bt_repfavvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_repfavvideo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_repfavvideo.Location = new System.Drawing.Point(67, 523);
+            this.bt_repfavvideo.Name = "bt_repfavvideo";
+            this.bt_repfavvideo.Size = new System.Drawing.Size(152, 56);
+            this.bt_repfavvideo.TabIndex = 1;
+            this.bt_repfavvideo.Text = "PLAY";
+            this.bt_repfavvideo.UseVisualStyleBackColor = true;
+            this.bt_repfavvideo.Click += new System.EventHandler(this.bt_repfavvideo_Click);
             // 
             // WMP_repfavvideo
             // 
@@ -4536,42 +4578,13 @@
             this.WMP_repfavvideo.Size = new System.Drawing.Size(588, 340);
             this.WMP_repfavvideo.TabIndex = 0;
             // 
-            // bt_repfavvideo
-            // 
-            this.bt_repfavvideo.Location = new System.Drawing.Point(67, 442);
-            this.bt_repfavvideo.Name = "bt_repfavvideo";
-            this.bt_repfavvideo.Size = new System.Drawing.Size(152, 56);
-            this.bt_repfavvideo.TabIndex = 1;
-            this.bt_repfavvideo.Text = "PLAY";
-            this.bt_repfavvideo.UseVisualStyleBackColor = true;
-            this.bt_repfavvideo.Click += new System.EventHandler(this.bt_repfavvideo_Click);
-            // 
-            // bt_nextfavvideo
-            // 
-            this.bt_nextfavvideo.Location = new System.Drawing.Point(309, 441);
-            this.bt_nextfavvideo.Name = "bt_nextfavvideo";
-            this.bt_nextfavvideo.Size = new System.Drawing.Size(152, 56);
-            this.bt_nextfavvideo.TabIndex = 2;
-            this.bt_nextfavvideo.Text = "NEXT";
-            this.bt_nextfavvideo.UseVisualStyleBackColor = true;
-            this.bt_nextfavvideo.Click += new System.EventHandler(this.bt_nextfavvideo_Click);
-            // 
-            // bt_backrepfavvideo
-            // 
-            this.bt_backrepfavvideo.Location = new System.Drawing.Point(716, 438);
-            this.bt_backrepfavvideo.Name = "bt_backrepfavvideo";
-            this.bt_backrepfavvideo.Size = new System.Drawing.Size(152, 56);
-            this.bt_backrepfavvideo.TabIndex = 3;
-            this.bt_backrepfavvideo.Text = "BACK";
-            this.bt_backrepfavvideo.UseVisualStyleBackColor = true;
-            this.bt_backrepfavvideo.Click += new System.EventHandler(this.bt_backrepfavvideo_Click);
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1460, 710);
+            this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_repfavvideo);
             this.Controls.Add(this.pn_repfavsongs);
             this.Controls.Add(this.pn_repcola);
@@ -4579,7 +4592,6 @@
             this.Controls.Add(this.pn_FavMenu);
             this.Controls.Add(this.pn_ArtistEdit);
             this.Controls.Add(this.pn_vidCrit);
-            this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_premios);
             this.Controls.Add(this.pn_premio);
             this.Controls.Add(this.pn_rativideo);
