@@ -328,6 +328,8 @@ namespace Entrega_3
         
         private void bt_cargarsong_Click(object sender, EventArgs e)
         {
+            App app = new App();
+            app.OpenApp();
             if (tb_albumsong.Text == "" || tb_artistasong.Text == "" || tb_edadartsong.Text == "" || tb_generosong.Text == "" || tb_nombresong.Text == "" || tb_sexoartista.Text == "")
             {
                 lb_datossong.Visible = true;
@@ -335,10 +337,10 @@ namespace Entrega_3
             }
             else
             {
-
+                string[] artist = tb_artistasong.Text.Split(' ');
                 if (openFilesong.ShowDialog() == DialogResult.OK)
                 {
-                    App app = new App();
+                    
                     routesong = openFilesong.FileName;
                     NameSong = tb_nombresong.Text;
                     KindSong = tb_generosong.Text;
@@ -347,10 +349,17 @@ namespace Entrega_3
                     SexArtist = tb_sexoartista.Text;
                     AlbumSong = tb_albumsong.Text;
                     Workers worker = new Workers();
-                    worker.SetName(NameArtist);
+                    worker.SetName(artist[0]);
                     worker.SetAge(AgeArtist);
                     worker.SetSex(SexArtist);
-                    worker.SetSurname(NameArtist);
+                    if (artist.Count() > 1)
+                    {
+                        worker.SetSurname(artist[1]);
+                    }
+                    else
+                    {
+                        worker.SetSurname("");
+                    }
                     
                     List<Awards> awardslist = new List<Awards>();
                     if (cb_grammy.Checked == true)
@@ -376,7 +385,7 @@ namespace Entrega_3
                     List<Workers> workerlist = new List<Workers>();
                     workerlist.Add(worker);
 
-                    app.OpenApp();
+                    
                     app.AddSong(NameSong, KindSong, AlbumSong, workerlist, awardslist, workerlist, routesong);
                     app.CloseApp();
 
@@ -455,6 +464,8 @@ namespace Entrega_3
         private void bt_cargarvideo_Click(object sender, EventArgs e)
         {
             App app = new App();
+            app.OpenApp();
+            string[] artist= tb_direcvideo.Text.Split(' ');
             if (tb_nombrevideo.Text == "" || tb_generovideo.Text == "" || tb_direcvideo.Text == "" || tb_canalvideo.Text == "" || tb_sexodirecvideo.Text == "" || tb_edaddirect.Text == "")
             {
                 lb_datavideo.Visible = true;
@@ -471,13 +482,20 @@ namespace Entrega_3
                     SexDirector = tb_sexodirecvideo.Text;
                     StudioVideo= tb_canalvideo.Text;
                     Workers worker = new Workers();
-                    worker.SetName(NameDirector);
+                    worker.SetName(artist[0]);
                     worker.SetAge(AgeDirector);
                     worker.SetSex(SexDirector);
-                    worker.SetSurname(NameDirector);
+                    if (artist.Count() > 1)
+                    {
+                        worker.SetSurname(artist[1]);
+                    }
+                    else
+                    {
+                        worker.SetSurname("");
+                    }
                     List<Workers> workerlist = new List<Workers>();
                     workerlist.Add(worker);
-                    app.OpenApp();
+                    
                     app.AddVid(NameVideo,KindVideo,StudioVideo,workerlist,workerlist,routevideo);
                     app.CloseApp();
 
@@ -1449,9 +1467,9 @@ namespace Entrega_3
                 string title = tb_critTitle.Text;
                 rtb_critVid.ReadOnly = false;
                 string comment = rtb_critVid.Text;
-                userReview.SetReview(title, comment);
+                userReview.SetReview(title, comment, app.GetServer().GetActive().GetUsername());
                 review.Add(userReview);
-                app.ReviewVid(app.GetServer().GetActive().GetUsername(), review);
+                app.ReviewVid(name, review);
             }
             else
             {
@@ -1460,7 +1478,7 @@ namespace Entrega_3
                 string title = tb_critTitle.Text;
                 rtb_critVid.ReadOnly = false;
                 string comment = rtb_critVid.Text;
-                userReview.SetReview(title, comment);
+                userReview.SetReview(title, comment, app.GetServer().GetActive().GetUsername());
                 review.Add(userReview);
                 app.ReviewVid(name, review);
             }
@@ -1485,6 +1503,7 @@ namespace Entrega_3
 
         private void bt_vercriticavideo_Click(object sender, EventArgs e)
         {
+            bt_commcritVid.Visible = false;
             pn_vidCrit.Visible = true;
             rtb_critVid.Text = "";
             label24.Visible = false;
@@ -2071,6 +2090,7 @@ namespace Entrega_3
         private void bt_followArtists_Click(object sender, EventArgs e)
         {
             pn_ArtistEdit.Visible = true;
+            label35.Visible = false;
             bt_enterArtist.Visible = true;
             lb_followArtist.Visible = true;
             tb_searchArtist.Visible = true;
@@ -2084,6 +2104,8 @@ namespace Entrega_3
             bt_enterArtist.Visible = false;
             lb_followArtist.Visible = false;
             tb_searchArtist.Visible = false;
+            label35.Visible = true;
+            label35.Text = "ARTISTAS SEGUIDOS";
             tb_searchArtist.Text = "";
             rtb_Artist.Text = "";
             App app = new App();
@@ -2095,7 +2117,7 @@ namespace Entrega_3
             {
                 for (int i = 0; i < artists.Count(); i++)
                 {
-                    rtb_Artist.Text = rtb_Artist.Text + "\n" + artists[i].GetName() + " " + artists[i].GetSurname()+ "\n";
+                    rtb_Artist.Text = rtb_Artist.Text + "\n"+ (i + 1) + ". " + artists[i].GetName() + " " + artists[i].GetSurname()+ "\n";
                 }
             }
             else
@@ -2109,6 +2131,7 @@ namespace Entrega_3
         {
             pn_ArtistEdit.Visible = false;
             bt_enterArtist.Visible = true;
+            label35.Visible = false;
         }
 
         private void bt_enterArtist_Click(object sender, EventArgs e)
@@ -2116,15 +2139,28 @@ namespace Entrega_3
             App app = new App();
             app.OpenApp();
             List<Workers> allWorkers = app.GetWorkers();
+            string[] artist = tb_searchArtist.Text.Split(' ');
             if (allWorkers.Count() != 0)
             {
                 for (int i = 0; i < allWorkers.Count(); i++)
                 {
-                    if (tb_searchArtist.Text == allWorkers[i].GetName() + " " + allWorkers[i].GetSurname())
+                    if (artist.Count() > 1)
                     {
-                        app.GetServer().GetActive().FollowArtist(allWorkers[i]);
-                        rtb_Artist.Text = "Se siguio al artista exitosamente";
-                        break;
+                        if (artist[0] == allWorkers[i].GetName() && artist[1] == allWorkers[i].GetSurname())
+                        {
+                            app.GetServer().GetActive().FollowArtist(allWorkers[i]);
+                            rtb_Artist.Text = "Se siguio al artista exitosamente";
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        if (artist[0] == allWorkers[i].GetName())
+                        {
+                            app.GetServer().GetActive().FollowArtist(allWorkers[i]);
+                            rtb_Artist.Text = "Se siguio al artista exitosamente";
+                            break;
+                        }
                     }
                 }
             }
@@ -2162,7 +2198,154 @@ namespace Entrega_3
             Application.Exit();
         }
 
-        
+        private void bt_SeeAllArt_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            pn_ArtistEdit.Visible = true;
+            bt_enterArtist.Visible = false;
+            label35.Text = "TODOS LOS ARTISTAS";
+            label35.Visible = true;
+            lb_followArtist.Visible = false;
+            tb_searchArtist.Visible = false;
+            tb_searchArtist.Text = "";
+            rtb_Artist.Text = "";
+            List<Workers> allWorkers = app.GetWorkers();
+            for (int i = 0; i < allWorkers.Count(); i++)
+            {
+                rtb_Artist.Text = rtb_Artist.Text + "\n" +(i+1)+". "+ allWorkers[i].GetName() + " " + allWorkers[i].GetSurname();
+            }
+            app.CloseApp();
+        }
+
+        private void bt_Favs_Click(object sender, EventArgs e)
+        {
+            pn_FavMenu.Visible = true;
+        }
+
+        private void bt_BackFav_Click(object sender, EventArgs e)
+        {
+            pn_FavMenu.Visible = false;
+            pn_Fav.Visible = false;
+            tb_Fav.Text = "";
+            lb_Fav.Text = "FAVORITOS";
+            rtb_Fav.Text = "";
+        }
+
+        private void bt_AddFavSong_Click(object sender, EventArgs e)
+        {
+            lb_Fav.Text = "CANCIONES FAVORITAS";
+            label36.Text = "Ingrese nombre de la cancion";
+            rtb_Fav.Text = "";
+            pn_Fav.Visible = true;
+        }
+
+        private void bt_AddFavVid_Click(object sender, EventArgs e)
+        {
+            lb_Fav.Text = "VIDEOS FAVORITOS";
+            label36.Text = "Ingrese nombre del video";
+            rtb_Fav.Text = "";
+            pn_Fav.Visible = true;
+        }
+
+        private void bt_backfavpanel_Click(object sender, EventArgs e)
+        {
+            tb_Fav.Text = "";
+            pn_Fav.Visible = false;
+            lb_Fav.Text = "FAVORITOS";
+            rtb_Fav.Text = "";
+        }
+
+        private void bt_AddFav_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+
+            if (lb_Fav.Text== "CANCIONES FAVORITAS")
+            {
+                if (tb_Fav.Text == "")
+                {
+                    rtb_Fav.Text = "Ingrese un nombre";
+                }
+                else
+                {
+                    List<Song> songs = app.SearchAndPlaySong(new List<string> { tb_Fav.Text });
+                    List<Multimedia> favs = app.GetServer().GetActive().GetFavSongs();
+                    if (songs.Count() != 0)
+                    {
+                        bool check = false;
+                        for (int i = 0; i < favs.Count(); i++)
+                        {
+                            if (songs[0].GetName() == favs[i].GetName())
+                            {
+                                check = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        if (check)
+                        {
+                            rtb_Fav.Text = "La cancion ya esta en favoritos";
+                        }
+                        else
+                        {
+                            app.GetServer().GetActive().AddFavSong(songs[0]);
+                            rtb_Fav.Text = "Se agrego la cancion con exito";
+                        }
+                    }
+                    else
+                    {
+                        rtb_Fav.Text = "No se encontraron canciones con ese nombre";
+                    }
+                }
+            }
+            else
+            {
+                if (tb_Fav.Text == "")
+                {
+                    rtb_Fav.Text = "Ingrese un nombre";
+                }
+                else
+                {
+                    List<Video> vids = app.SearchAndPlayVid(new List<string> { tb_Fav.Text });
+                    List<Multimedia> favs = app.GetServer().GetActive().GetFavVids();
+                    if (vids.Count() != 0)
+                    {
+                        bool check = false;
+                        for (int i = 0; i < favs.Count(); i++)
+                        {
+                            if (vids[0].GetName() == favs[i].GetName())
+                            {
+                                check = true;
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
+                        }
+                        if (check)
+                        {
+                            rtb_Fav.Text = "El video ya esta en favoritos";
+                        }
+                        else
+                        {
+                            app.GetServer().GetActive().AddFavVid(vids[0]);
+                            rtb_Fav.Text = "Se agrego el video con exito";
+                        }
+                    }
+                    else
+                    {
+                        rtb_Fav.Text = "No se encontraron videos con ese nombre";
+                    }
+                }
+            }
+
+            app.CloseApp();
+        }
 
         private void bt_nextaskplsong_Click(object sender, EventArgs e)
         {

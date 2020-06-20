@@ -14,16 +14,18 @@ namespace Entrega_3
     {
         private string Title;
         private string Text;
+        private string user;
 
-        public void SetReview(string Title, string Text)
+        public void SetReview(string Title, string Text, string user)
         {
             this.Title = Title;
             this.Text = Text;
+            this.user = user;
 
         }
         public string GetReview()
         {
-            return (Title + ":" + Text);
+            return (user+":"+"\n"+"Titulo: "+Title + "\n" + Text+"\n");
         }
     }
 

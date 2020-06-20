@@ -323,6 +323,23 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.pn_opciones = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.bt_SeeAllArt = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.bt_Favs = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pn_FavMenu = new System.Windows.Forms.Panel();
+            this.bt_PlayFavSong = new System.Windows.Forms.Button();
+            this.bt_PlayFavVid = new System.Windows.Forms.Button();
+            this.bt_AddFavSong = new System.Windows.Forms.Button();
+            this.bt_AddFavVid = new System.Windows.Forms.Button();
+            this.bt_BackFav = new System.Windows.Forms.Button();
+            this.pn_Fav = new System.Windows.Forms.Panel();
+            this.lb_Fav = new System.Windows.Forms.Label();
+            this.bt_backfavpanel = new System.Windows.Forms.Button();
+            this.bt_AddFav = new System.Windows.Forms.Button();
+            this.tb_Fav = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.rtb_Fav = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_settingsong.SuspendLayout();
@@ -373,6 +390,8 @@
             this.pn_Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pn_opciones.SuspendLayout();
+            this.pn_FavMenu.SuspendLayout();
+            this.pn_Fav.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -3807,6 +3826,7 @@
             // pn_Artists
             // 
             this.pn_Artists.BackColor = System.Drawing.Color.Blue;
+            this.pn_Artists.Controls.Add(this.bt_SeeAllArt);
             this.pn_Artists.Controls.Add(this.bt_backArtists);
             this.pn_Artists.Controls.Add(this.bt_followArtists);
             this.pn_Artists.Controls.Add(this.bt_followedArtists);
@@ -3838,7 +3858,7 @@
             this.bt_followArtists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
             this.bt_followArtists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_followArtists.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_followArtists.Location = new System.Drawing.Point(3, 175);
+            this.bt_followArtists.Location = new System.Drawing.Point(3, 106);
             this.bt_followArtists.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_followArtists.Name = "bt_followArtists";
             this.bt_followArtists.Size = new System.Drawing.Size(195, 68);
@@ -3853,7 +3873,7 @@
             this.bt_followedArtists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
             this.bt_followedArtists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_followedArtists.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_followedArtists.Location = new System.Drawing.Point(3, 60);
+            this.bt_followedArtists.Location = new System.Drawing.Point(3, 19);
             this.bt_followedArtists.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_followedArtists.Name = "bt_followedArtists";
             this.bt_followedArtists.Size = new System.Drawing.Size(195, 68);
@@ -3864,6 +3884,7 @@
             // 
             // pn_ArtistEdit
             // 
+            this.pn_ArtistEdit.Controls.Add(this.label35);
             this.pn_ArtistEdit.Controls.Add(this.rtb_Artist);
             this.pn_ArtistEdit.Controls.Add(this.lb_followArtist);
             this.pn_ArtistEdit.Controls.Add(this.label31);
@@ -4152,7 +4173,7 @@
             this.bt_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Settings.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bt_Settings.Location = new System.Drawing.Point(17, 346);
+            this.bt_Settings.Location = new System.Drawing.Point(16, 410);
             this.bt_Settings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Settings.Name = "bt_Settings";
             this.bt_Settings.Size = new System.Drawing.Size(244, 41);
@@ -4177,7 +4198,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Blue;
-            this.panel6.Location = new System.Drawing.Point(4, 346);
+            this.panel6.Location = new System.Drawing.Point(3, 410);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(15, 41);
@@ -4186,6 +4207,8 @@
             // pn_opciones
             // 
             this.pn_opciones.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pn_opciones.Controls.Add(this.panel7);
+            this.pn_opciones.Controls.Add(this.bt_Favs);
             this.pn_opciones.Controls.Add(this.button3);
             this.pn_opciones.Controls.Add(this.panel6);
             this.pn_opciones.Controls.Add(this.pictureBox2);
@@ -4217,12 +4240,223 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // bt_SeeAllArt
+            // 
+            this.bt_SeeAllArt.FlatAppearance.BorderSize = 0;
+            this.bt_SeeAllArt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_SeeAllArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_SeeAllArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_SeeAllArt.Location = new System.Drawing.Point(3, 190);
+            this.bt_SeeAllArt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_SeeAllArt.Name = "bt_SeeAllArt";
+            this.bt_SeeAllArt.Size = new System.Drawing.Size(195, 68);
+            this.bt_SeeAllArt.TabIndex = 3;
+            this.bt_SeeAllArt.Text = "VER TODOS";
+            this.bt_SeeAllArt.UseVisualStyleBackColor = true;
+            this.bt_SeeAllArt.Click += new System.EventHandler(this.bt_SeeAllArt_Click);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label35.Location = new System.Drawing.Point(50, 94);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(280, 31);
+            this.label35.TabIndex = 6;
+            this.label35.Text = "ARTISTAS SEGUIDOS";
+            this.label35.Visible = false;
+            // 
+            // bt_Favs
+            // 
+            this.bt_Favs.FlatAppearance.BorderSize = 0;
+            this.bt_Favs.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.bt_Favs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Favs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Favs.Location = new System.Drawing.Point(15, 342);
+            this.bt_Favs.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_Favs.Name = "bt_Favs";
+            this.bt_Favs.Size = new System.Drawing.Size(244, 41);
+            this.bt_Favs.TabIndex = 34;
+            this.bt_Favs.Text = "FAVORITOS";
+            this.bt_Favs.UseVisualStyleBackColor = true;
+            this.bt_Favs.Click += new System.EventHandler(this.bt_Favs_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Blue;
+            this.panel7.Location = new System.Drawing.Point(3, 341);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(15, 41);
+            this.panel7.TabIndex = 34;
+            // 
+            // pn_FavMenu
+            // 
+            this.pn_FavMenu.BackColor = System.Drawing.Color.Blue;
+            this.pn_FavMenu.Controls.Add(this.bt_BackFav);
+            this.pn_FavMenu.Controls.Add(this.bt_AddFavVid);
+            this.pn_FavMenu.Controls.Add(this.bt_AddFavSong);
+            this.pn_FavMenu.Controls.Add(this.bt_PlayFavVid);
+            this.pn_FavMenu.Controls.Add(this.bt_PlayFavSong);
+            this.pn_FavMenu.Location = new System.Drawing.Point(258, 80);
+            this.pn_FavMenu.Name = "pn_FavMenu";
+            this.pn_FavMenu.Size = new System.Drawing.Size(200, 419);
+            this.pn_FavMenu.TabIndex = 32;
+            this.pn_FavMenu.Visible = false;
+            // 
+            // bt_PlayFavSong
+            // 
+            this.bt_PlayFavSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_PlayFavSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_PlayFavSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_PlayFavSong.Location = new System.Drawing.Point(4, 45);
+            this.bt_PlayFavSong.Name = "bt_PlayFavSong";
+            this.bt_PlayFavSong.Size = new System.Drawing.Size(196, 59);
+            this.bt_PlayFavSong.TabIndex = 0;
+            this.bt_PlayFavSong.Text = "ESCUCHAR CANCIONES FAVORITAS";
+            this.bt_PlayFavSong.UseVisualStyleBackColor = true;
+            // 
+            // bt_PlayFavVid
+            // 
+            this.bt_PlayFavVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_PlayFavVid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_PlayFavVid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_PlayFavVid.Location = new System.Drawing.Point(3, 184);
+            this.bt_PlayFavVid.Name = "bt_PlayFavVid";
+            this.bt_PlayFavVid.Size = new System.Drawing.Size(196, 59);
+            this.bt_PlayFavVid.TabIndex = 1;
+            this.bt_PlayFavVid.Text = "VER VIDEOS FAVORITOS";
+            this.bt_PlayFavVid.UseVisualStyleBackColor = true;
+            // 
+            // bt_AddFavSong
+            // 
+            this.bt_AddFavSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_AddFavSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_AddFavSong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_AddFavSong.Location = new System.Drawing.Point(4, 112);
+            this.bt_AddFavSong.Name = "bt_AddFavSong";
+            this.bt_AddFavSong.Size = new System.Drawing.Size(196, 59);
+            this.bt_AddFavSong.TabIndex = 2;
+            this.bt_AddFavSong.Text = "AGREGAR CANCIONES FAVORITAS";
+            this.bt_AddFavSong.UseVisualStyleBackColor = true;
+            this.bt_AddFavSong.Click += new System.EventHandler(this.bt_AddFavSong_Click);
+            // 
+            // bt_AddFavVid
+            // 
+            this.bt_AddFavVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_AddFavVid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_AddFavVid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_AddFavVid.Location = new System.Drawing.Point(4, 258);
+            this.bt_AddFavVid.Name = "bt_AddFavVid";
+            this.bt_AddFavVid.Size = new System.Drawing.Size(196, 59);
+            this.bt_AddFavVid.TabIndex = 3;
+            this.bt_AddFavVid.Text = "AGREGAR VIDEOS FAVORITOS";
+            this.bt_AddFavVid.UseVisualStyleBackColor = true;
+            this.bt_AddFavVid.Click += new System.EventHandler(this.bt_AddFavVid_Click);
+            // 
+            // bt_BackFav
+            // 
+            this.bt_BackFav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_BackFav.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_BackFav.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.bt_BackFav.Location = new System.Drawing.Point(3, 333);
+            this.bt_BackFav.Name = "bt_BackFav";
+            this.bt_BackFav.Size = new System.Drawing.Size(196, 59);
+            this.bt_BackFav.TabIndex = 4;
+            this.bt_BackFav.Text = "BACK";
+            this.bt_BackFav.UseVisualStyleBackColor = true;
+            this.bt_BackFav.Click += new System.EventHandler(this.bt_BackFav_Click);
+            // 
+            // pn_Fav
+            // 
+            this.pn_Fav.Controls.Add(this.rtb_Fav);
+            this.pn_Fav.Controls.Add(this.label36);
+            this.pn_Fav.Controls.Add(this.tb_Fav);
+            this.pn_Fav.Controls.Add(this.bt_AddFav);
+            this.pn_Fav.Controls.Add(this.bt_backfavpanel);
+            this.pn_Fav.Controls.Add(this.lb_Fav);
+            this.pn_Fav.Location = new System.Drawing.Point(466, 79);
+            this.pn_Fav.Name = "pn_Fav";
+            this.pn_Fav.Size = new System.Drawing.Size(596, 441);
+            this.pn_Fav.TabIndex = 33;
+            this.pn_Fav.Visible = false;
+            // 
+            // lb_Fav
+            // 
+            this.lb_Fav.AutoSize = true;
+            this.lb_Fav.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lb_Fav.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Fav.ForeColor = System.Drawing.Color.Aqua;
+            this.lb_Fav.Location = new System.Drawing.Point(17, 17);
+            this.lb_Fav.Name = "lb_Fav";
+            this.lb_Fav.Size = new System.Drawing.Size(153, 31);
+            this.lb_Fav.TabIndex = 0;
+            this.lb_Fav.Text = "FAVORITOS";
+            // 
+            // bt_backfavpanel
+            // 
+            this.bt_backfavpanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_backfavpanel.ForeColor = System.Drawing.Color.Aqua;
+            this.bt_backfavpanel.Location = new System.Drawing.Point(22, 390);
+            this.bt_backfavpanel.Name = "bt_backfavpanel";
+            this.bt_backfavpanel.Size = new System.Drawing.Size(75, 30);
+            this.bt_backfavpanel.TabIndex = 1;
+            this.bt_backfavpanel.Text = "BACK";
+            this.bt_backfavpanel.UseVisualStyleBackColor = true;
+            this.bt_backfavpanel.Click += new System.EventHandler(this.bt_backfavpanel_Click);
+            // 
+            // bt_AddFav
+            // 
+            this.bt_AddFav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_AddFav.ForeColor = System.Drawing.Color.Aqua;
+            this.bt_AddFav.Location = new System.Drawing.Point(351, 110);
+            this.bt_AddFav.Name = "bt_AddFav";
+            this.bt_AddFav.Size = new System.Drawing.Size(75, 30);
+            this.bt_AddFav.TabIndex = 2;
+            this.bt_AddFav.Text = "ADD";
+            this.bt_AddFav.UseVisualStyleBackColor = true;
+            this.bt_AddFav.Click += new System.EventHandler(this.bt_AddFav_Click);
+            // 
+            // tb_Fav
+            // 
+            this.tb_Fav.Location = new System.Drawing.Point(24, 110);
+            this.tb_Fav.Name = "tb_Fav";
+            this.tb_Fav.Size = new System.Drawing.Size(309, 22);
+            this.tb_Fav.TabIndex = 3;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Aqua;
+            this.label36.Location = new System.Drawing.Point(23, 79);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(197, 19);
+            this.label36.TabIndex = 4;
+            this.label36.Text = "Ingrese nombre de la cancion";
+            // 
+            // rtb_Fav
+            // 
+            this.rtb_Fav.Location = new System.Drawing.Point(26, 150);
+            this.rtb_Fav.Name = "rtb_Fav";
+            this.rtb_Fav.ReadOnly = true;
+            this.rtb_Fav.Size = new System.Drawing.Size(295, 219);
+            this.rtb_Fav.TabIndex = 5;
+            this.rtb_Fav.Text = "";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1460, 710);
+            this.Controls.Add(this.pn_Fav);
+            this.Controls.Add(this.pn_FavMenu);
+            this.Controls.Add(this.pn_ArtistEdit);
             this.Controls.Add(this.pn_vidCrit);
             this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_premios);
@@ -4251,7 +4485,6 @@
             this.Controls.Add(this.pn_playlist);
             this.Controls.Add(this.pn_repsong);
             this.Controls.Add(this.pn_Artists);
-            this.Controls.Add(this.pn_ArtistEdit);
             this.Controls.Add(this.pn_addsongcola);
             this.Controls.Add(this.pn_addcolavideo);
             this.Controls.Add(this.pn_repcola);
@@ -4349,6 +4582,9 @@
             this.pn_Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pn_opciones.ResumeLayout(false);
+            this.pn_FavMenu.ResumeLayout(false);
+            this.pn_Fav.ResumeLayout(false);
+            this.pn_Fav.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4649,5 +4885,22 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel pn_opciones;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button bt_SeeAllArt;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button bt_Favs;
+        private System.Windows.Forms.Panel pn_FavMenu;
+        private System.Windows.Forms.Button bt_BackFav;
+        private System.Windows.Forms.Button bt_AddFavVid;
+        private System.Windows.Forms.Button bt_AddFavSong;
+        private System.Windows.Forms.Button bt_PlayFavVid;
+        private System.Windows.Forms.Button bt_PlayFavSong;
+        private System.Windows.Forms.Panel pn_Fav;
+        private System.Windows.Forms.TextBox tb_Fav;
+        private System.Windows.Forms.Button bt_AddFav;
+        private System.Windows.Forms.Button bt_backfavpanel;
+        private System.Windows.Forms.Label lb_Fav;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.RichTextBox rtb_Fav;
     }
 }
