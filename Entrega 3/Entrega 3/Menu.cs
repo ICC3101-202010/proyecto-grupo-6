@@ -57,6 +57,9 @@ namespace Entrega_3
             pn_settingsong.Visible = true;
             pn_video.Visible = false;
             pn_usuario.Visible = false;
+            pn_Artists.Visible = false;
+            pn_FavMenu.Visible = false;
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -114,6 +117,10 @@ namespace Entrega_3
             pn_usuario.Visible = true;
             pn_settingsong.Visible = false;
             pn_video.Visible = false;
+            pn_Artists.Visible = false;
+            pn_FavMenu.Visible = false;
+            
+
         }
 
         private void bt_backusu_Click(object sender, EventArgs e)
@@ -136,6 +143,9 @@ namespace Entrega_3
             pn_video.Visible = true;
             pn_settingsong.Visible = false;
             pn_usuario.Visible = false;
+            pn_Artists.Visible = false;
+            pn_FavMenu.Visible = false;
+           
         }
 
         private void bt_backvideo_Click(object sender, EventArgs e)
@@ -2116,6 +2126,10 @@ namespace Entrega_3
         private void bt_Artist_Click(object sender, EventArgs e)
         {
             pn_Artists.Visible = true;
+            pn_FavMenu.Visible = false;
+            pn_usuario.Visible = false;
+            pn_settingsong.Visible = false;
+            pn_video.Visible = false;
         }
 
         private void bt_Settings_Click(object sender, EventArgs e)
@@ -2126,6 +2140,11 @@ namespace Entrega_3
             pn_Settings.Visible = true;
             cb_AccPriv.Checked = app.GetServer().GetActive().GetPrivacy();
             app.CloseApp();
+            pn_Artists.Visible = false;
+            pn_FavMenu.Visible = false;
+            pn_usuario.Visible = false;
+            pn_settingsong.Visible = false;
+            pn_video.Visible = false;
         }
 
         private void bt_backArtists_Click(object sender, EventArgs e)
@@ -2267,6 +2286,10 @@ namespace Entrega_3
         private void bt_Favs_Click(object sender, EventArgs e)
         {
             pn_FavMenu.Visible = true;
+            pn_Artists.Visible = false;
+            pn_usuario.Visible = false;
+            pn_settingsong.Visible = false;
+            pn_video.Visible = false;
         }
 
         private void bt_BackFav_Click(object sender, EventArgs e)
@@ -2444,7 +2467,7 @@ namespace Entrega_3
         private void bt_PlayFavSong_Click(object sender, EventArgs e)
         {
             pn_repfavsongs.Visible = true;
-            pn_FavMenu.Visible = false;
+            
         }
 
         private void bt_backfavsong_Click(object sender, EventArgs e)
@@ -2463,7 +2486,7 @@ namespace Entrega_3
 
         private void bt_PlayFavVid_Click(object sender, EventArgs e)
         {
-            pn_FavMenu.Visible = false;
+            
             pn_repfavvideo.Visible = true;
         }
 
