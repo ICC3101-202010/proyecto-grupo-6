@@ -350,6 +350,20 @@
             this.bt_nextfavvideo = new System.Windows.Forms.Button();
             this.bt_repfavvideo = new System.Windows.Forms.Button();
             this.WMP_repfavvideo = new AxWMPLib.AxWindowsMediaPlayer();
+            this.bt_critSearchSong = new System.Windows.Forms.Button();
+            this.label37 = new System.Windows.Forms.Label();
+            this.bt_filNameSong = new System.Windows.Forms.Button();
+            this.bt_filArtSong = new System.Windows.Forms.Button();
+            this.bt_filAlbSong = new System.Windows.Forms.Button();
+            this.bt_filGenSong = new System.Windows.Forms.Button();
+            this.bt_filSexSong = new System.Windows.Forms.Button();
+            this.bt_criterioVid = new System.Windows.Forms.Button();
+            this.label38 = new System.Windows.Forms.Label();
+            this.bt_filNomVid = new System.Windows.Forms.Button();
+            this.bt_filArtVid = new System.Windows.Forms.Button();
+            this.bt_filCanVid = new System.Windows.Forms.Button();
+            this.bt_filGenVid = new System.Windows.Forms.Button();
+            this.bt_filSexVid = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pn_settingsong.SuspendLayout();
@@ -724,6 +738,7 @@
             // pn_bussong
             // 
             this.pn_bussong.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pn_bussong.Controls.Add(this.bt_critSearchSong);
             this.pn_bussong.Controls.Add(this.button1);
             this.pn_bussong.Controls.Add(this.bt_busmulti);
             this.pn_bussong.Controls.Add(this.bt_bussim);
@@ -756,7 +771,7 @@
             this.bt_busmulti.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.bt_busmulti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_busmulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_busmulti.Location = new System.Drawing.Point(0, 192);
+            this.bt_busmulti.Location = new System.Drawing.Point(0, 135);
             this.bt_busmulti.Margin = new System.Windows.Forms.Padding(4);
             this.bt_busmulti.Name = "bt_busmulti";
             this.bt_busmulti.Size = new System.Drawing.Size(243, 44);
@@ -771,7 +786,7 @@
             this.bt_bussim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.bt_bussim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_bussim.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_bussim.Location = new System.Drawing.Point(0, 96);
+            this.bt_bussim.Location = new System.Drawing.Point(0, 63);
             this.bt_bussim.Margin = new System.Windows.Forms.Padding(4);
             this.bt_bussim.Name = "bt_bussim";
             this.bt_bussim.Size = new System.Drawing.Size(243, 52);
@@ -1430,6 +1445,7 @@
             // pn_buscvideo
             // 
             this.pn_buscvideo.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.pn_buscvideo.Controls.Add(this.bt_criterioVid);
             this.pn_buscvideo.Controls.Add(this.bt_backfilvideo);
             this.pn_buscvideo.Controls.Add(this.bt_multivideo);
             this.pn_buscvideo.Controls.Add(this.bt_simvideo);
@@ -1462,7 +1478,7 @@
             this.bt_multivideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.bt_multivideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_multivideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_multivideo.Location = new System.Drawing.Point(4, 180);
+            this.bt_multivideo.Location = new System.Drawing.Point(4, 139);
             this.bt_multivideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_multivideo.Name = "bt_multivideo";
             this.bt_multivideo.Size = new System.Drawing.Size(236, 42);
@@ -1477,7 +1493,7 @@
             this.bt_simvideo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
             this.bt_simvideo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_simvideo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_simvideo.Location = new System.Drawing.Point(0, 90);
+            this.bt_simvideo.Location = new System.Drawing.Point(0, 65);
             this.bt_simvideo.Margin = new System.Windows.Forms.Padding(4);
             this.bt_simvideo.Name = "bt_simvideo";
             this.bt_simvideo.Size = new System.Drawing.Size(240, 63);
@@ -2926,6 +2942,12 @@
             // 
             // pn_searchSong
             // 
+            this.pn_searchSong.Controls.Add(this.bt_filSexSong);
+            this.pn_searchSong.Controls.Add(this.bt_filGenSong);
+            this.pn_searchSong.Controls.Add(this.bt_filAlbSong);
+            this.pn_searchSong.Controls.Add(this.bt_filArtSong);
+            this.pn_searchSong.Controls.Add(this.bt_filNameSong);
+            this.pn_searchSong.Controls.Add(this.label37);
             this.pn_searchSong.Controls.Add(this.rtb_searchSong);
             this.pn_searchSong.Controls.Add(this.label19);
             this.pn_searchSong.Controls.Add(this.label18);
@@ -3324,6 +3346,12 @@
             // 
             // pn_searchVid
             // 
+            this.pn_searchVid.Controls.Add(this.bt_filSexVid);
+            this.pn_searchVid.Controls.Add(this.bt_filGenVid);
+            this.pn_searchVid.Controls.Add(this.bt_filCanVid);
+            this.pn_searchVid.Controls.Add(this.bt_filArtVid);
+            this.pn_searchVid.Controls.Add(this.bt_filNomVid);
+            this.pn_searchVid.Controls.Add(this.label38);
             this.pn_searchVid.Controls.Add(this.bt_backvidSearch);
             this.pn_searchVid.Controls.Add(this.bt_searchVid);
             this.pn_searchVid.Controls.Add(this.rtb_vidSearch);
@@ -4578,12 +4606,213 @@
             this.WMP_repfavvideo.Size = new System.Drawing.Size(588, 340);
             this.WMP_repfavvideo.TabIndex = 0;
             // 
+            // bt_critSearchSong
+            // 
+            this.bt_critSearchSong.FlatAppearance.BorderSize = 0;
+            this.bt_critSearchSong.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.bt_critSearchSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_critSearchSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_critSearchSong.Location = new System.Drawing.Point(-1, 205);
+            this.bt_critSearchSong.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_critSearchSong.Name = "bt_critSearchSong";
+            this.bt_critSearchSong.Size = new System.Drawing.Size(243, 44);
+            this.bt_critSearchSong.TabIndex = 7;
+            this.bt_critSearchSong.Text = "POR CRITERIO";
+            this.bt_critSearchSong.UseVisualStyleBackColor = true;
+            this.bt_critSearchSong.Click += new System.EventHandler(this.bt_critSearchSong_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label37.Location = new System.Drawing.Point(45, 90);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(189, 19);
+            this.label37.TabIndex = 6;
+            this.label37.Text = "Criterio: (Presione un boton)";
+            this.label37.Visible = false;
+            // 
+            // bt_filNameSong
+            // 
+            this.bt_filNameSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filNameSong.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filNameSong.Location = new System.Drawing.Point(359, 156);
+            this.bt_filNameSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filNameSong.Name = "bt_filNameSong";
+            this.bt_filNameSong.Size = new System.Drawing.Size(91, 30);
+            this.bt_filNameSong.TabIndex = 7;
+            this.bt_filNameSong.Text = "NOMBRE";
+            this.bt_filNameSong.UseVisualStyleBackColor = true;
+            this.bt_filNameSong.Visible = false;
+            this.bt_filNameSong.Click += new System.EventHandler(this.bt_filNameSong_Click);
+            // 
+            // bt_filArtSong
+            // 
+            this.bt_filArtSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filArtSong.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filArtSong.Location = new System.Drawing.Point(359, 201);
+            this.bt_filArtSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filArtSong.Name = "bt_filArtSong";
+            this.bt_filArtSong.Size = new System.Drawing.Size(91, 30);
+            this.bt_filArtSong.TabIndex = 8;
+            this.bt_filArtSong.Text = "ARTISTA";
+            this.bt_filArtSong.UseVisualStyleBackColor = true;
+            this.bt_filArtSong.Visible = false;
+            this.bt_filArtSong.Click += new System.EventHandler(this.bt_filArtSong_Click);
+            // 
+            // bt_filAlbSong
+            // 
+            this.bt_filAlbSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filAlbSong.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filAlbSong.Location = new System.Drawing.Point(359, 246);
+            this.bt_filAlbSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filAlbSong.Name = "bt_filAlbSong";
+            this.bt_filAlbSong.Size = new System.Drawing.Size(91, 30);
+            this.bt_filAlbSong.TabIndex = 9;
+            this.bt_filAlbSong.Text = "ALBUM";
+            this.bt_filAlbSong.UseVisualStyleBackColor = true;
+            this.bt_filAlbSong.Visible = false;
+            this.bt_filAlbSong.Click += new System.EventHandler(this.bt_filAlbSong_Click);
+            // 
+            // bt_filGenSong
+            // 
+            this.bt_filGenSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filGenSong.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filGenSong.Location = new System.Drawing.Point(359, 292);
+            this.bt_filGenSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filGenSong.Name = "bt_filGenSong";
+            this.bt_filGenSong.Size = new System.Drawing.Size(91, 30);
+            this.bt_filGenSong.TabIndex = 10;
+            this.bt_filGenSong.Text = "GENERO";
+            this.bt_filGenSong.UseVisualStyleBackColor = true;
+            this.bt_filGenSong.Visible = false;
+            this.bt_filGenSong.Click += new System.EventHandler(this.bt_filGenSong_Click);
+            // 
+            // bt_filSexSong
+            // 
+            this.bt_filSexSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filSexSong.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filSexSong.Location = new System.Drawing.Point(359, 340);
+            this.bt_filSexSong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filSexSong.Name = "bt_filSexSong";
+            this.bt_filSexSong.Size = new System.Drawing.Size(91, 30);
+            this.bt_filSexSong.TabIndex = 11;
+            this.bt_filSexSong.Text = "SEXO";
+            this.bt_filSexSong.UseVisualStyleBackColor = true;
+            this.bt_filSexSong.Visible = false;
+            this.bt_filSexSong.Click += new System.EventHandler(this.bt_filSexSong_Click);
+            // 
+            // bt_criterioVid
+            // 
+            this.bt_criterioVid.FlatAppearance.BorderSize = 0;
+            this.bt_criterioVid.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.bt_criterioVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_criterioVid.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_criterioVid.Location = new System.Drawing.Point(2, 201);
+            this.bt_criterioVid.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_criterioVid.Name = "bt_criterioVid";
+            this.bt_criterioVid.Size = new System.Drawing.Size(236, 42);
+            this.bt_criterioVid.TabIndex = 4;
+            this.bt_criterioVid.Text = "POR CRITERIO";
+            this.bt_criterioVid.UseVisualStyleBackColor = true;
+            this.bt_criterioVid.Click += new System.EventHandler(this.bt_criterioVid_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label38.Location = new System.Drawing.Point(39, 114);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(189, 19);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Criterio: (Presione un boton)";
+            this.label38.Visible = false;
+            // 
+            // bt_filNomVid
+            // 
+            this.bt_filNomVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filNomVid.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filNomVid.Location = new System.Drawing.Point(318, 177);
+            this.bt_filNomVid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filNomVid.Name = "bt_filNomVid";
+            this.bt_filNomVid.Size = new System.Drawing.Size(98, 32);
+            this.bt_filNomVid.TabIndex = 7;
+            this.bt_filNomVid.Text = "NOMBRE";
+            this.bt_filNomVid.UseVisualStyleBackColor = true;
+            this.bt_filNomVid.Visible = false;
+            this.bt_filNomVid.Click += new System.EventHandler(this.bt_filNomVid_Click);
+            // 
+            // bt_filArtVid
+            // 
+            this.bt_filArtVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filArtVid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_filArtVid.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filArtVid.Location = new System.Drawing.Point(318, 215);
+            this.bt_filArtVid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filArtVid.Name = "bt_filArtVid";
+            this.bt_filArtVid.Size = new System.Drawing.Size(98, 32);
+            this.bt_filArtVid.TabIndex = 8;
+            this.bt_filArtVid.Text = "CREADOR";
+            this.bt_filArtVid.UseVisualStyleBackColor = true;
+            this.bt_filArtVid.Visible = false;
+            this.bt_filArtVid.Click += new System.EventHandler(this.bt_filArtVid_Click);
+            // 
+            // bt_filCanVid
+            // 
+            this.bt_filCanVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filCanVid.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filCanVid.Location = new System.Drawing.Point(318, 254);
+            this.bt_filCanVid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filCanVid.Name = "bt_filCanVid";
+            this.bt_filCanVid.Size = new System.Drawing.Size(99, 32);
+            this.bt_filCanVid.TabIndex = 9;
+            this.bt_filCanVid.Text = "CANAL";
+            this.bt_filCanVid.UseVisualStyleBackColor = true;
+            this.bt_filCanVid.Visible = false;
+            this.bt_filCanVid.Click += new System.EventHandler(this.bt_filCanVid_Click);
+            // 
+            // bt_filGenVid
+            // 
+            this.bt_filGenVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filGenVid.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filGenVid.Location = new System.Drawing.Point(318, 295);
+            this.bt_filGenVid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filGenVid.Name = "bt_filGenVid";
+            this.bt_filGenVid.Size = new System.Drawing.Size(99, 32);
+            this.bt_filGenVid.TabIndex = 10;
+            this.bt_filGenVid.Text = "GENERO";
+            this.bt_filGenVid.UseVisualStyleBackColor = true;
+            this.bt_filGenVid.Visible = false;
+            this.bt_filGenVid.Click += new System.EventHandler(this.bt_filGenVid_Click);
+            // 
+            // bt_filSexVid
+            // 
+            this.bt_filSexVid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_filSexVid.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.bt_filSexVid.Location = new System.Drawing.Point(318, 338);
+            this.bt_filSexVid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_filSexVid.Name = "bt_filSexVid";
+            this.bt_filSexVid.Size = new System.Drawing.Size(99, 32);
+            this.bt_filSexVid.TabIndex = 11;
+            this.bt_filSexVid.Text = "SEXO";
+            this.bt_filSexVid.UseVisualStyleBackColor = true;
+            this.bt_filSexVid.Visible = false;
+            this.bt_filSexVid.Click += new System.EventHandler(this.bt_filSexVid_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
             this.ClientSize = new System.Drawing.Size(1460, 710);
+            this.Controls.Add(this.pn_searchVid);
+            this.Controls.Add(this.pn_buscvideo);
+            this.Controls.Add(this.pn_bussong);
+            this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_Admin);
             this.Controls.Add(this.pn_repfavvideo);
             this.Controls.Add(this.pn_repfavsongs);
@@ -4597,19 +4826,15 @@
             this.Controls.Add(this.pn_rativideo);
             this.Controls.Add(this.pn_addvideo);
             this.Controls.Add(this.pn_songrating);
-            this.Controls.Add(this.pn_bussong);
             this.Controls.Add(this.pn_critvideo);
             this.Controls.Add(this.pn_calisong);
             this.Controls.Add(this.pn_calivideos);
-            this.Controls.Add(this.pn_buscvideo);
             this.Controls.Add(this.pn_songPL);
             this.Controls.Add(this.pn_repplyalistsong);
-            this.Controls.Add(this.pn_searchVid);
             this.Controls.Add(this.pn_repvideoplaylist);
             this.Controls.Add(this.pn_asksongplaylist);
             this.Controls.Add(this.pn_playlistvideo);
             this.Controls.Add(this.pn_vidPL);
-            this.Controls.Add(this.pn_searchSong);
             this.Controls.Add(this.pn_menuUser);
             this.Controls.Add(this.pn_vidRating);
             this.Controls.Add(this.pn_askvideoplaylist);
@@ -5048,5 +5273,19 @@
         private System.Windows.Forms.Button bt_nextfavvideo;
         private System.Windows.Forms.Button bt_repfavvideo;
         private AxWMPLib.AxWindowsMediaPlayer WMP_repfavvideo;
+        private System.Windows.Forms.Button bt_critSearchSong;
+        private System.Windows.Forms.Button bt_filSexSong;
+        private System.Windows.Forms.Button bt_filGenSong;
+        private System.Windows.Forms.Button bt_filAlbSong;
+        private System.Windows.Forms.Button bt_filArtSong;
+        private System.Windows.Forms.Button bt_filNameSong;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button bt_criterioVid;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Button bt_filSexVid;
+        private System.Windows.Forms.Button bt_filGenVid;
+        private System.Windows.Forms.Button bt_filCanVid;
+        private System.Windows.Forms.Button bt_filArtVid;
+        private System.Windows.Forms.Button bt_filNomVid;
     }
 }

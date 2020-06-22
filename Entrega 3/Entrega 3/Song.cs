@@ -56,6 +56,11 @@ namespace Entrega_3
             return Promedio / Rating.Count();
         }
 
+        public List<Workers> GetArtist()
+        {
+            return Artist;
+        }
+
         public override string GetData()
         {
             return (this.Name + ", " + this.Album);
