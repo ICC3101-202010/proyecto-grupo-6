@@ -94,6 +94,7 @@ namespace Entrega_3
         private void button1_Click(object sender, EventArgs e)
         {
             pn_bussong.Visible = false;
+            pn_searchSong.Visible = false;
         }
 
 
@@ -182,6 +183,7 @@ namespace Entrega_3
         private void bt_backfilvideo_Click(object sender, EventArgs e)
         {
             pn_buscvideo.Visible = false;
+            pn_searchVid.Visible = false;
         }
 
         private void bt_playlisyvideo_Click(object sender, EventArgs e)
@@ -1312,14 +1314,27 @@ namespace Entrega_3
         {
             pn_searchSong.Visible = true;
             tb_searchSong.Text = "";
+            tb_searchSong.Visible = true;
+            bt_searchSong.Visible = true;
             rtb_searchSong.Text = "";
             label18.Text = "Busqueda Simple";
+            label19.Visible = true;
+            tb_searchSong.Visible = true;
+            bt_searchSong.Visible = true;
+            bt_filNameSong.Visible = false;
+            bt_filArtSong.Visible = false;
+            bt_filAlbSong.Visible = false;
+            bt_filGenSong.Visible = false;
+            bt_filSexSong.Visible = false;
+            label37.Visible = false;
 
         }
 
         private void bt_backsearchSong_Click(object sender, EventArgs e)
         {
             pn_searchSong.Visible = false;
+            rtb_searchSong.Text = "";
+            label37.Text = "Criterio: (Presione un boton)";
         }
 
         private void bt_searchSong_Click(object sender, EventArgs e)
@@ -1352,8 +1367,19 @@ namespace Entrega_3
         {
             pn_searchSong.Visible = true;
             tb_searchSong.Text = "";
+            tb_searchSong.Visible = true;
+            bt_searchSong.Visible = true;
             rtb_searchSong.Text = "";
             label18.Text = "Busqueda Multiple";
+            label19.Visible = true;
+            tb_searchSong.Visible = true;
+            bt_searchSong.Visible = true;
+            bt_filNameSong.Visible = false;
+            bt_filArtSong.Visible = false;
+            bt_filAlbSong.Visible = false;
+            bt_filGenSong.Visible = false;
+            bt_filSexSong.Visible = false;
+            label37.Visible = false;
         }
 
         private void bt_backmenuUser_Click(object sender, EventArgs e)
@@ -1702,7 +1728,16 @@ namespace Entrega_3
             pn_searchVid.Visible = true;
             tb_vidSearch.Text = "";
             rtb_vidSearch.Text = "";
-            label27.Text = "Busqueda Multiple";
+            label27.Text = "BUSQUEDA MULTIPLE";
+            label38.Visible = false;
+            tb_vidSearch.Visible = true;
+            bt_searchVid.Visible = true;
+            label28.Visible = true;
+            bt_filNomVid.Visible = false;
+            bt_filArtVid.Visible = false;
+            bt_filCanVid.Visible = false;
+            bt_filGenVid.Visible = false;
+            bt_filSexVid.Visible = false;
         }
 
         private void bt_simvideo_Click(object sender, EventArgs e)
@@ -1710,7 +1745,16 @@ namespace Entrega_3
             pn_searchVid.Visible = true;
             tb_vidSearch.Text = "";
             rtb_vidSearch.Text = "";
-            label27.Text = "Busqueda Simple";
+            label27.Text = "BUSQUEDA SIMPLE";
+            label38.Visible = false;
+            tb_vidSearch.Visible = true;
+            bt_searchVid.Visible = true;
+            label28.Visible = true;
+            bt_filNomVid.Visible = false;
+            bt_filArtVid.Visible = false;
+            bt_filCanVid.Visible = false;
+            bt_filGenVid.Visible = false;
+            bt_filSexVid.Visible = false;
         }
 
         private void bt_backrepsong_Click(object sender, EventArgs e)
@@ -2467,6 +2511,554 @@ namespace Entrega_3
                 }
 
 
+            }
+            app.CloseApp();
+        }
+
+        private void bt_critSearchSong_Click(object sender, EventArgs e)
+        {
+            pn_searchSong.Visible = true;
+            label18.Text = "FILTRACION POR CRITERIOS";
+            label19.Visible = false;
+            rtb_searchSong.Text = "";
+            tb_searchSong.Visible = false;
+            bt_searchSong.Visible = false;
+            label37.Visible = true;
+            bt_filNameSong.Visible = true;
+            bt_filArtSong.Visible = true;
+            bt_filAlbSong.Visible = true;
+            bt_filGenSong.Visible = true;
+            bt_filSexSong.Visible = true;
+            label37.Text = "Criterio: (Presione un boton)";
+            label37.Visible = true;
+        }
+
+        private void bt_filNameSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            label37.Text = "Criterio: Nombre";
+            rtb_searchSong.Text = "";
+            if (allSongs.Count() != 0)
+            {
+                for (int i=0; i < allSongs.Count(); i++)
+                {
+                    rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() +", "+allSongs[i].GetArtistSong()+ "\n"+ "_________________________________"+"\n";
+                }
+            }
+            else
+            {
+                rtb_searchSong.Text = "No hay canciones para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filArtSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            label37.Text = "Criterio: Artista";
+            rtb_searchSong.Text = "";
+
+
+
+            if (allSongs.Count() != 0)
+            {
+                List<Workers> artistas = new List<Workers>();
+                for (int x = 0; x < allSongs.Count(); x++)
+                {
+                    if (artistas.Count() != 0)
+                    {
+                        bool check = false;
+                        foreach (var a in artistas)
+                        {
+                            if (a.GetName() == allSongs[x].GetArtist()[0].GetName())
+                            {
+                                check = true;
+                            }
+                            else
+                            {
+                                check = false;
+                            }
+                        }
+                        if (check == true)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            artistas.Add(allSongs[x].GetArtist()[0]);
+                        }
+                    }
+
+                    else
+                    {
+                        artistas.Add(allSongs[x].GetArtist()[0]);
+                    }
+
+                    
+                }
+                if (artistas.Count() != 0)
+                {
+                    foreach (var a in artistas)
+                    {
+                        rtb_searchSong.Text = rtb_searchSong.Text + "\n" + "_________________________________" + "\n" + a.GetName() + " " + a.GetSurname() + "\n" + "_________________________________" + "\n";
+                        for (int i = 0; i < allSongs.Count(); i++)
+                        {
+                            if (a.GetName() == allSongs[i].GetArtist()[0].GetName())
+                            {
+                                rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_searchSong.Text = "No hay canciones para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_searchSong.Text = "No hay canciones para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filAlbSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            label37.Text = "Criterio: Albums";
+            rtb_searchSong.Text = "";
+            List<string> albums = new List<string>();
+
+
+            if (allSongs.Count() != 0)
+            {
+                
+                for (int x = 0; x < allSongs.Count(); x++)
+                {
+                    
+                    if(albums.Count()!=0)
+                    {
+                        if (albums.Contains(allSongs[x].GetAlbum())==false)
+                        {
+                            albums.Add(allSongs[x].GetAlbum());
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        albums.Add(allSongs[x].GetAlbum());
+                    }
+
+
+                }
+
+
+                if (albums.Count() != 0)
+                {
+                    for (int a = 0; a<albums.Count();a++)
+                    {
+                        rtb_searchSong.Text = rtb_searchSong.Text + "\n" + "_________________________________" + "\n" + albums[a]  + "\n" + "_________________________________" + "\n";
+                        for (int i = 0; i < allSongs.Count(); i++)
+                        {
+                            if (albums[a] == allSongs[i].GetAlbum())
+                            {
+                                rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_searchSong.Text = "No hay canciones para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_searchSong.Text = "No hay canciones para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filGenSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            label37.Text = "Criterio: Genero";
+            rtb_searchSong.Text = "";
+            List<string> generos = new List<string>();
+
+
+            if (allSongs.Count() != 0)
+            {
+
+                for (int x = 0; x < allSongs.Count(); x++)
+                {
+
+                    if (generos.Count() != 0)
+                    {
+                        if (generos.Contains(allSongs[x].GetGender()) == false)
+                        {
+                            generos.Add(allSongs[x].GetGender());
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        generos.Add(allSongs[x].GetGender());
+                    }
+
+
+                }
+
+
+                if (generos.Count() != 0)
+                {
+                    for (int a = 0; a < generos.Count(); a++)
+                    {
+                        rtb_searchSong.Text = rtb_searchSong.Text + "\n" + "_________________________________" + "\n" + generos[a] + "\n" + "_________________________________" + "\n";
+                        for (int i = 0; i < allSongs.Count(); i++)
+                        {
+                            if (generos[a] == allSongs[i].GetGender())
+                            {
+                                rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_searchSong.Text = "No hay canciones para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_searchSong.Text = "No hay canciones para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filSexSong_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Song> allSongs = app.GetAllSongs();
+            label37.Text = "Criterio: Sexo";
+            rtb_searchSong.Text = "";
+            
+
+
+            if (allSongs.Count() != 0)
+            {
+                rtb_searchSong.Text = rtb_searchSong.Text + "\n" + "_________________________________" + "\n" + "Mujer" + "\n" + "_________________________________";
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if(allSongs[i].GetArtist()[0].GetSex()=="Mujer"|| allSongs[i].GetArtist()[0].GetSex() =="mujer"|| allSongs[i].GetArtist()[0].GetSex() == "MUJER")
+                    {
+                        rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong() + "\n";
+                    }
+                }
+                rtb_searchSong.Text = rtb_searchSong.Text + "\n" + "_________________________________" + "\n" + "Hombre" + "\n" + "_________________________________";
+                for (int i = 0; i < allSongs.Count(); i++)
+                {
+                    if (allSongs[i].GetArtist()[0].GetSex() == "Hombre" || allSongs[i].GetArtist()[0].GetSex() == "hombre" || allSongs[i].GetArtist()[0].GetSex() == "HOMBRE")
+                    {
+                        rtb_searchSong.Text = rtb_searchSong.Text + "\n" + allSongs[i].GetData() + ", " + allSongs[i].GetArtistSong() + "\n";
+                    }
+                }
+
+            }
+            else
+            {
+                rtb_searchSong.Text = "No hay canciones para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_criterioVid_Click(object sender, EventArgs e)
+        {
+            pn_searchVid.Visible = true;
+            label27.Text = "FILTRACION POR CRITERIO";
+            label38.Visible = true;
+            label38.Text = "Criterio: (Presione un boton)";
+            tb_vidSearch.Visible = false;
+            bt_searchVid.Visible = false;
+            label28.Visible = false;
+            bt_filNomVid.Visible = true;
+            bt_filArtVid.Visible = true;
+            bt_filCanVid.Visible = true;
+            bt_filGenVid.Visible = true;
+            bt_filSexVid.Visible = true;
+        }
+
+        private void bt_filNomVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVids = app.Getallvideos();
+            label38.Text = "Criterio: Nombre";
+            rtb_vidSearch.Text = "";
+            if (allVids.Count() != 0)
+            {
+                for (int i = 0; i < allVids.Count(); i++)
+                {
+                    rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData() + "\n" + "______________________________" + "\n";
+                }
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No hay videos para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filArtVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVids = app.Getallvideos();
+            label38.Text = "Criterio: Artista";
+            rtb_vidSearch.Text = "";
+
+
+
+            if (allVids.Count() != 0)
+            {
+                List<Workers> artistas = new List<Workers>();
+                for (int x = 0; x < allVids.Count(); x++)
+                {
+                    if (artistas.Count() != 0)
+                    {
+                        bool check = false;
+                        foreach (var a in artistas)
+                        {
+                            if (a.GetName() == allVids[x].GetArtist()[0].GetName())
+                            {
+                                check = true;
+                            }
+                            else
+                            {
+                                check = false;
+                            }
+                        }
+                        if (check == true)
+                        {
+                            continue;
+                        }
+                        else
+                        {
+                            artistas.Add(allVids[x].GetArtist()[0]);
+                        }
+                    }
+
+                    else
+                    {
+                        artistas.Add(allVids[x].GetArtist()[0]);
+                    }
+
+
+                }
+                if (artistas.Count() != 0)
+                {
+                    foreach (var a in artistas)
+                    {
+                        rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + "______________________________" + "\n" + a.GetName() + " " + a.GetSurname() + "\n" + "______________________________" + "\n";
+                        for (int i = 0; i < allVids.Count(); i++)
+                        {
+                            if (a.GetName() == allVids[i].GetArtist()[0].GetName())
+                            {
+                                rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_vidSearch.Text = "No hay videos para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No hay videos para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filCanVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVids = app.Getallvideos();
+            label38.Text = "Criterio: Canales";
+            rtb_vidSearch.Text = "";
+            List<string> canales = new List<string>();
+
+
+            if (allVids.Count() != 0)
+            {
+
+                for (int x = 0; x < allVids.Count(); x++)
+                {
+
+                    if (canales.Count() != 0)
+                    {
+                        if (canales.Contains(allVids[x].GetStudio()) == false)
+                        {
+                            canales.Add(allVids[x].GetStudio());
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        canales.Add(allVids[x].GetStudio());
+                    }
+
+
+                }
+
+
+                if (canales.Count() != 0)
+                {
+                    for (int a = 0; a < canales.Count(); a++)
+                    {
+                        rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + "______________________________" + "\n" + canales[a] + "\n" + "______________________________" + "\n";
+                        for (int i = 0; i < allVids.Count(); i++)
+                        {
+                            if (canales[a] == allVids[i].GetStudio())
+                            {
+                                rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_vidSearch.Text = "No hay videos para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No hay videos para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filGenVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVids = app.Getallvideos();
+            label38.Text = "Criterio: Generos";
+            rtb_vidSearch.Text = "";
+            List<string> generos = new List<string>();
+
+
+            if (allVids.Count() != 0)
+            {
+
+                for (int x = 0; x < allVids.Count(); x++)
+                {
+
+                    if (generos.Count() != 0)
+                    {
+                        if (generos.Contains(allVids[x].GetKind()) == false)
+                        {
+                            generos.Add(allVids[x].GetKind());
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        generos.Add(allVids[x].GetKind());
+                    }
+
+
+                }
+
+
+                if (generos.Count() != 0)
+                {
+                    for (int a = 0; a < generos.Count(); a++)
+                    {
+                        rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + "______________________________" + "\n" + generos[a] + "\n" + "______________________________" + "\n";
+                        for (int i = 0; i < allVids.Count(); i++)
+                        {
+                            if (generos[a] == allVids[i].GetKind())
+                            {
+                                rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData() + "\n";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    rtb_vidSearch.Text = "No hay videos para filtrar";
+                }
+
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No hay videos para filtrar";
+            }
+            app.CloseApp();
+        }
+
+        private void bt_filSexVid_Click(object sender, EventArgs e)
+        {
+            App app = new App();
+            app.OpenApp();
+            List<Video> allVids = app.Getallvideos();
+            label38.Text = "Criterio: Sexo";
+            rtb_vidSearch.Text = "";
+
+
+
+            if (allVids.Count() != 0)
+            {
+                rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + "______________________________" + "\n" + "Mujer" + "\n" + "______________________________";
+                for (int i = 0; i < allVids.Count(); i++)
+                {
+                    if (allVids[i].GetArtist()[0].GetSex() == "Mujer" || allVids[i].GetArtist()[0].GetSex() == "mujer" || allVids[i].GetArtist()[0].GetSex() == "MUJER")
+                    {
+                        rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData()  + "\n";
+                    }
+                }
+                rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + "______________________________" + "\n" + "Hombre" + "\n" + "______________________________";
+                for (int i = 0; i < allVids.Count(); i++)
+                {
+                    if (allVids[i].GetArtist()[0].GetSex() == "Hombre" || allVids[i].GetArtist()[0].GetSex() == "hombre" || allVids[i].GetArtist()[0].GetSex() == "HOMBRE")
+                    {
+                        rtb_vidSearch.Text = rtb_vidSearch.Text + "\n" + allVids[i].GetData()  + "\n";
+                    }
+                }
+
+            }
+            else
+            {
+                rtb_vidSearch.Text = "No hay videos para filtrar";
             }
             app.CloseApp();
         }

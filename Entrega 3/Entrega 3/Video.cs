@@ -147,5 +147,9 @@ namespace Entrega_3
             return directors;
         }
 
+        public List<Workers> GetArtist()
+        {
+            return Actors;
+        }
     }
 }
