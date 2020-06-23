@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(34)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pn_register);
             this.panel1.Controls.Add(this.lb_register);
             this.panel1.Controls.Add(this.lb_cuincorrecto);
@@ -77,9 +77,8 @@
             this.panel1.Controls.Add(this.pn_color_nohacenada);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(739, 554);
+            this.panel1.Size = new System.Drawing.Size(554, 450);
             this.panel1.TabIndex = 0;
             // 
             // pn_register
@@ -99,9 +98,8 @@
             this.pn_register.Controls.Add(this.label1);
             this.pn_register.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pn_register.Location = new System.Drawing.Point(0, 0);
-            this.pn_register.Margin = new System.Windows.Forms.Padding(4);
             this.pn_register.Name = "pn_register";
-            this.pn_register.Size = new System.Drawing.Size(739, 554);
+            this.pn_register.Size = new System.Drawing.Size(554, 450);
             this.pn_register.TabIndex = 8;
             this.pn_register.Visible = false;
             // 
@@ -110,10 +108,9 @@
             this.cb_cuentapremium.AutoSize = true;
             this.cb_cuentapremium.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_cuentapremium.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.cb_cuentapremium.Location = new System.Drawing.Point(103, 388);
-            this.cb_cuentapremium.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_cuentapremium.Location = new System.Drawing.Point(77, 315);
             this.cb_cuentapremium.Name = "cb_cuentapremium";
-            this.cb_cuentapremium.Size = new System.Drawing.Size(116, 24);
+            this.cb_cuentapremium.Size = new System.Drawing.Size(97, 20);
             this.cb_cuentapremium.TabIndex = 14;
             this.cb_cuentapremium.Text = "PREMIUM";
             this.cb_cuentapremium.UseVisualStyleBackColor = true;
@@ -123,10 +120,9 @@
             this.bt_closeregistro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bt_closeregistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bt_closeregistro.ImageLocation = "http://icons.iconarchive.com/icons/icojam/blue-bits/24/symbol-delete-icon.png";
-            this.bt_closeregistro.Location = new System.Drawing.Point(701, 4);
-            this.bt_closeregistro.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_closeregistro.Location = new System.Drawing.Point(526, 3);
             this.bt_closeregistro.Name = "bt_closeregistro";
-            this.bt_closeregistro.Size = new System.Drawing.Size(33, 30);
+            this.bt_closeregistro.Size = new System.Drawing.Size(25, 25);
             this.bt_closeregistro.TabIndex = 12;
             this.bt_closeregistro.TabStop = false;
             this.bt_closeregistro.Click += new System.EventHandler(this.bt_closeregistro_Click);
@@ -136,10 +132,9 @@
             this.lb_exito.AutoSize = true;
             this.lb_exito.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_exito.ForeColor = System.Drawing.Color.White;
-            this.lb_exito.Location = new System.Drawing.Point(192, 527);
-            this.lb_exito.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_exito.Location = new System.Drawing.Point(144, 428);
             this.lb_exito.Name = "lb_exito";
-            this.lb_exito.Size = new System.Drawing.Size(304, 24);
+            this.lb_exito.Size = new System.Drawing.Size(243, 18);
             this.lb_exito.TabIndex = 11;
             this.lb_exito.Text = "CUENTA CREADA CON EXITO";
             this.lb_exito.Visible = false;
@@ -148,10 +143,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(99, 249);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(74, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(259, 17);
+            this.label3.Size = new System.Drawing.Size(204, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "NOMBRE DE USUARIO YA EXISTENTE";
             this.label3.Visible = false;
@@ -159,12 +153,11 @@
             // bt_crearcuenta
             // 
             this.bt_crearcuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_crearcuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_crearcuenta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_crearcuenta.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.bt_crearcuenta.Location = new System.Drawing.Point(489, 462);
-            this.bt_crearcuenta.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_crearcuenta.Location = new System.Drawing.Point(367, 375);
             this.bt_crearcuenta.Name = "bt_crearcuenta";
-            this.bt_crearcuenta.Size = new System.Drawing.Size(117, 42);
+            this.bt_crearcuenta.Size = new System.Drawing.Size(88, 34);
             this.bt_crearcuenta.TabIndex = 9;
             this.bt_crearcuenta.Text = "CREAR";
             this.bt_crearcuenta.UseVisualStyleBackColor = true;
@@ -173,12 +166,11 @@
             // bt_backresgister
             // 
             this.bt_backresgister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_backresgister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_backresgister.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_backresgister.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.bt_backresgister.Location = new System.Drawing.Point(103, 463);
-            this.bt_backresgister.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_backresgister.Location = new System.Drawing.Point(77, 376);
             this.bt_backresgister.Name = "bt_backresgister";
-            this.bt_backresgister.Size = new System.Drawing.Size(117, 41);
+            this.bt_backresgister.Size = new System.Drawing.Size(88, 33);
             this.bt_backresgister.TabIndex = 8;
             this.bt_backresgister.Text = "BACK";
             this.bt_backresgister.UseVisualStyleBackColor = true;
@@ -190,10 +182,9 @@
             this.lb_rellenecampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lb_rellenecampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_rellenecampos.ForeColor = System.Drawing.Color.White;
-            this.lb_rellenecampos.Location = new System.Drawing.Point(99, 508);
-            this.lb_rellenecampos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_rellenecampos.Location = new System.Drawing.Point(74, 413);
             this.lb_rellenecampos.Name = "lb_rellenecampos";
-            this.lb_rellenecampos.Size = new System.Drawing.Size(471, 18);
+            this.lb_rellenecampos.Size = new System.Drawing.Size(383, 15);
             this.lb_rellenecampos.TabIndex = 7;
             this.lb_rellenecampos.Text = "PORFAVOR RELLENE TODOS LOS CAMPOS SOLICITADOS";
             this.lb_rellenecampos.Visible = false;
@@ -204,10 +195,9 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label2.Location = new System.Drawing.Point(92, 347);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(69, 282);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(349, 25);
+            this.label2.Size = new System.Drawing.Size(295, 20);
             this.label2.TabIndex = 6;
             this.label2.Text = "QUIERE SER USUARIO PREMIUM";
             // 
@@ -215,11 +205,10 @@
             // 
             this.tb_inContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_inContraseña.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_inContraseña.Location = new System.Drawing.Point(97, 273);
-            this.tb_inContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_inContraseña.Location = new System.Drawing.Point(73, 222);
             this.tb_inContraseña.Multiline = true;
             this.tb_inContraseña.Name = "tb_inContraseña";
-            this.tb_inContraseña.Size = new System.Drawing.Size(529, 51);
+            this.tb_inContraseña.Size = new System.Drawing.Size(398, 42);
             this.tb_inContraseña.TabIndex = 4;
             this.tb_inContraseña.Text = "Contraseña";
             this.tb_inContraseña.Click += new System.EventHandler(this.tb_inContraseña_Click);
@@ -228,11 +217,10 @@
             // 
             this.tb_inUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_inUsername.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_inUsername.Location = new System.Drawing.Point(97, 193);
-            this.tb_inUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_inUsername.Location = new System.Drawing.Point(73, 157);
             this.tb_inUsername.Multiline = true;
             this.tb_inUsername.Name = "tb_inUsername";
-            this.tb_inUsername.Size = new System.Drawing.Size(529, 51);
+            this.tb_inUsername.Size = new System.Drawing.Size(398, 42);
             this.tb_inUsername.TabIndex = 3;
             this.tb_inUsername.Text = "Nombre de Usuario";
             this.tb_inUsername.Click += new System.EventHandler(this.tb_inUsername_Click);
@@ -242,11 +230,10 @@
             // 
             this.tb_inLastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_inLastName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_inLastName.Location = new System.Drawing.Point(375, 114);
-            this.tb_inLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_inLastName.Location = new System.Drawing.Point(281, 93);
             this.tb_inLastName.Multiline = true;
             this.tb_inLastName.Name = "tb_inLastName";
-            this.tb_inLastName.Size = new System.Drawing.Size(252, 51);
+            this.tb_inLastName.Size = new System.Drawing.Size(190, 42);
             this.tb_inLastName.TabIndex = 2;
             this.tb_inLastName.Text = "Apellido";
             this.tb_inLastName.Click += new System.EventHandler(this.tb_inLastName_Click);
@@ -257,27 +244,24 @@
             this.tb_inName.BackColor = System.Drawing.Color.White;
             this.tb_inName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_inName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tb_inName.Location = new System.Drawing.Point(97, 114);
-            this.tb_inName.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_inName.Location = new System.Drawing.Point(73, 93);
             this.tb_inName.Multiline = true;
             this.tb_inName.Name = "tb_inName";
-            this.tb_inName.Size = new System.Drawing.Size(252, 51);
+            this.tb_inName.Size = new System.Drawing.Size(190, 42);
             this.tb_inName.TabIndex = 1;
             this.tb_inName.Text = "Nombre";
             this.tb_inName.Click += new System.EventHandler(this.tb_inName_Click);
-           
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.label1.Location = new System.Drawing.Point(229, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(169, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 54);
+            this.label1.Size = new System.Drawing.Size(218, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "REGISTRO";
             // 
@@ -286,10 +270,9 @@
             this.lb_register.AutoSize = true;
             this.lb_register.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_register.ForeColor = System.Drawing.Color.White;
-            this.lb_register.Location = new System.Drawing.Point(245, 489);
-            this.lb_register.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_register.Location = new System.Drawing.Point(184, 397);
             this.lb_register.Name = "lb_register";
-            this.lb_register.Size = new System.Drawing.Size(228, 18);
+            this.lb_register.Size = new System.Drawing.Size(187, 15);
             this.lb_register.TabIndex = 7;
             this.lb_register.Text = "NUEVO AQUI? REGISTRATE";
             this.lb_register.Click += new System.EventHandler(this.lb_register_Click);
@@ -298,10 +281,9 @@
             // 
             this.lb_cuincorrecto.AutoSize = true;
             this.lb_cuincorrecto.ForeColor = System.Drawing.Color.White;
-            this.lb_cuincorrecto.Location = new System.Drawing.Point(225, 527);
-            this.lb_cuincorrecto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_cuincorrecto.Location = new System.Drawing.Point(169, 428);
             this.lb_cuincorrecto.Name = "lb_cuincorrecto";
-            this.lb_cuincorrecto.Size = new System.Drawing.Size(279, 17);
+            this.lb_cuincorrecto.Size = new System.Drawing.Size(218, 13);
             this.lb_cuincorrecto.TabIndex = 6;
             this.lb_cuincorrecto.Text = "CONTRASEÑA O USUARIO INCORRECTO";
             this.lb_cuincorrecto.Visible = false;
@@ -311,12 +293,11 @@
             this.bt_login.BackColor = System.Drawing.Color.DarkTurquoise;
             this.bt_login.FlatAppearance.BorderSize = 0;
             this.bt_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_login.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_login.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.bt_login.Location = new System.Drawing.Point(103, 406);
-            this.bt_login.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_login.Location = new System.Drawing.Point(77, 330);
             this.bt_login.Name = "bt_login";
-            this.bt_login.Size = new System.Drawing.Size(541, 62);
+            this.bt_login.Size = new System.Drawing.Size(406, 50);
             this.bt_login.TabIndex = 5;
             this.bt_login.Text = "LOGIN";
             this.bt_login.UseVisualStyleBackColor = false;
@@ -325,10 +306,9 @@
             // tb_Contraseña
             // 
             this.tb_Contraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Contraseña.Location = new System.Drawing.Point(177, 319);
-            this.tb_Contraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Contraseña.Location = new System.Drawing.Point(133, 259);
             this.tb_Contraseña.Name = "tb_Contraseña";
-            this.tb_Contraseña.Size = new System.Drawing.Size(465, 53);
+            this.tb_Contraseña.Size = new System.Drawing.Size(350, 44);
             this.tb_Contraseña.TabIndex = 4;
             this.tb_Contraseña.UseSystemPasswordChar = true;
             this.tb_Contraseña.Click += new System.EventHandler(this.tb_Contraseña_Click);
@@ -337,11 +317,10 @@
             // tb_Usuario
             // 
             this.tb_Usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Usuario.Location = new System.Drawing.Point(177, 223);
-            this.tb_Usuario.Margin = new System.Windows.Forms.Padding(4);
+            this.tb_Usuario.Location = new System.Drawing.Point(133, 181);
             this.tb_Usuario.Multiline = true;
             this.tb_Usuario.Name = "tb_Usuario";
-            this.tb_Usuario.Size = new System.Drawing.Size(465, 61);
+            this.tb_Usuario.Size = new System.Drawing.Size(350, 50);
             this.tb_Usuario.TabIndex = 3;
             this.tb_Usuario.Click += new System.EventHandler(this.tb_Usuario_Click);
             this.tb_Usuario.TextChanged += new System.EventHandler(this.tb_Usuario_TextChanged);
@@ -349,20 +328,18 @@
             // pictureBox2
             // 
             this.pictureBox2.ImageLocation = "http://icons.iconarchive.com/icons/graphicloads/flat-finance/48/lock-icon.png";
-            this.pictureBox2.Location = new System.Drawing.Point(103, 319);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(77, 259);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.ImageLocation = "http://icons.iconarchive.com/icons/graphicloads/flat-finance/48/person-icon.png";
-            this.pictureBox1.Location = new System.Drawing.Point(103, 223);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(77, 181);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -373,19 +350,17 @@
             this.pn_color_nohacenada.Controls.Add(this.UserLogin);
             this.pn_color_nohacenada.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pn_color_nohacenada.Location = new System.Drawing.Point(0, 0);
-            this.pn_color_nohacenada.Margin = new System.Windows.Forms.Padding(4);
             this.pn_color_nohacenada.Name = "pn_color_nohacenada";
-            this.pn_color_nohacenada.Size = new System.Drawing.Size(739, 137);
+            this.pn_color_nohacenada.Size = new System.Drawing.Size(554, 111);
             this.pn_color_nohacenada.TabIndex = 0;
             // 
             // bt_closeall
             // 
             this.bt_closeall.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bt_closeall.ImageLocation = "http://icons.iconarchive.com/icons/icojam/blue-bits/24/symbol-delete-icon.png";
-            this.bt_closeall.Location = new System.Drawing.Point(701, 4);
-            this.bt_closeall.Margin = new System.Windows.Forms.Padding(4);
+            this.bt_closeall.Location = new System.Drawing.Point(526, 3);
             this.bt_closeall.Name = "bt_closeall";
-            this.bt_closeall.Size = new System.Drawing.Size(33, 30);
+            this.bt_closeall.Size = new System.Drawing.Size(25, 25);
             this.bt_closeall.TabIndex = 1;
             this.bt_closeall.TabStop = false;
             this.bt_closeall.Click += new System.EventHandler(this.bt_closeall_Click);
@@ -393,24 +368,22 @@
             // UserLogin
             // 
             this.UserLogin.AutoSize = true;
-            this.UserLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLogin.Location = new System.Drawing.Point(143, 39);
-            this.UserLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.UserLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLogin.Location = new System.Drawing.Point(107, 32);
             this.UserLogin.Name = "UserLogin";
-            this.UserLogin.Size = new System.Drawing.Size(434, 54);
+            this.UserLogin.Size = new System.Drawing.Size(368, 46);
             this.UserLogin.TabIndex = 0;
             this.UserLogin.Text = "USER LOGIN PSN";
             this.UserLogin.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // PSN
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(739, 554);
+            this.ClientSize = new System.Drawing.Size(554, 450);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PSN";

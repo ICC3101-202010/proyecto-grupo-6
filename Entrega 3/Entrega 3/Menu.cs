@@ -646,7 +646,7 @@ namespace Entrega_3
         {
             App app = new App();
             pn_addsongcola.Visible = true;
-            pn_tuusu.Visible = false;
+            
             app.OpenApp();
             foreach(var a in app.GetAllSongs())
             {
@@ -664,14 +664,14 @@ namespace Entrega_3
         private void bt_vercolvideo_Click(object sender, EventArgs e)
         {
             pn_repvideocola.Visible = true;
-            pn_tuusu.Visible = false;
+            
         }
 
         private void bt_agrecolavideo_Click(object sender, EventArgs e)
         {
             App app = new App();
             pn_addcolavideo.Visible = true;
-            pn_tuusu.Visible = false;
+            
             app.OpenApp();
             foreach(var a in app.Getallvideos())
             {
@@ -1784,7 +1784,6 @@ namespace Entrega_3
         private void bt_reproplayvideo_Click(object sender, EventArgs e)
         {   App app = new App();
             pn_askvideoplaylist.Visible = true;
-            pn_playlistvideo.Visible = false;
             app.OpenApp();
             if (app.GetServer().GetActive().GetYourVideos() == null)
             {
@@ -1907,7 +1906,6 @@ namespace Entrega_3
         private void bt_repplay_Click(object sender, EventArgs e)
         {
             pn_asksongplaylist.Visible = true;
-            pn_playlist.Visible = false;
             App app = new App();
             app.OpenApp();
             if (app.GetServer().GetActive().GetYourMusic() == null)
@@ -2039,21 +2037,21 @@ namespace Entrega_3
 
         private void bt_backdeletesongcola_Click(object sender, EventArgs e)
         {
-            pn_tuusu.Visible = true;
+            
             pn_deletesongqueue.Visible = false;
             lb_deletesongcola.Text = "";
         }
 
         private void bt_vaccolasong_Click(object sender, EventArgs e)
         {
-            pn_tuusu.Visible = false;
+            
             pn_deletesongqueue.Visible = true;
         }
 
         private void bt_backdeletevideoqueue_Click(object sender, EventArgs e)
         {
             pn_deletevideoqueue.Visible = false;
-            pn_tuusu.Visible = true;
+            
         }
 
         private void bt_deletevideoqueue_Click(object sender, EventArgs e)
@@ -2075,7 +2073,7 @@ namespace Entrega_3
         private void bt_vaccolavideo_Click(object sender, EventArgs e)
         {
             pn_deletevideoqueue.Visible = true;
-            pn_tuusu.Visible = false;
+            
         }
 
         private void pn_repvideoplaylist_Paint(object sender, PaintEventArgs e)
@@ -2307,12 +2305,21 @@ namespace Entrega_3
             label36.Text = "Ingrese nombre de la cancion";
             rtb_Fav.Text = "";
             pn_Fav.Visible = true;
+            label36.ForeColor = System.Drawing.Color.FromName("DarkTurquoise");
+            bt_AddFav.ForeColor = System.Drawing.Color.FromName("DarkTurquoise");
+            bt_backfavpanel.ForeColor = System.Drawing.Color.FromName("DarkTurquoise");
+            lb_Fav.ForeColor = System.Drawing.Color.FromName("DarkTurquoise");
         }
+       
 
         private void bt_AddFavVid_Click(object sender, EventArgs e)
         {
             lb_Fav.Text = "VIDEOS FAVORITOS";
             label36.Text = "Ingrese nombre del video";
+            label36.ForeColor = System.Drawing.Color.FromName("SlateBlue");
+            bt_AddFav.ForeColor = System.Drawing.Color.FromName("SlateBlue");
+            bt_backfavpanel.ForeColor = System.Drawing.Color.FromName("SlateBlue");
+            lb_Fav.ForeColor = System.Drawing.Color.FromName("SlateBlue");
             rtb_Fav.Text = "";
             pn_Fav.Visible = true;
         }
@@ -3097,7 +3104,7 @@ namespace Entrega_3
         {
             NamePlvid = tb_asknamevideoplaylist.Text;
             pn_repvideoplaylist.Visible = true;
-            pn_askvideoplaylist.Visible = false;
+            
         }
 
         private void bt_grammy_Click(object sender, EventArgs e)
